@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<p>PART FOUR</p>
+<p>THE GOSPEL ACCORDING TO CALEB</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>TWENTY-SIX</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>’D DRIVEN TO RALPH’S Tavern for two reasons. The first was that I
+couldn’t face any of my family. And the second was that I only knew of
+one bar in the county. The guys from the shop often came here, and spoke
+of it frequently.</p>
+<p>Parking my new (to me) Toyota in the lot, I’d heard the sound of
+music and laughter before I even opened the door. Inside, I liked the
+look of the place. There was dark wood paneling and soft lighting. Two
+pool tables lined the back wall.</p>
+<p>My next thought was just a reflex. I should bring Josh here. It took
+me a second to realize how fucked up my brain really was. I’d just
+wrecked things with Josh. I’d made him cry, for God’s sake, and slap me.
+The look on his face was going to be with me a long time. And even if I
+made it up to him somehow, he’d still know.</p>
+<p>Nobody gets to throw me away, he’d said. But that’s exactly what I’d
+tried to do, without realizing how he’d take it. And then! Even if Josh
+could forgive me, there was still poor Miriam to consider.</p>
+<p>All I had was impossible choices.</p>
+<p>“Hey! Look who it is!”</p>
+<p>I turned my head to see Danny and Jakobitz sitting at a high table on
+bar stools. “Hi,” I said, realizing that this had been a mistake. When I
+first started working at the garage, they’d asked me several times to
+join them here. But I never did.</p>
+<p>It’s not that I didn’t want to go out with them. It’s just that I
+couldn’t justify spending money on beer. And what’s more, I couldn’t
+justify hanging out at the bar with these guys while Josh waited at
+home. And bringing Josh with me… I didn’t know how that would go.</p>
+<p>So I’d always begged off.</p>
+<p>But now here I was, finally accepting their invitation, on the night
+when I was a giant fucking wreck. Nicely done, Caleb. You idiot.</p>
+<p>“You meeting someone?” Jackbitz asked.</p>
+<p>I went closer to them. “No. Just needed to get out.”</p>
+<p>Danny cocked his head toward an empty bar stool. “Get over here,
+then.”</p>
+<p>I sat down, and a waitress appeared immediately, temporarily saving
+me from further conversation. “What’ll it be?” she asked.</p>
+<p>“Uh,” I didn’t know much about beers. “Let me buy a round,” I said,
+taking out my credit card. “I’ll have one of whatever they’re
+drinking.”</p>
+<p>She took the card and walked off.</p>
+<p>“Don’t take this the wrong way,” Jakobitz said, pausing to drain his
+glass, “but you don’t look so good.”</p>
+<p>I must look almost as bad as I felt, then. Because Jakobitz wasn’t
+the most perceptive guy I’d ever met. “Yeah,” I sighed, tucking my
+wallet back into my jeans. “I fucked up tonight.”</p>
+<p>“Bad?”” Danny asked.</p>
+<p>“Bad,” I confirmed.</p>
+<p>“We’re talking, like, life-changing fuck up?” Jakobitz asked.</p>
+<p>I nodded, miserable.</p>
+<p>He whistled. “Did you cheat?”</p>
+<p>“No,” I said immediately. But then my heart seized. Because I might
+as well have said yes. I’d told Josh that I meant to marry Miriam, and
+to me, that was nothing but a giant sacrifice. But from where he sat, it
+wouldn’t look like that.</p>
+<p>“Does she think you cheated? Women can’t ever get over that shit.
+They tell you they will, but they don’t.”</p>
+<p>My heart dipped. The waitress set a beer down in front of me, and I
+took a sip of it before I looked up at Danny and Jakobitz. “Well. Is the
+same true for guys?”</p>
+<p>Jakobitz’s beer halted on the way to his mouth. “You’re with a
+guy?”</p>
+<p>I sighed, setting my beer on the table. “I was until about an hour
+ago. You got a problem with that?”</p>
+<p>Danny let out a hoot and smacked the table with an open hand. “He
+does got a problem! His problem is that he owes me twenty bucks. Pay
+up.”</p>
+<p>“Christ,” Jakobitz swore, opening up his wallet. He took out a twenty
+and threw it at Danny.</p>
+<p>“You had a bet?”</p>
+<p>“Don’t be mad,” Danny said, tucking the money away. “We bet on
+everything. Jako once won ten bucks off of me because the boss took a
+piss break before noon, not after.”</p>
+<p>It took me a minute to relax, though. I had exactly zero practice
+telling people I was gay. The only person I ever told was Josh. Everyone
+else just guessed. “Where we’re from, they would have jumped us for
+being together.”</p>
+<p>“Cuz you’re from… Iran?” Jakobitz quipped.</p>
+<p>Danny thumped him on the chest. “There are assholes everywhere,
+moron.”</p>
+<p>Wasn’t that the truth? And now Danny and Jakobitz were both staring
+at me. “I don’t say much about my life. Pretty much all of it is
+freaky.”</p>
+<p>“I don’t know, man,” Danny said, shaking his head. “Lotta people I
+know could say the same thing. The bar is set pretty high around
+here.”</p>
+<p>At that, I smiled for the first time all night.</p>
+<p>Our waitress was passing by, and Jakobitz reached out and touched her
+arm. “Can we get six shots of Jack? Seems like we need it.”</p>
+<p>“Sure, hon.” She moved on.</p>
+<p>I didn’t know what Jack was, but I bet it was going to be strong.
+“You know I have zero tolerance, right?”</p>
+<p>Jakobitz grinned. “Could be fun, then. You eat dinner?”</p>
+<p>I shook my head.</p>
+<p>He got up and went to the bar, where I heard him order some
+fries.</p>
+<p>TWO HOURS LATER, the room was swimming, and I clutched the edge of
+the table with both hands, just so it didn’t get away from me.</p>
+<p>“That is fucked up, my man,” Danny was saying. “If this girl knows
+you really want your boy, not her, she won’t marry you. A woman don’t
+work that way.”</p>
+<p>The whole story had come pouring out after that first shot of Jack.
+All of it. Stealing the gun. Getting Josh kicked out. Finding him in the
+dirt behind the bus station. Washington. Maggie. Daniel. Chloe.</p>
+<p>Miriam. Miriam’s rape.</p>
+<p>“I don’t know what to do for her,” I slurred. “She’s eighteen.”</p>
+<p>“You’re twenty-one, right? Just a baby yourself. It’s not your fault
+what those assholes did to her.”</p>
+<p>“Yeah, it is. She needed my protection and I ran away instead, so I
+could finally get laid.”</p>
+<p>“Can’t believe you were a twenty-year-old virgin,” Jakobitz muttered.
+“That’s the weirdest part of this story.”</p>
+<p>Danny ignored him. “You need to go home to your guy and apologize.
+Plead innocent, by reason of insanity. You gotta stay with the guy,
+because faking it with the girl sounds like a bad plan. You can still
+help her, though. Just not with a wedding and a ring.”</p>
+<p>They made it sound so easy. “When I think of what those fuckers did
+to her, I just want to hurt somebody.”</p>
+<p>“No kidding. But if you do this, you’re only hurting your guy,
+yourself, and that girl.”</p>
+<p>“Why do people keep saying that?” I asked.</p>
+<p>“‘Cause you’re in need of hearing it,” Jakobitz said. “Listen to
+Danny. He’s smarter than me. Just ask him.”</p>
+<p>Danny gave Jako another thump in the chest.</p>
+<p>“I need to go home,” I said.</p>
+<p>“Yeah, you do. But none of us are driving. It’s taxi time. One for
+us, because we live close to each other. And one to drive you out to the
+sticks.”</p>
+<p>“Shit.” That would cost a fortune.</p>
+<p>“Or you could call home and ask for a ride.” Jakobitz pulled a phone
+out of his pocket.</p>
+<p>I took it.</p>
+<p>HALF AN HOUR LATER, I was holding up the exterior wall of the bar
+with my ass. My hands were slowly turning to ice. But the cool air on my
+face was helpful. It made me feel a little less drunk, although the war
+between whiskey and greasy fries in my stomach was not going well.</p>
+<p>Beside me, Danny and Jako were betting on whether or not I was going
+to puke before my ride showed up. There was five bucks riding on it.</p>
+<p>Finally, Daniel’s truck pulled into the lot. But the passenger door
+opened, not the driver’s. Josh jumped down, slamming the door. When he
+turned to me, I saw a look on his face that I never thought I’d see.</p>
+<p>Disgust.</p>
+<p>“Is that your guy?” Jako asked. “He looks pissed. I don’t think
+you’re getting any make-up nookie tonight.”</p>
+<p>“Shut it, moron,” Danny muttered under his breath. Then he put a hand
+on my shoulder and called out. “You Josh? I got good news and bad news.
+The good news is that Caleb is really sorry, and he knows he’s been an
+asshole. The bad news is that he’s drunk off his ass, and probably going
+to puke in the next ten minutes.”</p>
+<p>Josh took three steps closer, then stopped. He folded his arms and
+just stared me down. As if he was trying to decide something.</p>
+<p>“I’m sorry,” I said.</p>
+<p>“See?” Jako piped up. “He’s sorry.”</p>
+<p>“We’re both sorry about a lot of things,” Josh said. “It’s what you
+do about it that matters.”</p>
+<p>Ah. So true. If only I wasn’t so drunk, this would be easier. “I
+shouldn’t have freaked out like that. I wouldn’t last a day without
+you.”</p>
+<p>“Aw!” Jakobitz crowed. “Keep going, dude. You’re on the right
+track.”</p>
+<p>“I want to come home,” I said. “To the apartment,” I added, in case
+that wasn’t clear. There could be no more fuck-ups. I couldn’t afford
+them.</p>
+<p>Josh kicked a pebble in the gravel at his feet. Then he glanced at my
+car where it was parked against the fence. “Is your new toy a manual or
+an automatic?”</p>
+<p>“Auto…” I burped in the middle of the word. “…Matic.”</p>
+<p>“Oh, man. You didn’t show him the car yet?” Danny yelped. “Jesus,
+Caleb. You are kind of an asshole.”</p>
+<p>I sighed. “That’s nothing I don’t already know.”</p>
+<p>Josh may have hidden a tiny little smile at that point. But then he
+buried it, and held out a hand. “Keys.”</p>
+<p>“Wha? You’re driving?”</p>
+<p>“You’re sure as hell not,” he said.</p>
+<p>I pulled them out of my pocket just as another car pulled up to the
+bar.</p>
+<p>Jakobitz held his hand up to his eyes to shield them from the
+headlights.</p>
+<p>“Can you, like, kiss and make up, now? Because our taxi is here.”</p>
+<p>Josh rolled his eyes as he took the keys from me, which he managed to
+do without even brushing my hand.</p>
+<p>“Uh, guys,” I said. “Thanks for everything tonight, but you can go on
+home.”</p>
+<p>“We don’t get to know how this ends? What a rip!”</p>
+<p>Danny gave his arm a tug. “Come on. You can talk to Caleb next
+week.”</p>
+<p>The two of them stumbled into the taxi together, and it drove away.
+So did Daniel’s truck, after Josh went over to the window and waved him
+off.</p>
+<p>That left just the two of us. “Can I take you out to dinner?” I
+slurred.</p>
+<p>“Now?” He squinted at me as if I’d lost my mind.</p>
+<p>I hadn’t, I just wasn’t expressing myself very well. “Not now, but
+soon. Some night. Just you and me. We never do that.”</p>
+<p>Josh sighed. “Ask me tomorrow. I really just need this day to
+end.”</p>
+<p>That was probably a good call. “Okay. Let’s go.” I let go of the
+tavern wall, and began walking to the Toyota. But it wasn’t easy. And my
+stomach rebelled just as Josh bleeped the locks. “Just a sec…” I said,
+but then had to double over and vomit on the gravel beside the car. My
+stomach heaved, and then heaved again. The sour heat of whiskey
+permeated my senses, and tears of discomfort flushed my eyes.</p>
+<p>Fuck. Why did people drink?</p>
+<p>I spit a couple of times, then opened the door. Josh thrust a water
+bottle in my direction, the one I’d put on the console earlier in the
+day. “Thanks.” I rinsed and spit, and then got into the car with
+him.</p>
+<p>“That was really sexy,” Josh deadpanned.</p>
+<p>“You’re…” I stopped a second, trying to figure out if what I had to
+say would be taken well. “You should fight back more often,” I said
+quietly. “It looks good on you.”</p>
+<p>Josh gave me a long, exasperated look out of the corner of his eye,
+and I wondered how much time would pass before his anger wore off. I’d
+brought him low tonight. I got that now. And it would probably take a
+while before he trusted me again.</p>
+<p>I would wait. Forever, if necessary.</p>
+<p>He put the key in the ignition and turned her on. Putting my new baby
+in reverse, he slowly backed out of the parking space.</p>
+<p>“Josh?”</p>
+<p>“What?”</p>
+<p>“It’s easier to drive at night if you turn on the headlights.”</p>
+<p>With his foot on the brake, he dropped his head onto the steering
+wheel. “I’m sorry.”</p>
+<p>“Don’t be sorry. The lever is here.” The smooth skin at back of his
+neck was visible in the moonlight, and I yearned to put my hand there to
+sooth him. Instead, I reached over to flip on the lights.</p>
+<p>With a sigh, he sat up again. “I can do this. It’s only eight miles
+on a lonely road,” he said.</p>
+<p>“You can do anything, baby,” I whispered. “I only hope I’m allowed to
+stick around and watch.”</p>
+<p>Without comment, Josh put the car in drive and rolled toward the
+road.</p>
+<p>SEVERAL UNEVENTFUL MINUTES LATER, we pulled up in front of the
+workshop. Josh got out and shut the door, then waited for me to haul my
+drunk self out and into the building.</p>
+<p>My toothbrush was still in the bathroom. So at least I knew that he
+hadn’t finished evicting me.</p>
+<p>I made my way carefully up into the loft, then I stripped off every
+stitch of clothing and climbed into bed. The bedside lamp was still on,
+blinding me, so I rolled to the side to escape its glare.</p>
+<p>A few minutes later, Josh padded softly up to join me. He shut the
+lamp off and slipped into bed.</p>
+<p>Three feet of empty space lay between us, and I was afraid to breech
+it. Who wanted a drunk asshole like me, anyway?</p>
+<p>Nobody, that’s who. And to think I’d begun the night imagining myself
+the savior of not one, but two people.</p>
+<p>What a crock.</p>
+<p>TWENTY-SEVEN</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>W hen I opened my eyes in the morning, I was disoriented. Thenew
+king-sized bed felt different under my body. And the new king-sized bed
+felt different under my body. And the sunlight on the slanted ceiling
+above me was unfamiliar. A dull pain thumped in my head, and my mouth
+tasted of whiskey and sadness.</p>
+<p>I turned my head, and was comforted by the sight of a sleeping Josh.
+His eyes lay peacefully closed, and his tousled hair fanned out over his
+ear.</p>
+<p>He hadn’t gotten up to do the milking. My achy brain worried over
+this for a moment, until I realized it was Saturday, the day that Daniel
+milked by himself. Several months ago he’d told Josh to sleep in on the
+weekends. Those were the same days that I could sleep in, too. Looking
+back on this, it was clear to me now that Daniel had arranged this on
+purpose—given us two days a week to wake up slowly together.</p>
+<p>Another gift from Daniel, and I hadn’t even realized it.</p>
+<p>Looking over at Josh again, my heart gave a squeeze. It was a
+privilege to wake up beside him. And yesterday I’d somehow told him that
+it was something I could do without.</p>
+<p>Not only was I an ungrateful asshole, I was an idiot, too.</p>
+<p>As much as I wanted to hold Josh right now, I didn’t know where we
+stood. And the poor guy was sleeping. So, to escape the temptation, I
+slipped out of bed. On the main level, I took a long shower, cleansing
+myself of sweat and whiskey and yesterday’s mistakes. Then, wrapped in a
+towel, I made myself a piece of buttered toast and then ate it standing
+at the sink. I put the coffee on, too, but left it to drip. In our
+bathroom, I drank two tall glasses of water and brushed my teeth
+aggressively.</p>
+<p>It was almost ten o’clock now, and I was lonely for Josh. So I went
+back up to the loft and dropped my towel, lying down again in the
+bed.</p>
+<p>Josh was just as I’d left him, the sheets half-way down his back,
+exposing the honey-colored skin of his shoulders. If I went any longer
+without touching him, I would die.</p>
+<p>Scooting toward him, I palmed his lower back. My hand met warm skin
+and firm muscle. He was beautiful and alive, and I don’t know how I
+thought, even for a few hours, that I could give him up.</p>
+<p>Sleepy eyes flickered open, and he studied me from under the fringe
+of his soft hair.</p>
+<p>“Good morning,” I whispered. He didn’t say anything, but neither did
+he turn away. So I scooted closer, then reached for him, pulling his
+upper body onto my chest.</p>
+<p>With a sigh, Josh settled into me, throwing one knee over mine,
+burying his face in my neck. We just lay there quietly, while I wondered
+how things would go between us now. I put my arms around him, my palms
+flat on his lower back. The more of him that I could hold and touch at
+once, the less awful I’d feel.</p>
+<p>I ran my hands up his back slowly, pressing firmly on all the muscle
+I felt there. And then I ran them down again, my fingertips digging in
+just the way he liked.</p>
+<p>I didn’t get a moan or an appreciative wiggle, though. Josh was
+silent.</p>
+<p>Sticking my nose in his hair, I inhaled. The clean scent of him was
+almost enough to make me feel better. I palmed the back of his neck and
+held him close. Then I let my hands dance all the way down his back,
+onto his waist. With strong fingers, I massaged the muscles of his lower
+back. Then I slid my hands down into his boxers, rubbing gentle circles
+into his ass. Just touching him. Loving him.</p>
+<p>If he shifted against me, I would find a way. If he pushed closer, or
+spread himself for me, I would know that it was okay to ask for more.
+But that didn’t happen. He remained still, his sadness rising like mist
+around us.</p>
+<p>“I love you,” I whispered, even though it was too little too late.
+“I’m sorry I freaked out yesterday. It wasn’t your fault. And it wasn’t
+right.”</p>
+<p>Josh let out a slow sigh against me. But if I wasn’t mistaken, he
+melted into my chest just a little bit.</p>
+<p>“You feel so good, baby,” I whispered. “Let me love you.”</p>
+<p>He didn’t say yes. But he also didn’t say no.</p>
+<p>By now, I was feeling all kinds of arousal. My cock was hard, and
+laying against my belly. And everywhere we were connected, my skin was
+on fire.</p>
+<p>I would never stop wanting Josh. No matter how big an idiot I was, he
+would always have this effect on me. Always.</p>
+<p>Taking his hand, the one that he’d flung over my chest, I kissed his
+knuckles. Then I put that hand on my belly, where my hair thickened as
+it approached my groin. It was a place that I knew he loved to touch
+me.</p>
+<p>Sure enough, his fingers sifted through that fine hair. As I stroked
+the skin over his taut ass, I felt his breath hitch.</p>
+<p>I turned my head and spoke right into his ear. “I’m so hard for you
+right now. That’s never going to change. Whether I’m stupid or smart,
+and whether you still love me anymore, or not. I never could help loving
+you. It’s just the way that I’m wired.”</p>
+<p>Josh became very, very still. I could feel him resisting the pull of
+me, and I didn’t really blame him. It couldn’t be easy to just roll over
+and let the man who broke your heart yesterday fuck you.</p>
+<p>I thought about this for a second. But only for a second. Because I
+knew what I needed to do.</p>
+<p>Hiking up a knee on the bed, I spread myself a little bit. Then I
+took Josh’s hand off my belly, and I draped it across my balls, until
+his fingertips hung down between my legs. “Josh,” I whispered. “Will you
+fuck me?”</p>
+<p>First, he made a small noise of surprise. Then he turned his head
+away from me, as if to think. But his hand, with those beautiful long
+fingers, reached down, skimming my taint.</p>
+<p>Damn, that felt good. “Yeah,” I encouraged him. “I want you right
+there. Do this for me.”</p>
+<p>With a sigh, he raised himself up on an elbow, finally looking me in
+the eye. “Why?” he whispered. “Why now? You never asked for that
+before.”</p>
+<p>I pulled his head down, right on my chest. “Sometimes I fantasize
+about getting fucked by you. But I never told you. It’s because I always
+needed to maintain this illusion that I could be in charge of
+everything. Like, if I let go of the reins for a second, everything
+would fall apart.”</p>
+<p>For this explanation, I received a very gentle kiss to my left
+nipple. It was the first kiss I’d gotten from Josh for forty-eight
+hours. So that was something.</p>
+<p>“I get it now. I can’t always be in charge,” I continued. “There is
+so much out of my control. And I hate that. But I need to get over
+myself.”</p>
+<p>Josh kissed my chest again. “You think if I fuck you, you can get
+over yourself?”</p>
+<p>My stomach contracted with a huff of laughter. “I like you sassy,” I
+chuckled. “Seriously.”</p>
+<p>He sighed. “You didn’t answer the question.”</p>
+<p>“It’s a start. Besides, you always make it look like fun. I love
+taking you. But I would like to try being taken.”</p>
+<p>Again with the thoughtful silence. “I always assumed you wouldn’t
+want to… submit to me.”</p>
+<p>Submit. It wasn’t a bad word for what I wanted to do. “It’s true that
+I have trouble giving up control. But it isn’t about equality.”</p>
+<p>Josh grunted. “You don’t think of me as your equal.”</p>
+<p>“That is not true,” I said immediately. “And I hate that you think
+so. At the Compound, I got the good jobs and the driver’s license. But
+none of it made me feel superior, because I could see how shallow it all
+was. But that shit followed us here, too. I’m the one with the job, and
+with friends that don’t live here on this twenty acre lot. But you can
+have all that, too. You’re almost there. It’ll only take a little
+longer.” I pushed my fingers into his beautiful hair and rubbed his
+head. “What we do in bed isn’t related to any of that crap in our past.
+I just hope you know that.”</p>
+<p>“Sometimes I hate being the one who stays at home and waits for you.
+And some days I think it’s the best scam ever.”</p>
+<p>I ruffled his hair. “How do you feel about always being the
+bottom?”</p>
+<p>“Mmm,” he said. “I get all boned up just thinking about it. But
+fucking you would be really hot. Mostly because I want you to know how
+it feels.”</p>
+<p>I was pretty boned up myself at that point. “How does it feel?” I
+dropped a hand to my hard dick and squeezed. “Does it hurt?”</p>
+<p>Josh shook his head against my chest. “Only that first time, when we
+didn’t know what we were doing.”</p>
+<p>“You didn’t know,” I corrected him. “I’d searched it six ways ’til
+Sunday already. Apparently I gave Daniel’s computer a gay hard-on.”</p>
+<p>Josh smiled against my ribcage. “Fine. If you go too fast before
+you’re opened up, it’s going to burn. And there’s always this moment at
+the beginning when it just feels awkward. But if you get through that,
+and there’s a nice, thick dick hitting your spot over and over again…”
+He shifted his body against mine, and I could sense his arousal.
+“…There’s nothing like it. And when you finally come, it’s
+spectacular.”</p>
+<p>I let out a hot breath. “Please fuck me, Josh. Please?”</p>
+<p>He moaned, and I loved the sound. “Right now?”</p>
+<p>“You got a bus to catch?”</p>
+<p>I’d meant it as a light joke, of course. But as soon as I said those
+words, I felt last night’s troubles creep back in under the door.</p>
+<p>Josh pulled himself up into a crouch, looking down at me on the
+pillow. “If you ever try to tell me again that marrying a woman is going
+to solve anyone’s problems, I will catch a bus.”</p>
+<p>Jesus. That was the last thing I wanted. Reaching up, I tugged his
+face down near mine. “I know. I’m sorry. Temporary insanity.”</p>
+<p>He quirked an eyebrow.</p>
+<p>“That’s what my drunk friends told me to say.”</p>
+<p>He smiled all of a sudden. “Do I get to meet them sometime? When
+you’re not all wasted?”</p>
+<p>I craned my neck and kissed him. “Absolutely. Now get down here and
+loosen me up. Make me a member of the club, already.”</p>
+<p>“Jeez,” his cheeks pinked up. “Roll over.” He scrambled to the side
+of the bed to get the lube that he must have put in there when we moved
+in. We’d spent two nights in this bed already, with no action.</p>
+<p>Nice, Caleb. Way to ruin everything.</p>
+<p>“Ass in the air,” Josh ordered. His voice was bossier than I’d ever
+heard it. I knew he was still mad at me, which gave this morning’s
+decision to bottom some interesting timing. That was the point, though.
+Josh would never hurt me, no matter how mad he was. I knew I couldn’t
+take back the awful thing I’d done yesterday. This was the only way I
+could think of to hand myself over to him in a way that felt real.</p>
+<p>Leaving my forehead on the bed, I lifted my naked ass in the air, as
+he’d asked me to. It wasn’t the sexiest position, either. “I feel so
+exposed,” I said.</p>
+<p>A beat went by before he replied. “It is so exposed,” he said
+quietly. “There’s no getting around it. You have to trust the one you’re
+exposing yourself to.”</p>
+<p>Of course. Josh gave me that trust all the time. Now I knew I’d never
+be careless with it again.</p>
+<p>I felt him move into position between my legs, and I clenched, as if
+waiting for the invasion. But it didn’t come. He leaned over and kissed
+my lower back. Then he did it a few more times. Finally, a smooth hand
+began gently tracing the crease of my ass, slowly spreading me
+wider.</p>
+<p>Blowing out a breath, I tried to relax.</p>
+<p>Soft kisses rained down on my back, my hip… even my ass. And a smooth
+hand stole around my hip and cupped my balls. “That’s it,” he whispered.
+“Spread yourself for me.”</p>
+<p>I widened my stance even further, and Josh rewarded me by moving his
+hand onto the column of my dick. I rocked into his palm, gently fucking
+his hand. That felt good, and it made me relax.</p>
+<p>“Good boy.” The sound of Josh’s praise soothed me, and I relaxed even
+further. His fingertips teased the entrance to my hole, and I let myself
+enjoy it. I was so sensitive to his touch. It was unfamiliar, yet
+utterly arousing. “Good boy,” he said again, and the low tone of his
+praise made me even harder.</p>
+<p>I wanted very much to be a good boy, if this was how that felt.</p>
+<p>It was all going well so far. “I can take more,” I told him, “should
+I grab the lube?”</p>
+<p>“No,” he breathed. “We don’t need it yet.”</p>
+<p>I was about to argue the point when I realized why he’d said that.
+Josh’s lips landed at my crease, and at the same unbelievable moment,
+his wet, hot tongue swept over my hole.</p>
+<p>The moan I let out could have been heard down at Ralph’s Tavern.</p>
+<p>“Mmm,” Josh said, kissing me. Licking me. He was pressing his tongue
+everywhere, and it was crazy.</p>
+<p>“God in heaven,” I panted. “That is…unnng.” I couldn’t finish the
+sentence. All that wet warmth made me push my face into the pillow and
+moan. And this while he stroked my dick with one hand and my inner
+thighs with another.</p>
+<p>“You’re so beautiful,” Josh said behind me. The timbre of his voice
+was the sweetest thing I’d ever heard. “I can’t wait to fuck you.”</p>
+<p>“Do it,” I panted.</p>
+<p>“Not just yet.” He moved around for a moment, and then the lube
+bottle popped open and then shut again. A slippery finger took over
+where his tongue had been. With a gentle firmness, he pushed inside
+me.</p>
+<p>“Okay,” I said to the pillow. The feeling was… odd. It neither hurt
+nor felt good.</p>
+<p>“Relax, baby,” Josh said. “You can do this. Ease yourself back on
+me.”</p>
+<p>It did not hurt. But it was weird. Gingerly, I rocked back onto his
+finger.</p>
+<p>“There you go.” He moved inside me, while I focused on relaxing for
+him.</p>
+<p>That got easier a minute later when he stretched that naughty finger
+and brushed something that made me hiss. “Oh,” I panted.</p>
+<p>Behind me, Josh chuckled. “Now you’ll understand.”</p>
+<p>Did I ever. I pushed back, fucking myself on his finger, hoping for a
+little more of that glory. His hand disappeared, though. I heard the
+sound of the lube again, and then he pressed forth, this time with two
+fingers.</p>
+<p>Again, I needed a minute to adjust. But this time I understood what
+pleasures were to be had. So I breathed deeply while my body adjusted.
+Josh worked his fingers apart and then together again, just like I’d
+done for him so many times. It was so odd to be on the receiving end of
+this treatment.</p>
+<p>Before, I’d thought I understood what it meant to bottom. Josh seemed
+to do it effortlessly. But even though I’d warmed him up countless times
+before, I never really knew what was required. This was an activity full
+of will and intention. Letting someone else into your body required
+patience and a lot more trust than I’d ever known.</p>
+<p>Before long, those two fingers were making me crazy. Every stroke
+began to feel like a gift. I fell face first onto the bed again.
+“Please,” I begged the mattress. “I’m ready.”</p>
+<p>He kissed a sensitive place at the bottom of my spine. “I’m going to
+take you now.”</p>
+<p>“Do it,” I gasped.</p>
+<p>Trembling, I waited a few seconds for him to lube up one more time.
+My ass was in the air, and I no longer cared. I had no room for worry,
+only breathless anticipation.</p>
+<p>Then I felt it — the broad head of his cock seeking entrance. With a
+groan, I eased back. There was a moment there when I thought it wouldn’t
+work. But then I gave way, and the first part of him slid inside.</p>
+<p>“Oh,” I sighed. He was bigger than I expected. Again, my body needed
+to adjust.</p>
+<p>Josh did not thrust. I heard him taking, long, deep breaths. Gently,
+he worked his way forward, until he was seated inside. “Caleb,” he
+panted. “You feel unbelievable.”</p>
+<p>I took a big lungful of air and made myself relax. “Do it,” I
+whispered. “Fuck me.”</p>
+<p>Josh’s hands gripped my hips. Slowly, he experimented with
+rocking.</p>
+<p>“Aah,” I gasped. I felt so full of him. It was overwhelming.</p>
+<p>He drew back, and then immediately pushed forward. It was good, and I
+could tell that it was about to get better. “More,” I begged.</p>
+<p>Josh provided. He began to thrust — gently at first. The sway of his
+balls against mine was exquisite. Every sound he made lit me up—from the
+huff of each little breath, to the soft moans he made in between. The
+sound of his arousal stoked my fire. And then he did something so sexy.
+He reached forward and wrapped his long hands loosely around my neck. I
+felt claimed when he did that. Owned. Taken. And all the while he fucked
+me from behind, his pace picking up speed as he went.</p>
+<p>I began to meet him with each thrust, and that’s when it got really
+crazy. When I moved my hips, he hit my spot just right. “Oh, shit,” I
+gasped. “That’s…” I blew out a happy breath.</p>
+<p>“You like that?” he whispered. He shifted the angle of his pelvis and
+really pounded forward.</p>
+<p>My breath caught in my throat. “Baby…” He was riding me, and together
+we were headed somewhere beautiful.</p>
+<p>“Getting close,” he grunted. “You’re so tight.” One hand left my neck
+and slipped around my hip. Then his hand was on my dick, and every time
+I moved my hips, he stroked me.</p>
+<p>“Yeah,” I encouraged him. “Do it.”</p>
+<p>Josh began to moan. His thrusts got short and choppy. I loved that.
+When we had sex he always lost himself in it. “Oh, Caleb,” he gasped. “I
+need to…” That’s when it happened. I could even feel the heat of his
+seed filling me up, while Josh groaned with pleasure.</p>
+<p>And that’s all it took to get me there, too. My spine hitched, and
+the most wonderfully deep orgasm began to sweep me under. “Oh, fuck.” I
+was shuddering and shooting all over our new bed. Collapsing forward, I
+brought Josh down on top of me.</p>
+<p>“Jesus,” I gasped into the pillow.</p>
+<p>Josh grunted his agreement. He was quiet again, but it was okay now.
+Tired arms grabbed my hips as Josh slid off me. I rolled to pull him
+into my embrace.</p>
+<p>We lay there, breathing together, our breath mingling the way it was
+supposed to.</p>
+<p>We’re going to be okay, I promised myself.</p>
+<p>Time passed. The sun rose higher in our new windows. “Baby?” I asked
+Josh after a while.</p>
+<p>“Mmm?” He sounded so happy and calm, I didn’t want to ruin it. But
+there was one more thing I needed to tell him. “I want to explain why I
+freaked out so bad yesterday. Not to excuse myself,” I added in a hurry.
+“But there’s something you should know. How Miriam got those bruises on
+her face.”</p>
+<p>He turned his sweaty face to me, listening.</p>
+<p>“She wouldn’t go to Archer willingly. They were married, but she
+wouldn’t…” I sighed.</p>
+<p>“Oh,” Josh breathed. He tucked his feet closer to mine in the
+bed.</p>
+<p>“So, Archer taught her a lesson. He let a couple of his pals come
+over one night. He tied her down, and they all took turns.”</p>
+<p>Josh’s eyes squeezed shut. “Oh, hell.”</p>
+<p>“I know.” I took Josh’s hand and kissed it. “I want to just fly there
+and shoot him.”</p>
+<p>“Poor thing,” Josh said, his eyes flicking toward the house. “That’s
+what you overheard the other night?”</p>
+<p>“Yeah.” I kissed his hand again. “So when this baby is born, we can’t
+breathe a word about who she looks like. Because Miriam doesn’t know who
+the father is.”</p>
+<p>I watched Josh take a deep, shaky breath. “Okay. But why did she have
+two black eyes? Because what you’re describing would have happened
+months ago.”</p>
+<p>“Yeah. From what I could gather, Archer wanted to make an example of
+her. He stopped treating her like a proper wife. Since she got pregnant
+the way she did, he called a whore and slapped her around in front of
+the other wives.”</p>
+<p>Josh squeezed his eyes shut again. “Too bad you pawned that gun.”</p>
+<p>I kissed him on the forehead. “I know. The good news is that Miriam
+might get a chance to send him to jail. I looked it up on the internet.
+You can prosecute a rape in Wyoming no matter how long ago it was. So
+she can settle in here for years before she decides whether to tell the
+police what happened.”</p>
+<p>Josh groaned. “That poor girl. She’ll probably be too afraid to ever
+set foot there again.”</p>
+<p>“Mmm,” I pulled him closer to me. “I didn’t tell you this to make you
+feel bad. But it is bad.”</p>
+<p>“Yeah,” he sighed. “At least I understand now why you flipped.” He
+wiggled closer to me. “I’m glad Miriam got away from him.”</p>
+<p>“Me too.”</p>
+<p>“You’re a gentle soul, Caleb.”</p>
+<p>“Not as gentle as you,” I whispered. And that was the truth.</p>
+<p>ANOTHER HALF HOUR WENT BY, both of us lost in our thoughts.</p>
+<p>“I could just lie here all day.” Josh’s words were muffled by the
+pillow.</p>
+<p>It made my heart swell to hear that. He hadn’t kicked me out of bed.
+“That works for me. But eventually, we’ll need groceries.”</p>
+<p>Josh flopped onto his back. “Yeah. We have to feed ourselves
+now.”</p>
+<p>“Not totally. Maggie said we should still have dinner with them every
+night.” I reached over a put a hand on his belly. Today I planned to
+touch Josh any chance I got. I wasn’t even going to let him out of my
+sight.</p>
+<p>I cuddled closer to him, while we both listened to the silence.
+“Please forgive me,” I whispered eventually.</p>
+<p>The short pause before he spoke almost gutted me. “I need you to love
+me, even when things get hard.” he said.</p>
+<p>“I do, though. Always. I’m going to prove it to you.”</p>
+<p>The only question was how.</p>
+<p>EVENTUALLY, we got up and showered together.</p>
+<p>“Let’s go to the store,” I said afterward. “We’ll get food for our
+new fridge.”</p>
+<p>Josh smiled, grabbing his coat. “Okay. We should ask Maggie if
+there’s anything she needs, though.”</p>
+<p>“Good idea.”</p>
+<p>A few minutes later, though, I felt a little nervous walking into the
+house. Surely my reputation had suffered since last night. When I’d
+told</p>
+<p>Daniel my plan to marry Miriam, he’d told me I was crazy. And that
+was before he’d had to drive Josh out at midnight to pick up my drunk
+ass.</p>
+<p>And then there was Miriam. We used to be close. But in the
+forty-eight hours she’d been here, I’d barely spoken ten words to her,
+because I was busy freaking out.</p>
+<p>Today was Saturday, and well after the milking, so the whole family
+was sitting in the living room, drinking coffee. Maggie had some
+classical guitar music playing on the stereo. She and Daniel sat on the
+couch, each with a section of the newspaper. And Miriam sat in the
+rocking chair, with Chloe on her lap.</p>
+<p>Josh stopped in the doorway, and I drew up beside him. In a maneuver
+that I would have never considered before, I put an affectionate hand on
+the back of Josh’s neck. In front of God and everyone. “Hi,” I said
+softly, as they all looked up.</p>
+<p>“Hi,” Daniel said carefully, letting his newspaper fall into his lap.
+“How are you this morning?”</p>
+<p>I cleared my throat. “Saner, I think.”</p>
+<p>Daniel grinned, as did Miriam. She looked up to the place where I’d
+rested my hand on Josh’s skin, and her smile grew.</p>
+<p>For a moment I just stared at Miriam. The bruises on her face had
+faded almost to nothing. She was beautiful, and so, so young. Impossibly
+young.</p>
+<p>“I need to…” the words got stuck in my throat. Because I’d just spent
+two days trying to figure out what it was that I really did need to do.
+Marrying Miriam was not the answer. But it left me with little else than
+a few words. “I need to apologize to Miriam. Can I do that?”</p>
+<p>Miriam’s smile faded. “Don’t, Caleb. What happened to me isn’t your
+fault.”</p>
+<p>“It is, though.” My voice was rough, and I wondered if I could do
+this without it breaking. “The day I left, I should have taken you with
+me. The three of us…”</p>
+<p>She shook her head. “You tried, sweetie. You told me I could put on
+my coat and go.”</p>
+<p>Everyone looked at me then, their faces inquisitive.</p>
+<p>Had I really said that to her? I thought back to our frantic
+conversation in the pantry of Miriam’s family house. At any moment, we
+might have been discovered. There was barely any time to say goodbye,
+let alone plot another escape.</p>
+<p>I had told her she could come, though. I’d said those words. But
+there had been a catch. “I didn’t… I didn’t push, Miriam. Because I was
+worried about Josh, and I knew I was running out of time. It was almost
+meaner to throw it out there that way. I didn’t give you even an hour to
+think about it.”</p>
+<p>She shook her head. “Doesn’t matter. You said to put on my coat and
+meet you at the main gate. And for a second, I was ready to do it. But
+then I made a different decision. My father was ill, and I was worried
+about my mother. I stood there and chose, Caleb. I didn’t want to leave
+them.”</p>
+<p>“He was ill?” She hadn’t told me that.</p>
+<p>She nodded. “He died a little while after you left. Mom is remarried
+to Elder Michael. But Michael is out of favor now. So Mom and I both
+ended up in unfortunate situations. She’s the one who told me to run
+away last week. She gave me Maggie’s phone number, and all her kitchen
+money. And she sent me away.”</p>
+<p>“I’m still sorry,” I said, my voice rough.</p>
+<p>Her eyes were filling, but she smiled anyway. “I know, Caleb. Me too.
+But it’s going to be okay. You don’t have to worry about me
+anymore.”</p>
+<p>“I want to help, though.” My voice finally broke on the last word,
+and so Josh slipped an arm onto my back.</p>
+<p>“You will,” she said, a single tear rolling down her cheek. “You can
+help me in so many ways. I’m just across the yard.”</p>
+<p>Blowing out a breath, I felt my shoulders relax for the first time in
+two days.</p>
+<p>I needed a minute to compose myself, which Josh seemed to sense. So
+he changed the subject. “We were heading to the grocery store, actually.
+Our new fridge is empty. Do you guys need anything?”</p>
+<p>Maggie stood up. “Go after lunch. I have two quiches in the oven.
+I’ll make you a shopping list while they cool.”</p>
+<p>“Someday you’ll have to stop feeding us, Maggie,” I said.</p>
+<p>“I don’t see why,” she returned. “It’s a few eggs and some flour, big
+guy. Get over yourself.”</p>
+<p>I was trying. Really I was.</p>
+<p>“We’ll need more coffee,” Daniel said, following Maggie out of the
+room. “I’m putting it on the grocery list. If you’re really willing to
+make a trip to that zoo on a Saturday, I’ll take you up on it.”</p>
+<p>“Deal,” I promised.</p>
+<p>“Down,” Chloe said suddenly.</p>
+<p>Miriam helped the little girl slide off the chair. She toddled over
+to us. “Bosh,” she said, raising her arms. “Up.”</p>
+<p>My partner bent over immediately and lifted her into his arms. “Hi
+there,” he whispered. “You miss me?”</p>
+<p>“Baba.”</p>
+<p>“Yeah?” He lifted her a little higher and smelled her backside. I
+recognized that as one of those childcare maneuvers that separated the
+naturals from those who were just phoning it in. “Let’s take care of
+this diaper first. And then we’ll find you some milk.” He headed up the
+stairs with Chloe in his arms.</p>
+<p>I watched him go, admiring him until the backs of his long legs
+disappeared upstairs.</p>
+<p>When I turned around again, Miriam was smiling at me. “Cute.”</p>
+<p>My cheeks heated. “Yeah, he is.”</p>
+<p>She giggled. “I meant you, silly. Come and talk to me.” She got up
+and took her sister’s place on the couch.</p>
+<p>I sat down beside her, and she kicked her stocking feet into my lap.
+Sitting here like this was forbidden on the Compound. Because the path
+to hell was paved with friends touching each other’s feet.</p>
+<p>“I can’t get over the hospital Maggie took me to. I thought all
+babies were born at home.”</p>
+<p>“Yeah,” I said, squeezing her instep. “I’ll bet that seems pretty
+strange. But if anything goes wrong, they can help.”</p>
+<p>“I have to stay two nights.” She made a face. “Maggie said she’ll
+stay with me. But I don’t want to take her from Chloe.”</p>
+<p>“I’ll stay a night,” I suggested. “And Maggie can stay the other one.
+We’ll split it.”</p>
+<p>Miriam turned her smile on me. “You know I love you, right? But I was
+thinking of asking Josh if he’d take a shift.”</p>
+<p>I tipped my head back against the sofa and laughed. “That just
+figures.”</p>
+<p>“Don’t be mad. But I’m a little scared of babies. And he…”</p>
+<p>“…Isn’t,” I supplied.</p>
+<p>“Yeah.” Her voice was soft. “I’m happy that you have him, Caleb. I
+truly am.”</p>
+<p>There wasn’t a thing I could say to that, except the obvious. “Thank
+you.”</p>
+<p>“I thought we were doomed, you know that? Both of us. And I won’t
+pretend that the last year was easy. But I’m so optimistic now.”</p>
+<p>“I’m glad,” I ground out, because my throat had seized up completely.
+And suddenly I was losing a battle with tears that I didn’t even know
+I’d been fighting. My chin sagged onto my chest, and a sob came heaving
+from my throat.</p>
+<p>“Oh, noooo!” Miriam crooned. She scrambled into a kneeling position,
+grabbing my head against her giant curvy body.</p>
+<p>I hated breaking down. But that was the thing about tears—they didn’t
+care. It had been so long since I let any out that now they poured out
+of me like a river. Another sob burst forth. “I’m sorry,” I said for the
+thousandth time.</p>
+<p>“Shh,” she said. The sound of her voice was precious to me. Miriam
+was one of my oldest friends. I’d been looking out for her for as long
+as I could remember. I thought it was my duty. The part I didn’t
+understand, though, was that I didn’t have to do it alone.</p>
+<p>I cried anyway, though. I shed tears for those who wouldn’t wake up
+here with us tomorrow: for whichever girl Asher targeted next, and for
+my own mother, who used to knit me new socks every year. I shed tears
+for the kids who wouldn’t go to a real school, and for the boys who
+liked boys and were terrified to admit it.</p>
+<p>I’d come so far, and yet there was no way I’d ever be able to fix all
+the things that were wrong.</p>
+<p>A few minutes into my crying jag, Josh appeared at my other side, his
+hands free of Chloe. He must have pawned her off on someone else,
+because he shoved me over a few inches and took a seat on my other
+side.</p>
+<p>Now both my oldest friends were holding me while I struggled to
+breathe normally again.</p>
+<p>Breathe in. Breathe out. Repeat. That was my only job this morning.
+But it was so hard to set my burdens down, that even this seemed
+impossible.</p>
+<p>When my sadness finally lifted, I found my head on Josh’s shoulder.
+He stroked my hair slowly, patiently.</p>
+<p>“Josh?”</p>
+<p>“Mmm?” he said.</p>
+<p>His breath caught, and then I felt his smile against my forehead.
+“You do mean to each other, right?”</p>
+<p>I squeezed his knee. “Yes. Would you do that for me?”</p>
+<p>“I would like that very much,” he said in a small voice.</p>
+<p>“Oh, man,” Miriam said, raising a hand to her face. “Now you’re going
+to make me cry.”</p>
+<p>“So?” I gave her knee a little pinch, the way I would have done when
+we were kids. “Why should I have all the fun?” Sitting here together, a
+warmth spread through my chest. I took a deep breath through my sniffly
+nose and felt calmer again. “We’ll hold off on the wedding until after
+you have the baby,” I said. “So you can fit into one of Maggie’s
+dresses.”</p>
+<p>“I know a good catering company,” Josh said.</p>
+<p>“We won’t even need them,” I said. “We don’t have very many people to
+invite.”</p>
+<p>Miriam sat up a little straighter. “Let’s send invitations to
+everyone on the Compound. Archer will probably have a heart attack
+reading it. If we’re lucky, he’ll go face down in the mashed
+potatoes.”</p>
+<p>Yesterday, the sound of the word “Archer” had made me furious enough
+to boil my blood. But now I actually laughed. “Wouldn’t you just love to
+see the looks on the Elders’ faces?”</p>
+<p>The three of us sat there in a row on a couch, chuckling over this
+bit of humor. We used to sit like this on the school bus in second
+grade, when Miriam was in kindergarten. “Like bumps on a log,” my mother
+had always said.</p>
+<p>Josh held my hand, his thumb stroking my knuckles. Miriam made
+wedding jokes. And we were happy for once, just sitting and talking and
+having nowhere we needed to go, until Maggie called us in for
+quiche.</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>EAR WASHINGTON,</p>
+<p>THANK YOU for the Christmas card. Our second one! It’s hard to
+believe that it’s been more than a year since I sat in your truck,
+wondering how Caleb and I were going to survive the next week.</p>
+<p>I have news.</p>
+<p>And I started writing this letter a hundred times, and couldn’t
+figure out how to tell you. So I’m just enclosing this invitation
+instead. Sorry if I’m giving you one heck of a surprise.</p>
+<p>There isn’t a whole lot else to say, I guess, except I hope we can
+still be friends. If we can’t, that will make me sad, but I’ll still
+think of you as someone who changed my life.</p>
+<p>My love to Brenda.</p>
+<p>Josh</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>JOSHUA ROYCE AND CALEB SMITH</p>
+<h1 id="cordially-invite-you-to-join-them-as-they-exchange-vows-in-a-celebration-of-marriage">Cordially
+invite you to join them as they exchange vows in a celebration of
+marriage</h1>
+<p>02.14.15 4 o’clock in the afternoon</p>
+<p>Ralph’s Tavern</p>
+<p>2900 South Boulevard</p>
+<p>Hintenville, MA</p>
+<p>Reception to follow</p>
+<p>TWENTY-NINE</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>We’d been very busy that week. My fiancé was now taking GED courses
+at a community center in Pittsfield, in between babysitting gigs and the
+occasional catering job.</p>
+<p>In fact, we had a marked-up calendar hanging in our new kitchen
+helping us map out who needed the car and for how many hours. Sometimes
+I had to borrow Daniel’s truck in a pinch, though Josh wouldn’t drive
+it. “I can’t park that boat,” he complained. Although by now he was a
+very good driver.</p>
+<p>In addition to our busy work schedules, we tried to get out together
+sometimes, too. Once a week, we ate dinner at a restaurant, just the two
+of us. “Date night,” is what Maggie called it. Money wasn’t quite so
+tight now, so we spent a little cash on things like movie tickets and
+the occasional bar tab.</p>
+<p>We’d met Jakobitz and Danny a couple of times at the Tavern for a
+bite and a beer. Josh was just so-so on all their betting talk, but he
+did like the burgers and fries. And once, Danny decided to teach Josh to
+shoot pool, which I thought was sure to be a disaster.</p>
+<p>How wrong I was. Ladies and gentlemen, allow me to introduce my
+fiancé, the pool shark. There was just something about all those angles
+which spoke to Josh. By our second trip back, he was beating strangers
+in the bar.</p>
+<p>“Damn,” Jako complained after Josh won his five dollars. “You should
+study engineering, or some shit. After you get that high school
+equivalency.”</p>
+<p>“Agricultural engineering,” Josh muttered, lining up a shot.</p>
+<p>“What?” I asked.</p>
+<p>He sunk a combination shot before answering me. “It turns out you can
+get a degree in how stuff should work on a farm.”</p>
+<p>“Cool. Really?”</p>
+<p>“Really. I’ve been reading up.”</p>
+<p>So I made a mental note to figure out how to pay for some college
+classes for Josh. I wanted that for him. In fact, the best revenge I
+could think of against the Compound was for Josh to earn a college
+degree and make a better living than any of the assholes who used to
+rule over us.</p>
+<p>The night before our wedding, I wasn’t thinking about revenge,
+though. It was quiet in the living room, after Maggie, Daniel and Miriam
+had gone to bed. We sat at opposite ends of the sofa, our legs tangled
+up in the middle. I was trying to wrap my head around what was happening
+tomorrow.</p>
+<p>We were having a wedding, of all things. Back when we still lived on
+the Compound, even in my wildest fantasies there was no wedding for Josh
+and I. At best, I’d imagined us living together somewhere as closeted
+“roommates.” But even that had seemed like a pipe dream most of the
+time.</p>
+<p>It’s really quite shocking to get what your heart desires.</p>
+<p>At the other end of the sofa, Josh adjusted Miriam’s nine-week-old
+baby girl, who wiggled against his chest.</p>
+<p>Wilhelmina (or “Willy” for short) was a bit of a night owl. She
+hadn’t learned to sleep through the night, yet. So Josh was doing a
+favor for Miriam by sitting up with her. In a half hour or so he would
+give Willy a final bottle, then sneak her into the crib in Miriam’s
+room. This afforded the new mommy an extra two hours sleep that she
+would not otherwise get.</p>
+<p>Naturally, I kept sneaking looks at Josh. The TV movie we were
+watching simply could not compete. My gaze lingered over his square
+shoulders, and the little V of skin above the buttons of his flannel
+shirt. I wanted to unbutton it a little further, and then put my lips
+right there.</p>
+<p>“What?” he asked me finally, after he’d caught me staring for the
+third time.</p>
+<p>“Nothing. I just like you.”</p>
+<p>He grunted, giving Willy a pacifier to chew on. The baby took it, her
+big eyes trained upward on his face. The babies of Runaway Dairy saw a
+lot of that view — Josh’s strong jaw, and peaceful blue eyes.</p>
+<p>“Josh?” I asked suddenly.</p>
+<p>“Yeah?”</p>
+<p>“Are you going to want kids someday?”</p>
+<p>He looked at me with genuine surprise. “What do you mean? I’m up to
+my ears in kids.”</p>
+<p>It was true, too. Maggie’s belly got bigger each and every day. One
+day I’d heard Josh and Maggie doing the math on how many continuous
+months of diaper-wearing the family would tally up before it was
+through. It was not a small number.</p>
+<p>“I mean kids of our own.” I’d been wondering if that would be
+important to Josh. And after seeing how much diapers cost, I’d tried to
+imagine how we could swing it.</p>
+<p>“Um, Caleb? You know we can’t impregnate each other, right?”</p>
+<p>I chuckled. “It would have happened already, I suppose.” Since moving
+into our apartment, we’d had so much sex. It was like we were trying to
+make up for years of abstinence these last three months. “People adopt,
+though. I just want to know if that’s something I should be ready
+for.”</p>
+<p>He looked down at the top of Willy’s fuzzy little head and frowned.
+“But I have kids. Two of them, and one on the way.” He looked up again.
+“Do you want kids?”</p>
+<p>I wasn’t sure how to answer that. “It’s not on the top of my list.
+But if you wanted them, I’d listen.”</p>
+<p>Across the sofa, he smiled at me. “Actually, I’m happy renting. I
+don’t need to hold title, Caleb.”</p>
+<p>Aw. I reached over and squeezed his knee. “Good. That works for
+me.”</p>
+<p>“It’s nice of you to ask, though. I like to hear your wheels
+turning.”</p>
+<p>My hand was still on his knee, and I liked it there. “My wheels are
+always turning, baby. I try to stay a step ahead of you. But it isn’t
+easy.”</p>
+<p>He yawned. “It gets easier this time of night.”</p>
+<p>“You’re tired? That’s a shame, because I had some plans for you
+later.”</p>
+<p>Josh glanced at me out of the corner of his eye. “I could rally. We
+get to sleep in tomorrow, you know. Nobody will bother us on our wedding
+day.”</p>
+<p>“I’m counting on it.”</p>
+<p>“Me too.” I slid my hand further up his leg, my fingers brushing his
+inner thigh.</p>
+<p>“Are you nervous about tomorrow?” he asked suddenly.</p>
+<p>“No,” I said right away. “But I don’t like being the center of
+attention.” Josh nudged me with his knee. “This was your idea.”</p>
+<p>“I know,” I chuckled. “But I love you so much more than I love
+reciting vows in front of people.”</p>
+<p>“There will only be, like, ten people,” Josh said.</p>
+<p>“True.”</p>
+<p>He looked down at the baby in his arms. “Willy,” he said quietly.
+“Let’s get you that bottle. I could swear you were looking sleepy.”</p>
+<p>“That’s the spirit.”</p>
+<p>He got up off the couch and then leaned over me, depositing Willy in
+my lap. Then he quickly left the room.</p>
+<p>“Wait!” I protested. But it was too late. I could hear him opening
+the refrigerator, looking for the bottle.</p>
+<p>Willy looked up at me, a question in her eyes. You don’t have a clue
+about babies, do you, buddy?</p>
+<p>“Sorry,” I whispered. “You’re just going to have to put up with me
+for a minute.” I picked her up a little higher, and she rubbed one of
+her drooly little hands on my wrist. “You won’t have Josh to kick around
+for a few days, you know,” I whispered. “Be good to your mommy while
+we’re gone.”</p>
+<p>In reply, Willy made a gassy smile.</p>
+<p>I’d booked three nights at a hotel in Miami Beach, Florida. It would
+be our first vacation ever, and I couldn’t wait. The pictures on the
+hotel’s website showed couples lazing in hammocks, or sipping cocktails
+beside the pool.</p>
+<p>Also? Miami Beach was supposed to be one of the gayest vacation spots
+in America. And Caleb and I had never seen the ocean yet. There was just
+so much to look forward to.</p>
+<p>Josh came back into the room, scooping Willy up again and settling in
+to feed her. It made my heart swell to see him calmly tuck her into the
+crook of his arm, and slip the nipple between her tiny lips.</p>
+<p>How did I end up with someone so caring and beautiful? It boggled the
+mind.</p>
+<p>“I love you, Josh.”</p>
+<p>“That’s just the horny talking,” he said, without looking up.</p>
+<p>“Not true,” I promised, and he grinned.</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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i3q//Yau/wD0IV6BGixRpGv3VAUfQVleHfDlj4Zsri1sGmaOe5kun81gx3ucnGAOPSgDk/iD/wAjv4A/7CUn/oFeh1kat4csda1PSdQummE2lzmeAIwALEY+bjkflWvQB5zcwRaP8ddPktVEK6xpsouVXhZZIzkMR/exXo1YmveFNK8R3On3N/HKLjT5vNt5YZTGynuMjscDIrboA4D4zf8AJNrz/rvB/wCjVrvIf9RH/uj+VZniTw9ZeKdFk0q/aZbeR0cmFgrZVgw5IPcVqqoVQo6AYoAWiiigDz34b/8AIw+O/wDsNv8A+givQqyNG8OWWhXeq3No0xk1O6N1P5jAgOQB8vHA49616ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAopCQBkmqr6pp8TbZL62Q+jSqP60AW6Khhu7a4/1FxFL/ALjhv5VNQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUmaoavren6FYveajcpBCo6sQM+w9aAL5rm/E/jnQvClo02oXse8dIozucn6DmvG/Gfx4u76aTTvC8JVH+QTsvzN9B2rK8JfCHxB4wvP7R8STzQWzfNmUkyP7YPIoATxF8XvFXjC6ay8O289vbscDyFLP+LDpWWnwo+IusKLmSDeW5zNcqD+pr6U8NeDtF8K2SW+m2aIVHMjAFz+PWt/FAHyS+ifEnwG63KC7RUPIgcyKfqF7V6N4J+PEF5Imn+JYvs8/3fPUYXPuO1e3OiSIUdQykYIIyDXmXjj4M6J4m8y7sUWyvivBjGEY+4GB+NAHo1nfWt/As1pcRTxkZDRuGH6VZr5KR/HXwl1PewlFsDjkl4WH8ga9l8D/GfRvEqJbag62N+eNrnCMfY0AeoUU1XV1DKQQeQRS5oAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKazKiksQAO5oAdUN1dQWVs9xcyrFCgyzscACvPvGHxj8P+F2ktoZBe3q5BjiO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" alt="image" /></p>
+<p>A</p>
+<p>S WEDDING DAYS GO, ours was pretty relaxed.</p>
+<p>and shaving. ing.</p>
+<p>Josh and I slept in on Saturday, and then made ourselves scrambled
+eggs and bacon for brunch. We took turns showering</p>
+<p>Then it was time to suit up. We both had new clothes for the wedding
+— matching navy blue suits and white dress shirts. Maggie had bought us
+each a red silk tie with tiny white hearts. “You’re getting married on
+Valentine’s day,” she said. “There have to be hearts.”</p>
+<p>I hoped the guys from the garage wouldn’t give me a hard time.
+Much.</p>
+<p>I’d never owned anything as fine as these clothes, and since they
+weren’t overly fancy, I could wear the suit again sometime.</p>
+<p>At three-thirty, we got into our car and drove together to the
+tavern, where an Episcopal priest was waiting to marry us. Maggie took
+care of all the planning for our wedding. “It’s my wedding gift to
+you.”</p>
+<p>And as soon as we walked into the little private room at Ralph’s
+Tavern, we could see that she’d done a great job. On a table off to the
+side stood a small white wedding cake, with Josh &amp; Caleb swirled
+onto the top. There was one long table set for fifteen people, including
+two high chairs.</p>
+<p>I counted in my head. Five adults and two babies from our house,
+three from the garage, plus Maggie’s catering partner and gay Trey. That
+was twelve. The pastor made thirteen. “Who are the last two seats
+for?”</p>
+<p>Maggie just grinned at me. “Let’s go over the menu?”</p>
+<p>“Do I have to? If it’s food, I’ll eat it.”</p>
+<p>She rolled her eyes. “Men. If it weren’t for women, the wedding
+industry would crumble to the ground.”</p>
+<p>“You say that like it’s a bad thing.”</p>
+<p>She tackled me in a hug. “I love you, Caleb. And I’m so happy for you
+today, I could burst.”</p>
+<p>I felt a sudden prickle of heat in the corners of my eyes. Oh, hell
+no. I was not going to cry today. With a deep breath, I pushed that
+swell of emotion away. “Thank you, Maggie. I’m pretty happy, too.”</p>
+<p>Across the room, Josh was holding Willy, trying not to let her drool
+on his tie, while Maggie’s business partner was adjusting a spray of
+flowers on the cake table. And Daniel was chatting with Trey, who had
+come in a minute ago.</p>
+<p>Then the priest walked in. When I met her last week, I would never
+have known she was a cleric, but for the stiff black and white collar
+projecting from the neckline of her dress.</p>
+<p>She was not at all what I expected. I’d not seen the inside of a
+church since we left the Compound, but the pastors of my youth were dour
+old men. This one was a smartly dressed, silver-haired woman with sharp
+blue eyes. She came right over and laid a hand on my arm.
+“Congratulations, Caleb. I’m very happy to do the honor of marrying you
+today.”</p>
+<p>I swallowed hard. Maybe if everyone stopped saying such nice things
+to me, I could keep myself in check. “Thank you. We appreciate you doing
+this for us.”</p>
+<p>She gave my arm a little squeeze. “This is the best part of my job.
+And it’s really special to marry two people who have known each other
+all their lives.”</p>
+<p>“I’ve never spent a day without Josh,” I said truthfully. “Never
+wanted to.”</p>
+<p>Her blue eyes glittered. “I guess I won’t waste any time asking if
+you’re sure about him, then.”</p>
+<p>“There’d be no point,” I agreed.</p>
+<p>She grinned. “We can get started whenever you wish.”</p>
+<p>I looked toward the doorway as three guys from my garage walked in —
+Joe, Danny and Jakobitz. “Thanks for coming,” I said, shaking hands. “I
+feel kind of guilty getting you guys into collared shirts on a Saturday.
+But there will be beer and barbecued ribs.”</p>
+<p>“We wouldn’t miss it,” Joe chuckled. “I’ve never been to an all-guy
+wedding before. It never occurred to me that the food would be
+better.”</p>
+<p>“Right?” I agreed. “And nobody will mind if you check the basketball
+scores later.”</p>
+<p>“I’ve got money on the Louisville game,” Danny said, shedding his
+coat.</p>
+<p>I laughed. “Of course you do.” Looking around, I saw the pastor
+waiting in front, her hands folded before her.</p>
+<p>Josh met my eyes, and there was a flicker of bashfulness in his
+expression. Apparently I wasn’t the only one who was uncomfortable with
+ritual.</p>
+<p>I gave him a brave smile. Let’s just go for it, I tried to
+telegraph.</p>
+<p>He grinned back at me, and the warmth of his smile was really all I
+needed to get through this.</p>
+<p>I turned to find Maggie in the doorway. “Are you ready?” I asked
+her.</p>
+<p>“Nope,” she said quickly. “We’re waiting for someone, but I think
+that’s him walking through the front door right now.”</p>
+<p>A quick scan of the room confused me. We were all here already, at
+least by my count.</p>
+<p>But seconds later, a familiar face walked into the room, one that I
+hadn’t seen for over a year. “Washington!” I barked with surprise.</p>
+<p>He gave me a toothy smile. “Looking sharp, boy!”</p>
+<p>I was speechless for a second. But he came over to shake my hand, and
+his firm grip shook me out of my silence. “It’s really good to see you.
+Didn’t know you were coming.”</p>
+<p>“Told Maggie I wanted to surprise you.” He turned around as a pretty
+dark-skinned lady in a polka-dot dress came into the room. “This is
+Brenda,” he said. “My love, meet Caleb, that troublemaker I’m always
+telling you about.”</p>
+<p>“Wow,” Josh said at my elbow. He looked as speechless as I’d been.
+“You’re here?”</p>
+<p>Brenda laughed. “He said, ‘honey, we’re going to go to a wedding next
+weekend. There’s two boys I need you to meet.’”</p>
+<p>Maggie put a hand on my shoulder. “Aw. Let’s go, boys. Time to tie
+the knot.”</p>
+<p>“Go on,” Washington said, putting an arm around his wife. “It ain’t
+every day that I see two runaways get married.”</p>
+<p>Josh tugged my hand, and together we made our way over to the pastor.
+She smiled at us. “Are you nervous?”</p>
+<p>I glanced at Josh. “Being married doesn’t scare me. Getting married
+is a little weird.”</p>
+<p>Everyone laughed, including the pastor. “It only takes a few minutes,
+and it won’t hurt a bit.” She turned toward our little crowd of
+supporters. “Friends and family who have meant so much to Caleb and Josh
+this past year, we are gathered here today to celebrate a holy joining
+of hearts and spirits. Two men who have always been there for one
+another will declare their union before God and the Commonwealth of
+Massachusetts.”</p>
+<p>I’d pasted a rather stiff smile onto my face, because I didn’t like
+being the center of attention.</p>
+<p>“Before I read the wedding vows, Maggie wants to say something.”</p>
+<p>Maggie handed Chloe to Daniel and faced our small circle of friends.
+“It was fifteen months ago when I got a phone call out of the blue from
+Caleb, telling me he’d run away from the Compound with Josh. And my
+reaction was — finally! I’d been waiting for someone from my old life to
+come and find me. There’s so much more to life than obedience and
+subservience. My own journey from that wretched place to where I am now
+was not easy. But I’m so glad I did it. And I’m so happy to have Caleb
+and Josh and Miriam to share it with.”</p>
+<p>Maggie swallowed hard, and her eyes glittered. “Josh and Caleb, it
+was brave of you to start a new life. Don’t ever stop being brave. I
+know it’s hard to stand here and declare your love in public. You aren’t
+used to being accepted for who you are. But what you are is strong. And
+beautiful. I just want you to know how proud I am to know you.”</p>
+<p>Cecilia gave a little whoop, and everyone clapped.</p>
+<p>I didn’t hear much of the prayer that the pastor recited next,
+because I was watching Josh. He was stealing looks at all the people in
+the room, his eyes full of wonder. It calmed me to look at him. Because
+this was the view I was going to have all my life, now. And it was an
+excellent one.</p>
+<p>“I, Joshua,” the pastor began reciting Josh’s vow, “take you, Caleb,
+to be my partner and husband.”</p>
+<p>“I, Joshua…” He continued to repeat the words she gave him.</p>
+<p>“…To be yours in times of plenty and in times of want, in times of
+sickness and in times of health… In times of joy and in times of sorrow,
+in times of failure and in times of triumph… I promise to cherish and
+respect you, to care for and protect you, to comfort and encourage you,
+and stay with you, for all eternity.”</p>
+<p>Well, hell. Those were beautiful words. And I wanted to do all those
+things, too. And now Josh was saying the same, repeating the vows in a
+clear and steady voice.</p>
+<p>And I was so, so not worthy.</p>
+<p>“I, Caleb,” the pastor turned to me. “Take you, Josh to be my partner
+and husband.”</p>
+<p>My throat was dry like a desert. “I, Caleb…” I pushed forward. “Take
+you, Josh to be my friend and husband.” My eyes were hot, too. This
+didn’t bode well.</p>
+<p>The pastor gave me the next lines, and I muddled through. Until “…to
+comfort and encourage you, and stay with you, for all eternity.”</p>
+<p>I opened my mouth to repeat those last dozen words. But I made a
+crucial error, and that was looking straight into Josh’s gaze to deliver
+them. Looking back at me were the steady blue eyes I’d been admiring my
+whole life. And his handsome face was tilted up toward mine, as if I’d
+hung the moon. The intensity of all that love just stopped me in my
+tracks.</p>
+<p>There was a silence, because I forgot what I was supposed to say.</p>
+<p>Our pastor tried to bail me out. “To comfort and encourage,” she
+prompted. “And to stay with you for all eternity.”</p>
+<p>My voice broke as I repeated it. And a big fat tear ran down my
+cheek. Christ on a cracker, as Maggie would say. I was crying at my own
+wedding.</p>
+<p>Josh’s eyes became round with empathy. But then his lips quirked into
+a tiny smile. And I freaking loved that smile. So I focused on the sexy
+curve of his lips. And that was distracting enough that I bucked up a
+little and held myself together.</p>
+<p>The pastor asked Josh if I took him to be my lawfully wedded husband.
+“I do,” he said calmly.</p>
+<p>She asked the same of me. “I absolutely do,” I said, sounding only a
+little bit wobbly.</p>
+<p>The pastor beamed at both of us. “By the power vested in me by the
+Commonwealth, I congratulate you on your marriage.”</p>
+<p>There was a round of applause, while Josh gave me a shy smile.</p>
+<p>“Kiss him already,” Miriam cried.</p>
+<p>I laughed, feeling terribly self-conscious. Josh and I did not do PDA
+at all.</p>
+<p>Who knew that Josh would be the first one to shake off our lifelong
+hangups? He stepped into my space, grabbed my chin in one hand, and
+planted a kiss on my lips.</p>
+<p>And the world did not end. Not at all. The cheering only grew
+louder.</p>
+<p>Not to be outdone, I slipped my arms around his waist and pulled him
+in. I made it a real kiss. As he always did, Josh tasted like everything
+I’d always wanted.</p>
+<p>Kissing him in front of everyone we knew? It was as easy as rolling
+off a log.</p>
+<p>When I finally stepped back, breaking off the kiss, Josh’s face was
+pink. But he looked as happy as I’d ever seen him. “You survived it,” he
+said, smiling.</p>
+<p>“I certainly did,” I agreed. He might have meant the wedding. But I
+meant everything that had led me to this moment.</p>
+<p>I survived it. And he was the reason why.</p>
+<p>“Now you can have ribs and beer, and then take me to Florida,” Josh
+gave me a nudge toward the family who were waiting to congratulate
+us.</p>
+<p>“I can’t wait,” I agreed.</p>
+<p>The End</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAlAFwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAoorI17xPo3hm2WbVr6OAyHEUXLSSn0RB8zH6CgDXorgrrxr4tuI/M0P4eahPCRxJf3cVq3/fskt+eK5u7+MHijQG3+I/h5fWtqPv3EMxZV/Hbt/wDHhQB7DRXB+GvjD4N8TMsUWo/YbpuBBfgREn2bJU/QHNd4CCAQcg96ACiiigAoriLP4reGb3xzJ4SikuPtqyNCJmjAheRc5QHOc8EdMEjr0z29ABWdruuad4b0e41XVLhYLSAZZjySewA7knoK0a8s+OHhHxD4t0HTYdCi+0i3uGee2EioWyMK3zEDj5h/wKgDVjfxt4ysEvbLUIPC2nTqHt1NqLm7dCOC+4hUyOcDJHrXGXvwg8cWniA+I9L8ZW99rCjCTX1thgPQZ3genQfhXrHhKHV7bwnpkGuiEanFAqT+ScrkcDn1xjOOM5xxWzQB4RN8TPiX4Jkx4u8MR3lmp5uoF2D6+Ym5PwIBrtPDnxn8GeIwsL339m3L8GG/AQH6Pyp/MH2r0IgEEEZB6g1w/iX4ReDvE2+SbTFsrpv+XixxE2fUgDafxBoAh8SfCHwZ4rQ3AsVsriQblutPITdnuV+631xn3rgj4K+KHw4Jk8K6t/bOlpz9jfkgenlMeP8AgDZNPPws+IXgeUzeCfEpurYHP2OVhHn22NmM/XINXoPip8QNEdYPEnw/uZyODNZo6g+/AdSfoRQAul/tBW9tL9i8W+H77TL1OHMSZA9yj4Zfp81dhD8Y/AM0AlHiCNcj7jQSh/pt25P4Vjp8QNU8Twi3tPhnqd0W4B1JVigHuWcEVf8ADXw1hh11fEviC305tVT/AI9rSwgEdraDttGAXf8A2m/DoKAMPw94H/4SL4qXHj6Swk07S1YPZ280ZjluJAm0ysn8IJyRnknBPXn1+iigAooooAKKKKACiiigAooooAKKKKACiiigD//Z" alt="image" /></p>
+<p>DON’T MISS the next book, HELLO FOREVER. Want to read a description?
+You can find it here.</p>
+</body>
+</html>
