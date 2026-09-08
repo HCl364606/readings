@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>Dynamics of Dyads in Social Networks: Assortative, Relational, and
+Proximity Mechanisms</p>
+<p>Author(s): Mark T. Rivera, Sara B. Soderstrom and Brian Uzzi</p>
+<p>Source: Annual Review of Sociology, 2010, Vol. 36 (2010),
+pp. 91-115</p>
+<p>Published by: Annual Reviews</p>
+<p>Stable URL: https://www.jstor.org/stable/25735070</p>
+<p>JSTOR is a not-for-profit service that helps scholars, researchers,
+and students discover, use, and build upon a wide range of content in a
+trusted digital archive. We use information technology and tools to
+increase productivity and facilitate new forms of scholarship. For more
+information about JSTOR, please contact support@jstor.org.</p>
+<p>Your use of the JSTOR archive indicates your acceptance of the Terms
+&amp; Conditions of Use, available at https://about.jstor.org/terms</p>
+<h1 id="dynamics-of-dyads-in-social-networks-assortative-relational-and-proximity-mechanisms">Dynamics
+of Dyads in Social Networks: Assortative, Relational, and Proximity
+Mechanisms</h1>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>1</mn></msup><annotation encoding="application/x-tex">^{1}</annotation></semantics></math>
+Department of Management and Organizations, Kellogg School of
+Management, Northwestern University, Evanston, Illinois 60208; email:
+mark-rivera@kellogg.northwestern.edu,
+s-soderstrom@kellogg.northwestern.edu, uzzi@kellogg.northwestern.edu</p>
+<p>Mark T. Rivera,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>1</mn></msup><annotation encoding="application/x-tex">^{1}</annotation></semantics></math>
+Sara B. Soderstrom,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>1</mn></msup><annotation encoding="application/x-tex">^{1}</annotation></semantics></math>
+and Brian Uzzi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">^{1,2}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>2</mn></msup><annotation encoding="application/x-tex">^{2}</annotation></semantics></math>
+Northwestern University Institute on Complex Systems and Network Science
+(NICO), Evanston, Illinois 60208-4057</p>
+<p>Annu. Rev. Sociol. 2010.36:91–115</p>
+<p>First published online as a Review in Advance on April 12, 2010</p>
+<p>The Annual Review of Sociology is online at soc.annualreviews.org</p>
+<p>0360-0572/10/0811-0091$20.00</p>
+<p>This article’s doi: 10.1146/annurev.soc.34.040507.134743</p>
+<p>Copyright © 2010 by Annual Reviews. All rights reserved</p>
+<p>Key Words</p>
+<p>embeddedness, homophily, complexity, organizations, network
+evolution</p>
+<h2 id="abstract">Abstract</h2>
+<p>Embeddedness in social networks is increasingly seen as a root cause
+of human achievement, social stratification, and actor behavior. In this
+article, we review sociological research that examines the processes
+through which dyadic ties form, persist, and dissolve. Three
+sociological mechanisms are overviewed: assortative mechanisms that draw
+attention to the role of actors’ attributes, relational mechanisms that
+emphasize the influence of existing relationships and network positions,
+and proximity mechanisms that focus on the social organization of
+interaction.</p>
+<h2 id="introduction">INTRODUCTION</h2>
+<p>If research activity and impact are indicators of scientific value,
+the capital of social network research has risen rapidly. Taking a
+census of all papers published in the top two sociology journals as
+defined by ISI’s journal impact factor, the American Journal of
+Sociology (AJS) and the American Sociological Review (ASR), there has
+been a 20-year increase in the share of papers that list “networks” as a
+keyword. In 1980, 1990, 2000, and 2005, the share of papers on networks
+was 1.2%, 2.2%, 7.8%, and 11.6%. Further, Figure 1 shows the increasing
+citation impact of network papers. The ranking of the 15 most cited
+papers in AJS and ASR by citations per year indicates that 10 out of 30
+are network papers. Network papers account for 5 of the top 20 papers
+published in the Administrative Science Quarterly (ASQ) (Figure 1
+inset). In physics and communications, network research has achieved
+similar prominence (Monge &amp; Contractor 2003; Barabási 2008, 2009;
+Newman 2008).</p>
+<p>One impetus behind this explosion of work is the increasing number of
+stratification variables across persons, firms, and institutions that
+are now understood to be influenced by networks. Disciplines that once
+focused on individual attributes to explain behavior now see
+embeddedness in networks as a determinant of job attainment and
+advancement, creativity, obesity, mortality, neighborhood cohesion,
+political mobilization, state formation, markets, prices, digital ties,
+and the competitiveness of firms and states (Granovetter 2005). As this
+emergent body of research establishes the importance of networks as
+determinants of actors’ behavior and outcomes, understanding the
+antecedents of social networks has become an increasingly important area
+of inquiry. Conceptualizations of networks as static substrata of social
+interaction are giving way to an image of networks as continuously
+evolving over time. In creating, maintaining, and dissolving social
+ties, people, groups, and organizations are continuously altering their
+networks and the networks of those around them.</p>
+<p>This review examines journal articles that explain how social
+networks evolve over time. As an orienting principle, we cover research
+that examines network change at the level of the network dyad. We focus
+on research that explicates the existence, creation, persistence, and
+dissolution of social relationships among social actors and the
+implications that these processes have on the evolution of networks over
+time. For readers less acquainted with network research, we begin with a
+brief clarification of terminology (see also Wasserman &amp; Faust
+1992). A social network can be said to exist wherever distinct social
+actors (also called nodes) are connected by more or less persistent ties
+(or relationships). Both actors and ties can be represented by a variety
+of different constructs and can consequently span levels of analysis
+ranging from friendships among individuals to interorganizational ties
+between firms to commercial trade between states. Ties connecting actors
+can be valued, indicating stronger or weaker connections (such as
+friendships and best friendships), or binary, simply indicating the
+presence or absence of a tie. Ties can also be directed (one person
+chooses another as a friend, who may or may not choose him back) or
+undirected. Moreover, actors can simultaneously be connected by several
+different relations. Schoolchildren can be connected by relations of
+friendship, trust, or animosity, each of which may inform different
+aspects of a student’s social world. In practice, most research within
+the social sciences—and by extension most of the research in this
+review—has focused on single-relation, binary networks.</p>
+<h2 id="a-typology-of-mechanisms-of-change-in-social-networks">A
+TYPOLOGY OF MECHANISMS OF CHANGE IN SOCIAL NETWORKS</h2>
+<p>We identify three perspectives on network change—each deriving its
+origins from a unique sociological lineage: (a) assortative perspectives
+that emphasize compatibilities and complementarities between actors’
+attributes; (b) relational perspectives that draw on the structuralistic
+assumption that trust, information, and</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p>Figure 1</p>
+<p>The increasing role of network papers in sociology journals,
+1970–present. Note: The plot shows the fifteenth most highly cited
+papers according to the number of citations gained per year in the
+American Journal of Sociology and American Sociological Review
+(Administrative Science Quarterly, inset) from 1970 to the present
+(source: http://www.harzing.com). The papers in ranked order are Coleman
+(1988, 522/yr), Granovetter (1985, 464/yr), DiMaggio &amp; Powell (1983,
+356/yr), Granovetter (1973, 314/yr), Meyer &amp; Rowan (1977, 225/yr),
+Massey (1990, 204/yr), Uzzi (1996, 143/yr), Hannan &amp; Freeman (1977,
+110/yr), Inglehart &amp; Baker (2000, 104/yr), Hannan &amp; Freeman
+(1984, 102/yr), Swidler (1986, 102/yr), Burt (2004, 97/yr), Meyer et
+al. (1997, 96/yr), Powell et al. (2005, 94/yr), Gulati &amp; Gargiulo
+(1999, 88/yr), Sewell (1992, 80/yr), Portes &amp; Sensenbrenner (1993,
+79/yr), Snow et al. (1986, 79/yr), Williamson (1981, 66/yr), Pickering
+(1993, 66/yr), McPherson et al. (2006, 63/yr), Sampson et al. (1999,
+62/yr), Cohen &amp; Felson (1979, 60/yr), McCarthy &amp; Zald (1977,
+58/yr), Orloff (1993, 56/yr), Barro &amp; McCleary (2003, 59/yr), Korpi
+&amp; Palme (1998, 52/yr), Budig &amp; England (2001, 51/yr), Duncun et
+al. (1998, 49/yr), and Uzzi (1999, 47/yr). The papers in ranked order
+for ASQ are Cohen &amp; Levinthal (1990, 476/yr), Uzzi (1997, 221/yr),
+Powell et al. (1996, 209/yr), Hansen (1999, 178/yr), Henderson &amp;
+Clark (1990, 166/yr), Williamson (1991, 166/yr), Abrahamson &amp;
+Fairchild (1999, 127/yr), Brown &amp; Eisenhardt (1997, 119/yr), Tushman
+&amp; Anderson (1986, 113/yr), Ahuja (2000, 106/yr), Burt (1997,
+104/yr), Weick &amp; Roberts (1993, 100/yr), Karasek (1979, 99/yr),
+Edmondson (1999, 95/yr), and Weick (1976, 91/yr). Papers coded as
+network papers are in bold.</p>
+<p>introductions are conferred through actors’ positions in existing
+social networks; and (c) proximity perspectives that focus on the
+organization of social interaction in time and space. This rubric places
+mechanisms into buckets that are categorically distinct yet intimately
+interwoven in the evolution of real social networks. For example, people
+may preferentially create social networks that correspond to their
+political beliefs but also position themselves into associations and
+contexts that are populated with people who have similar political
+preferences (Huckfeldt &amp; Sprague 1987). Independently, each
+perspective has revealed empirical regularities that often generalize
+across contexts, actors, and ties, giving rise to interesting
+self-similar patterns across interpersonal, interfirm, and even
+interstate research. However, owing to different theoretical foundations
+and explanatory variables, research in each stream has tended to occur
+in isolation. We articulate and review progress in each area, but we
+also point future research toward a more robust integration.</p>
+<h2 id="assortative-mechanisms">ASSORTATIVE MECHANISMS</h2>
+<p>Assortative mechanisms speculate that the creation, persistence, and
+dissolution of social relationships are all outcomes that rely on the
+compatibility and complementarity of actors’ attributes. Thus,
+assortative hypotheses are generally pair-level associations between
+actors’ similarities or dissimilarities and their consequent propensity
+to form connections. Lazarsfeld &amp; Merton’s (1954) analysis of
+friendship selection among adults coined the term homophily to refer to
+“a tendency for friendships to form between those who are alike in some
+designated respect” (p. 23) and gave birth to a rich tradition of
+research that has investigated the tendency toward assortativity in a
+variety of social contexts and relations. A more recent trend has begun
+to note that outright similarity in actors’ attributes may not
+characterize social connections and that in some instances actors may
+seek a balance between similarity on some dimensions and
+differentiation, or heterophily, on others. Recent studies have also
+extended the assortative perspective to explain the evolution of ties
+between firms as well as between individuals. In each instance, the
+driver of network change is thought to be an interaction of actors’
+attributes that collectively compels them to create, maintain, or
+dissolve relationships.</p>
+<h2 id="dynamics-of-homophily">Dynamics of Homophily</h2>
+<p>In a landmark review of more than 100 sociological studies, McPherson
+et al. (2001) found that people display a strong tendency toward
+homophily—the greater the similarity between two individuals the more
+likely they are to establish a connection. Homophily’s potency as a
+social mechanism lies in its apparent universality. Similarities in the
+human attributes of potential alters, such as age, gender, religion,
+ethnicity, values, intelligence, and education, appear to characterize
+the formation and dissolution of connections as varied as online chats,
+best friendships, and marriage.</p>
+<p>Homophily appears to strongly affect attachment because people expect
+a priori that self-similar alters are more likely to accept them (Ely
+1995, Ibarra 1995), to be trustworthy (Allen &amp; Wilder 1979, Lincoln
+&amp; Miller 1979), and to hold beliefs that affirm their own (Byrne
+&amp; Wong 1962, Stein et al. 1965, Rokeach &amp; Mezei 1966, Stein
+1966, Allen &amp; Wilder 1979), thereby mitigating the potential
+conflicts, misunderstandings, and monitoring costs that come with making
+connections. As a result, these benefits appear to increase with the
+strength of the relationship. Thus, homophily more strongly affects
+attachment in intimate relations (Burgess &amp; Wallin 1943, Blackwell
+&amp; Lichter 2004, Qian &amp; Lichter 2007) and close friendships than
+in casual ties. For example, Van Duijn et al. (2003) found that gender
+homophily was positively associated with the formation of “real friends”
+but not “friendly” or “neutral” relations. Similarly, Leenders (1997,
+p. 149) concluded that gender homophily was “profoundly predominant in
+‘best friend’ networks, but loses much of [its] importance when
+‘friends’ are also considered.”</p>
+<p>Although innumerable attributes may impart a homophily bias, it is a
+rare attribute that has the strongest influence on attachment. Mehra et
+al. (1998, p. 443) asked 159 MBA students to identify other students
+they “considered especially similar to themselves” or “considered to be
+personal friends.” Controlling for the baseline availability of similar
+others, minorities (t = -2.03, df = 19.5, p &lt; 0.05) and women (t =
+3.82, df = 157, p &lt; 0.001) identified more strongly with homophilous
+others than did members of the majority categories (whites and men) and
+were also more likely to name self-similar others as personal friends.
+Mehra et al. reason that rare attributes are more likely to be salient
+to individuals and consequently central to their self-identity: “[T]wo
+African Americans in a crowd of whites will tend to notice and identify
+with each other because of their common race; however, when in a group
+of other African Americans, the same two people are unlikely to notice
+or identify with each other” (Mehra et al. 1998, p. 442). In this way,
+rare attributes strongly impact attachment.</p>
+<p>If people are more likely to create social ties with self-similar
+others, there is also evidence that they are more likely to maintain
+homophilous relationships than they are to maintain heterophilous ones.
+Lazarsfeld &amp; Merton’s (1954) work on homophily posited that
+heterophilous relationships would be more likely to break apart as
+differences in opinions and beliefs led to interpersonal conflict. One
+area where this hypothesis has been tested is in research on the
+dissolution of romantic relationships. Felmlee et al. (1990) found that
+the hazard rate for detachment of interracial romantic relationships was
+more than three times higher than that exhibited by racially homophilous
+couples (antilog coef = 3.06, p &lt; 0.10), and several studies within
+family relations have noted a higher divorce rate among racially
+heterophilous individuals (Heaton 2002, Bratter &amp; King 2008). In the
+context of friendships, tendencies toward homophily may similarly be
+reflected in the dissolution of heterophilous ties—Mollica et al. (2003)
+examined the friendship network of graduate students and found that
+homophilous friendships were significantly more likely to persist more
+than three and a half months than were heterophilous ones (see also
+Hallinan &amp; Williams 1987). Here again, the relative rarity of the
+attribute moderated the effect of homophily: more than 95% of
+Hispanic-Hispanic ties persisted, compared with 65% for white-white (the
+majority race in that school) ties.</p>
+<p>Importantly, homophily shapes attachment even in contexts where
+diversity is explicitly valued and encouraged. In the friendship network
+of 114 newly admitted MBA students in a large U.S. university, Mollica
+et al. (2003) found that six weeks into a two-year program students had
+a high degree of racial homophily in their personal friendship
+networks—a bias that persisted more than 14 weeks despite the promotion
+of diversity by school administrators and the assignment of students
+into heterogeneous classes and teams. Ingram &amp; Morris (2007) used
+electronic global positioning devices to monitor the relationships
+during an MBA mixer, which was aimed at helping MBA students form new
+ties with students with different characteristics and backgrounds. In
+spite of attendees’ declarations of wanting to meet new and different
+people, they found that students were more likely to engage with a group
+of people in which at least one other person in the group was of the
+same race or of the same approximate physical attractiveness. Similarly,
+Ruef et al. (2003) found that the composition of new business start-ups
+is driven by similarity in gender, ethnicity, and occupation rather than
+by functional diversification.</p>
+<p>The role of digitally mediated relationships is an important new area
+of research on assortativity, homophily, and network building. These
+relationships form or are maintained through instant messaging, blogs,
+online-community membership, or email, rather than face-to-face contact,
+which can potentially mask visible characteristics of potential contacts
+(Adamic &amp; Adar 2003, Eagle et al. 2007). One recent study,
+impressive for its ability to record the empirical patterns of vast
+numbers of people on a planetary scale, was conducted by Leskovec &amp;
+Horvitz (2007). They examined the global communication network of
+Microsoft Messenger instant-message communications and found that, among
+30 billion online conversations between approximately 240 million
+individuals, people tended to communicate more with others with similar
+ages, languages, and locations. A study on the determinants of messaging
+on an online dating Web site found that similarity in daters’ physical
+attractiveness, smoking habits, education level, religion, and race all
+predicted the frequency of attempts to initiate a romantic relationship
+(Fiore &amp; Donath 2005).</p>
+<p>Digitally mediated contexts of social interaction such as Web sites
+and online communities may also impart a homophily bias in people’s
+social choices by selectively exposing people to self-similar others.
+Participation in online communities requires regular access to a
+personal computer—a prerequisite that biases communities toward
+higher-income strata. Differences in the demographic makeup of online
+communities may similarly affect the availability of contacts in
+different groups. Hargittai (2007) found that Hispanic students were
+significantly less likely to use the online networking site Facebook and
+much more likely to use MySpace, whereas the opposite was true for white
+and Asian students. This suggests that online networking sites might
+further contribute to homophily by organizing persons into groups of
+self-similar individuals. Surprisingly, in cyberspace, where individuals
+have a greater sense of anonymity, homophily appears to shape social
+connections.</p>
+<h2 id="dynamics-of-heterophily">Dynamics of Heterophily</h2>
+<p>Although persons appear to form ties according to the homophily
+principle, it is also self-evident that diverse network relationships
+exist: “[t]he simple facts of the matter are that when society confronts
+difficult problems—putting people on the moon, curing diseases,
+designing new products, crafting changes in the tax code—we create teams
+of diverse people” (Page 2007, p. 322). In some cases, diversity might
+be mandated—boards of directors of large companies must represent
+dissimilar functional specializations (e.g., law, science, or nonprofit)
+or connections to diverse financial or political resources (Westphal
+&amp; Milton 2000, Mizruchi 2004). However, heterophilous ties are also
+formed voluntarily. Research on collaboration networks is one area that
+explores the increasing role of heterophily. Collaboration networks are
+ubiquitous and occur whenever people work together in teams—directors on
+a board, actors on a cast, writers on a movie, and so forth. In this
+work, the diversity of social ties can be inferred from coauthorship on
+the same articles (Newman 2001d, Moody 2004, Guimera et al. 2005, Wuchty
+et al. 2007, Jones et al. 2008), codirectorships on the same board
+(Davis et al. 2003, Westphal &amp; Stern 2007), coperformance in the
+same artistic production (Watts 1999, Uzzi &amp; Spiro 2005, Uzzi 2008),
+and so on.</p>
+<p>Research on teams in which dyads are nested within larger group
+structures suggests that people are likely to collaborate with others
+who possess qualities, skills, and know-how that are complementary to
+their own and relevant to solving a particular problem or objective.
+With regard to teams in science, Moody (2004, p. 217) remarked, “in
+high-growth, fast changing specialties, we would expect to see more
+coauthorship because it is easier to bring in a new author than it is to
+learn new material oneself.” Indeed, Moody (2004) found that researchers
+who publish quantitative work, which requires specialization in theory
+and methodology, are more than five times more likely to have coauthored
+a paper than someone who has not published quantitative work. Examining
+the formation of task-related ties—asking for assistance or support from
+a colleague—in three different organizations, Casciaro &amp; Lobo (2008)
+found that a key fact of organizational life is that people seek out
+others whom they believe to have valuable and complementary task-related
+skills. Page (2007) found that in science the trend toward heterophilous
+ties has been increasing over time. He reported that the first ten Nobel
+Prizes in Physics were shared by 14 individuals, whereas the last ten
+have been shared by 27, a twofold increase in collaboration. This
+pattern has also been found in chemistry and sociology (Moody 2004) and
+in pre-publication teams that form to submit grants (Cummings &amp;
+Kiesler 2005). In collaborations of creative and economic production,
+connections can be valuable or sought after precisely because they
+connect people with different and complementarity attributes, qualities,
+and capabilities (Lin et al. 1981, Lin 1999).</p>
+<p>Alliance research—in which actors are organizations and ties are
+formal or informal collaborative arrangements between firms—has perhaps
+examined the role of heterophily in network formation most fully. It has
+become conventional wisdom that network ties are formed with dissimilar
+rather than similar collaborators. Powell et al. (2005) examined the
+determinants of attachment among universities, venture capital firms,
+public research organizations, and large pharmaceutical firms during the
+first ten years of the biotechnology field. They note that in this field
+“[n]o single organization [had] been able to internally master and
+control all the competencies required to develop a new medicine,” which
+may have led organizations to form collaborative relationships with
+firms that were distinct from them in activity specialization. Research
+on investment banks’ tie formation (Eccles &amp; Crane 1988; Podolny
+1993, 1994) has found that diversity is actively pursued. Chung et
+al. (2000) concluded that banks preferentially attached to other banks
+that (a) specialized in selling stock to different types of investors
+than themselves, (b) were located in different geographic areas, and (c)
+specialized in stock offerings of companies in different industries.
+Similar preferences for heterophilous partners in interorganizational
+relations have been found for industry niche (Gulati 1995, Chung et
+al. 2000), strategic grouping (Nohria &amp; Garcia-pont 1991), venture
+syndicates (Sorenson &amp; Stuart 2008), and organizational size
+(Shipilov et al. 2006). Compared with interpersonal ties,
+interorganizational links may be more prone to heterophily because the
+trust orientation of homophily between individuals may be functionally
+substituted by contracts between organizations, and the desire for
+expressive benefits found in interpersonal networks may be absent in
+firm-to-firm relationships (Granovetter 1985). One study of task-related
+ties found that organizational members seek out contacts they believe to
+have complementary and relevant skills, but only if they perceive those
+people as being enjoyable to work with (Casciaro &amp; Lobo 2008).</p>
+<p>One indication of the instrumental nature of heterogeneous
+relationships is that collaborative ties between actors with
+complementary attributes are often short term and oriented toward the
+completion of a project or goal. “Connections are often forged with a
+specific goal in mind, such as taking a company public or selling and
+distributing a new medicine. Once the task is completed, the
+relationship is ended and successful collaborators depart gracefully”
+(Powell et al. 2005, p. 1138).</p>
+<p>The increasing dominance of diverse teams and repeated heterophilous
+ties suggest that more research may be needed on what Blau (1974) called
+multiform heterogeneity.</p>
+<p>Multiform heterogeneity means that network ties may be between
+individuals who are simultaneously similar and different, sharing
+similarities on some dimensions and differences on others. It may
+ultimately be an oversimplification to refer to a relationship as
+homophilous or heterophilous, as few individuals do not differ in at
+least some dimensions and match in at least a few others (Blau 1974,
+p. 622). An important question is whether attachment is encouraged by
+homogeneity across numerous dimensions (McPherson &amp; Ranger-Moore
+1991) or by a balance between similarity on some, such as race and
+gender, but differences on others, such as skill, knowledge, or
+connections. At least some early research supports the latter position.
+Casciaro &amp; Lobo’s (2008) field research suggests that people
+preferentially collaborate with others who have complementary
+specializations but similar demographic traits that facilitate
+communication and trust. Organizations, too, appear to seek a balance
+between similarity on some dimensions, such as status (Podolny 1993),
+and dissimilarity on others, such as industry niche (Gulati 1995, Chung
+et al. 2000), strategic grouping (Nohria &amp; Garcia-Pont 1991),
+geographic location (Gulati &amp; Gargiulo 1999, Chung et al. 2000),
+size (Shipilov et al. 2006), or embedded versus arm’s-length ties
+(Lazerson 1995; Uzzi 1996, 1997). Future research that evaluates the
+choices and balance of homophily and heterophily is needed to understand
+the conditions under which one process or the other dominates and the
+balance that is struck in different social settings.</p>
+<h2 id="relational-mechanisms">RELATIONAL MECHANISMS</h2>
+<p>Drawing on a different theoretical heritage, a second perspective
+places importance on direct and indirect connections linking
+individuals. This perspective is sometimes referred to as a
+“within-the-network” approach, as the focal predictor of network change
+is hypothesized to be the shape and structure of the network in a prior
+time period (Stuart &amp; Sorenson 2007, p. 220). Arising out of
+Simmel’s notion of the triad, the classic relational hypothesis is of
+network closure—the proposition that actors separated by one
+intermediary are the most likely to become connected in subsequent time
+periods (Simmel 1908 [1950], Davis et al. 1971). Recent work has
+expanded relational perspectives to emphasize the role of prior direct
+ties (Baker 1990, Gulati 1995, Guimera et al. 2005), indirect
+connections through numerous third parties (Newman 2001a, Kossinets
+&amp; Watts 2006), and prior network degree centrality (Newman 2002,
+Uzzi 2008). Each mechanism originates from the structuralistic
+assumption that the selection of relationships, the maintenance of
+existing ones, and the dissolution of old ones are conditioned by trust,
+information, and opportunities for interaction that are structured by
+the network.</p>
+<h2 id="dynamics-of-reciprocity">Dynamics of Reciprocity</h2>
+<p>In cases in which ties are meaningfully directional—one actor chooses
+another who may or may not also choose them—an important relational
+mechanism is the tendency toward reciprocity. That is, the bestowing of
+a friendship from i to j tends to be quickly followed by a reciprocal
+offering of a friendship from j to i. Consequently, an important
+predictor of tie formation from one individual, i, to another, j, is
+whether or not j previously had a directed tie with i. Reciprocity
+appears to occur for several reasons. In interpersonal relationships,
+one-way ties are likely to become reciprocal because people tend to like
+others who like them (Newcomb 1956, Backman &amp; Secord 1959, Sprecher
+1998, Montoya &amp; Insko 2008). Similarly, reciprocation relative to a
+first advance of friendship decreases the chance of being rebuffed
+(Goffman 1963).</p>
+<p>Early evidence for the temporal development of reciprocity in
+friendship networks comes from grade-school data (Sørensen &amp;
+Hallinan 1977, Eder &amp; Hallinan 1978, Hallinan 1978, Tuma &amp;
+Hallinan 1979, Runger &amp; Wasserman 1980, Hallinan &amp; Williams
+1989, Doreian et al. 1996). Hallinan (1978) measured the friendship
+networks of fourth and sixth grade students at five elementary schools
+in the Midwestern United States at seven points in time. She found that
+the most likely new friendship to be created was the reciprocation of an
+extended friendship from another student. Using the same data, Runger
+&amp; Wasserman (1980) showed that students were between three and nine
+times more likely to create a new friendship with another student in the
+future if that student had already selected them. Analyzing longitudinal
+networks of friendship formation among 17 formerly unacquainted college
+students, Doreian et al. (1996) found that one of fastest structural
+tendencies in a developing network was a bias toward reciprocated
+relationships. In another analysis on newcomer networks, Mollica et
+al. (2003) measured the friendship network of 114 MBA students six weeks
+after matriculation into a graduate program and three and a half months
+later. They found that just six weeks after students had met, the level
+of reciprocity in their friendship network was much higher than chance
+levels; approximately 37% of friendships were reciprocated. The
+reciprocation of extended friendships continued over the following eight
+weeks such that 52% of ties were reciprocated by the end of the
+observation period.</p>
+<p>However, reciprocity in social networks does not occur solely because
+people reciprocate offered relationships. It also occurs as actors
+withdraw unreciprocated ones. Hallinan (1978) reported an interesting
+pattern in the evolution of friendship networks. She found that while
+one-way friendships were significantly more likely than null
+relationships to blossom into reciprocated ties, they also had a high
+base rate of dissolution. One-way friendships were approximately two
+times more likely to entirely dissolve than they were to be
+reciprocated. This suggests that although a one-way tie can make a
+reciprocal tie more likely to arise relative to a nonexistent
+relationship, one-way friendships are fundamentally short-lived if they
+fail to become reciprocal. Several factors have been identified as
+potential causes of the fragility of one-way ties. If a one-way tie is
+not reciprocated relatively quickly, independent of its potential value,
+it can evoke embarrassment (Goffman 1963), distress, or mutual
+discomfiture (Heider 1958). Moreover, in an influential paper on the
+development of status hierarchies, Gould (2002, p. 1151) comments
+“[s]omeone who pays less attention to you than you pay to her implicitly
+asserts that she is superior to you in status. If you do not respond by
+withdrawing your attention, you have implicitly agreed.” In this way,
+extending a tie to someone who does not reciprocate may signify
+deference to another person’s higher status. Friendships in Hallinan’s
+schools were consistent with this hypothesis. Students were roughly half
+as likely to withdraw a reciprocated friendship as they were to withdraw
+an unreciprocated one (Runger &amp; Wasserman 1980). Mollica et al.’s
+(2003) MBA study also showed that students were significantly more
+likely to maintain reciprocated friendships more than three and a half
+months than they were to maintain unreciprocated ones.</p>
+<p>Thus, reciprocity is associated with stability. Over time,
+unreciprocated ties are inherently unstable, either becoming
+reciprocated or withdrawn. A relatively open area of inquiry is to
+understand why some ties are reciprocated and others are not. For
+example, are high-status individuals the recipients of many one-way
+ties, only a few of which they reciprocate? Are homophilous ties less or
+more likely to be reciprocated given their frequency? Do certain
+contexts promote reciprocation while others are characterized by many
+failed one-way ties?</p>
+<h2 id="dynamics-of-repetition">Dynamics of Repetition</h2>
+<p>In relationships that can be ongoing in time, an important relational
+property is the frequency of repetition. Repeated ties figure
+prominently in the networks literature in many types of ties, both
+social and economic. In addition to being a measure of the strength of a
+relationship, repetition is also taken as an indicator of trust (Gulati
+&amp; Gargiulo 1999, Uzzi &amp; Lancaster 2004) and social embeddedness
+in economic exchange (Uzzi 1996). The frequency of a repeated tie has
+also been correlated with altruism, joint problem solving, and
+information exchange (Uzzi 1996, 1997); deals in exchanges (DiMaggio
+&amp; Louch 1998, Uzzi 1999); prices (Uzzi &amp; Lancaster 2004); and
+collusion (Ingram &amp; Roberts 2000).</p>
+<p>Uzzi &amp; Spiro’s (2005) work on the career histories of about 5000
+artists who made Broadway musicals between 1900 and 1995 and the
+evolution of their network provides evidence of the tendency toward
+repeat relationships over time. Uzzi &amp; Spiro (2005) showed that over
+time collaborators show a significant propensity to work with persons
+with whom they have worked in the past. Guimera et al. (2005) used
+agent-based simulations to show that the network structure of four
+scientific disciplines—astronomy, ecology, economic, and
+psychology—exhibited similarly high rates of repeated ties.
+Disaggregating the coauthorship networks in these fields over the top
+seven journals in each field, the authors were able to compare the rates
+of repeated ties across these diverse networks. They showed that the
+rate of repeated ties varied from about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">50\%</annotation></semantics></math>
+to approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>99</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">99\%</annotation></semantics></math>
+, which suggests that repeated ties are common and, for some networks,
+are the norm.</p>
+<p>Even in markets where relationships are frequently thought of as
+being arm’s-length, one-shot engagements, we find relatively high rates
+of repeated, reciprocal ties. Baker (1990) looked at the relationships
+between large corporations and their investment banks with an eye to how
+many banks they maintain relationships with and the repetition of dyadic
+financial relationships. He showed that corporations tend to have
+ongoing relationships with a core set of financial partners, adding
+others on an ad-hoc basis for special deals. This condition is also
+found between investment banks (Podolny 1994) and large law firms and
+their client corporations (Uzzi &amp; Lancaster 2004). Uzzi (1996)
+showed that in the competitive markets of the apparel industry, many
+contractors concentrate their relationships with certain
+manufacturers—establishing ongoing, repeat relationships—and those
+contractors who fail to establish these embedded ties tend to fail at
+greater rates, suggesting that the orientation toward repetition is
+important to the functioning of the network and the actors embedded
+within it. Thus, in networks of economic exchange and friendship, the
+ties that exist at one point in time are likely to be repeated in the
+future.</p>
+<h2 id="dynamics-of-clustering-and-closure">Dynamics of Clustering and
+Closure</h2>
+<p>In comparing networks as diverse as biological food webs to the World
+Wide Web to interlocking corporate directorates, Newman &amp; Park
+(2003) found that a characteristic that distinguishes social networks
+from biological and technological networks is clustering, a condition
+originally proposed by Simmel (1908 [1950]). Clustering means that
+social networks tend to have a high density of closed triads, or,
+colloquially, people tend to become friends with the friends of their
+friends. In their respective networks, corporate board members (Davis et
+al. 2003), Hollywood movie actors (Watts 1999), Broadway musical artists
+(Uzzi &amp; Spiro 2005), inventors (Fleming et al. 2007), scientists
+(Newman 2001b), lawyers (Lazega &amp; Pattison 1999), and organizations,
+tied together through alliances (Kogut &amp; Walker 2001, Baum et
+al. 2003), all tend to be connected to other actors who are themselves
+connected.</p>
+<p>Several rationales have been proposed to explain the almost universal
+observation that social networks exhibit nontrivial clustering.
+Granovetter (1973, p. 1362) suggested that people are inclined to create
+ties with the friends of their friends (or the business associates of
+their business associates, etc.) because people who spend time with a
+common third are likely to incidentally encounter each other, even if
+they are not explicitly introduced (cf. Feld 1997). Others have noted
+that sharing a third party provides information about potential
+connections through referrals and gossip and that this information eases
+the process of developing a new tie by decreasing the uncertainty and
+risk of a new connection (Burt &amp; Knez 1995). In this respect,
+proximity in a social network is correlated with increased information
+about the trustworthiness of a potential contact. “Better than the
+statement that someone is known to be reliable is information from a
+trusted informant that he has dealt with that individual and found him
+so,” remarked Granovetter (1985, p. 490). Finally, research on social
+capital has noted that embeddedness among third parties can also promote
+collectively oriented norms, thereby minimizing opportunism (Coleman
+1990; Granovetter 1985; Uzzi 1997, p. 48) and mitigating conflict
+(Simmel 1908 [1950], p. 135; Portes &amp; Sensenbrenner 1993; Krackhardt
+&amp; Handcock 2008).</p>
+<p>A measurable implication of these processes on network dynamics is
+that open triads tend to close over time. In one of the first empirical
+studies on the closure process, Hammer (1980) examined longitudinal data
+of interpersonal interaction in three settings: a neighborhood church, a
+coffeehouse, and a textile factory. In each network, ties between
+individuals were measured by observing interactions over a period of
+time (ranging from one month for the coffeehouse and church to six
+months for the textile plant). A tie was said to exist if people were
+observed interacting (usually conversing) with one another. Providing
+early support for the closure process, Hammer found that in all three
+settings pairs of unacquainted individuals were significantly more
+likely to begin interacting if they had a common acquaintance. This
+early study alluded to the generality of the closure mechanism; Hammer’s
+church and coffeehouse were located in Manhattan, the textile factory in
+Africa.</p>
+<p>The closure hypothesis of social attachment has been further
+corroborated by recent studies that have vastly increased the size and
+scope of research through the use of digital communication data.
+Kossinets &amp; Watts (2006) tracked the emails of 45,553 students,
+faculty, and staff at a large research university over an academic year
+with the goal of identifying factors that predicted communication
+between individuals. One of the predominant influences on social
+attachment that they uncovered was Simmel’s triadic closure. Having a
+mutual contact dramatically increased the tendency for two formerly
+unconnected students to begin communicating via email: Among students
+who did not share a common class—and were therefore less likely to
+incidentally meet—having a mutual contact increased the probability of
+communication by a staggering 140 times. Even students who sat in a
+class together were three times more likely to begin communicating with
+each other via email if they both emailed a common third individual.
+Sharing common third parties has also been found to influence the
+formation of new collaborative ties between researchers. Newman (2001d)
+examined the structure of scientific collaboration networks of more than
+1.6 million researchers in biology, physics, medicine, and computer
+science between 1995 and 1999. Two scientists were considered to have a
+tie if they had coauthored a paper together. He found a similar
+result—across each discipline, two scientists had a 30% or greater
+probability of collaborating if they had both collaborated with a common
+third researcher.</p>
+<p>The effect of sharing mutual acquaintances on attachment appears to
+be additive—each additional mutual acquaintance shared by an unconnected
+dyad additionally increases the likelihood that they will become
+connected. Hammer (1980) found that in each of her analyzed settings
+having two shared acquaintances increased the probability that a pair of
+individuals would create a tie above and beyond the probability observed
+for people who shared only one. Newman (2001a) provides compelling
+evidence for additivity in closure. He examined the scientific
+collaborations catalogued in the National Institute of Health’s Medline®
+database, a network containing more than 1.6 million researchers in
+biology and medicine, and found that two researchers who shared one
+prior collaborator were 40 times more likely to collaborate than were
+researchers who did not share any collaborators. Sharing two, three,
+four, and five prior collaborators increased the probability of
+collaboration by 100, 140, 170, and 200 times, respectively, than the
+probability experienced by researchers with no prior common
+collaborators. Thus, scientists’ current relationships powerfully
+affected their selection of future collaborators.</p>
+<p>Clustering occurs even between individuals who are separated by more
+than a single intermediary. In a social network, the distance from one
+actor, i, to another, j, is denoted
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>i</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">dij</annotation></semantics></math>
+and represents the length of the shortest path between i and j.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>1</mn></msup><annotation encoding="application/x-tex">^{1}</annotation></semantics></math>
+Individuals who are not connected themselves, but who are connected to a
+common third actor, are separated by a distance of 2, people separated
+by two acquaintances have a distance of 3, and so on. Research has found
+that shorter network distances are correlated with increased tendencies
+toward connections. Early evidence can again be found in Hammer’s (1980)
+analysis of interaction networks. She found that the network distance
+between two people at one point in time was negatively related with the
+probability of a tie being created between them in a subsequent time
+period. Patrons of the coffeehouse, employees in the African textile
+factory, and churchgoers who shared a contact (
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>i</mi><mi>j</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">dij = 2</annotation></semantics></math>
+) were significantly more likely to begin conversing during the
+observation period than were individuals separated by two intermediaries
+(
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>i</mi><mi>j</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">dij = 3</annotation></semantics></math>
+). Kossinets &amp; Watts’s (2006) study on the creation of email
+communication ties similarly found that network distance at one point in
+time is negatively related to the probability of attachment: Among
+students who were not currently in a class together, dyads separated by
+two intermediaries (
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>i</mi><mi>j</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">dij = 3</annotation></semantics></math>
+) were approximately 30 times less likely to initiate a new tie than
+were individuals separated by only one (
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>i</mi><mi>j</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">dij = 2</annotation></semantics></math>
+). Given evidence that on average people are regularly linked by a short
+“6 degrees of separation” (Milgram 1967, Leskovec &amp; Horvitz 2007),
+it is likely that the effect of network distance on attachment decays
+rapidly as people become separated by more and more intermediaries.
+Thus, mutual acquaintances and proximity within a social network have
+notable effects on social attachment: In many networks, new ties are
+more likely to be formed between people who are not only close in a
+network, but are close through numerous independent intermediaries.</p>
+<p>Ties that connect people who share several common alters are said to
+be structurally embedded and are not only more likely to arise in a
+social network, but are also more likely to withstand the test of time.
+In one study, Martin &amp; Yeung (2006) looked at the relationships
+between members of 60 voluntary communes to see what factors predicted
+the survival of interpersonal relationships between 1974 and 1986. Even
+though all ties examined were between people who had once lived together
+and consequently had relatively strong social ties, people with mutual
+acquaintances were more likely to stay in touch for more than 12 years
+and exhibited more frequent interaction. Burt (2000) used survival
+analysis to examine the hazard rate of business relationship decay among
+345 bankers during a four-year period. At the end of each year, bankers
+were asked to identify individuals with whom they had “frequent and
+substantial business contact in the preceding year.” Bankers experienced
+a high degree of turnover in their year-to-year business networks. On
+average, less than 35% of the ties they had in a given year were still
+extant the following year. Even in this rapidly evolving context of
+strong and weak ties, Burt found that ties that were embedded in triads
+were slower to decay than were nonembedded ones (p &lt; 0.001). An
+apparent paradox is that ties bridging distant parts of social
+networks—connections that are disproportionately important for global
+connectivity, information flow, and human achievement—are not only the
+least likely to be created in the first place, but are also the most
+likely to decay over time.</p>
+<p>It might therefore be expected that social networks close over time,
+continuously becoming more clustered. Yet networks can both open and
+close. Using a complete population data set of about 5000 creative
+artists who cocreated the hundreds of Broadway musicals that appeared
+between 1877 and 1995, Uzzi &amp; Spiro (2005) and Uzzi (2008) studied
+the changing properties of small world networks with a focus on the
+temporal formation and distribution of closed triads, or clustering, in
+the network. Using the clustering coefficient ratio, a variable that
+measures the ratio of actual clustering to that expected by the random
+creation of links in a network of the same size, they found that this
+network increased and decreased in clustering over time in a punctuated
+way. Clustering decreased after a shock perturbed the network. For
+example, the clustering coefficient of the network sometimes dropped as
+much as 30% after large shocks such as the Great Depression, the rise of
+movies and television, and the AIDS epidemic. This suggests that large
+upheavals in a network or shocks that change the environmental or market
+conditions within which a network is embedded may lead to the breakdown
+of clusters and a consequent decrease in the clustering coefficient
+ratio. Perhaps shocks weaken common ties to the same third party or make
+interaction with a common third party less predictable (Uzzi &amp; Spiro
+2005).</p>
+<p>Not all social networks exhibit clustering. In fact some social
+networks exhibit the opposite tendency. Networks that have few, if any,
+closed cycles may exist where closure is normatively prohibited or
+logistically impossible. Kinship networks where ties represent
+genealogical descent are an obvious example of taboo norms against
+closure. More sociologically interesting examples can be found in
+romantic dating networks, which have implications for the spread of
+ideas, infectious diseases, and new practices. Bearman et al. (2004)
+examined the romantic and sexual networks of more than 800 high school
+students in a midsize Midwestern town. Conspicuously absent from the
+network was the existence of many closed triads or cycles of length 4.
+Bearman et al. speculated that such short cycles do not frequently occur
+because of a social prohibition against dating the former lover of your
+current lover’s ex-lover, and because the closure of triads would
+require a high rate of same-sex unions. Consequently, even in Hollywood,
+where revolving door romances among the stars could increase the
+likelihood of closure, closed triads, or cycles of length 4, are
+unlikely. Independent of their personal attractiveness (or not), Billy
+Bob Thornton is unlikely to date Jennifer Aniston because their exes,
+Angelina Jolie and Brad Pitt, became a couple first.</p>
+<h2 id="dynamics-of-degree">Dynamics of Degree</h2>
+<p>In the 1920s and 1930s, Moreno (1934) sketched the social networks of
+prisoners at Sing Sing prison and schoolchildren at the Hudson School
+for girls in upstate New York, thus giving birth to the sociogram
+(Moreno 1934). Reflecting on these first sociograms, Moreno and a
+collaborator, Jennings (1943), discovered that some individuals tended
+to be at the center of their networks (stars) while others remained on
+the periphery (isolates). This realization gave rise to the concept of
+network centrality. It has since developed into a myriad of related
+measures that capture different aspects of an actor’s connectedness and
+status, including betweenness, closeness, degree, prestige, fitness,
+attractiveness, rank, and brokerage (Borgatti &amp; Everett 2006). Most
+work finds a positive association between an actor being in a central
+position in the network and that actor’s goal achievement, including
+creativity (Burt 2004, Uzzi &amp; Spiro 2005), job attainment
+(Granovetter 1973), professional advancement (Brass 1984; Burt 1992,
+2004), political influence (Fernandez &amp; Gould 1994), prestige
+(Burris 2004), rate of alliance formation (Powell et al. 2005), and
+dissolution (Saavedra et al. 2008).</p>
+<p>In addition to shaping outcomes, centrality has important effects on
+the evolution of actors’ social networks. Degree centrality—the number
+of ties that an actor possesses—has received particular attention
+(Zeleny 1940, Katz 1953, Price 1976, Freeman 1979, Friedkin 1991,
+Marsden 2002). In many social networks, researchers have found that most
+actors have only a few ties, while a small number have extraordinarily
+many (Borgatti &amp; Everett 1999, Albert &amp; Barabási 2002). An
+analysis of the online friendships of 4.2 million people on Facebook
+found that a few individuals had more than 10,000 friends, more than 55
+times as many as the average user’s 180 (Golder et al. 2006). Liljeros
+et al. (2001) found that degree centrality is similarly skewed in sexual
+contact networks, where some superconnector actors acquire as many as
+1000 partners. Davis et al. (2003) examined the network of corporate
+board memberships in the United States between 1982 and 2001 and found
+that the average director had ties to 16 other directors, but a few were
+connected to as many as 100. Similar patterns exist in the rap music
+industry cosinger network (Smith 2006), the Hollywood movie coappearance
+network (Barabási &amp; Albert 1999), and numerous coauthorship networks
+in academia (Price 1965; Newman 2001c,d; Jeong et al. 2003; cf. Moody
+2004; Guimera et al. 2005; Wuchty et al. 2007).</p>
+<p>One reason social networks develop such a high variance in actors’
+degree centrality is that the number of ties an actor possesses (degree)
+affects processes of attachment. One prominent model, termed
+preferential attachment, posits that the rate at which actors acquire
+new ties is a function of the number of ties they currently have (Price
+1976, Barabási &amp; Albert 1999). Implications of preferential
+attachment echo Merton’s (1968) “Matthew Effect.” Social connections
+tend to accrue to those who already have them, the consequence of which
+is that small differences in actor centrality compound over time into a
+distinct cumulative advantage.</p>
+<p>Preferential attachment purportedly occurs because actors looking for
+new connections use an actor’s degree as a proxy for his or her fitness.
+In this way, the deceptively simple process has significant
+ramifications for acquiring and reinforcing centrality because it
+suggests that central actors benefit from a rich-get-richer phenomenon
+of cumulative advantage. In a paper that examined this process across
+varied types of social networks, Jeong et al. (2003) explored (a) the
+coauthorship network in the neuroscience field, (b) the citation network
+of papers published in Physical Review Letters, and (c) the Hollywood
+cocast actor network from 1892–1999. They found that neuroscientists,
+Hollywood actors, and physicists who had relatively more links than
+their respective peers tended to attach to other actors at a higher rate
+than did their less connected counterparts. Newman (2001a) similarly
+found that researchers in physics and biology who already had a large
+number of collaborators were more likely to accumulate new collaborators
+in the future. In a first empirical test of the preferential attachment
+model that used a specially designed methodology for testing
+preferential attachment (Clauset et al. 2009), Uzzi (2008) showed that
+the creative artists who made Broadway musicals acquired new ties in
+proportion to the number of ties they already possessed.</p>
+<p>The relationship between centrality and tie accumulation is likely to
+be diminished by factors that moderate an actor’s resources for tie
+acquisition or maintenance such as time, money, or even natural aging.
+In many contexts, highly connected actors may accumulate new ties up to
+a carrying capacity, after which they cease to acquire more (Amaral et
+al. 2000, Guimera et al. 2005, Uzzi &amp; Spiro 2005). As a result,
+networks of relationships that require significant investments of time,
+such as friendship networks (Amaral et al. 2000, Newman et al. 2001),
+interorganizational collaboration networks (Kogut et al. 2007), and
+corporate board membership networks (Newman et al. 2002, Davis et
+al. 2003, Conyon &amp; Muldoon 2006), have less extreme differences
+between the most and least central actors than do networks of
+relationships where increasing one’s degree requires only a small cost,
+or one-time cost, such as Facebook friends or networks of sexual
+contacts (Liljeros et al. 2001). Research on interfirm networks has
+found that the influence of degree centrality on attachment can also be
+minimized by other factors that are stronger proxies for fitness. For
+example, Powell et al.’s (2005) analysis of the interorganizational
+collaboration networks found that in many cases firms exhibited a
+preference for novelty over preferential attachment—with
+well-established, highly connected firms collaborating with younger,
+less-connected organizations. Kogut et al. (2007) examined the emergence
+of the U.S. venture capital syndication network and found that new
+entrant firms sometimes entered the network with more cutting-edge
+knowledge and consequently surpassed some incumbent firms in the number
+of partners they accumulated. Whether a preference for novelty may
+similarly enable some individuals—for example, rising stars—to surpass
+incumbents in the extent of their connectedness is a relatively
+unexplored area.</p>
+<p>Not only are high-degree actors more likely to form attachments than
+noncentral actors, but they are also more likely to form attachments
+with each other—popular actors attach to other popular actors, whereas
+lower-degree actors tend to attach to other low-degree actors. In a
+study on the bases of community power in a Midwestern U.S. town,
+Perrucci &amp; Pilisuk (1970) identified the individuals who had the
+most ties to different organizations and constituencies. They
+encountered an interesting result: Among eight of the elite individuals
+who had ties to multiple organizations within the community of 50,000
+people, 53 of 56 possible social ties existed. In other words, each of
+the eight elite individuals named nearly all of the other eight as
+people they saw socially. This finding supported assortativity among
+elite actors, but also strongly suggested that the most well-connected
+individuals in the community preferred to attach to other well-connected
+individuals. Recently, Conyon &amp; Muldoon (2006) collected data on
+corporate directorships at 1733 unique firms in the United States,
+Germany, and the United Kingdom. Despite the different regulatory
+environments characterizing each locale, they found that in each case
+directors who sit on a lot of boards tend to do so with other
+high-degree directors. In a provocative paper, Newman (2002) compared
+five different social networks—including coauthorship networks and a
+network of corporate directors—to six biological and technological
+networks and found that only social networks exhibited a tendency for
+the most connected actors to connect among themselves. In his study of
+the Broadway musical industry, Uzzi (2008) found that this tendency
+occurs at the interteam level as well (where teams are the nodes and
+ties between teams are made by a shared teammate)—production teams that
+are highly central are more likely to connect to other central
+teams.</p>
+<p>A literature is emerging on degree centrality and detachment. Baker
+et al. (1998) studied the longevity and detachment of large companies’
+links with their advertising agencies circa 1985–1987. They argued that
+conditions affecting breakup were due to competitive, market, and
+institutional forces that could be measured as network variables. Their
+work indicated that a company’s degree, as measured by the number of ad
+agencies it employed, was positively related to the probability of
+breakup of the firm-agency relationship. Their rationale for
+preferential detachment is that firms that employed a large number of
+advertising agencies had an increased variety and availability of
+alternatives to any one focal agency. Thus, echoing processes of
+attachment, detachment can be affected by actors’ degree. However,
+Saavedra et al. (2008) found that detachment is not the reverse process
+of attachment. Using 20 years of data on the exchanges between
+manufacturers and contractors in the New York City garment industry,
+they found that even though firms form ties through preferential
+attachment, the links between the highest- and lowest-degree nodes have
+the lowest probability of breakup. Their explanation is that in the
+preferential attachment model a node’s degree is a stand-in for its true
+fitness because direct performance data are costly to gather before the
+relationship is made. By contrast, during breakup there is already a
+link in place, which enables the quality of the relationship to be
+judged based on firsthand accounts and a history of past interactions.
+Saavedra et al. (2008, p. 16470) conclude that a preference to maintain
+connections between high- and low-degree actors results in “a remarkably
+robust topology,” as these connections preserve the global connectivity
+of a network even when undergoing severe decline.</p>
+<h2 id="proximity-mechanisms">PROXIMITY MECHANISMS</h2>
+<p>Whereas assortative mechanisms are derived from information on
+actors’ attributes, and relational mechanisms originate from information
+about actors’ relationships, proximity mechanisms put the source of
+network change at the level of actors’ social and cultural environments.
+The most elementary proximity hypothesis is that interaction increases
+with geographic/physical propinquity. Being proximate is thought to
+encourage chance encounters and opportunities for interaction, which can
+lead to the formation of new relationships and the maintenance of
+existing ones. More complex conjectures can be drawn from the
+heterogeneous organization of social activities into foci that bring
+actors together and occasion the formation of positive sentiment,
+opportunities for interaction, shared goals, and cultural norms of
+sociability.</p>
+<h2 id="dynamics-of-proximity-and-social-foci">Dynamics of Proximity and
+Social Foci</h2>
+<p>“Cupid may have wings, but apparently they are not adapted for long
+flights,” remarked Bossard (1932, p. 222) after examining the physical
+distances between 10,000 applicants for marriage licenses in
+Philadelphia. More than one in six couples filing for a marriage license
+had previously lived within a single city block of each other, providing
+early evidence for the important role of proximity on social attachment.
+Using electronic footprint data, recent studies have found additional
+evidence for the large impact of proximity on attachment. A study of
+email networks among Dartmouth students found that sharing a dormitory
+increased the volume of emails sent by two times, living on the same
+floor by another two times, and sharing a room by a further three times
+(Marmaros &amp; Sacerdote 2006). Within a large multidivisional company,
+Kleinbaum et al. (2008) show that individuals who are in the same
+business unit, subfunction, and office location communicate in emails,
+calendar meetings, and teleconferences approximately 1000 times more
+than do pairs of employees that do not share any of those categories. At
+the planetary scale, Leskovec &amp; Horvitz (2007) showed that the
+frequency and duration of 1.8 billion instant-message conversations
+between 180 million people worldwide decreased as geographic distance
+increased. Even when digital communication can make the world flat and
+in one electrifying moment “end the tyranny of distance” (to paraphrase
+Samuel Morse), people still tend to connect to those comparatively few
+others who are spatially proximate.</p>
+<p>Proximity similarly influences the persistence of social ties by
+moderating the effort required to maintain relationships. Martin &amp;
+Yeung’s (2006) analysis on the determinants of tie persistence of former
+residents of voluntary communes found that geographic proximity was a
+significant predictor of detachment; people were much more likely to
+remain friends over a 12-year period if they were geographically close.
+In an analysis of the evolution of 66 high school graduates’ personal
+networks over a 6-year period, Bidart &amp; Lavenu (2005) similarly
+found that changes in geographic location resulted in the loss of
+significant portions of people’s networks. They note that some
+individuals lost as much as one-third of their old personal networks as
+they transitioned to a new location (pp. 365–68). Proximity may have
+increased importance during later periods of people’s lives when they
+are less mobile. For example, Ikkink &amp; van Tilburg (1999) found that
+distance was negatively related to the longevity of older adults’
+social-support ties, and Fischer (1982) showed that age was associated
+with social networks that were more geographically constrained.</p>
+<p>The idea of proximity may involve but is not defined by geographic
+closeness (Gieryn 2000). Rather, social interaction is organized into
+foci such as “social, psychological, legal, or physical entit[ies]
+around which joint activities are organized” (Feld 1981, p. 1016). The
+notion of social foci draws attention to collectivities such as
+workplaces, clubs, groups, and associations to which individuals can
+belong and that cannot be defined in terms of physical geography alone
+(Feld 1981, Grossetti 2005). Sharing foci of activity affects attachment
+above and beyond physical proximity, as common interest in an activity
+may emphasize members’ shared interests instead of their discordant ones
+(Uzzi &amp; Dunlap 2005), downplay status or role discrepancies (Moody
+2001), and bring people together in mutually rewarding situations that
+promote positive sentiment (Homans 1961; Feld 1981, p. 1017). Moreover,
+foci such as neighborhoods, communities, and organizations may develop
+cultures that further induce the creation of social relationships
+(Entwisle et al. 2007). If networks are the fabric of interpersonal
+interaction, social foci are the looms in which they are woven.</p>
+<p>Kono et al. (1998) examined the influence of social foci and
+geographic proximity on firms’ choices of corporate board members. They
+found that firms were more likely to share corporate board members
+(referred to as a corporate interlock; see Mizruchi 1996) if those firms
+had headquarters in proximate locations. However, upon closer
+inspection, Kono et al. (1998) found that membership in exclusive
+upper-class clubs in the same city as the headquarters was the actual
+driver of board interlocks. These clubs were important social foci that
+enabled interaction between elites who then shaped interfirm ties. More
+broadly, several studies have documented the influence that the foci of
+shared workplaces play in fostering social ties. Kossinets &amp; Watts’s
+(2006) analysis of the formation of email communication ties found that
+a significant predictor of tie formation was whether or not students
+were in a class together. Golder et al. (2006) recently looked at 284
+million Facebook messages sent by 4.2 million students at 496 different
+universities and found that nearly 60% of all messages were exchanged by
+students at the same university.</p>
+<p>Given advances in technologies that facilitate communication,
+geographically dispersed social foci may be playing a more important
+role in organizing attachments while geography is playing a less
+important role. Jones et al. (2008) examined all the collaborations
+among U.S. scientists worldwide from 1975 to 2005 for 650 U.S. research
+universities. They calculated the fraction of work published by
+scientists as sole authors, coauthors in teams with other scientists
+from their home or nearby universities, and coauthors in teams with
+other scientists at other universities at a distance. Their work showed
+that in all areas of science the greatest growth rate in collaborations
+is in university collaborations at a distance. In social science, for
+example, multiuniversity collaborations made up about 40% of all team
+collaborations in 2005. The fraction of collaborations of coauthored
+work done with researchers from their home or nearby universities was
+also 40%. These findings allude to the possibility that shared foci such
+as academic associations, conferences, and consortia oriented around
+academic disciplines and research areas may increasingly bring together
+researchers from geographically distinct locales. As technological
+advances in communication proliferate, the effect of distance on
+attachment may increasingly be supplanted by the influence of shared
+foci that supersede the confines of geographic propinquity (Wellman
+1979, 1996; Hampton &amp; Wellman 2001).</p>
+<p>Similar to how changes in geographic distance influenced detachment,
+the loss of shared foci induces the breaking apart of network ties.
+Bidart &amp; Lavenu’s (2005, p. 361) study of network evolution found
+that when transitioning from school to work, young people “lost their
+schoolmates in a fairly extreme way…. They had relatively extensive
+networks, which underwent a major replacement of ties at the time of
+their entry into working life.” Nevertheless, “[a] relation may last
+longer than the circle [foci], which made its initial construction
+possible. We maintain relations with former school or university
+companions, former colleagues, and former activists in political parties
+long since disappeared” (Grossetti 2005, p. 292). Relationships that
+carry over from prior foci play an additionally important role of
+connecting the different social groups and communities to which people
+belong. Ties formed during university years may have a large impact on
+the social capital of graduates throughout their careers, as Cohen et
+al. (2008) recently showed with regard to the role of MBA alma mater and
+access to private information in the stock market.</p>
+<p>What is much less understood in this literature is an understanding
+of the aspects of foci of activity that lead to strong tendencies toward
+social connections—i.e., a theory of why some foci encourage connections
+and others do not. In his study of New York City child care centers,
+Small (2009) has begun to address this. He found that mothers often
+expanded their network through relationships developed at the centers;
+however, the extent of network development was strongly influenced by
+institutional practices at the centers. He found that people were more
+likely to form ties when “they have opportunities to interact, when they
+do so frequently, when they are focused on some activity, when they are
+not competitors, and when they have reason to cooperate” (p. 15). This
+corroborates experimental findings that suggest that perceptions of
+group belongingness, positive affective sentiments, and emotional
+reactions are greatest when activities are characterized by highly
+interdependent activities and feelings of shared responsibility (Lawler
+et al. 2008). There is still much opportunity for future research in
+this area. Do shared activities that focus on small group interaction,
+such as four-person bridge teams (to allude to the famous shared
+activity that created a connection, valued at $45 billion, between
+William Gates and Warren Buffet), or large group activities, such as
+soccer or basketball, have a greater impact on the formation of network
+attachments? Do activities that have some gradation of winning or losing
+versus noncompetitive interaction (e.g., a book club) impact the
+creation of ties differently? How do activities that highlight a core
+aspect of personal commonality, such as a shared passion for the
+environment, help create connections between people who are otherwise
+nonhomophilous or distantly linked through common third parties?</p>
+<h2 id="conclusion">CONCLUSION</h2>
+<p>Homans (1961, p. 1) commented that social behavior is a “familiar
+chaos,” in that “[n]othing is more familiar to men than their ordinary,
+everyday social behavior,” yet much of social interaction still appears
+chaotic. Change in social networks is a familiar chaos. Although there
+are few social phenomena more elementary than the creation and
+dissolution of relationships, these processes are driven by sometimes
+complex mechanisms and generate networks that have profound implications
+for human achievement, beliefs, and outcomes. Researchers have
+historically approached this familiar chaos in three ways: one focusing
+on actors’ attributes, another on their relationships, and a third on
+proximity. Each approach has yielded robust and often generalizable
+findings. However, these theoretical streams have also tended to
+progress in relative isolation—favoring their own theoretical
+foundations and explanatory variables. Further integration stands to
+benefit network research in at least three ways: (a) by explicating
+causal mechanisms, (b) by exploring interactions between mechanisms, and
+(c) by evaluating the changing role of different mechanisms as networks
+emerge and evolve.</p>
+<p>Disambiguating causal relationships in the dynamics of relationship
+formation and dissolution remains an elusive goal. Perpetually
+threatening the validity of each perspective covered in this review is
+the possibility that its findings are epiphenomenal to the operation of
+the others. For example, Feld (1982) argues that proponents of homophily
+significantly overestimate actors’ preferences to interact with
+self-similar others by neglecting to account for people’s self-selection
+into contexts that bring together disproportionately homophilous actors.
+Indeed, a recent analysis by Kossinets &amp; Watts (2009) found
+precisely this effect—in their study, college students with similar
+gender, age, majors, academic years, and foreign/domestic status tend to
+take classes together, where they find occasion to create social ties.
+Thus, observed biases toward interaction with self-similar others are
+largely the result of prior selection into contexts of homophilous
+actors. Similar alternative explanations for clustering have also been
+proposed (e.g., Feld 1981). Future research that simultaneously accounts
+for mechanisms in each perspective may further untangle these
+theoretically elusive questions.</p>
+<p>A second promising avenue for future research is to explore
+interactions between assortative, relational, and proximity mechanisms.
+One extant stream of research that brings together assortative and
+relational mechanisms explores the different networking tendencies of
+men and women. For example, Eder &amp; Hallinan (1978) found that male
+and female schoolchildren demonstrate different solutions to having a
+friend that is not friends with their friends—boys were more likely to
+add relationships to embed the isolated individual, whereas girls were
+more likely to delete a relationship to entrench their existing
+friendship clique. Conversely, Plickert et al. (2007) found that women
+are more likely than men to reciprocate some relationships and, further,
+that reciprocity is more likely between individuals that are spatially
+proximate. Future studies may further explore interactions between
+assortative, relational, and proximity mechanisms by (a) evaluating
+whether closure is more likely between individuals who share social foci
+or share attributes, or by (b) testing whether homophily is greater (or
+lesser) within social foci or whether homophily still matters between
+people who share friends.</p>
+<p>Finally, it is relatively unknown whether different mechanisms play
+greater or lesser roles as networks evolve. One area where this is
+especially apparent is in the genesis of social networks. Critiques of
+relational mechanisms have noted that an emphasis on prior network
+structure unavoidably begs the question: Where does the network come
+from in the first place (Podolny &amp; Page 1998; Stuart &amp; Sorenson
+2007, p. 220)? Given the importance of prior connections on informing
+actors about potential friends and colleagues, people in emerging
+networks may rely on other avenues of information gathering—such as
+homophily and social proximity—to initially find new friends and
+colleagues, and only later rely on networks to facilitate the formation
+of relationships. This suggests that as networks evolve so too do the
+rules that govern their evolution (Rivera &amp; Uzzi 2009). In the face
+of this complexity, what is clear is that understanding these contingent
+effects of network dynamics promises that future work will develop a
+greater understanding of the changing networks in which we are all
+embedded.</p>
+<h2 id="disclosure-statement">DISCLOSURE STATEMENT</h2>
+<p>The authors are not aware of any affiliations, memberships, funding,
+or financial holdings that might be perceived as affecting the
+objectivity of this review.</p>
+<h2 id="acknowledgments">ACKNOWLEDGMENTS</h2>
+<p>The authors thank Helena Buhr, Brayden King, Sekou Bermiss, Kate
+Ashley, and Maxim Sytch for their invaluable comments and revisions, as
+well as attendees of the 2008 Complex Systems Summer School at the Santa
+Fe Institute. Research was sponsored by the Northwestern University
+Institute on Complex Systems and Network Science (NICO) and the Army
+Research Laboratory (Cooperative Agreement Number W911NF-09-2-0053). The
+views and conclusions contained in this review are those of the authors
+and should not be interpreted as representing the official policies,
+either expressed or implied, of the Army Research Laboratory or the U.S.
+Government.</p>
+<h2 id="literature-cited">LITERATURE CITED</h2>
+<p>Abrahamson E, Fairchild G. 1999. Management fashion: lifecycles,
+triggers, and collective learning processes. <em>Adm. Sci.</em> Q.
+44:708–40</p>
+<p>Adamic LA, Adar E. 2003. Friends and neighbors on the Web. Soc. Netw.
+25:211–30</p>
+<p>Ahuja G. 2000. Collaboration networks, structural holes, and
+innovation: a longitudinal study. <em>Adm. Sci.</em> Q. 45:425–55</p>
+<p>Albert R, Barabási A-L. 2002. Statistical mechanics of complex
+networks. Ref. Mod. Phys. 74:47–97</p>
+<p>Allen VL, Wilder DA. 1979. Group categorization and attribution of
+belief similarity. Small Group Behav. 10:73–80</p>
+<p>Amaral LAN, Scala A, Barthelemy M, Stanley HE. 2000. Classes of
+small-world networks. Proc. Natl. Acad. Sci. USA 97:11149–52</p>
+<p>Backman CW, Secord PF. 1959. The effect of perceived liking on
+interpersonal attraction. Hum. Relat. 12:379–84</p>
+<p>Baker WE. 1990. Market networks and corporate-behavior. Am. J.
+Sociol. 96:589–625</p>
+<p>Baker WE, Faulkner RR, Fisher GA. 1998. Hazards of the market: the
+continuity and dissolution of interorganizational market relationships.
+Am. Sociol. Rev. 63:147–77</p>
+<p>Barabási A-L. 2008. Network Science Applications to Global
+Communications. Norwich Research Park, UK: NetSci.</p>
+<p>Barabási A-L. 2009. Network theory-the emergence of the creative
+enterprise. Science 308:639–41</p>
+<p>Barabási A-L, Albert R. 1999. Emergence of scaling in random
+networks. Science 286:509–12</p>
+<p>Barro RJ, McCleary RM. 2003. Religion and economic growth across
+countries. Am. Sociol. Rev. 68:760–81</p>
+<p>Baum JAC, Shipilov AV, Rowley TJ. 2003. Where do small worlds come
+from? Ind. Corp. Change 12:697–725</p>
+<p>Bearman PS, Moody J, Stovel K. 2004. Chains of affection: the
+structure of adolescent romantic and sexual networks. Am. J. Sociol.
+110:44–91</p>
+<p>Bidart C, Lavenu D. 2005. Evolutions of personal networks and life
+events. Soc. Netw. 27:359–76</p>
+<p>Blackwell DL, Lichter DT. 2004. Homogamy among dating, cohabiting,
+and married couples. Sociol. Q. 45:719–37</p>
+<p>Blau PM. 1974. Presidential address—parameters of social structure.
+Am. Sociol. Rev. 39:615–35</p>
+<p>Borgatti SP, Everett MG. 1999. Models of core/periphery structures.
+Soc. Netw. 21:375–95</p>
+<p>Borgatti SP, Everett MG. 2006. A graph-theoretic perspective on
+centrality. Soc. Netw. 28:466–84</p>
+<p>Bossard JS. 1932. Residential propinquity as a factor in marriage
+selection. Am. J. Sociol. 38:219–24</p>
+<p>Brass DJ. 1984. Being in the right place—a structural-analysis of
+individual influence in an organization. Adm. Sci. Q. 29:518–39</p>
+<p>Bratter JL, King RB. 2008. “But will it last?”: marital instability
+among interracial and same-race couples. Fam. Relat. 57:160–71</p>
+<p>Brown SL, Eisenhardt KM. 1997. The art of continuous change: linking
+complexity theory and time-paced evolution in relentlessly shifting
+organizations. <em>Adm. Sci.</em> Q. 42:1-34</p>
+<p>Budig MJ, England P. 2001. The wage penalty for motherhood. Am.
+Sociol. Rev. 66:204–25</p>
+<p>Burgess EW, Wallin P. 1943. Homogamy in social characteristics. Am.
+J. Sociol. 49:109–24</p>
+<p>Burris V. 2004. The academic caste system: prestige hierarchies in
+PhD exchange networks. Am. Sociol. Rev. 69:239–64</p>
+<p>Burt RS. 1992. Structural Holes: The Social Structure of Competition.
+Cambridge, MA: Harvard Univ. Press. 313 pp. </p>
+<p>Burt RS. 1997. The contingent value of social capital. Adm. Sci. Q.
+42:339–65</p>
+<p>Burt RS. 2000. Decay functions. Soc. Netw. 22:1–28</p>
+<p>Burt RS. 2004. Structural holes and good ideas. Am. J. Sociol.
+110:349–99</p>
+<p>Burt RS, Knez M. 1995. Kinds of third-party effects on trust. Ration.
+Soc. 7:255–92</p>
+<p>Byrne D, Wong TJ. 1962. Racial prejudice, interpersonal attraction,
+and assumed dissimilarity of attitudes. J. Abnorm. Soc. Psychol.
+65:246–53</p>
+<p>Casciaro T, Lobo MS. 2008. When competence is irrelevant: the role of
+interpersonal affect in task-related ties. Adm. Sci. Q. 53:655–84</p>
+<p>Chung S, Singh H, Lee K. 2000. Complementarity, status similarity and
+social capital as drivers of alliance formation. Strateg. Manag. J.
+21:1–22</p>
+<p>Clauset A, Shalizi CR, Newman MEJ. 2009. Power-law distributions in
+empirical data. SIAM Rev. 51:661–703</p>
+<p>Cohen LE, Felson M. 1979. Social-change and crime rate trends—a
+routine activity approach. Am. Sociol. Rev. 44:588–608</p>
+<p>Cohen L, Frazzini A, Malloy C. 2008. The small world of investing:
+board connections and mutual fund returns. J. Polit. Econ.
+116:951–79</p>
+<p>Cohen WM, Levinthal DA. 1990. Absorptive capacity: a new perspective
+on learning and innovation. Adm. Sci. Q. 35:128–52</p>
+<p>Coleman JS. 1988. Social capital in the creation of human capital.
+Am. J. Sociol. 94:S95–120</p>
+<p>Coleman JS. 1990. Foundations of Social Theory. Cambridge, MA:
+Harvard Univ. Press</p>
+<p>Conyon MJ, Muldoon MR. 2006. The small world of corporate boards. J.
+Bus. Financ. Account. 33:1321–43</p>
+<p>Cummings JN, Kiesler S. 2005. Collaborative research across
+disciplinary and organizational boundaries. Soc. Stud. Sci.
+35:703–22</p>
+<p>Davis G, Yoo M, Baker W. 2003. The small world of the American
+corporate elite. Strateg. Organ. 3:301–26</p>
+<p>Davis JA, Holland PW, Leinhardt S. 1971. Comments on Professor
+Mazur’s hypothesis about interpersonal sentiments. Am. Sociol.
+Rev. 36:309–11</p>
+<p>DiMaggio P, Louch H. 1998. Socially embedded consumer transactions:
+For what kinds of purchases do people most often use networks? Am.
+Sociol. Rev. 63:619–37</p>
+<p>DiMaggio PJ, Powell WW. 1983. The iron cage revisited: institutional
+isomorphism and collective rationality in organizational fields. Am.
+Sociol. Rev. 48:147–60</p>
+<p>Doreian P, Kapuscinski R, Krackhardt D, Szczypula J. 1996. A brief
+history of balance through time. J. Math. Sociol. 21:113–31</p>
+<p>Duncan GJ, Yeung WJ, Brooks-Gunn J, Smith JR. 1998. How much does
+childhood poverty affect the life chances of children? Am. Sociol.
+Rev. 63:406–23</p>
+<p>Eagle N, Pentland A, Lazer D. 2007. Inferring friendship network
+structure by using mobile phone data. Proc. Natl. Acad. Sci. USA
+106:15274–78</p>
+<p>Eccles RG, Crane DB. 1988. Doing Deals: Investment Banks at Work.
+Boston: Harvard Bus. Sch. Press</p>
+<p>Eder D, Hallinan MT. 1978. Sex differences in children’s friendships.
+Am. Sociol. Rev. 43:237–50</p>
+<p>Edmondson A. 1999. Psychological safety and learning behavior in work
+teams. Adm. Sci. Q. 44:350–83</p>
+<p>Ely RJ. 1995. The role of dominant identity and experience in
+organizational work on diversity. In <em>Diversity in Work Teams:
+Research Paradigms for a Changing Workplace</em>, ed. SE Jackson, MN
+Ruderman, pp. 161–86. Washington, DC: Am. Psychol. Assoc.</p>
+<p>Entwisle B, Faust K, Rindfuss RR, Kaneda T. 2007. Networks and
+contexts: variation in the structure of social ties. Am. J. Sociol.
+112:1495–533</p>
+<p>Feld SL. 1981. The focused organization of social ties. Am. J.
+Sociol. 86:1015–35</p>
+<p>Feld SL. 1982. Social structural determinants of similarity among
+associates. Am. Sociol. Rev. 47:797–801</p>
+<p>Feld SL. 1997. Structural embeddedness and stability of interpersonal
+relations. Soc. Netw. 19:91–95</p>
+<p>Felmlee D, Sprecher S, Bassin E. 1990. The dissolution of intimate
+relationships: a hazard model. Soc. Psychol. Q. 53:13–30</p>
+<p>Fernandez RM, Gould RV. 1994. A dilemma of state power—brokerage and
+influence in the national-health policy domain. Am. J. Sociol.
+99:1455–91</p>
+<p>Fiore AT, Donath JS. 2005. Homophily in online dating: When do you
+like someone like yourself? Presented at Conf. Human Factors Comput.
+Syst., Portland, OR, April 2–7</p>
+<p>Fischer CS. 1982. To Dwell Among Friends. Chicago: Univ. Chicago
+Press</p>
+<p>Fleming L, King C, Juda A. 2007. Small worlds and regional
+innovation. Organ. Sci. 18:938–54</p>
+<p>Freeman LC. 1979. Centrality in social networks conceptual
+clarification. Soc. Netw. 1:215–39</p>
+<p>Friedkin NE. 1991. Theoretical foundations for centrality measures.
+Am. J. Sociol. 96:1478–504</p>
+<p>Gieryn TF. 2000. A space for place in sociology. Annu. Rev. Sociol.
+26:463–96</p>
+<p>Goffman E. 1963. Behavior in Public Places: Notes on the Social
+Organization of Gatherings. New York: Free Press Glencoe. 248 pp. </p>
+<p>Golder S, Wilkinson D, Huberman B. 2006. Rhythms of social
+interaction: messaging within a massive online network. HP Labs White
+Pap., HP Labs, Palo Alto, CA. 16
+pp. http://www.hpl.hp.com/research/idl/papers/facebook/facebook.pdf</p>
+<p>Gould RV. 2002. The origins of status hierarchies: a formal theory
+and empirical test. Am. J. Sociol. 107:1143–78</p>
+<p>Granovetter M. 1973. The strength of weak ties. Am. J. Sociol.
+78:1360–80</p>
+<p>Granovetter M. 1985. Economic action and social structure: the
+problem of embeddedness. Am. J. Sociol. 91:481–510</p>
+<p>Granovetter M. 2005. The impact of social structure on economic
+outcomes. J. Econ. Perspect. 19:33–50</p>
+<p>Grossetti M. 2005. Where do social relations come from? A study of
+personal networks in the Toulouse area of France. Soc. Netw.
+27:289–300</p>
+<p>Guimera R, Uzzi B, Spiro J, Amaral LAN. 2005. Team assembly
+mechanisms determine collaboration network structure and team
+performance. Science 308:697–702</p>
+<p>Gulati R. 1995. Social structure and alliance formation patterns: a
+longitudinal analysis. <em>Adm. Sci.</em> Q. 40:619–52</p>
+<p>Gulati R, Gargiulo M. 1999. Where do interorganizational networks
+come from? Am. J. Sociol. 104:1439–93</p>
+<p>Hallinan M. 1978. The process of friendship formation. Soc. Netw.
+1:193–210</p>
+<p>Hallinan M, Williams R. 1987. The stability of students’ interracial
+friendships. Am. Sociol. Rev. 52:653–64</p>
+<p>Hallinan M, Williams R. 1989. Interracial friendship choice in
+secondary schools. Am. Sociol. Rev. 54:67–78</p>
+<p>Hammer M. 1980. Predictability of social connections over time. Soc.
+Netw. 2:165–80</p>
+<p>Hampton K, Wellman B. 2001. Long distance community in the network
+society—contact and support beyond Netville. Am. Behav. Sci.
+45:476–95</p>
+<p>Hannan M, Freeman J. 1977. The population ecology of organizations.
+Am. J. Sociol. 82:929–63</p>
+<p>Hannan MT, Freeman J. 1984. Structural inertia and
+organizational-change. Am. Sociol. Rev. 49:149–64</p>
+<p>Hansen MT. 1999. The search-transfer problem: the role of weak ties
+in sharing knowledge across organization subunits. <em>Adm. Sci.</em> Q.
+44:82–111</p>
+<p>Hargittai E. 2007. Whose space? Differences among users and non-users
+of social network sites. Comput.-Med. Commun. 13:276–97</p>
+<p>Heaton TB. 2002. Factors contributing to increasing marital stability
+in the United States. J. Fam. Issues 23:392–409</p>
+<p>Heider F. 1958. The Psychology of Interpersonal Relations. New York:
+Wiley. 322 pp. </p>
+<p>Henderson RM, Clark KB. 1990. Architectural innovation: the
+reconfiguration of existing product technologies and the failure of
+established firms. <em>Adm. Sci.</em> Q. 35:9–30</p>
+<p>Homans GC. 1961. Social Behavior: Its Elementary Forms. New York:
+Harcourt Brace</p>
+<p>Huckfeldt R, Sprague J. 1987. Networks in context: the social flow of
+political information. Am. Polit. Sci. Rev. 81:1197–216</p>
+<p>Ibarra H. 1995. Race, opportunity, and diversity of social circles in
+managerial networks. Acad. Manag. J. 38:673–703</p>
+<p>Ikkink KK, van Tilburg T. 1999. Broken ties: reciprocity and other
+factors affecting the termination of older adults’ relationships. Soc.
+Netw. 21:131–46</p>
+<p>Inglehart R, Baker WE. 2000. Modernization, cultural change, and the
+persistence of traditional values. Am. Sociol. Rev. 65:19–51</p>
+<p>Ingram P, Morris MW. 2007. Do people mix at mixers? Structure,
+homophily, and the “life of the party.” Adm. Sci. Q. 52:558–85</p>
+<p>Ingram P, Roberts PW. 2000. Friendships among competitors in the
+Sydney hotel industry. Am. J. Sociol. 106:387–423</p>
+<p>Jennings H. 1943. Leadership and Isolation: A Study of Personality in
+Interpersonal Relations. New York: Longmans</p>
+<p>Jeong H, Neda Z, Barabási A-L. 2003. Measuring preferential
+attachment in evolving networks. Europhys. Lett. 62:567–72</p>
+<p>Jones BF, Wuchty S, Uzzi B. 2008. Multi-university research teams:
+shifting impact, geography, and stratification in science. Science
+322:1259–62</p>
+<p>Karasek RA. 1979. Job demands, job decision latitude, and mental
+strain—implications for job redesign. Adm. Sci. Q. 24:285–308</p>
+<p>Katz L. 1953. A new status index derived from sociometric analysis.
+Psychometrica 18:39–43</p>
+<p>Kleinbaum AM, Stuart TE, Tushman M. 2008. Communication (and
+coordination?) in a modern, complex organization. Presented at Annu.
+Meet. Am. Sociol. Assoc., Boston, July 31</p>
+<p>Kogut B, Urso P, Walker G. 2007. Emergent properties of a new
+financial market: American venture capital syndication, 1960–2005.
+Manag. Sci. 53:1181–98</p>
+<p>Kogut B, Walker G. 2001. The small world of Germany and the
+durability of national networks. Am. Sociol. Rev. 66:317–35</p>
+<p>Kono C, Palmer D, Friedland R, Zafonte M. 1998. Lost in space: the
+geography of corporate interlocking directorates. Am. J. Sociol.
+103:863–911</p>
+<p>Korpi W, Palme J. 1998. The paradox of redistribution and strategies
+of equality: welfare state institutions, inequality, and poverty in the
+western countries. Am. Sociol. Rev. 63:661–87</p>
+<p>Kossinets G, Watts DJ. 2006. Empirical analysis of an evolving social
+network. Science 311:88–90</p>
+<p>Kossinets G, Watts DJ. 2009. Origins of homophily in an evolving
+social network. Am. J. Sociol. 115:405–50</p>
+<p>Krackhardt D, Handcock MS. 2008. Heider vs Simmel: emergent features
+in dynamic structures. In Statistical Network Analysis: Models, Issues,
+and New Directions, ed. E Airoldi, DM Blei, SE Fienberg, A Goldenberg,
+EP Xing, AX Zheng, pp. 14–27. Berlin: Springer</p>
+<p>Lawler EJ, Thye SR, Yoon J. 2008. Social exchange and micro social
+order. Am. Sociol. Rev. 73:519–42</p>
+<p>Lazarsfeld P, Merton RK. 1954. Friendship as social process: a
+substantive and methodological analysis. In Freedom and Control in
+Modern Society, ed. MA Berger, T Abel, C Page, pp. 18–66. New York: Van
+Nostrand</p>
+<p>Lazega E, Pattison PE. 1999. Multiplexity, generalized exchange and
+cooperation in organizations: a case study. Soc. Netw. 21:67–90</p>
+<p>Lazerson M. 1995. A new phoenix? Modern putting-out in the Modena
+knitwear industry. <em>Adm. Sci.</em> Q. 40:34–59</p>
+<p>Leenders RTAJ. 1997. Evolution of friendship and best friendship
+choices. In Evolution of Social Networks, ed. P Doreian, FN Stokman,
+pp. 149–65. Amsterdam: Gordan &amp; Breach</p>
+<p>Leskovec J, Horvitz E. 2007. Worldwide buzz: planetary-scale views on
+an instant-messaging network. Microsoft Res. Tech. Rep. MSR-TR-2006-186.
+http://research.microsoft.com/en-us/um/people/horvitz/msn-paper.pdf</p>
+<p>Liljeros F, Edling CR, Amaral LAN, Stanley HE, Aberg Y. 2001. The web
+of human sexual contacts. Nature 411:907–8</p>
+<p>Lin N. 1999. Social networks and status attainment. Annu.
+Rev. Sociol. 25:467–87</p>
+<p>Lin N, Ensel WM, Vaughn JC. 1981. Social resources and strength of
+ties: structural factors in occupational status attainment. Am. Sociol.
+Rev. 46:393–405</p>
+<p>Lincoln JR, Miller J. 1979. Work and friendship ties in
+organizations: a comparative analysis of relational networks. <em>Adm.
+Sci.</em> Q. 24:181–99</p>
+<p>Marmaros D, Sacerdote B. 2006. How do friendships form? Q. J. Econ.
+121:79–119</p>
+<p>Marsden PV. 2002. Egocentric and sociocentric measures of network
+centrality. Soc. Netw. 24:407–22</p>
+<p>Martin JL, Yeung K-T. 2006. Persistence of close personal ties over a
+12-year period. Soc. Netw. 28:331–62</p>
+<p>Massey DS. 1990. American apartheid—segregation and the making of the
+underclass. Am. J. Sociol. 96:329–57</p>
+<p>McCarthy JD, Zald MN. 1977. Resource mobilization and
+social-movements—partial theory. Am. J. Sociol. 82:1212–41</p>
+<p>McPherson JM, Ranger-Moore JR. 1991. Evolution on a dancing
+landscape: organizations and networks in dynamic Blau space. Soc. Forces
+70:19–42</p>
+<p>McPherson M, Smith-Lovin L, Brashears ME. 2006. Social isolation in
+America: changes in core discussion networks over two decades. Am.
+Sociol. Rev. 71:353–75</p>
+<p>McPherson M, Smith-Lovin L, Cook JM. 2001. Birds of a feather:
+homophily in social networks. Annu. Rev. Sociol. 27:415–44</p>
+<p>Mehra A, Kilduff M, Brass DJ. 1998. At the margins: a distinctiveness
+approach to the social identity and social networks of underrepresented
+groups. Acad. Manag. J. 41:441–52</p>
+<p>Merton RK. 1968. The Matthew effect in science. Science 159:56–63</p>
+<p>Meyer JW, Boli J, Thomas GM, Ramirez FO. 1997. World society and the
+nation-state. Am. J. Sociol. 103:144–81</p>
+<p>Meyer JW, Rowan B. 1977. Institutionalized organizations: formal
+structure as myth and ceremony. Am. J. Sociol. 83:340–63</p>
+<p>Milgram S. 1967. The small-world problem. Psychol. Today 1:60–67</p>
+<p>Mizruchi MS. 1996. What do interlocks do? An analysis, critique, and
+assessment of research on interlocking directorates. Annu. Rev. Sociol.
+22:271–98</p>
+<p>Mizruchi MS. 2004. Berle and Means revisited: the governance and
+power of large US corporations. Theory Soc. 33:579–617</p>
+<p>Mollica KA, Gray B, Trevino LK. 2003. Racial homophily and its
+persistence in newcomers’ social networks. Organ. Sci. 14:123–36</p>
+<p>Monge PR, Contractor N. 2003. Theories of Communication Networks. New
+York: Oxford Univ. Press</p>
+<p>Montoya RM, Insko CA. 2008. Toward a more complete understanding of
+the reciprocity of liking effect. Eur. J. Soc. Psychol. 38:477–98</p>
+<p>Moody J. 2001. Race, school integration, and friendship segregation
+in America. Am. J. Sociol. 107:679–716</p>
+<p>Moody J. 2004. The structure of a social science collaboration
+network: disciplinary cohesion from 1963 to 1999. Am. Sociol.
+Rev. 69:213–38</p>
+<p>Moreno JL. 1934. Who Shall Survive. Washington, DC: Nerv. Ment.
+Dis.</p>
+<p>Newcomb TM. 1956. The prediction of interpersonal attraction. Am.
+Psychol. 11:575–86</p>
+<p>Newman MEJ. 2001a. Clustering and preferential attachment in growing
+networks. Phys. Rev. E 64:025102R</p>
+<p>Newman MEJ. 2001b. Scientific collaboration networks. I. Network
+construction and fundamental results. Phys. Rev. E 64:016131</p>
+<p>Newman MEJ. 2001c. Scientific collaboration networks. II. Shortest
+paths, weighted networks, and centrality. Phys. Rev. E 64:016132</p>
+<p>Newman MEJ. 2001d. The structure of scientific collaboration
+networks. Proc. Natl. Acad. Sci. USA 98:404–9</p>
+<p>Newman MEJ. 2002. Assortative mixing in networks. Phys. Rev. Lett.
+89:208701</p>
+<p>Newman MEJ. 2008. The physics of networks. Phys. Today 61:33–38</p>
+<p>Newman MEJ, Park J. 2003. Why social networks are different from
+other types of networks. Phys. Rev. E 68:036122</p>
+<p>Newman MEJ, Strogatz SH, Watts DJ. 2001. Random graphs with arbitrary
+degree distributions and their applications. Phys. Rev. E 6402</p>
+<p>Newman MEJ, Watts DJ, Strogatz SH. 2002. Random graph models of
+social networks. Proc. Natl. Acad. Sci. USA 99(Suppl. 1):2566–72</p>
+<p>Nohria N, Garcia-Pont C. 1991. Global strategic linkages and industry
+structure. Strateg. Manag. J. 12:105–24</p>
+<p>Orloff AS. 1993. Gender and the social rights of citizenship—the
+comparative-analysis of gender relations and welfare states. Am. Sociol.
+Rev. 58:303–28</p>
+<p>Page SE. 2007. The Difference: How the Power of Diversity Creates
+Better Groups, Firms, Schools, and Societies. Princeton, NJ: Princeton
+Univ. Press</p>
+<p>Perrucci R, Pilisuk M. 1970. Leaders and ruling
+elites—interorganizational bases of community power. Am. Sociol.
+Rev. 35:1040–57</p>
+<p>Pickering A. 1993. The mangle of practice—agency and emergence in the
+sociology of science. Am. J. Sociol. 99:559–89</p>
+<p>Plickert G, Cote RR, Wellman B. 2007. It’s not who you know, it’s how
+you know them: Who exchanges what with whom? Soc. Netw. 29:405–29</p>
+<p>Podolny JM. 1993. A status-based model of market competition. Am. J.
+Sociol. 98:829–72</p>
+<p>Podolny JM. 1994. Market uncertainty and the social character of
+economic exchange. Adm. Sci. Q. 39:458–83</p>
+<p>Podolny JM, Page KL. 1998. Network forms of organization. Annu.
+Rev. Sociol. 24:57–76</p>
+<p>Portes A, Sensenbrenner J. 1993. Embeddedness and immigration—notes
+on the social determinants of economic-action. Am. J. Sociol.
+98:1320–50</p>
+<p>Powell WW, Koput KW, Smith-Doerr L. 1996. Interorganizational
+collaboration and the locus of innovation: networks of learning in
+biotechnology. <em>Adm. Sci.</em> Q. 41:116–45</p>
+<p>Powell WW, White DR, Koput KW, Owen-Smith J. 2005. Network dynamics
+and field evolution: the growth of interorganizational collaboration in
+the life sciences. Am. J. Sociol. 110:1132–205</p>
+<p>Price DJdS. 1965. Networks of scientific papers. Science
+149:510–15</p>
+<p>Price DJdS. 1976. General theory of bibliometric and other cumulative
+advantage processes. J. Am. Soc. Inf. Sci. 27:292–306</p>
+<p>Qian ZC, Lichter DT. 2007. Social boundaries and marital
+assimilation: interpreting trends in racial and ethnic intermarriage.
+Am. Sociol. Rev. 72:68–94</p>
+<p>Rivera MT, Uzzi B. 2009. The emergence and evolution of elite
+networks in an MBA program. Work. Pap., Kellogg Sch. Manag., Northwest.
+Univ.</p>
+<p>Rokeach M, Mezei L. 1966. Race and shared belief as factors in social
+choice. Science 151:167–72</p>
+<p>Ruef M, Aldrich H, Carter N. 2003. The structure of founding teams:
+homophily, strong ties and isolation among U.S. entrepreneurs. Am.
+Sociol. Rev. 68:195–222</p>
+<p>Runger G, Wasserman S. 1980. Longitudinal analysis of friendship
+networks. Soc. Netw. 2:143–54</p>
+<p>Saavedra S, Reed-Tsochas F, Uzzi B. 2008. Asymmetric disassembly and
+robustness in declining networks. Proc. Natl. Acad. Sci. USA
+105:16466–71</p>
+<p>Sampson RJ, Morenoff JD, Earls F. 1999. Beyond social capital:
+spatial dynamics of collective efficacy for children. Am. Sociol.
+Rev. 64:633–60</p>
+<p>Sewell WH Jr. 1992. A theory of structure: duality, agency, and
+transformation. Am. J. Sociol. 98:1–29</p>
+<p>Shipilov AV, Rowley TJ, Aharonson BS. 2006. When do networks matter?
+A study of tie formation and decay. Adv. Strateg. Manag. 23:481–519</p>
+<p>Simmel G. 1908 [1950]. The Sociology of Georg Simmel. New York: Free
+Press</p>
+<p>Small ML. 2009. Unanticipated Gains: Origins of Network Inequality in
+Everyday Live. New York: Oxford Univ. Press</p>
+<p>Smith RD. 2006. The network of collaboration among rappers and its
+community structure. J. Stat. Mech. Theory Exp. 2006:P02006</p>
+<p>Snow DA, Worden SK, Rochford EB, Benford RD. 1986. Frame alignment
+processes, micromobilization, and movement participation. Am. Sociol.
+Rev. 51:464–81</p>
+<p>Sørensen AB, Hallinan MT. 1977. Stochastic-model for change in group
+structure. Sociol. Rev. Monogr. M24:143–66</p>
+<p>Sorenson O, Stuart TE. 2008. Bringing the context back in: settings
+and the search for syndicate partners in venture capital investment
+networks. Adm. Sci. Q. 53:266–94</p>
+<p>Sprecher S. 1998. Insiders’ perspectives on reasons for attraction to
+a close other. Soc. Psychol. Q. 61:287–300</p>
+<p>Stein DD. 1966. The influence of belief systems on interpersonal
+preference: a validation study of Rokeach’s theory of prejudice.
+Psychol. Monogr. 80:1–29</p>
+<p>Stein DD, Hardyck JE, Smith MB. 1965. Race and belief: an open and
+shut case. J. Personal. Soc. Psychol. 1:281–89</p>
+<p>Stuart TE, Sorenson O. 2007. Strategic networks and entrepreneurial
+ventures. Strateg. Entrep. J. 1:211–27</p>
+<p>Swidler A. 1986. Culture in action—symbols and strategies. Am.
+Sociol. Rev. 51:273–86</p>
+<p>Tuma NB, Hallinan M. 1979. The effects of sex, race and achievement
+on schoolchildren’s friendships. Soc. Forces 57:1265–85</p>
+<p>Tushman ML, Anderson P. 1986. Technological discontinuities and
+organizational environments. <em>Adm. Sci.</em> Q. 31:439–65</p>
+<p>Uzzi B. 1996. The sources and consequences of embeddedness for the
+economic performance of organizations: the network effect. Am. Sociol.
+Rev. 61:674–98</p>
+<p>Uzzi B. 1997. Social structure and competition in interfirm networks:
+the paradox of embeddedness. Adm. Sci. Q. 42:35–67</p>
+<p>Uzzi B. 1999. Embeddedness in the making of financial capital: how
+social relations and networks benefit firms seeking financing. Am.
+Sociol. Rev. 64:481–505</p>
+<p>Uzzi B. 2008. A social network’s changing statistical properties and
+the quality of human innovation. J. Phys. A 41:24023</p>
+<p>Uzzi B, Dunlap S. 2005. How to build your network. Harvard Bus.
+Rev. 83:53–60</p>
+<p>Uzzi B, Lancaster R. 2004. Embeddedness and price formation in the
+corporate law market. Am. Sociol. Rev. 69:319–44</p>
+<p>Uzzi B, Spiro J. 2005. Collaboration and creativity: the small world
+problem. Am. J. Sociol. 111:447–504</p>
+<p>van Duijn MAJ, Zeggelink EPH, Huisman M, Stokman FN, Wasseur FW.
+2003. Evolution of sociology freshmen into a friendship network. J.
+Math. Sociol. 27:153–91</p>
+<p>Wasserman S, Faust K. 1992. Social Network Analysis: Methods and
+Applications. Cambridge, UK: Cambridge Univ. Press</p>
+<p>Watts DJ. 1999. Networks, dynamics, and the small-world phenomenon.
+Am. J. Sociol. 105:493–527</p>
+<p>Weick KE. 1976. Educational organizations as loosely coupled systems.
+Adm. Sci. Q. 21:1–19</p>
+<p>Weick KE, Roberts KH. 1993. Collective minds in organizations:
+heedful interrelating on flight decks. <em>Adm. Sci.</em> Q.
+38:357–81</p>
+<p>Wellman B. 1979. Community question—intimate networks of East
+Yorkers. Am. J. Sociol. 84:1201–31</p>
+<p>Wellman B. 1996. Are personal communities local? A dumptarian
+reconsideration. Soc. Netw. 18:347–54</p>
+<p>Westphal JD, Milton LP. 2000. How experience and network ties affect
+the influence of demographic minorities on corporate boards. <em>Adm.
+Sci.</em> Q. 45:366–98</p>
+<p>Westphal JD, Stern I. 2007. Flattery will get you everywhere
+(especially if you are a male Caucasian): how ingratiation, boardroom
+behavior, and demographic minority status affect additional board
+appointments at US companies. Acad. Manag. J. 50:267–88</p>
+<p>Williamson OE. 1981. The economics of organization: the transaction
+cost approach. Am. J. Sociol. 87:548–77</p>
+<p>Williamson OE. 1991. Comparative economic-organization—the analysis
+of discrete structural alternatives. <em>Adm. Sci.</em> Q. 36:269–66</p>
+<p>Wuchty S, Jones BF, Uzzi B. 2007. The increasing dominance of teams
+in production of knowledge. Science 316:1036–39</p>
+<p>Zeleny LD. 1940. Measurement of social status. Am. J. Sociol.
+45:576–82</p>
+</body>
+</html>
