@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<h1 id="notes-on-the-theory-of-the-actor-network-ordering-strategy-and-heterogeneity">Notes
+on the Theory of the Actor-Network: Ordering, Strategy, and
+Heterogeneity</h1>
+<p>John Law
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>1</mn></msup><annotation encoding="application/x-tex">^{1}</annotation></semantics></math></p>
+<p>Received April 10, 1992</p>
+<p>This paper describes the theory of the actor-network, a body of
+theoretical and empirical writing which treats social relations,
+including power and organization, as network effects. The theory is
+distinctive because it insists that networks are materially
+heterogeneous and argues that society and organization would not exist
+if they were simply social. Agents, texts, devices, architectures are
+all generated in, form part of, and are essential to, the networks of
+the social. And in the first instance, all should be analyzed in the
+same terms. Accordingly, in this view, the task of sociology is to
+characterize the ways in which materials join together to generate
+themselves and reproduce institutional and organizational patterns in
+the networks of the social.</p>
+<p>KEY WORDS: actor-network; translation; heterogeneity; agency;
+technology; strategy; ordering; punctualization; power; materialism.</p>
+<h2 id="introduction">1. INTRODUCTION</h2>
+<p>Just occasionally we find ourselves watching on the sidelines as an
+order comes crashing down. Organizations or systems which we had always
+taken for granted—the Union of Soviet Socialist Republics, or
+Continental Illinois—are swallowed up. Commissars, moguls, and captains
+of industry disappear from view. These dangerous moments offer more than
+political promise. For when the hidden trapdoors of the social spring
+open we suddenly learn that the masters of the universe may also have
+feet of clay.</p>
+<p>How is it that it ever seemed otherwise? How is that, at least for a
+time, they made themselves different from us? By what organizational
+means did they keep themselves in place and overcome the resistances
+that would have brought them tumbling down much sooner? How was it we
+colluded in this? These are some of the key questions of social science.
+And they are the questions that lie at the heart of “actor-network
+theory”
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>2</mn></msup><annotation encoding="application/x-tex">^{2}</annotation></semantics></math>
+—the approach to sociology that is the topic of this note. This
+theory—also known as the sociology of translation—is concerned with the
+mechanics of power. It suggests, in effect, that we should analyze the
+great in exactly the same way that we would anyone else. Of course, this
+is not to deny that the nabobs of this world are powerful. They
+certainly are. But it is to suggest that they are no different in kind
+sociologically to the wretched of the earth.</p>
+<p>Here is the argument. If we want to understand the mechanics of power
+and organization it is important not to start out assuming whatever we
+wish to explain. For instance, it is a good idea not to take it for
+granted that there is a macrosocial system on the one hand, and bits and
+pieces of derivative micro-social detail on the other. If we do this we
+close off most of the interesting questions about the origins of power
+and organization. Instead, we should start with a clean slate. For
+instance, we might start with interaction and assume that interaction is
+all that there is. Then we might ask how some kinds of interactions more
+or less succeed in stabilizing and reproducing themselves: how it is
+that they overcome resistance and seem to become “macrosocial”; how is
+it that they seem to generate the effects such as power, fame, size,
+scope, or organization with which we are all familiar. This, then, is
+one of the core assumptions of actor-network theory: that Napoleons are
+no different in kind to small-time hustlers, and IBMs to whelk-stalls.
+And if they are larger, then we should be studying how this comes
+about—how, in other words, size, power, or organization are
+generated.</p>
+<p>In this note, I start by exploring the metaphor of heterogeneous
+network. This lies at the heart of actor-network theory, and is a way of
+suggesting that society, organizations, agents, and machines are all
+effects generated in patterned networks of diverse (not simply human)
+materials. Next I consider network consolidation, and in particular how
+it is that networks may come to look like single point actors: how it
+is, in other words, we are sometimes able to talk of “the British
+Government” rather than all the bits and pieces that make it up. I then
+examine the character of network ordering and argue that this is better
+seen as a verb—a somewhat uncertain process of overcoming
+resistance—rather than as the fait accompli of a noun. Finally, I
+discuss the materials and strategies of network ordering, and describe
+some organizationally-relevant findings of actor-network theory. In
+particular, I consider some of the ways in which patterning generates
+institutional and organizational effects, including hierarchy and
+power.</p>
+<h2 id="society-as-heterogeneous-network">2. SOCIETY AS HETEROGENEOUS
+NETWORK</h2>
+<p>Actor-network authors started out in the sociology of science and
+technology. With others in the sociology of science, they argued that
+knowledge is a social product rather than something generated through
+the operation of a privileged scientific method. And, in particular,
+they argued that “knowledge” (but they generalize from knowledge to
+agents, social institutions, machines, and organizations) may be seen as
+a product or an effect of a network of heterogeneous materials.</p>
+<p>I put “knowledge” in inverted commas because it always takes material
+forms. It comes as talk, or conference presentations. Or it appears in
+papers, preprints, or patents. Or again, it appears in the form of
+skills embodied in scientists and technicians (Latour and Woolgar,
+1979). “Knowledge,” then, is embodied in a variety of material forms.
+But where does it come from? The actor-network answer is that it is the
+end product of a lot of hard work in which heterogeneous bits and
+pieces—test tubes, reagents, organisms, skilled hands, scanning electron
+microscopes, radiation monitors, other scientists, articles, computer
+terminals, and all the rest—that would like to make off on their own are
+juxtaposed into a patterned network which overcomes their resistance. In
+short, it is a material matter but also a matter of organizing and
+ordering those materials. So this is the actor-network diagnosis of
+science: that it is a process of “heterogeneous engineering” in which
+bits and pieces from the social, the technical, the conceptual, and the
+textual are fitted together, and so converted (or “translated”) into a
+set of equally heterogeneous scientific products.</p>
+<p>So much for science. But I have already suggested that science isn’t
+very special. Thus what is true for science is also said to be true for
+other institutions. Accordingly, the family, the organization, computing
+systems, the economy and technologies—all of social life—may be
+similarly pictured. All of these are ordered networks of heterogeneous
+materials whose resistance has been overcome. This, then, is the crucial
+analytical move made by actor-network writers: the suggestion that the
+social is nothing other than patterned networks of heterogeneous
+materials.</p>
+<p>This is a radical claim because it says that these networks are
+composed not only of people, but also of machines, animals, texts,
+money, architectures—any material that you care to mention. So the
+argument is that the stuff of the social isn’t simply human. It is all
+these other materials too. Indeed, the argument is that we wouldn’t have
+a society at all if it weren’t for the heterogeneity of the networks of
+the social. So in this view the task of sociology is to characterize
+these networks in their heterogeneity, and explore how it is that they
+come to be patterned to generate effects like organizations, inequality,
+and power.</p>
+<p>Look at the material world in this way. It isn’t simply that we eat,
+find shelter in our houses, and produce objects with machines. It is
+also that almost all of our interactions with other people are mediated
+through objects of one kind or another. For instance, I speak to you
+through a text, even though we will probably never meet. And to do that,
+I am tapping away at a computer keyboard. At any rate, our communication
+with one another is mediated by a network of objects—the computer, the
+paper, the printing press. And it is also mediated by networks of
+objects-and-people, such as the postal system. The argument is that
+these various networks participate in the social. They shape it. In some
+measure they help to overcome your reluctance to read my text. And (most
+crucially) they are necessary to the social relationship between author
+and reader.</p>
+<p>Here is a second example. I am standing on a stage. The students face
+me, behind seried ranks of desks, with paper and pens. They are writing
+notes. They can see me, and they can hear me. But they can also see the
+transparencies that I put in the overhead projector. So the projector,
+like the shape of the room, participates in the shaping of our
+interaction. It mediates our communication and it does this
+asymmetrically, amplifying what I say without giving students much of a
+chance to answer back (Thompson, 1990). In another world it might, of
+course, be different. The students might storm the podium and take
+control of the overhead projector. Or they might, as they do if I
+lecture badly, simply ignore me. But they don’t, and while they don’t
+the projector participates in our social relations: it helps to define
+the lecturer-student relationship. It is a part of the social. It
+operates on them to influence the way in which they act.</p>
+<p>Perhaps it is only in lovemaking that there is interaction between
+unmediated human bodies—though even here the extra-somatic usually plays
+a role too. But the general case, and the one pressed by actor-network
+theory, is this. If human beings form a social network, it is not
+because they interact with other human beings. It is because they
+interact with human beings and endless other materials too. And, just as
+human beings have their preferences—they prefer to interact in certain
+ways rather than in others—so too do the other materials that make up
+the heterogeneous networks of the social. Machines, architectures,
+clothes, texts—all contribute to the patterning of the social. And—this
+is my point—if these materials were to disappear then so too would what
+we sometimes call the social order. Actor-network theory says, then,
+that order is an effect generated by heterogeneous means.</p>
+<p>At this point there is a parting of the ways. For the argument about
+the material patterning of the social can be treated in a reductionist
+manner. The reductionist versions tell that either machines or human
+relations are determinate in the last instance: that one drives the
+other.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>3</mn></msup><annotation encoding="application/x-tex">^{3}</annotation></semantics></math>
+However, though these reductionisms are different, they have two things
+in common. First, they divide the human and the technical into two
+separate heaps. And second, they assume that one drives the other.</p>
+<p>Actor-network theory does not accept this reductionism. It says that
+there is no reason to assume, a priori, that either objects or people in
+general determine the character of social change or stability. To be
+sure, in particular cases, social relations may shape machines, or
+machine relations shape their social counterparts. But this is an
+empirical question, and usually matters are more complex. So, to use
+Langdon Winner’s (1980) phrase, artefacts may, indeed, have politics.
+But the character of those politics, how determinate they are, and
+whether it is possible to tease people and machines apart in the first
+instance—these are all contingent questions.</p>
+<h2 id="agency-as-network">3. AGENCY AS NETWORK</h2>
+<p>Let me be clear. Actor-network theory is analytically radical in part
+because it treads on a set of ethical, epistemological, and ontological
+toes. In particular, it does not celebrate the idea that there is a
+difference in kind between people on the one hand, and objects on the
+other. It denies that people are necessarily special. Indeed it raises a
+basic question about what we mean when we talk of people. Necessarily
+then, it sets the alarm bells of ethical and epistemological humanism
+ringing. What should we make of this? A clarificatory point, and then an
+argument.</p>
+<p>The clarificatory point is this. We need, I think, to distinguish
+between ethics and sociology. The one may—indeed should—inform the
+other, but they are not identical. To say that there is no fundamental
+difference between people and objects is an analytical stance, not an
+ethical position. And to say this does not mean that we have to treat
+the people in our lives as machines. We don’t have to deny them the
+rights, duties, or responsibilities that we usually accord to people.
+Indeed, we might use it to sharpen ethical questions about the special
+character of the human effect—as, for instance, in difficult cases such
+as life maintained by virtue of the technologies of intensive care.</p>
+<p>Now the analytical point. This can be made in several ways. For
+instance, I could argue (as have sociologists such as Woolgar, 1992 and
+psychologists of technology like Turkle, 1984) that the dividing line
+between people and machines (and for that matter animals) is subject to
+negotiation and changes. Thus, it is easily shown that machines (and
+animals) gain and lose attributes such as independence, intelligence,
+and personal responsibility. And, conversely, that people take on and
+lose the attributes of machines and animals.</p>
+<p>However, I will press the argument in another way by saying that,
+analytically, what counts as a person is an effect generated by a
+network of heterogeneous, interacting, materials. This is much the same
+argument as the one that I have already made about both scientific
+knowledge and the social world as a whole. But converted into a claim
+about humans it says that people are who they are because they are a
+patterned network of heterogeneous materials. If you took away my
+computer, my colleagues, my office, my books, my desk, my telephone I
+wouldn’t be a sociologist writing papers, delivering lectures, and
+producing “knowledge.” I’d be something quite other—and the same is true
+for all of us. So the analytical question is this. Is an agent an agent
+primarily because he or she inhabits a body that carries knowledges,
+skills, values, and all the rest? Or is an agent an agent because he or
+she inhabits a set of elements (including, of course, a body) that
+stretches out into the network of materials, somatic and otherwise, that
+surrounds each body?</p>
+<p>Goffman’s (1968) answer is that props are important, but the moral
+career of the mental patient is not reducible to the props.
+Actor-network theory, like symbolic interaction (Star, 1990a, 1992)
+offers a similar response. It doesn’t deny that human beings usually
+have to do with bodies (but what of Banquo’s ghost, or the shadow of
+Karl Marx?). Neither does it deny that human beings, like the patients
+in the asylums described by Goffman, have an inner life. But it insists
+that social agents are never located in bodies and bodies alone, but
+rather that an actor is a patterned network of heterogeneous relations,
+or an effect produced by such a network. The argument is that thinking,
+acting, writing, loving, earning—all the attributes that we normally
+ascribe to human beings, are generated in networks that pass through and
+ramify both within and beyond the body. Hence the term, actor-network—an
+actor is also, always, a network.</p>
+<p>The argument can easily be generalized. For instance, a machine is
+also a heterogeneous network—a set of roles played by technical
+materials but also by such human components as operators, users, and
+repair-persons. So, too, is a text. All of these are networks which
+participate in the social. And the same is true for organizations and
+institutions: these are more or less precariously patterned roles played
+by people, machines, texts, buildings, all of which may offer
+resistance.</p>
+<h2 id="punctualization-and-resourcing">4. PUNCTUALIZATION AND
+RESOURCING</h2>
+<p>Why is it that we are sometimes but only sometimes aware of the
+networks that lie behind and make up an actor, an object or an
+institution? For instance, for most of us most of the time a television
+is a single and coherent object with relatively few apparent parts. On
+the other hand when it breaks down, for that same user—and still more
+for the repair person—it rapidly turns into a network of electronic
+components and human interventions. Again, for the average small
+businessperson, the Bank of Credit and Commerce International was a
+coherent and organized location for depositing and withdrawing money.
+Now, however, and even more so for the fraud investigators, it is a
+complex network of questionable, indeed criminal, transactions. And
+again, for the healthy person, most of the workings of the body are
+concealed, even from them. By contrast, for someone who is ill and even
+more so for the physician, the body is converted into a complex network
+of processes, and a set of human, technical, and pharmaceutical
+interventions.</p>
+<p>Why is it that the networks which make up the actor come to be
+deleted, or concealed from view? And why is this sometimes not the case?
+Let me start with tautology. Each of the above examples suggests that
+the appearance of unity, and the disappearance of network, has to do
+with simplification. The argument runs like this. All phenomena are the
+effect or the product of heterogeneous networks. But in practice we do
+not cope with endless network ramification. Indeed, much of the time we
+are not even in a position to detect network complexities. So what is
+happening? The answer is that if a network acts as a single block, then
+it disappears, to be replaced by the action itself and the seemingly
+simple author of that action. At the same time, the way in which the
+effect is generated is also effaced: for the time being it is neither
+visible, nor relevant. So it is that something much simpler—a working
+television, a well-managed bank or a healthy body—comes, for a time, to
+mask the networks that produce it.</p>
+<p>Actor network theorists sometimes talk of such precarious
+simplificatory effects as punctualizations, and they certainly index an
+important feature of the networks of the social. Thus, I noted earlier
+that I refuse an analytical distinction between the macro- and the
+microsocial. On the other hand, I also noted that some network patterns
+run wide and deep—that they are much more generally performed than
+others. Here is the connection: network patterns that are widely
+performed are often those that can be punctualized. This is because they
+are network packages—routines—that can, if precariously, be more or less
+taken for granted in the process of heterogeneous engineering. In other
+words, they can be counted as resources, resources which may come in a
+variety of forms: agents, devices, texts, relatively standardized sets
+of organizational relations, social technologies, boundary protocols,
+organizational forms—any or all of these. Note that the heterogeneous
+engineer cannot be certain that any will work as predicted.
+Punctualization is always precarious, it faces resistance, and may
+degenerate into a failing network. On the other hand, punctualized
+resources offer a way of drawing quickly on the networks of the social
+without having to deal with endless complexity. And, to the extent that
+they are embodied in such ordering efforts they are then performed,
+reproduced in, and ramify through the networks of the social.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>4</mn></msup><annotation encoding="application/x-tex">^{4}</annotation></semantics></math></p>
+<h2 id="translation-social-ordering-as-precarious-process">5.
+TRANSLATION: SOCIAL ORDERING AS PRECARIOUS PROCESS</h2>
+<p>I have insisted that punctualization is a process or an effect,
+rather something that can be achieved once and for all. Thus,
+actor-network theory assumes that social structure is not a noun but a
+verb. Structure is not free-standing, like scaffolding on a
+building-site, but a site of struggle, a relational effect that
+recursively generates and reproduces itself.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>5</mn></msup><annotation encoding="application/x-tex">^{5}</annotation></semantics></math>
+The insistence on process has a number of implications. It means, for
+instance, that no version of the social order, no organization, and no
+agent, is ever complete, autonomous, and final. Or, to put it another
+way, it means that notwithstanding the dreams of dictators and normative
+sociologists, there is no such thing as “the social order” with a single
+center, or a single set of stable relations. Rather, there are orders,
+in the plural. And, of course, there are resistances.</p>
+<p>Caution is required here, for the theory is not pluralist in the
+usual sense of the term. It doesn’t say there are many more or less
+equal centers of power or order. What it says is that the effects of
+power are generated in a relational and distributed manner, and nothing
+is ever sewn up. And that, to use the language of classical sociology,
+ordering (and its effects including power) is contestable and often
+contested. Thus I said earlier that human beings and machines have their
+own preferences. This was an informal way of talking of resistance and
+the polyvalent character of ordering—of the way in which any particular
+effort at ordering encounters its limits, and struggles to accept or
+overcome those limits. Another way of saying this is to note that the
+bits and pieces assembled pro tem into an order are constantly liable to
+break down, or make off on their own. Thus, analysis of ordering
+struggle is central to actor-network theory. The object is to explore
+and describe local processes of patterning, social orchestration,
+ordering, and resistance. In short, it is to explore the process that is
+often called translation which generates ordering effects such as
+devices, agents, institutions, or organizations. So “translation” is a
+verb which implies transformation and the possibility of equivalence,
+the possibility that one thing (for example, an actor) may stand for
+another (for instance a network).</p>
+<p>This, then, is the core of the actor-network approach: a concern with
+how actors and organizations mobilize, juxtapose, and hold together the
+bits and pieces out of which they are composed; how they are sometimes
+able to prevent those bits and pieces from following their own
+inclinations and making off; and how they manage, as a result, to
+conceal for a time the process of translation itself and so turn a
+network from a heterogeneous set of bits and pieces each with its own
+inclinations, into something that passes as a punctualized actor.</p>
+<h2 id="the-strategies-of-translation">6. THE STRATEGIES OF
+TRANSLATION</h2>
+<p>How is the work of all the networks that make up the punctualized
+actor borrowed, bent, displaced, distorted, rebuilt, reshaped, stolen,
+profited from, and/or misrepresented to generate the effects of agency,
+organization, and power? How are the resistances overcome? Here
+actor-network theory engages with the question that I posed at the
+outset: how is it that we never saw before that the Gorbachevs of this
+world really had feet of clay all along. For actor-network theory is all
+about power—power as a (concealed or misrepresented) effect, rather than
+power as a set of causes. Here it is close to Foucault (1979), but it is
+not simply Foucauldian for, eschewing the synchronic, it tells empirical
+stories about processes of translation. Indeed, there is more than a
+hint of Machiavelli in the method, and the author of The Prince is cited
+approvingly by several actor-network theorists for his merciless
+analysis of the tactics and strategies of power.</p>
+<p>But what can we say about translation and the methods of overcoming
+resistance? Actor-network theory almost always approaches its tasks
+empirically, and this is no exception. So the empirical conclusion is
+that translation is contingent, local, and variable. However, four more
+general findings emerge:</p>
+<ol type="1">
+<li>The first has to do with the fact that some materials are more
+durable than others and so maintain their relational patterns for
+longer. Imagine a continuum. Thoughts are cheap but they don’t last
+long, and speech lasts very little longer. But when we start to perform
+relations—and in particular when we embody them in inanimate materials
+such as texts and buildings—they may last longer. Thus a good ordering
+strategy is to embody a set of relations in durable materials.
+Consequently, a relatively stable network is one embodied in and
+performed by a range of durable materials.</li>
+</ol>
+<p>The argument is attractive, but it is not as simple as it may seem.
+This is because durability is yet another relational effect, not
+something given in the nature of things. If materials behave in durable
+ways then this too is an interactional effect. Walls may resist the
+escape attempts of prisoners—but only while there are also prison
+guards. Another way of putting it is that durable material forms may
+find other uses: their effects change when they are located in new
+networks of relations. In sum, the argument about durability is
+attractive and has much merit—but it needs to be handled with
+caution.</p>
+<ol start="2" type="1">
+<li><p>If durability is about ordering through time, then mobility is
+about ordering through space. In particular, it is about ways of acting
+at a distance. Thus, centers and peripheries are effects too, effects
+generated by surveillance and control. The affinity with Foucault is
+obvious, but actor-network theory approaches the matter somewhat
+differently. In particular, it explores materials and processes of
+communication—writing, electronic communication, methods of
+representation, banking systems, and such apparent mundanities as
+early-modern trade routes. In other words, it explores the translations
+that create the possibility of transmitting of what Latour calls
+immutable mobiles—letters of credit, military orders, or cannon balls.
+Once again the stress is on precarious relational effects—though with a
+strongly historical emphasis, in part influenced by the
+“system-building” studies of such historians of technology as Hughes
+(1983), and in part by the Annales school of materialist history with
+its insistence on the “longue duree” (Braudel, 1975).</p></li>
+<li><p>Translation is more effective if it anticipates the responses and
+reactions of the materials to be translated. This idea is not new—it is,
+for instance, crucial to Machiavellian political science, and counts as
+a central theme in business history (Chandler, 1977; Beniger,
+1986)—though actor-network writers resist the functionalism and
+technological determinism which tends to characterize the latter.
+Instead, they treat what Latour calls centers of translation as
+relational effects and explore the conditions and materials that
+generate these effects and contain the resistance that would dissolve
+them. Drawing on the work of historians (e.g., Ivins, 1975; Eisenstein,
+1980) and anthropologists (Goody, 1977; Ong, 1982), they thus consider
+the relationship between literacy, bureaucracy, print, the development
+of double-entry bookkeeping, and newer electronic technologies on the
+one hand, and the capacity to foresee outcomes on the other. The
+argument is that under the appropriate relational circumstances such
+innovations have important calculational consequences, which in turn
+increases network robustness.</p></li>
+</ol>
+<p>Note, again, the caveat about relational circumstances. As Weber well
+understood, calculation is not a deus ex machina. It is a set of social
+methods or relations in its own right. Furthermore, it can only work on
+material representations—the products of surveillance which are also
+relational effects. Thus as I have indicated, systems of representation,
+of immutable mobiles, are also precarious. The analogy with the problem
+of political representation is direct, for as with any other form of
+translation, representation is fallible, and it cannot be foretold
+whether a representative will successfully speak for (and so mask) what
+it claims to represent.</p>
+<ol start="4" type="1">
+<li>Finally, there is the issue of the scope of ordering. I have been
+pressing the view that this is local. But, arguably it is possible to
+impute somewhat general strategies of translation to networks,
+strategies which, like Foucauldian discourses, ramify through and
+reproduce themselves in a range of network instances or locations. Note
+that if these exist, they are more or less implicit—for explicit
+strategic calculation is only possible if there is already a center of
+translation.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>6</mn></msup><annotation encoding="application/x-tex">^{6}</annotation></semantics></math></li>
+</ol>
+<p>What might such strategies look like? This, again, is an empirical
+matter. But since no ordering is ever complete, we might expect a series
+of strategies to coexist and interact. This, at any rate, is the claim
+made by several actor-network writers. Thus, in a recent study of
+management, I have detected a range of strategies—“enterprise,”
+“administration,” “vocation,” and “vision”—which collectively operate to
+generate multi-strategic agents, organizational arrangements, and
+inter-organizational transactions. Indeed, the argument is that an
+organization may be seen as a set of such strategies which operate to
+generate complex configurations of network durability, spatial mobility,
+systems of representation, and calculability—configurations which have
+the effect of generating the center/periphery asymmetries and
+hierarchies characteristic of most formal organizations.</p>
+<h2 id="conclusion">7. CONCLUSION</h2>
+<p>In this note, I have described actor-network theory and suggested
+that this is a relational and process-oriented sociology that treats
+agents, organizations, and devices as interactive effects. I have
+touched on some of the ways in which such effects are generated, and
+emphasized their heterogeneity, their uncertainty, and their contested
+character. In particular, I have argued that social structure is better
+treated as a verb than as a noun.</p>
+<p>As is obvious, the approach has a number of points in common with
+other sociologies. However, its relational materialism is quite
+distinctive. To be sure, materialism is not new to sociology.
+Nevertheless, materialism and social relations have not always been the
+happiest of bedfellows. In the best sociologies such as Marxism and
+feminism they have interacted. Even so, it has been usual to treat them
+as if they were naturally different in kind, as a dualism rather than a
+continuity. However, as the dualisms fall in sociology, the
+actor-network approach joins the party in a radical spirit, for it not
+only effaces the analytical divisions between agency and structure, and
+the macro- and the micro-social, but it also asks us to treat different
+materials—people, machines, “ideas” and all the rest—as interactional
+effects rather than primitive causes. The actor-network approach is thus
+a theory of agency, a theory of knowledge, and a theory of machines.
+And, more importantly, it says that we should be exploring social
+effects, whatever their material form, if we want to answer the “how”
+questions about structure, power, and organization. This is the basic
+argument: to the extent that “society” recursively reproduces itself it
+does so because it is materially heterogeneous. And sociologies that do
+not take machines and architectures as seriously as they do people will
+never solve the problem of reproduction.</p>
+<p>What does actor-network theory have to say to the sociology of
+organizations? One answer is that it defines a set of questions for
+exploring the precarious mechanics of organization. I have implied above
+that these questions come in several forms. Thus it is convenient to
+distinguish, on the one hand, between questions to do with the materials
+of organization, and on the other, with those to do with the strategy of
+organization. So when actor-network theory explores the character of
+organization, it treats this as an effect or a consequence—the effect of
+interaction between materials and strategies of organization.</p>
+<p>These, then, are the kinds of questions it asks of organizations, and
+the powerful who head those organizations. What are the kinds of
+heterogeneous bits and pieces created or mobilized and juxtaposed to
+generate organizational effects? How are they juxtaposed? How are
+resistances overcome? How it is (if at all) that the material durability
+and transportability necessary to the organizational patterning of
+social relations are achieved? What are the strategies being performed
+throughout the networks of the social as a part of this? How far do they
+spread? How widely are they performed? How do they interact? How it is
+(if at all) that organizational calculation is attempted? How (if at
+all) are the results of that calculation translated into action? How is
+it (if at all) that the heterogeneous bits and pieces that make up
+organization generate an asymmetrical relationship between periphery and
+center? How is it, in other words, that a center may come to speak for
+and profit from, the efforts of what has been turned into a periphery?
+How is it that a manager manages?</p>
+<p>Looked at in this way, organization is an achievement, a process, a
+consequence, a set of resistances overcome, a precarious effect. Its
+components—the hierarchies, organizational arrangements, power
+relations, and flows of information—are the uncertain consequences of
+the ordering of heterogeneous materials. So it is that actor-network
+theory analyses and demystifies. It demystifies the power of the
+powerful. It says that, in the last instance, there is no difference in
+kind, no great divide, between the powerful and the wretched. But then
+it says that there is no such thing as the last instance. And since
+there is no last instance, in practice there are real differences
+between the powerful and the wretched, differences in the methods and
+materials that they deploy to generate themselves. Our task is to study
+these materials and methods, to understand how they realize themselves,
+and to note that it could and often should be otherwise.</p>
+<h2 id="acknowledgments">ACKNOWLEDGMENTS</h2>
+<p>I did not want to clutter the text, so I have included few references
+to actor-network theory in the body of this note. (Citations will be
+found in footnote 2.) However, the note reports on a large body of
+(substantially empirical) work by a series of authors. I am grateful to
+them all for their support over a decade.</p>
+<h2 id="references">REFERENCES</h2>
+<p>Akrich, M. (1989a). De la position relative des localites: Systemes
+electriques et reseaux sociopolitiques. Cahiers Centre d’Etudes l’Emploi
+32, 117–166.</p>
+<p>Akrich, M. (1989b). La construction d’un système socio-technique:
+Esquisse pour une anthropologie des techniques. Anthropol. Soc. 13,
+31–54.</p>
+<p>Akrich, M. (1992). The description of technical objects. In Bijker,
+W. E., and Law, J. (eds.), Shaping Technology—Building Society: Studies
+in Sociotechnical Change, MIT Press, Cambridge, Mass.</p>
+<p>Beniger, J. R. (1986). The Control Revolution: Technological and
+Economic Origins of the Information Society, Harvard University Press,
+Cambridge, Mass.</p>
+<p>Bourdieu, P. (1989). Distinction: A Social Critique of the Judgement
+of Taste, Routledge, London.</p>
+<p>Bowker, G. (1988). Pictures from the Subsoil, 1939. In Fyfe, G., and
+Law, J. (eds.), Picturing Power: Visual Depiction and Social Relations,
+Routledge, London.</p>
+<p>Bowker, G. (1992). What’s in a patent? In Bijker, W. E., and Law, J.
+(eds.), Shaping Technology—Building Society: Studies in Sociotechnical
+Change, MIT Press, Cambridge, Mass.</p>
+<p>Braudel, F. (1975). The Mediterranean and the Mediterranean World in
+the Age of Philip II (in two volumes), Fontana, London.</p>
+<p>Callon, M. (1980). Struggles and negotiations to define what is
+problematic and what is not. The socio-logic of translation. In
+Knorr-Cetina, K. D., Krohn, R., and Whitley, R. D. (eds.), The Social
+Process of Scientific Investigation: Sociology of the Sciences Yearbook,
+Reidel, Dordrecht.</p>
+<p>Callon, M. (1986). Some elements of a sociology of translation;
+domestication of the scallops and the fishermen of St Brieuc Bay. In
+Law, J. (ed.), Power, Action and Belief. A New Sociology of Knowledge?
+Routledge and Kegan Paul, London.</p>
+<p>Callon, M. (1987). Society in the making; The study of technology as
+a tool for sociological analysis. In Bijker, W. E., Hughes, T. P., and
+Pinch, T. J. (eds.), The Social Construction of Technological Systems,
+New Directions in the Sociology and History of Technology, MIT Press,
+Cambridge, Mass.</p>
+<p>Callon, M. (1991). Techno-economic networks and Irreversibility. In
+Law, J. (ed.), A Sociology of Monsters: Essays on Power, Technology and
+Domination, Routledge, London.</p>
+<p>Callon, M., and Latour, B. (1981). Unscrewing the big Leviathan: How
+actors macrostructure reality and how sociologists help them to do so.
+In Knorr-Cetina, K. D., and Cicourel, A. V. (eds.), Advances in Social
+Theory and Methodology: Toward and Integration of Micro- and
+Macro-Sociologies, Routledge and Kegan Paul, Boston, Mass.</p>
+<p>Callon, M., Law, J., and Rip, A. (eds.) (1986). Mapping the Dynamics
+of Science and Technology: Sociology of Science in the Real World,
+Macmillan, London.</p>
+<p>Cambrosio, A., et al. (1990). Representing biotechnology: An
+ethnography of Quebec science policy. Soc. Stud. Sci. 20, 195–227.</p>
+<p>Chandler, A. D. (1977). The Visible Hand; the Managerial Revolution
+in American Business, Belknap, Harvard University Press, Cambridge,
+Mass.</p>
+<p>Eisenstein, E. L. (1980). The Printing Press as an Agent of Change;
+Communications and Cultural Transformations in Early-Modern Europe,
+Cambridge University Press, Cambridge.</p>
+<p>Elias, N. (1978). The History of Manners, Blackwell, Oxford.</p>
+<p>Foucault, M. (1979). Discipline and Punish: The Birth of the Prison,
+Penguin, Harmondsworth.</p>
+<p>Foucault, M. (1981). The History of Sexuality; Volume 1, An
+Introduction, Penguin, Harmondsworth.</p>
+<p>Giddens, A. (1984). The Constitution of Society, Polity,
+Cambridge.</p>
+<p>Goffman, E. (1968). Asylums: Essays on the Social Situation of Mental
+Patients and Other Inmates, Harmondsworth, Penguin.</p>
+<p>Goody, J. (1977). The Domestication of the Savage Mind, Cambridge
+University Press, Cambridge.</p>
+<p>Hennion, A. (1985). Esthetique populaire ou theatralite theorique? Le
+peuple, le sociologue et le producteur a succes. In Esthetiques du
+Peuple, La Decouverte, Paris.</p>
+<p>Hennion, A. (1989). An intermediary between production and
+consumption: The producer of popular music. Sci. Technol. Human Values
+14, 400–424.</p>
+<p>Hennion, A. (1990). De l’etude des medias a l’analyse de la
+mediation: Esquisse d’un problematique. Medias Pouvoirs 20, 39-45.</p>
+<p>Hennion, A., and Meadel, C. (1986). Programming music: Radio as
+mediator. Media, Culture Soc. 8, Sage, London.</p>
+<p>Hennion, A., and Meadel, C. (1989). The artisans of desire: The
+mediation of advertising between product and consumer. Sociol. Theory 7,
+191–209.</p>
+<p>Hughes, T. P. (1983). Networks of Power: Electrification in Western
+Society, 1880–1930, Johns Hopkins University Press, Baltimore.</p>
+<p>Ivins, W. M. (1975). On the Rationalization of Sight, Da Capo, New
+York.</p>
+<p>Latour, B. (1985). Give me a laboratory and I will raise the world.
+In Knorr-Cetina, K. D., and Mulkay, M. J. (eds.), Science Observed.
+Perspectives on the Social Study of Science, London, Sage.</p>
+<p>Latour, B. (1986). The powers of association. In Law, J. (ed.),
+Power, Action and Belief. A New Sociology of Knowledge? Routledge and
+Kegan Paul, London.</p>
+<p>Latour, B. (1987). Science in Action: How to Follow Scientists and
+Engineers Through Society, Open University Press, Milton Keynes.</p>
+<p>Latour, B. (1988a). The Pasteurization of France, Harvard University
+Press, Cambridge, Mass.</p>
+<p>Latour, B. (1988b). The Prince for machines as well as for
+machinations. In Elliott, B. (ed.), Technology and Social Process,
+Edinburgh University Press, Edinburgh.</p>
+<p>Latour, B. (1990). Drawing things together. In Lynch, M., and
+Woolgar, S. (eds.), Representation in Scientific Practice, MIT Press,
+Cambridge, Mass.</p>
+<p>Latour, B. (1991a). Nous N’Avons Jamais Été Modernes: Essai
+d’Anthropologie Symmetrique, Decouverte, Paris.</p>
+<p>Latour, B. (1991b). Technology is society made durable. In Law, J.
+(ed.), A Sociology of Monsters: Essays on Power, Technology and
+Domination, Routledge, London.</p>
+<p>Latour, B. (1992a). Where are the missing masses? Sociology of a few
+mundane artefacts. In Bijker, W. E., and Law, J. (eds.), Shaping
+Technology—Building Society: Studies in Sociotechnical Change, MIT
+Press, Cambridge, Mass.</p>
+<p>Latour, B. (1992b). Aramis ou l’amour des techniques, La Decouverte,
+Paris.</p>
+<p>Latour, B., and Woolgar, S. (1979). Laboratory Life: The Social
+Construction of Scientific Facts, Sage, Beverly Hills; reprinted,
+Princeton University Press, Princeton, 1986.</p>
+<p>Law, J. (1986a). On the methods of long-distance control: Vessels,
+navigation, and the Portuguese route to India. In Law, J. (ed.), Power,
+Action and Belief. A New Sociology of Knowledge? Routledge and Kegan
+Paul, London.</p>
+<p>Law, J. (1986b). On power and its tactics: a view from the sociology
+of science. Sociol. Rev. 34, 1–38.</p>
+<p>Law, J. (1987). Technology, closure and heterogeneous engineering:
+The case of the Portuguese expansion. In Bijker, W. E., Hughes, T. P.,
+and Pinch, T. J. (eds.), The Social Construction of Technological
+Systems, New Directions in the Sociology and History of Technology, MIT
+Press, Cambridge, Mass.</p>
+<p>Law, J. (1991a). Power, discretion and strategy. In Law, J. (ed.), A
+Sociology of Monsters. Essays on Power, Technology and Domination,
+Routledge, London.</p>
+<p>Law, J. (1991b). Monsters, machines and sociotechnical relations. In
+Law, J. (ed.), A Sociology of Monsters. Essays on Power, Technology and
+Domination, Routledge, London.</p>
+<p>Law, J. (1992a). The Olympus 320 engine. A case study in design,
+autonomy and organisational control. Technol. Cult. forthcoming.</p>
+<p>Law, J. (1992b). Modernity, Myth, and Materialism, Blackwell, Oxford,
+forthcoming.</p>
+<p>Law, J., and Bijker, W. (1992). Technology, stability and social
+theory. In Bijker, W. E., and Law, J. (eds.), Shaping
+Technology—Building Society: Studies in Sociotechnical Change, MIT
+Press, Cambridge, Mass.</p>
+<p>Law, J., and Callon, M. (1988). Engineering and sociology in a
+military aircraft project: A network analysis of technological change.
+Soc. Prob. 35, 284–297.</p>
+<p>Law, J., and Callon, M. (1992). The life and death of an aircraft: A
+network analysis of technical</p>
+<p>change. In Bijker, W. E., and Law, J. (eds.), Shaping
+Technology—Building Society: Studies in Sociotechnical Change, MIT
+Press, Cambridge, Mass.</p>
+<p>Ong, W. J. (1982). Orality and Literacy: The Technologizing of the
+Word, Routledge, London.</p>
+<p>Rip, A. (1986). Mobilising resources through texts. In Callon, M.,
+Law, J., and Rip, A. (eds.). Mapping the Dynamics of Science and
+Technology: Sociology of Science in the Real World, Macmillan,
+London.</p>
+<p>Star, S. L. (1990a). What difference does it make where the mind is?
+Some questions for the history of neuropsychiatry. J. Neurol. Clin.
+Neuropsychol. 2, 436–443.</p>
+<p>Star, S. L. (1990b). Layered space, formal representations and
+long-distance control: The politics of information. Fundamenta Sci. 10,
+125–55.</p>
+<p>Star, S. L. (1991). Power, technologies and the phenomenology of
+standards. On being allergic to onions. In Law, J. (ed.), A Sociology of
+Monsters. Essays on Power, Technology and Domination, Routledge,
+London.</p>
+<p>Star, S. L. (1992). The skin, the skull and the self: Towards a
+sociology of the brain. In Harrington, A. (ed.), So Human a Brain:
+Knowledge and Values in the Neurosciences, Birkhauser, Boston, Mass.</p>
+<p>Star, S. L., and Griesemer, J. (1989). Institutional ecology,
+“translations” and boundary objects: Amateurs and professionals in
+Berkeley’s Museum of Vertebrate Zoology, 1907–39. Soc. Stud. Sci. 19,
+387–420.</p>
+<p>Thompson, J. B. (1990). Ideology and Modern Culture, Polity,
+Cambridge.</p>
+<p>Turkle, S. (1984). The Second Self: Computers and the Human Spirit,
+Simon and Schuster, New York.</p>
+<p>Winner, L. (1980). Do artifacts have politics? Daedalus, 109,
+121–136.</p>
+<p>Woolgar, S. (1992). Configuring the user: The case of usability
+trials. In Law, J. (ed.), A Sociology of Monsters. Essays on Power,
+Technology and Domination, Routledge, London.</p>
+</body>
+</html>
