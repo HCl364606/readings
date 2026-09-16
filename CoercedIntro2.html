@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<p>Introduction</p>
+<p>Apache is compact and muscular.<sup>1</sup> He talks fast and low in
+an eloquent rumble. At 34 years old, the Black American man recently
+finished his second stint in a New York State prison where he was
+incarcerated, he explained philosophically, for “a certain lifestyle”—an
+ontological way of being in the world—rather than for any single crime.
+“In order to change that lifestyle,” he said, “it’s a process. . . . You
+have to get stripped down to look at yourself.” For Apache this process
+was accelerated by the birth of his third child while he was in prison.
+“For me to miss his birth and have him visit me in a prison and then not
+get to touch him, just see him through a glass. That took, like, mad
+layers of.” He was emotionally “stripped down.”</p>
+<p>Like all able-bodied prisoners in New York State, Apache was required
+to work in prison. He worked six hours a day in the mess hall—preparing
+and serving food, washing dishes, scouring the kitchen—for which he was
+paid 15¢–17¢ an hour, nearly $13 every two weeks.<sup>2</sup> Earning
+these wages in prison, Apache said,</p>
+<p>You convince yourself that you in a good position as far as, you
+know, getting by. Because you locked down, you ain’t got to pay no light
+bill and this, that, and the other. But it’s still slave labor at the
+end of the day . . . because you don’t get to call of, you don’t get
+sick days, you don’t get a union. You don’t get none of the benefits of
+a normal worker. You can’t really even advance. You can’t aspire to be
+the boss one day. And, I mean, you’re getting paid fifteen cents an
+hour.</p>
+<p>Yet even as Apache described prisoners’ work as “slave labor,” he
+argued that it should not be otherwise. Prisoners should not earn the
+higher wages and other “benefits of a normal worker,” he said, because
+the purpose of prison labor is punishment. “It’s not supposed to be a
+camp,” he explained. “It’s not supposed to be a happy place. . . . We’re
+in prison. We’re not supposed to come in and kick our feet up.”</p>
+<p>I mean, I think the best thing is to stay out of prison. I couldn’t
+really conjure somebody getting a lot of money working in prison. It
+wouldn’t really make sense to me. . . . I mean, you’re in prison, people
+are paying taxes and you’re not doing nothing. I mean, like, even my
+wife and my moms, they’re out there working and they were sending me
+money, and that didn’t make me feel good . . . and, if you really look
+at the grand scheme of things, you were out there working for me, to
+take care of me. I mean, the tax they took out of your check, they put
+it somewhere, and somewhere down the line it came in [the prison]. So,
+my best advice—even though I am an advocate [for prisoners] and I don’t
+want to sound like a hater, but—just don’t go. If you don’t want to be
+put in that position, then don’t go.<sup>3</sup></p>
+<p>Whether or not one agrees with Apache’s view of prisoners, his
+description of their labor captures their contradictory position as
+workers in American citizenry: they are “slave labor” yet they are also
+“doing nothing” while others are “paying taxes” and “working for” them.
+For like all Americans, prisoners are culturally expected to fulfill a
+moral obligation to work, the shirking of which—perceived or real—has
+long been used to justify exclusion from the rights of productive
+citizenship.<sup>4</sup> Yet prisoners work not only to avoid a
+stigmatized state of dependence. They also have to work because they are
+dependent. They are the sole exception to the U.S. Constitution’s
+prohibition of slavery. As the 13th Amendment states, “Neither slavery
+nor involuntary servitude, except as a punishment for crime . . . shall
+exist within the United States.”<sup>5</sup> In short, prisoners can be
+forced to work. Their incarceration not only justifies the compulsion of
+their labor; it also serves as the legal rationale for their exclusion
+from employment rights and protections, including the federal minimum
+wage, overtime pay, and collective bargaining.<sup>6</sup> Because they
+are prisoners, they can be required to work but, because they are
+prisoners, they are not protected as workers under labor and employment
+law. Like enslaved people in years past,<sup>7</sup> American prisoners
+can be compelled to work while being denied the rights and protections
+of productive workers, while also condemned for not being such workers.
+As Apache said, they are at once “slave labor” and “doing nothing.” It
+is this cultural and legal intersection of working but not being
+recognized as workers that allows prisoners’ labor—and that of others,
+as we will see—to be characterized by the coercion that I examine in
+this book.</p>
+<p>Prisoners are, in many ways, exceptional. They have been convicted of
+crimes; they are institutionally confined and therefore physically and
+economically dependent on the state; and as noted above, they can be
+legally forced to work. Even still, prisoners’ contradictory position at
+the crossroads of compulsory labor (“slave labor”) and culturally
+constructed idleness (“doing nothing”) is not unique. Take, for example,
+workfare workers: welfare recipients who are required to work 25–35
+hours a week in order to receive public assistance. They are assigned to
+jobs—often janitorial or bookkeeping in nature—in public parks,
+nonprofit organizations, government agencies, and (in New York City at
+least) subway stations, but their labor is construed as “work
+experience” rather than work.<sup>8</sup> As a result, instead of wages
+their work garners a relatively meager combination of cash benefits,
+rental and utility assistance, and food stamps (now SNAP), along with
+childcare during work hours.<sup>9</sup></p>
+<p>There are many dynamics unique to this labor relation, of course, as
+there are for prisoners. Yet there are also important economic, legal,
+and cultural parallels between workfare and incarcerated labor. On a
+structural level, in fact, the U.S. welfare system can be conceptualized
+as the feminized counterpart to the masculinized criminal justice
+system, as both are highly racialized, gendered, and classed
+institutions of social control and subjugation in the United
+States.<sup>10</sup> Within this system, moreover, workfare workers—much
+like prisoners—are compelled to work, as their labor is a prerequisite
+for their continued access to key elements of the social safety net.
+Meanwhile, the labor of both of these groups yields financial returns
+for their respective institutions. Workfare workers provide cost savings
+to the nonprofit organizations and government agencies that use their
+labor at no cost. Likewise, because incarcerated workers do much of
+prisons’ everyday operations and upkeep work (e.g., food service,
+cleaning, utilities maintenance), their low- or no-wage labor generates
+substantial cost savings for prisons and state agencies, while also
+generating revenue through the sale of prisoner-made goods and
+services.</p>
+<p>Despite their labor, workfare workers—like prisoners—are seen as
+dependent on the state and are culturally disparaged as being a “drain
+on the economy” and a “burden” on taxpayers.<sup>11</sup> Indeed,
+workfare workers themselves often take part in this disparagement,
+echoing Apache’s reprobation of prisoners. As workfare worker April
+Smith said of other welfare recipients, “A lot of people lay around,
+they don’t do anything.” To the contrary, studies suggest that most
+welfare recipients, like most Americans, believe deeply in the
+importance of work.<sup>12</sup> Even still, welfare recipients are seen
+as uniquely economically dependent on the state (in contrast to other
+demographic groups who, for example, receive Social Security benefits or
+federally subsidized student loans), and as with prisoners, this
+socially constructed dependence is used to justify their exclusion from
+many legal protections as “employees.” In both cases, these workers’
+economic dependence is reified, and even intensified, by the extra
+constraints of their labor relations. For instance, both workfare and
+incarcerated workers cannot freely choose whether and for whom they
+work, nor can they freely change or quit their jobs. Yet in the (white)
+American imagination, such restrictions are justified by welfare
+recipients’ and prisoners (interrelated) criminalization and
+marginalization. As convicts, prisoners are overtly criminalized, while
+welfare recipients’ criminalization is the product of the more insidious
+“criminalization of poverty,” a political, legal, and cultural
+superstructure built on the presumption of their fraudulence and enacted
+through their punitive surveillance and bodily regulation.<sup>13</sup>
+For both of these groups of workers, this criminalization is at once
+cause and consequence of their social marginalization, as they each
+confront high levels of stigmatization, pathologization, and subjugation
+at their particular intersections of race, class, and gender
+disadvantage.<sup>14</sup></p>
+<p>Thus, in America’s convoluted raced, classed, and gendered cultural
+logic, both welfare recipients and prisoners can, and should, be
+compelled to work because they are convicted or suspected criminals and
+because they are deemed to be unduly dependent on the state. Because of
+such dependence, workfare and incarcerated workers are not seen as
+“real” workers—regardless of their labor—and are therefore not protected
+by labor and employment laws. In fact, their economic independence is
+overtly curtailed by the institutions for which they labor. Yet all the
+while they are culturally condemned for being idle.</p>
+<p>These parallels are perhaps not surprising. Scholars have
+persuasively argued that the carceral and welfare states in America
+comprise a “single policy regime,”<sup>15</sup> which has taken a
+“resolutely punitive turn” in recent decades with carceral expansion and
+social welfare contraction.<sup>16</sup> This two-pronged policy regime
+has been built at the state level through political discourse,
+legislation, and budgetary spending (and cuts).<sup>17</sup> On the
+ground level, as I have argued elsewhere, it has been rolled out through
+the dual expansion of workfare and incarcerated labor—“punitive labor
+regimes”<sup>18</sup>—in which welfare recipients and prisoners
+experience firsthand the penalizing and paternalistic power of what Loïc
+Wacquant has called the neoliberal “centaur state.”<sup>19</sup></p>
+<p>As this book will show, however, understanding the U.S. carceral and
+welfare states as a single policy regime—and workers’ marginalized labor
+within it—does not fully explain these workers’ contradictory position
+as “slave labor” and “doing nothing.” In fact, focusing solely on the
+points of intersection between prison labor and workfare, as important
+and compelling as they are, may obscure their parallels to other very
+diferent categories of work that can be found beyond the “carceral
+archipelago.”<sup>20</sup></p>
+<p>Take university student workers, such as college football and
+basketball players and graduate student researchers in the sciences. To
+be sure, these students are far removed from prisoners and welfare
+recipients in many (almost innumerable) ways. While the latter groups
+are scapegoated as cultural exemplars of personal and moral failure,
+college athletes and PhD students are the opposite: they are cultural
+role models, and as a result, their day-to-day lives, as well as their
+future trajectories, are vastly diferent. The stigmatization,
+criminalization, and punishment which characterize daily life for many
+prisoners and welfare recipients difer dramatically from the near hero
+worship of some college athletes, whose ardent fans don replicas of
+their jerseys, hang their action shots on dorm-room walls, and cheer for
+them wildly from the sidelines. And though graduate students are not
+nearly such campus and cultural icons, they too occupy a position of
+social privilege, walking the halls of the “ivory tower” in pursuit of
+new knowledge and advanced educational degrees.</p>
+<p>Despite these important diferences, there are also parallels between
+these groups in their interstitial status as workers. For instance,
+though there is controversy about whether these student workers should
+be legally categorized as “employees”—just as there is about
+incarcerated and workfare workers<sup>21</sup>—they arguably perform
+labor: for hours a day, athletes sweat in sports arenas, and graduate
+students run experiments and analyze data in science labs. Like
+incarcerated and workfare workers, both student groups have professional
+counterparts who are considered rights-bearing workers: professional
+athletes in the NFL and NBA, science researchers in industry and
+academia. Furthermore, like incarcerated and workfare workers, these
+students’ labor yields substantial financial returns, not for themselves
+but for their institutions and other stakeholders. In fact, the athletic
+labor of Division I football and basketball players can generate
+multimillion-dollar salaries for their coaches and even more for their
+universities, athletic conferences, and the NCAA itself.<sup>22</sup>
+Private companies as well have profited handsomely from athletes’ labor
+by commodifying their names, photographs, likenesses, jersey numbers,
+and equipment, although court rulings have begun to proscribe some of
+these practices.<sup>23</sup></p>
+<p>In the academic sciences, PhD students and postdocs conduct much, and
+sometimes all, of faculty research. While faculty members design and
+oversee research projects in the lab, graduate students typically do the
+labor necessary to carry out such projects. Yet the products of their
+labor— publications, inventions, patents, and more—are owned by the
+faculty member in charge of the lab. As a result, faculty in the
+sciences are often bosses as well as teachers, and these students’
+graduate education is often a labor relation as well as a learning one.
+This stands in contrast to my own discipline of sociology, for example,
+in which graduate students generally devise and pursue their own
+research agendas (not their advisors’), and so their PhD research is not
+a labor relation in the same way. Yet it is also true that many graduate
+students across academic disciplines, including sociology, work under
+their advisors as teaching and research assistants, so that their labor
+would indeed be characterized by the type of coercion I examine in this
+book. In the sciences, such dynamics are often more acute, not least
+because graduate student labor is the foundation of the scientific
+enterprise in the academy. As Slaughter and colleagues write in their
+study of science and engineering faculty, “one cannot be a professor
+unless he or she does research, and a professor cannot do research
+without graduate students.”<sup>24</sup> Such research, fueled by
+graduate student labor, is the primary driver of the
+research-publication-grant cycle, which generates substantial financial
+returns for universities and faculty alike. For their part, graduate
+students are paid less than market value for their labor—indeed, they
+are widely referred to as “cheap”<sup>25</sup>—and their labor is
+largely paid for by the external grants it helps obtain. Yet such grants
+pay for much more than graduate student stipends; they supplement
+faculty salaries and subsidize universities’ “indirect costs” (e.g.,
+administrative support and facility maintenance). Beyond these immediate
+financial returns, graduate student labor helps universities cultivate
+their reputation as generators of scientific innovation, enabling them
+to recruit faculty and students, and thereby sustain the cycle.</p>
+<p>Despite their labor, graduate students and college athletes have been
+legally deemed “primarily students” rather than workers.<sup>26</sup>
+Although workers, activists, and even judges have challenged this
+sociolegal construction, both groups are still broadly considered
+trainees instead of employees: apprentices in the lab, amateurs on the
+field. As a result, they are paid in education and training rather than
+wages, though they often also receive basic stipends.<sup>27</sup> As
+students, moreover, their earnings outside of the lab and of the court
+can be capped. For graduate students in the sciences, for example, the
+general expectation is that they will not hold any other job, and this
+expectation can be formalized and enforced by granting agencies,
+universities, departments, and faculty advisors alike.<sup>28</sup>
+Regardless, the science graduate students I interviewed said that long
+hours in the lab rendered other employment out of the question. This was
+also the case for the college athletes I interviewed, who said that
+their intensive training and traveling schedules precluded them from
+taking other jobs. In any case, the NCAA explicitly restricts what kind
+of employment Division I athletes can accept and how much they can
+earn.<sup>29</sup> Indeed, with the very recent exception of California,
+athletes (along with their families) are not allowed to profit from
+their athletic labor in any way: aside from any university stipend they
+might receive, they cannot accept money, gifts, or meals for their
+athleticism or any activities that stem from it, such as selling
+autographs or endorsing products.<sup>30</sup> Such nonpayment is the
+underpinning of college athletes’ “amateurism,” NCAA oficials assert,
+which “is crucial to preserving an academic environment in which
+acquiring a quality education is the first priority.”<sup>31</sup> Thus,
+in a true tautology (recalling that of prisoners), college athletes
+cannot profit from their athletic labor because they are students, and
+because they are students they cannot profit from their athletic labor.
+Moreover, football and basketball players in particular are efectively
+required to play at the collegiate level before playing
+professionally.<sup>32</sup> In these revenue-generating sports,
+athletes are compelled to perform unpaid athletic labor before they can
+be paid for it.</p>
+<p>Like incarcerated and workfare workers, then, college athletes and
+graduate students work but are not seen as workers.<sup>33</sup> They
+cannot earn (or earn much) from their labor, and their economic
+independence—their ability to sell their labor and expertise—is
+restricted. They too are culturally and legally constructed as economic
+dependents: amateurs and trainees gaining education and experience. Yet
+unlike incarcerated and workfare workers, for whom the cultural
+condemnation of their racialized and gendered criminality and poverty
+justifies such dependence, college athletes’ and graduate students’
+relatively privileged status as university students justifies theirs.
+For while incarcerated and workfare workers are socially constructed as
+immoral dependents who require punitive state intervention to attend to
+their criminality and poverty, college athletes and graduate students
+are constructed as moral dependents who benefit from paternalist state
+intervention. They are seen as being gifted—even uplifted
+through—education. Yet for football and basketball players, the majority
+of whom are racial minorities,<sup>34</sup> the racialized overtones of
+such “uplift” cannot be ignored. In fact, as I show in chapter 1, they
+echo the paternalism of 19th-century slave owners in the American
+South,<sup>35</sup> thus pointing to even more parallels between college
+athletics and the racialized regimes of workfare and incarcerated labor
+in America today.</p>
+<p>Broadly speaking, then, there are surprising parallels across these
+diverse cases: graduate students, college athletes, workfare
+participants, and prisoners are all sociolegally constructed as
+something other than “workers”</p>
+<p>doing something other than “work.” Rather than rights-bearing
+employees, they are dependents whose economic independence is
+constrained, as they cannot freely seek additional or alternative
+employment. They do not earn free-market wages for their labor and in
+fact are often paid in something other than money altogether.</p>
+<p>This book does not argue, simplistically and narrowly, that all of
+these groups should be legally categorized as “employees.” Their legal
+exclusion is the starting point of this analysis, not its endpoint. My
+task is at once larger and messier. Through a comparative analysis of
+these strikingly different labor relations, I identify key similarities
+between them: not just their status as nonworkers, but how this status
+shapes the power dynamics that define their workplaces.</p>
+<p>I find that in all of these cases, as diferent from each other as
+they are, workers’ status as something other than rights-bearing
+employees allows for their supervisors to have unusually expansive
+punitive power over them. For instance, if prisoners do not comply with
+oficer demands, the consequence is not just being fired from the job,
+though that may also happen. They can be fined a week’s pay, lose their
+eligibility for parole, and be put in solitary confinement, that is,
+within an enclosed and segregated cell for 23 hours a day without human
+interaction. Indeed, any form of noncompliance, large or small, can land
+prisoners in the “box” (as those in New York State often refer to
+solitary confinement),<sup>36</sup> making it a relatively common
+occurrence. Although precise data are not available, it is estimated
+that 80,000–100,000 people in the United States (and 4,500 in New York)
+are held in some type of isolation at any given time, and often for
+significant periods of time: an average of 5 months in New York and 18
+months in Colorado, though in fact solitary sentences can be
+indefinite.<sup>37</sup> The mental and physiological consequences of
+such prolonged isolation are well documented and severe: PTSD, anxiety,
+depression, suicide, paranoia, insomnia, hallucinations, psychosis,
+dizziness, headaches, lethargy, heart palpitations, and
+more.<sup>38</sup> At least one bioethicist has called solitary
+confinement “the worst kind of psychological torture.”<sup>39</sup> Yet
+such “torture” is a routine consequence that oficers—as labor
+supervisors as well as guards—can mete out to prisoners.</p>
+<p>For the other workers I studied, the punishments that their bosses
+can impose are usually less severe, but the reach of their bosses’ power
+is similarly expansive. For instance, if workfare workers do not comply
+with their caseworkers’ or workfare supervisors’ demands, they can be
+“sanctioned,” which means that they lose access to public assistance
+programs, such as cash benefits, rent and utility subsidies, Medicaid,
+childcare and transportation assistance, and SNAP benefits—elements of
+the social safety net which are crucial to families in
+poverty.<sup>40</sup> Although such sanctions are usually temporary,
+their efects are permanent. In addition to any long-term consequences
+for themselves and their families, including those of homelessness and
+extreme poverty,<sup>41</sup> welfare sanctions reduce their lifetime
+allotment of public assistance under TANF (Temporary Assistance for
+Needy Families).<sup>42</sup></p>
+<p>For the university student workers in this study—college athletes and
+graduate students—the punitive power their bosses can wield is less
+severe still, though nonetheless far-reaching. For instance, if Division
+I athletes do not comply with their coaches’ directives, they may lose
+their playing time, that is, the much sought-after chance to compete at
+an elite collegiate level and the professional recruitment opportunities
+it provides. They may also lose their scholarships and thus their
+education and undergraduate degrees. Likewise, the education, degree
+conferral, and future employment of science graduate students are in the
+hands of the faculty advisors for whom they labor. Such advisors can
+dismiss them from the PhD program as well as delay their graduation
+because they have become productive workers in the lab. Advisors also
+have total authority over students’ academic record in the sciences,
+particularly their publications, which in combination with letters of
+recommendation give them immense power over students’ futures.</p>
+<p>Of course, not all faculty advisors, coaches, case workers, and
+corrections oficers deploy these punitive powers. But those who do are
+not “bad apples.” They are not exceptions to the rule. They are the
+rule. Their access to such expansive punitive power is simply a matter
+of course in these labor relations and, as a result, often remains
+unquestioned by workers and supervisors alike. This is simply “how
+things are done” in these workplaces. If a prisoner does not comply with
+an oficer’s orders, he will likely be put in the “box.” If a workfare
+worker does not adhere to her supervisor’s directives, she may very well
+be sanctioned. If an athlete does not comply with her coach’s dictates,
+she will likely lose playing time. If a graduate student does not follow
+his advisor’s directives, he may well lose his advisor’s support for
+future employment. Thus, graduate students, college athletes, workfare
+workers, and prisoners not only labor in the absence of most employment
+protections and remedies; they labor under the threat of punishment.
+Whether or not they experience such punishment, they are acutely aware
+of the punitive power that their supervisors can wield and this
+awareness pervades the workplace, fundamentally shaping their actions
+and experiences.</p>
+<p>To be sure, bosses in all workplaces wield substantial, and
+expansive, power over their subordinates. Most often, they do so through
+their capacity to hire, promote, schedule, and fire workers, that is,
+the economic coercion that Karl Marx identified as endemic to capitalist
+labor relations.<sup>43</sup> Because the “economic whip of the market”
+is ever present for workers in this system, the fear of losing one’s job
+may compel—indeed, coerce—their compliance.<sup>44</sup> This form of
+coercion is particularly acute in this era of resurgent labor precarity.
+For although the market’s lash can be softened by strong worker
+protections and a sturdy social safety net, such is not the case for
+American workers at the start of the 21st century, who face rising
+employment insecurity and welfare retrenchment along with intense social
+stigmatization of unemployment and welfare. Even the nontraditional
+workers in this book face economic coercion, at least to some degree, as
+their “wages”—prison earnings, public assistance, and student
+stipends—are often essential to their material well-being.</p>
+<p>But the workers in this book face a diferent form of coercion as
+well. For their bosses can do more than harness the lash of the market
+by firing them or assigning them worse work schedules. Their bosses can
+also disrupt their familial relationships (e.g., through solitary
+confinement or, much less severely, through long work hours in the lab);
+they can harm their health and well-being as well as that of their
+families (e.g., through solitary confinement, welfare sanctions, or
+pressure to play through injuries); and they can thwart their education,
+aspirations, and future employment (e.g., by withdrawing or withholding
+scholarship/funding, playing time, graduation, or positive letters of
+recommendation). Thus, in these labor relations bosses’ punitive power
+extends beyond the immediate job and its wages to afect workers’ lives
+in even more expansive ways. For incarcerated, workfare, athlete, and
+graduate student workers, then, the primary threat is not that they will
+lose their jobs, though that may also be of concern. Rather, it is what
+might happen to their bodies, families, and futures if they refuse to
+comply with their bosses’ demands.</p>
+<p>In existing scholarship there is no term that adequately captures
+this type of punitive power. In my search to find such a term, I looked
+to Marxian frameworks where the most productive tools for such analysis
+have been developed. Initially, the Marxian term “extra-economic
+coercion” seemed to capture this type of expansive employer power, as it
+is beyond economic in nature. Yet in the literature, this term is not
+usually used in this narrow, literal way. Instead, “extra-economic” has
+been used to distinguish (purportedly) precapitalist types of labor
+coercion from capitalism’s economic coercion.<sup>45</sup> As a result,
+it has become an umbrella term for an array of coercive employer powers,
+including physical coercion (violence and threats thereof, as in chattel
+slavery), economic and legal limits on worker mobility (as in debt
+peonage and vagrancy laws), and political and economic limits on land
+use (as in feudalism).<sup>46</sup> As the latter examples suggest, such
+coercion was at least somewhat economic in nature, despite being labeled
+“extra-economic.”<sup>47</sup> Similarly, as scholars have argued,
+“economic coercion” itself is not strictly economic in nature, as it
+also has social, legal, and political dimensions.<sup>48</sup> Thus, as
+used in the literature at least, “economic” and “extra-economic”
+coercions pertain more to their context—capitalist versus
+precapitalist—than to the nature of the coercion itself. This is in
+spite of the fact that, as scholars have shown, extraeconomic coercion
+was not necessarily precapitalist at all.<sup>49</sup> As demonstrated
+by studies of U.S. slavery, for example, this violent and brutal system
+of forced labor was essential, not antithetical, to America’s emergence
+as a modern, industrial, capitalist economy.<sup>50</sup> Then, after
+slavery was abolished and free labor was ostensibly universalized,
+forced and coerced labor remained entrenched, as evidenced by the
+persistence of sharecropping, debt peonage, indentured servitude, and
+prison labor as American capitalism developed.<sup>51</sup> Meanwhile,
+even purportedly “free” labor was underpinned by coercion through the
+19th century. Because of employers widespread use of criminal sanctions
+and wage forfeiture to enforce employment contracts, “free” workers were
+not actually free to quit their jobs.<sup>52</sup> Therefore, although
+the term “extra-economic” might seem definitionally appropriate to the
+type of coercion I analyze here, the term itself is used otherwise,
+while also implicated in outdated binarisms between economic and
+noneconomic, capitalist and precapitalist, and free and unfree labor,
+all of which have been disrupted in the scholarly literature.</p>
+<p>Beyond intervening in such debates, I believe it is more analytically
+productive to identify what this type of coercion is rather than what it
+is not (e.g., economic), for doing so highlights the mechanism by which
+it operates. In this vein, “economic coercion” is aptly named because it
+operates primarily through pecuniary compulsion. The same is true of
+“physical coercion,” which operates through corporal compulsion. While
+the workers in this book experience some degree of economic coercion
+and, in the case of prisoners, physical coercion, the type of coercion
+that permeates their labor does not operate through either pecuniary or
+corporal mechanisms. Rather, it operates through status. Their
+supervisors have the power to discharge them from a particular status—as
+prisoner, welfare recipient, college athlete, or graduate student “in
+good standing”—and thereby deprive them of the rights, privileges, and
+future opportunities that such status confers. Thus, I argue that these
+labor relations are characterized by status coercion.</p>
+<p>Status is a foundational sociological concept. Developed by
+anthropologist Ralph Linton in the 1930s, the term refers to
+individuals’ positions in society, both ascribed and achieved, such as
+female, parent, professor, and prisoner.<sup>53</sup> Such statuses come
+with important (though sometimes conflicting) rights, obligations,
+limitations, and expectations (“roles”), which are often normative in
+nature but which can also be codified in law. The workers in this book,
+for example, do not occupy the status of “worker,” and therefore do not
+have access to the cultural standing and legal rights and protections
+that this status usually yields. Instead, they occupy a variety of other
+statuses, each of which comes with its own obligations, constraints,
+rights, and privileges (however attenuated). To be sure, such statuses
+are not always desirable. It is likely that no one desires to occupy the
+status of prisoner. But once in it, retaining one’s status as prisoner
+in good standing is of utmost importance, because it gives prisoners
+access to the many human entitlements that become “privileges” behind
+bars—privileges which can be revoked. For example, being in good
+standing allows prisoners to sustain relationships with family and
+friends (through phone use, visitation, and interaction with fellow
+prisoners), while also giving them access to activity, recreation, and
+freedom of movement (albeit constrained), money, food, and consumer
+goods (through work assignments and commissary purchases), and sometimes
+early release from prison (through parole or commutation). Thus,
+although “prisoner” is not a desirable status, as it imposes many more
+constraints than privileges, when one is living behind bars, maintaining
+one’s status as a “good” prisoner is desirable indeed.</p>
+<p>The other statuses that I examine in this book are similar, for even
+when they impose constraints on their worker-occupants, they also ofer
+important rights and privileges. For workfare workers, for example,
+being a welfare recipient in good standing is a prerequisite for their
+continued access to key safety net programs and even homeless shelters.
+For Division I college athletes, occupying that status in good standing
+gives them access to subsidized university education and the credentials
+it confers, as well as the chance to play the sport they love and, for
+some, professional recruitment opportunities (perhaps even fame and
+future fortune). Likewise, being a graduate student in good standing
+ofers access to subsidized graduate education as well as high-status
+credentials, experience, training, and professional opportunities. Even
+though these statuses do not confer the right to a minimum wage or
+collective bargaining, as would the status of “worker,” they ofer rights
+and privileges that are highly valued within their respective
+institutions. Yet in each of these cases, supervisors have the capacity
+to revoke such rights and privileges, the consequences of which extend
+beyond the job to afect these workers’ lives, families, and futures in
+far-reaching ways. This control over status—status coercion—is the basis
+for supervisors’ expansive punitive power in these labor relations.</p>
+<p>But, of course, these workers do not experience this type of coercion
+to the same degree. Much like the difering degrees of economic coercion
+across jobs and workers in the conventional labor market, the status
+coercion that these workers experience is similar in kind but not
+intensity. Indeed, the severity of the punitive power that their bosses
+wield difers dramatically across these groups: solitary confinement is
+far removed from losing playing time on the field; welfare sanctions are
+far removed from being dismissed from PhD programs. As in conventional
+jobs, moreover, workers’ demographic characteristics—their particular
+identity at the intersection of race, class, gender, sexuality, and
+more—may make them more or less likely to be targets of their bosses’
+punitive power, and their vulnerability to such power can be mitigated
+(or intensified) by their personal circumstances.<sup>54</sup> There is
+significant variation, then, both within and across these labor
+relations in the severity of workers’ experience of status coercion. The
+goal of this book, however, is not to document such variation, but to
+delineate the contours of this form of labor coercion.</p>
+<p>To be sure, the labor relations I examine in this book are not the
+only ones characterized by status coercion. Take, for example, foreign
+guest workers and undocumented immigrant workers, both noncitizen
+workers for whom U.S. employers have de facto power of deportation.
+Because guest workers are legally bound to a single employer, the
+Southern Poverty Law Center reports, “At any moment, the employer can
+fire the worker, call the government and declare the worker to be
+‘illegal.’”<sup>55</sup> A similar dynamic is in efect for undocumented
+workers, because under U.S. immigration law employers are empowered—and
+in fact obligated—to verify workers’ citizenship status.<sup>56</sup>
+This means that at any point they can “discover” workers’ undocumented
+status and contact immigration authorities. In both cases, then,
+employers can convert workers into criminals (“illegal aliens”)—directly
+for guest workers and indirectly for undocumented immigrants by exposing
+their illegality—leaving them subject to detention and deportation. In
+short, employers have power over noncitizen workers’ status as worker or
+criminal and the privileges or punishments that each yields. Thus, like
+the labor relations I examine in this book, noncitizen labor is
+characterized by status coercion. And as studies of noncitizen workers
+have shown, employers’ access to this legal form of punitive power seems
+to facilitate their use of illegal exploitation and coercion, such as
+paying subminimum wages, providing unsafe working and living conditions,
+seizing passports, and blacklisting.<sup>57</sup> In fact, this also
+seems to be true of the labor relations in this book: bosses’ licit
+power of status coercion seems to open the door, at least for some, to
+illicit abuse.</p>
+<p>Status coercion is not relegated to such extreme or unusual labor
+relations. Many conventional workers also experience status coercion, at
+least to some degree. At the most basic level, being fired from one’s
+job means being ejected from one’s status as worker and the considerable
+rights and privileges it confers. Such loss of status can have
+significant psychological and physiological consequences in addition to
+economic consequences, especially for those who are culturally or
+financially expected to be “breadwinners.”<sup>58</sup> For many
+workers, however, this loss of status is temporary, as they are free
+(within constraints) to find and accept other employment. For such
+workers, the threat of losing income (economic coercion) often
+overshadows the threat of losing one’s employment status (status
+coercion). But this is not the case for everyone. For workers who are
+bound by noncompete clauses, for example, employers have power over
+their status as that particular type of worker.<sup>59</sup> According
+to reporting by the New York Times, an increasingly broad array of
+workers is bound by such clauses—including, for example, tree service
+workers. As one such worker told reporters, “It’s one thing to have a
+bump in the road and be in between jobs for a little while; it’s another
+thing to be prevented from doing the only thing you know how to
+do.”<sup>60</sup> For this worker, his employer controlled not only his
+wages and working conditions, but also his ability to leverage his labor
+market experience and obtain future employment. This is status
+coercion.</p>
+<p>Such coercion can be found anywhere an employer has power over a
+worker’s social position—not their immediate income but their status in
+society. It may be particularly prevalent among those who labor in
+“total institutions,” such as military and religious organizations, in
+which one’s status, as Marine oficer or Catholic nun, for example, is
+equally as important as (or even more important than) one’s
+income.<sup>61</sup> Status coercion may also be prevalent in
+occupations characterized by high degrees of social closure or tight
+labor markets. For instance, as I was writing this book, actors’
+pushback against sexual harassment and assault in Hollywood revealed
+(once again) the expansive power that gatekeepers in exclusive
+occupations wield over subordinates’ access to an elite status— in this
+case, Hollywood actor—and its many privileges.<sup>62</sup></p>
+<p>For those workers whose freedom from incarceration is predicated on
+their employment, such coercion may be even more acute. As Noah Zatz and
+collaborators have shown, people who are under criminal justice
+supervision but not incarcerated—parolees, probationers, and those with
+court-ordered debts—can be required to maintain employment on threat of
+incarceration.<sup>63</sup> In such “carceral labor,” as Zatz calls
+it,<sup>64</sup> employers have power over workers’ status as worker or
+criminal (as for noncitizens) and all of the privileges and punishments
+associated with each. As a judge in a court supervision program told a
+defendant’s employer, “Okay, I’ll make a deal with you; you take him
+back and I’ll add another weapon to your arsenal. If he doesn’t come to
+work when he is supposed to, doesn’t come to work on time . . . I’ll put
+him in jail, on your say-so.” Then, to the defendant, the judge said,
+“Your employer is now on the team of people who are reporting to me.
+When he calls up and tells me that you are late, or that you’re not
+there, I’m going to send the cops out to arrest you.”<sup>65</sup> Thus,
+for such workers the threat of incarceration is an explicit employer
+“weapon,” rendering their labor deeply coercive. As for noncitizen
+workers, moreover, studies suggest that this licit form of status
+coercion facilitates illicit coercion and exploitation as well, all of
+which suppresses workers’ resistance and enforces their
+productivity.<sup>66</sup></p>
+<p>As all of these examples suggest, status coercion is not only common
+practice; it is legal and legitimate. Employers are legally empowered to
+govern workers’ behavior on threat of incarceration; they are legally
+responsible for verifying workers’ citizenship status; and in most
+states, they can legally impose and enforce noncompete clauses for any
+type of worker. Likewise, for the workers in this book, employers are
+legally empowered to put them in solitary confinement, push them of
+public assistance, and obstruct their education and future employment.
+In short, employers’ powers of status coercion are sanctioned by the
+state.</p>
+<p>This state sanctioning of status coercion stands in contrast to state
+eforts to curb—at least to some degree—employers’ powers of economic
+coercion. Through various hard-won labor protections and social welfare
+programs, the state protects workers (however minimally) from economic
+coercion. If workers lose their jobs, for example, they may have access
+to unemployment benefits, cash assistance, and other social welfare
+programs; if they fall ill or adopt a child, they may have access to
+Family and Medical Leave Act benefits. Such protections ofset the
+economic coercion at the heart of those labor relations. But this is not
+the case for the type of coercion I examine in this book, which is
+endorsed, not mitigated, by state and institutional policies.</p>
+<p>Thus, in this book I argue that work in America is not only
+characterized by precarity and the “dull compulsion” of economic
+coercion.<sup>67</sup> It is also characterized by coercion of another
+sort: employer power over workers’ status in society—whether as “worker”
+or as something else—and therefore power over their access to meaningful
+rights and privileges. Studies of work and employment need to look
+beyond precarity and flexibilization to understand all of the “weapons”
+that employers can wield against workers. Doing so will not only provide
+a more complete accounting of employers “arsenal.” It will also provide
+a better understanding of how such weapons can be combined, compounding
+one another to amplify employers’ power over workers.</p>
+<p>The labor relations I examine in this book reveal this type of
+coercion in high relief. Yet some might object to the comparison of
+these groups, because they are simply so diferent. Indeed, on the
+surface, it seems absurd to link PhD work to prison labor. Thus, it is
+important to state again, as clearly as possible, that I do not argue
+that these groups are the same. They difer on so many levels, including
+their levels of social stigmatization and economic marginalization, as
+well as the severity of their coercion. Yet even with such important
+diferences between them, I believe that highlighting their similarities
+yields analytical advantages. By showing how this type of coercion
+operates for the criminalized as well as the privileged, for the
+powerless as well as the potentially powerful, and for those who are
+racialized Black as well as those racialized white, this book shows that
+this type of employer power is not unique to any one of these groups.
+Status coercion is not the idiosyncratic byproduct of, say, mass
+incarceration or the NCAA. It is an entrenched and pervasive form of
+labor governance, one that intersects with other regimes of social and
+labor control—including both race and precarity—to disadvantage workers,
+albeit in diferent ways and to diferent degrees.</p>
+<p>Examining the common power dynamics across such divergent cases ofers
+political and methodological advantages as well. By highlighting the
+connections between these typically siloed domains—criminal justice,
+welfare, sports, higher education, and work—this book lays the
+foundation for future alliances between scholars, workers, and activists
+who have, until now, understood their circumstances as unique.
+Methodologically, by comparing these divergent cases, this book fulfills
+the two primary functions of comparative research identified by French
+sociologist Michel Wieviorka.<sup>68</sup> First, it deconstructs “what
+common sense takes to be unique or unified”<sup>69</sup> by
+interrogating the presumed distinctiveness of each of these categories
+of work, as well as the presumed unity of “work” as it is traditionally
+defined. Second, by identifying status coercion as the unifying thread
+across these (and other) seemingly dissimilar labor relations, it
+constructs “unity of what seems to be broken up into practical
+categories.”<sup>70</sup> In so doing, this study continues the long
+sociological tradition of making what George Steinmetz describes as
+“odious comparisons.”<sup>71</sup> Scholars in this tradition, who
+include Everett Hughes, Erving Gofman, and Howard Becker, have compared
+radically diferent cases, identifying the often-surprising points of
+intersection between them in order to elucidate broader social
+phenomena. This is the goal of this book. By comparing the dramatically
+disparate cases of incarcerated, workfare, college athlete, and graduate
+student labor, this book uncovers the dynamics of a previously
+unidentified type of labor coercion: what status coercion is, how it
+works, and the ways that workers experience—and resist—it.</p>
+<p>Coerced both complements and extends previous studies of work, power,
+and social control. Foremost, it adds to Marxian analyses of labor
+coercion by identifying control over status as an additional form of
+coercive employer power that overlaps with, but is distinct from,
+economic and physical coercion. In so doing, it contributes to the now
+sizable scholarly literature documenting the persistence of not-strictly
+economic coercion in advanced capitalism.<sup>72</sup> In fact, by
+documenting such coercion in modern-day America, this book explicitly
+extends this literature, which has generally focused on either
+historical forms of unfree labor (particularly chattel
+slavery<sup>73</sup>) or present-day traficked, forced, and enslaved
+labor from the global South,<sup>74</sup> while also documenting the
+continued prevalence of economic coercion, especially among low-wage
+workers.<sup>75</sup> Yet such research, though important, might
+mistakenly lead readers to conclude that labor coercion is, variously, a
+historical relic premised on regimes of extreme racial violence and
+subjugation, a byproduct of contemporary globalization and transnational
+labor migration, or a customary component of capitalist labor relations.
+This book draws from each of these literatures while also diverging from
+them to show that labor coercion is not only a thing of the past, an
+import from the global South, or a common characteristic of “bad” jobs.
+In the form of status coercion, it is also a distinct and
+well-established mode of labor governance in America today.</p>
+<p>This book thus transforms our understanding of work in contemporary
+America. For simply put, labor coercion has not been a part of this
+understanding. Instead, the problem of precarity has dominated accounts
+of work and labor in America—with good reason, to be sure, as precarious
+employment has produced instability, insecurity, and vulnerability for a
+significant and growing population of workers.<sup>76</sup> But this
+book shows that precarity is not the only force shaping work in America
+today. Labor coercion is alive and well, and not simply in the widely
+accepted (even expected) form of economic coercion. Employers’ power
+over workers’ status is a pervasive and often potent type of labor
+control, one that seems to be growing with the criminal justice system’s
+deepening reach into the low-wage labor market; the upsurge in
+citizenship audits, deportation arrests, and immigrant detention; the
+rise of noncompete clauses, and more.</p>
+<p>Yet status coercion is not just operating alongside, and separate
+from, precarity. The two systems of labor control intersect, shaping and
+reinforcing one another. For as we will see in this book, status
+coercion helps create the vulnerable and compliant workers on whom
+neoliberal precarity relies. Whether priming workers for undervalued and
+insecure positions as adjuncts and postdocs (as does graduate school) or
+as day laborers and fast-food workers (as do prison labor and workfare),
+the coercive labor regimes I examine in this book actively produce the
+“precariat.”<sup>77</sup></p>
+<p>This book thus identifies a new mechanism by which the state has
+expanded its punitive power in the context of neoliberalism. For as
+scholars have noted, neoliberalism in the United States has entailed not
+only state contraction but also state expansion—a strategic shrinking of
+government combined with a surge of authoritarianism.<sup>78</sup> The
+recent spread of labor precarity is associated with the former: state
+withdrawal from (some categories of) work through de- and reregulation,
+declining labor standards, and deunionization.<sup>79</sup> The labor
+coercion I analyze in this book is associated with the latter: the
+insertion of punitive state power into (these and other categories of)
+work. In such coercive labor regimes, the punitive arm of the
+“ambidextrous” neoliberal state has flexed its muscle.<sup>80</sup></p>
+<p>In this way, status coercion not only intersects with other systems
+of labor control, such as precarity; it also intersects with other
+systems of social control, such as race. Its overlap with the racialized
+criminal justice system is a case in point. As scholars have shown,
+racial logics have been woven into the very fabric of this system,
+designating some (explicitly or implicitly) racialized people, drugs,
+crimes, and neighborhoods as “worse” and more “dangerous” than others
+and therefore deserving of increased surveillance, policing, and
+sentencing.<sup>81</sup> This has produced the profoundly racialized
+regime of mass incarceration, in which a vastly disproportionate share
+of the skyrocketing carceral population is African American, which has
+reentrenched America’s racial caste system.<sup>82</sup> The same is
+true of the welfare system, a profoundly racialized institution that has
+also produced and sustained deep racial disparities.<sup>83</sup> Racial
+logics have been woven into the fabric of this system as well, as racism
+has long been a guiding principle for administering—and denying—public
+assistance.<sup>84</sup> Status coercion directly intersects with both
+of these racialized regimes of social control through prison labor and
+workfare, as well as through the “carceral labor” that Zatz has
+identified.<sup>85</sup> In all of them, status coercion exploits and
+amplifies their punitive racial logics.</p>
+<p>Indeed, I would argue that racial logics have been woven into the
+coercive labor regimes I examine in this book—logics which seek to
+explain who should be subject to such coercion and why. As I show in
+chapter 1, for prisoners, welfare recipients, and athletes alike,
+cultural constructions (and assumptions) of their Blackness intersect
+with presumptions of their criminality, or their (not quite deserved)
+privilege, to justify their bosses’ expansive punitive power over them.
+Whether they are construed as wayward crooks (as are prisoners and
+welfare recipients) or as potentially wayward kids (as are college
+football and basketball players), such workers are framed as needing
+extensive surveillance, control, and discipline. Meanwhile, for graduate
+students, cultural constructions (and assumptions) of their whiteness
+intersect with presumptions of their (mostly deserved) privilege, to
+justify but also mitigate their bosses’ punitive power over them. Rather
+than wayward kids, they are seen as smart novices who require direction
+and surveillance, perhaps, but not punitive discipline. Therefore, just
+as racialized logics form the substructure of the American criminal
+justice and welfare systems, they also profoundly shape the institutions
+at the center of this book, and therefore workers’ experiences within
+them.</p>
+<p>This book thus builds on analyses of social institutions,
+particularly work organizations, as fundamentally raced, gendered, and
+classed. As scholars have shown, these intersecting axes of inequality
+are embedded in organizations’ culture, policies, and practices in ways
+that are distinct from (though not unrelated to) the particular bodies
+that inhabit them at any given time.<sup>86</sup> This is certainly true
+of the institutions at the center of this book. For despite the
+demographic diversity of prisoners in the United States, prisons are
+culturally constructed as Black, lower-class, masculinized
+institutions.<sup>87</sup> Similarly, despite the demographic diversity
+of people receiving public assistance, the American welfare system is
+coded as a Black, lower-class, feminized institution.<sup>88</sup>
+College football and basketball teams have a somewhat more complex
+race-class designation: regardless of athletes’ diversity, both sports
+are construed as relatively poor Black spaces situated (sometimes
+uneasily) within white upper-middle-class universities, though both are
+masculinized.<sup>89</sup> By contrast, the cultural construal of
+university graduate programs—in the sciences and otherwise—broadly
+aligns with universities’ race-class-gender designations, despite the
+diversity of those who learn and labor within them.<sup>90</sup></p>
+<p>Even though such designations are cultural constructs rather than
+demographic facts, their efects are powerful, shaping many aspects of
+these institutions, including their policies and practices of worker
+governance. Thus, for example, prisons’ everyday practices of coercion
+and subjugation, which all prisoners experience, at least to some
+degree, are shaped by their designation as Black, lower-class,
+masculinized institutions and the social construction of this identity
+as criminal and dangerous. This is not to deny that racial minorities
+experience unequal and discriminatory treatment in U.S. prisons. They
+do.<sup>91</sup> But at the same time, I contend that all prisoners
+experience prisons’ particular race-gender-class designation through the
+institution’s policies and practices. The same is true of the other
+labor regimes I examine in this book. Even though race and gender
+minorities experience disparate treatment within these work
+organizations,<sup>92</sup> these organizations’ institutionalized
+practices of worker governance are shaped by their socially constructed
+race-class-gender designations. Therefore, just as Cynthia Cockburn
+argued in her early study of occupational gender segregation that “jobs
+. . . have a gender character that rubs of on the people that do
+them,”<sup>93</sup> I argue that each of these labor regimes has a
+race-class-gender character that “rubs of” on the people who labor
+within them. Indeed, in this book I uncover at least some of the
+mechanisms by which such “rubbing of” occurs: for these institutions’
+race-class-gender character is actively “rubbed onto” workers bodies
+through the raced, classed, and gendered technologies of coercion and
+subjugation that I examine.</p>
+<p>Ultimately, Coerced revises our understanding of labor governance and
+social control in contemporary America. By identifying a previously
+unrecognized type of power that (at least some) employers can wield over
+workers, it shows how those employers are able to afect workers’ lives,
+families, and futures in far-reaching ways. Moreover, though this book’s
+analytical lens is centered on how workers’ experience this power in
+four particular types of work—from prisons to PhD programs—it also looks
+beyond these workplaces to consider how this coercive power intersects
+with other systems of social control. But this book is only the
+beginning: a first step toward a broader and deeper understanding of
+work and power in America today.</p>
+<p>For this book I interviewed more than 120 workers over the course of
+five years.<sup>94</sup> Of those workers, 42 were workfare participants
+and 41 were exprisoners, both from cities across New York State: New
+York City, Albany, Rochester, and Bufalo. Interviewing these two types
+of workers from just one state—New York—was necessary to control for the
+substantial statelevel variation in poverty and prison policies. For
+both, moreover, New York is an ideal site of analysis. New York has been
+a national leader in the implementation of workfare, particularly in the
+years after welfare reform, and therefore ofers greater insight into
+workers’ experiences of this labor regime. At the same time, New York’s
+prisons and prison practices are neither particularly extreme nor
+particularly controversial. New York does not have (the often infamous)
+private prisons, as do Texas, Indiana, Colorado, and Oklahoma; its
+prison conditions have not been deemed in violation of prisoners’
+constitutional rights, as have California’s;<sup>95</sup> and its
+prisoners are paid wages for their labor, however minimal, unlike
+Georgia, Texas, and South Carolina, where they are not paid at
+all.<sup>96</sup> In short, New York represents a middle-of-the-road
+case of prisons and prison labor in the United States.</p>
+<p>I also interviewed 18 former NCAA Division I football and basketball
+players and 20 former PhD students in the sciences. Unlike workfare and
+incarcerated workers, these former student workers were recruited from
+sites across the country. (In fact, in order to ensure their anonymity,
+I did not interview any student connected—past or present—with my own
+university.) Not only had these former student workers attended many
+diferent universities; they had also labored in diferent work
+environments within those universities. I interviewed women as well as
+men basketball players, for example, and I interviewed graduate students
+from a variety of labs and science departments, including chemistry,
+biology, pharmacology, and neuroscience. Yet like incarcerated and
+workfare workers, all of these student workers had labored under a
+single policy regime, because their governing bodies are at the national
+(rather than state) level. Athletes’ labor is primarily governed by the
+NCAA, while graduate students’ labor is governed by an amalgamation of
+court rulings and federal granting institutions, particularly the
+National Institutes of Health, which is the primary funder of bioscience
+research in the academy.<sup>97</sup> Within each of these groups of
+workers, then, any diferences between them stem not from structural
+variation but from the particularities of their bosses and work
+environments, that is, the dispositions of their faculty advisors,
+coaches, workfare supervisors, and corrections oficers, and the
+organizational cultures that such bosses have cultivated. (As I discuss
+in chapter 2, supervisors in these labor regimes often have exceptional
+latitude to shape workers’ lives.)</p>
+<p>Aside from those in workfare, most of the workers in this study had
+moved on from these particular employment relations, either recently
+released from prison or recently graduated from their
+universities.<sup>98</sup> For many, such distance enabled them to speak
+more freely about their work. Despite such distance, however, a few
+expressed fear of reprisal in doing so, particularly athletes and
+graduate students, who often continue to rely on their coaches and lab
+bosses for postgraduate employment. Although the ex-prisoners I
+interviewed did not generally share this concern, their distance from
+prison was also essential to their ability to talk openly, given the
+totality of their surveillance and control behind bars. Workfare workers
+were the exception: even though most of them were still laboring for
+workfare at the time of our interview, they did not express any concerns
+of reprisal. Nonetheless, for all of my informants I have taken numerous
+measures to protect their privacy and confidentiality, including
+changing key but inconsequential details and using pseudonyms, which the
+workers themselves chose so that they can identify themselves in my
+writing.</p>
+<p>In our interviews, a worker and I typically talked for an hour or
+more— me with a digital recorder in hand—most often in person but
+sometimes over the phone. My interview questions were broad and
+wide-ranging. I asked about their labor in college sports arenas,
+university science labs, public parks and thrift stores, prison mess
+halls and dormitories. I asked about their everyday tasks, work
+schedules, and remuneration. I asked about the best and worst aspects of
+their jobs, what they gained from their labor, and what (if anything)
+they would change if they could. I asked if they ever had any problems
+with coworkers or supervisors and, if so, how they handled them.
+Throughout, I was careful to utilize the workers’ own language in
+discussing their labor, so as not to introduce my own perspectives or
+politicized rhetoric into the conversation. If they described their
+supervisors as “like family,” “bosses,” or “slave drivers,” for example,
+I would inquire about their word choice and then, in some (less
+inflammatory) cases, use it myself; but I never introduced such
+language. I wanted to learn how they conceptualized their work, how they
+experienced their labor.</p>
+<p>Thus, in this book I draw heavily on these workers’ words: their own
+interpretations of their experiences, their own views of their labor.
+And as much as possible, I have tried to use their voices to tell their
+own stories.<sup>99</sup> For they are not simply data. They are people,
+and their stories are their own.<sup>100</sup> Despite the personal and
+idiosyncratic nature of their stories, however, in this book I only
+present findings with high levels of saturation. For though these
+workers’ stories are unique, the ones in this book are not anomalous. In
+fact, I have deliberately not detailed the worst aspects of their jobs
+and lives; this book is not intended to be a journalistic exposé. I have
+tried to avoid casting them as passive victims, while not overlooking
+the ways in which they are sometimes victimized. Indeed, like most
+workers, those in this book sought to find meaning and pleasure in their
+labor, even as they also faced dificulties.</p>
+<p>Finally, because I did not set out to study labor coercion, as
+detailed in appendix A, in many of my interviews with these workers I
+did not delve directly into the coercive power that would eventually
+become the centerpiece of this book. Thus, on the one hand, my findings
+bolster the centrality of status coercion to these workers’ lives as it
+emerged organically from talking to them about their labor. On the other
+hand, my findings should be understood as only a first step in
+understanding this form of labor governance and its consequences for
+workers and their families.</p>
+<p>Status coercion is recursively produced and reproduced at three
+levels: cultural, institutional, and individual. Its foundation is laid
+in the realm of culture, the realm in which narratives are circulated
+(and contested) about why some groups—despite their labor—are not “real”
+workers and therefore require extra regulation, surveillance, and
+discipline. Such ideas are operationalized at the institutional level.
+Prisons and college athletic programs, for example, act as chutes that
+channel these cultural narratives into policies and practices, thereby
+institutionalizing employers’ powers of status coercion.<sup>101</sup>
+Within such institutions, employers enact these powers on workers’
+bodies through individual-level actions. At all of these levels, workers
+themselves challenge such narratives, policies, and practices.</p>
+<p>In reality, of course, such levels are not so neatly divided, nor do
+social phenomena unfold linearly from one level to the next. Rather,
+culture, institutions, and individual actions are ever-changing,
+mutually constitutive components of dynamic social systems, continually
+pushed and pulled, shaped and reshaped by the actors within them. Yet
+diferentiating these levels is useful for analyzing how such messy
+real-world dynamics operate.</p>
+<p>In this book, my primary focus is the third level, the individual:
+how workers experience, and resist, status coercion in these labor
+regimes. But before delving into their individual experiences, I briefly
+explore the other levels at which coercion is produced and sustained:
+culture and institutions. In chapter 1, “‘Wicked’ and ‘Blessed’:
+Cultural Narratives of Coerced Labor,” I analyze the role that
+ideologies of immorality and privilege play in constructing, justifying,
+and sustaining status coercion and the labor regimes predicated on it. I
+begin with a brief history of such narratives, examining how they were
+deployed during America’s Industrial Revolution to characterize enslaved
+people, Native Americans, and white housewives. By highlighting this
+narrow slice of their cultural history, I seek to expose the
+artificiality of these narratives of immorality and privilege. I then
+jump to the contemporary era, exploring how recent changes in America’s
+criminal justice, welfare, and higher education systems have made it
+more likely for such narratives to be culturally afixed to their
+respective populations. In short, I show how narratives of immorality
+and privilege have been embedded in the structure of these institutions.
+Then, through analysis of hundreds of cultural documents, I analyze how
+these narratives have been applied to incarcerated, workfare, college
+athlete, and graduate student workers. In doing so, I find that despite
+important diferences in how they exploit logics of race, class, and
+gender, narratives of immorality and privilege use similar methods to
+produce similar results. By portraying their targets as subordinate,
+dependent, childlike figures who require extensive direction, control,
+and (often) punishment, these narratives cast them as something other
+than “workers” doing something other than rightsbearing “work.” As a
+result, such narratives not only justify workers’ exclusion from the
+rights and privileges of employment; they also justify their bosses’
+legal, culturally accepted, and institutionally expected power over
+their position in those institutions—that is, their status coercion.
+Thus, I argue that narratives of “wickedness” and “blessedness” are two
+sides of a single ideological apparatus used to delegitimize and
+discipline workers.</p>
+<p>With this cultural and institutional framework in place, I explore
+workers’ experiences of status coercion in chapter 2, “‘Either You Do It
+or You’re Going to the Box’: Coercion and Compliance.” Such experiences
+are diverse and vary significantly in their intensity. They include, for
+example, PhD students’ graduation dates being delayed because they had
+become productive workers in the lab, and prisoners being put in
+solitary confinement because they refused to clean up feces. Yet for all
+of these workers, such coercive penalties are not rarities, nor are they
+reserved for extreme cases of wrongdoing. To the contrary, the
+possibility of punishment is omnipresent, and even when their bosses do
+not wield such punitive powers, these workers are well aware of their
+capacity to do so. This is how coercion works: everyone knows what is
+possible and such knowledge is usually enough to compel compliance.
+Thus, I argue that the coercion at the center of these labor relations
+creates and sustains “a relation of docility-utility,” as Michel
+Foucault said of another context,<sup>102</sup> which not only pervades
+these particular labor regimes but also reaches beyond them into the
+mainstream economy.</p>
+<p>In chapter 3, “‘They Talk to You in Any Kind of Way’: Subjugation,
+Vulnerability, and the Body,” I continue this analysis by exploring how
+status coercion interacts with other forms of worker subjugation,
+particularly surveillance, degradation, and dehumanization. These types
+of subjugation are not unique to these labor relations, of course. In
+fact, they are common modes of labor control across work organizations.
+But when bosses have access to the expansive and punitive powers of
+status coercion, I find, such forms of subjugation take on new shape and
+intensity. For example, routine labor surveillance—the regulation and
+monitoring of workers’ actions and bodies—both creates and catches
+worker missteps to be punished, and in these labor relations such
+punishments are the same punitive technologies of status coercion. In
+these workplaces, then, even routine modes of labor governance increase
+workers’ vulnerability to employers’ coercive power.</p>
+<p>Despite their vulnerability to such power, these workers regularly
+resist it. In chapter 4, “‘Stay Out They Way’: Agency and Resistance,” I
+examine their strategies of resistance. To do so, I identify four
+interrelated axes by which resistance can be analyzed: its level of
+action (individual vs. collective), the openness of its defiance (covert
+vs. overt), the narrative frames workers use to explain it (e.g.,
+sovereignty), and its goal (e.g., “respect” vs. justice). From these I
+construct and analyze three categories of resistance, which I call
+“getting by” strategies, “standing up” strategies, and mobilization
+strategies. Yet while there are analytical diferences between these
+resistance strategies, they are not so distinct in workers’ everyday
+lives. Indeed, the same worker is likely to deploy diferent strategies
+in diferent situations. This analysis thus underscores the ways in which
+context fundamentally afects the form that resistance takes.</p>
+<p>In chapter 5, I continue this study of resistance by examining
+workers’ ideological dissent. In “‘I’m Getting Ethiopia Pay for My
+Work’: Hegemony and Counter-Hegemony,” I explore how the workers in this
+book justify and challenge hegemonic constructions of “work” and their
+exclusion from it. While some of them outright accept or dispute these
+ideological tenets, others take a more nuanced stance through partial
+accessions and dissensions. Yet in doing so, nearly all of them draw on
+the same two ideological frames: work and citizenship. This is not
+surprising, perhaps, as these interrelated ideologies are the conceptual
+foundation of work in America, jointly built on raced, classed, and
+gendered notions of morality and immorality, independence and
+dependence, productivity and idleness, rights and
+rightslessness.<sup>103</sup> Whereas in chapter 1 I analyze how
+cultural narratives stemming from these ideologies have been used to
+construct these categories of labor as something other than “work,” in
+this chapter I examine how workers themselves deploy these ideologies.
+Through this analysis, I show how long-standing hegemonic ideals—such as
+the veneration of productive labor and the abhorrence of idleness—can be
+rearranged toward counterhegemonic ends.</p>
+<p>In the conclusion, I discuss how this study transforms our
+understanding of work in America, expanding our notions of employer
+power while deepening our grasp of already-familiar power systems. In
+appendix A, I tell “The Story of This Book,” charting its analytical
+development and detours, including my interviews with domestic workers,
+which do not appear in these pages. In appendix B, “People qua Data,” I
+provide more detail about the workers at the heart of this study: their
+demographic characteristics and their jobs, as well as how they compare
+to their broader populations. Yet even as these workers have become
+“data” in this book, I urge readers to keep in mind Ta-Nehisi Coates’s
+words while reading these chapters, as I sought to do while writing
+them. “You must always remember that the sociology, the history, the
+economics, the graphs, the charts, the regressions all land, with great
+violence, upon the body.”<sup>104</sup></p>
+<h1 id="either-you-do-it-or-youre-going-to-the-box">2 “Either You Do It
+or You’re Going to the Box”</h1>
+<p>coercion and compliance</p>
+<p>I have a two-year-old child and I tell him, “You can be whatever you
+want to be, but you will not get a PhD, because I don’t want anyone else
+to have that much control over your future. You can do anything. You can
+be a doctor, you can be a lawyer, you can do anything. But you will not
+get a PhD, absolutely not.” Because it’s not about what you do, it’s
+about your mentor and what he decides or she decides, where she wants
+you to go, or what she wants you to do.</p>
+<p>—Kimberly Mays, former graduate student in biology</p>
+<p>It’s hard. You’re always in fear of being kicked out. That’s really
+what it is. Every day you think, “Is this the day someone is going to
+walk in and tell me, You’re leaving with a master’s.”</p>
+<p>—Laine, former graduate student in chemistry</p>
+<p>Kimberly Mays and Laine recently completed their PhD in the sciences.
+Though they were in diferent disciplines and at diferent universities,
+they both characterized their graduate school experiences as dificult,
+even oppressive. Laine called hers “the worst time of [her] life,” and
+Kimberly said that graduate school “destroyed [her] ambitions to become
+an academic scientist.” They both endured harassment from faculty
+members in their departments, though Kimberly described hers as more
+severe and persistent. They both sufered mental and physical health
+problems because of their graduate-school work environments, and because
+of those environments, they both left the academy after finishing their
+degrees.</p>
+<p>Though Kimberly’s and Laine’s experiences were not unique, they were
+at the worse end of the spectrum among the graduate students I
+interviewed, whose experiences ranged from “terrible” to “fantastic.” In
+fact, a similar spread characterized the experiences of all four groups
+of workers in this study, though with markedly diferent upper limits, as
+no incarcerated or workfare workers described their jobs as “fantastic.”
+Even still, it is worth emphasizing that in these labor relations—as in
+all jobs—workers do not always experience bad labor conditions, overt
+exploitation, or abuse. Nor do they always interpret the power dynamics
+at their workplaces as coercive, just as “regular” workers do not always
+feel or see the economic compulsion undergirding their own employment
+relations. In part, this is a matter of ideology and interpretation, for
+the cultural narratives analyzed in the previous chapter inform how
+these workers experience and interpret their labor. Many simply accept
+that this is how things are done.</p>
+<p>Yet variation in their experiences and understandings of status
+coercion is not only due to individual diferences in interpretation. It
+is also because in these jobs, as in others, there is a range of
+bosses—some are kind, some are strict, some are abusive—whose
+dispositions invariably afect the tenor of the workplace. In fact, in
+these labor relations bosses dispositions are particularly important
+because they have unusually broad discretion in shaping workplace
+dynamics. As Suzanne, a former biochemistry graduate student, said,</p>
+<p>The problem with the whole sciences right now is that there’s no
+common standard or rules, so it’s a bit like The Wild Wild West. It
+really depends— like, how much you learn and how you’re treated—all
+these things depend a hundred percent on who your advisor is.</p>
+<p>Indeed, all of the labor relations in this book are “a bit like The
+Wild Wild West” in this way. Because they are not sociolegally
+constructed as rightsbearing “work,” they are not governed by typical
+workplace norms and regulations. Therefore, the workers who labor within
+them do so in the absence of many (if not all) employment protections,
+without recourse to union representatives and human resources
+departments, and without the basic expectations and privileges of other
+“workers.” Meanwhile, their bosses’ actions as overseers of their labor
+are not closely monitored or regulated by higher-ups, and so such powers
+often remain unchecked. As a consequence, while a good boss in these
+jobs can be quite good, a bad one can be really bad.</p>
+<p>But even when such bosses are at their best, these labor relations
+are still predicated on status coercion. Because their coercive power
+does not reside in their disposition but, rather, in their
+institutionalized capacity to wield punitive power, whether or not they
+choose to do so. Indeed, even when they do not, workers are acutely
+aware of their ability to wield such power, and this awareness shapes
+their experiences and interpretations of their labor.</p>
+<p>In the sections below, I examine these experiences and
+interpretations, moving from the least severely coercive labor relation
+to the most. Yet for all of them, as we will see, workers’ awareness of
+their bosses’ coercive power usually produces their acquiescence. They
+are sure to “follow instructions” and remain “compliant.” They act like
+“good soldiers” and “walk on eggshells.” Thus, I argue, the coercion at
+the heart of these labor relations creates and sustains “a relation of
+docility-utility,” as Michel Foucault said of another
+context,<sup>1</sup> producing and enforcing “good soldier” worker
+subjectivities. Yet such subjectivities are not likely to remain
+confined to these particular labor regimes. Because these regimes often
+prime workers for precarious employment in the mainstream economy, the
+coercion at their core also produces the vulnerable and compliant
+workers on whom neoliberal precarity relies.</p>
+<h2 id="graduate-students-your-professor-is-trying-to-squeeze-every-last-experiment-out-of-you">graduate
+students: “your professor is trying to squeeze every last experiment out
+of you”</h2>
+<p>Emily recently earned her PhD in chemistry from a top-tier research
+university. Echoing Kimberly Mays, the 30-year-old white woman argued
+that faculty advisors in the life sciences have too much control over
+too many dimensions of graduate students’ lives.</p>
+<p>They have a frightening amount of power, I think, because they sort
+of have unchecked dominion, like, over multiple aspects of your life. I
+think this is one of the reasons that some groups of graduate students
+have tried to unionize. Because [advisors] can dictate the hours that
+you work without any sort of check on that, they can demand any sort of
+product, whether it’s reasonable or not, they can terminate you at
+will,<sup>2</sup> because they’re providing your funding. . . . And, in
+most cases, they have total discretion over when you can graduate and
+whether you can graduate. . . . And nobody is going to give you a job
+unless you have a good letter from your advisor. . . . Your advisor has
+total power over your life. I mean, in what job setting is that
+okay?</p>
+<p>In Emily’s view, faculty advisors have expansive “unchecked” power
+over not only graduate students’ work lives but also their education and
+future employment—or, as she said, their “whole life.”</p>
+<p>At first glance, such power may seem both reasonable and expected.
+University faculty are experts in their fields and must train graduate
+students according to the high standards of PhD-level work. Therefore,
+it makes sense that they have the authority to determine whether
+students have met such standards, as well as the authority to assess the
+caliber of students’ work for future employers. In specialized fields,
+in fact, faculty advisors may be among a very small handful of people
+with the expertise necessary to do so. In isolation, then, faculty
+advisors’ authority as teachers and mentors does not render graduate
+student labor inherently coercive. It is the broader organization of
+work in the academic sciences that does so.</p>
+<p>In the sciences, faculty advisors not only oversee their students’
+research; they also oversee their students’ labor. They are the “bosses”
+of their labs, and the graduate students who work in those labs are
+learning and pursuing their degrees at the same time as they are
+performing labor for their advisors. As Henry, who is now a chemistry
+professor, said, “It is complicated in our field, because working in the
+lab as a job and working in the lab as a student overlap almost one
+hundred percent.” These students are not performing just any labor,
+moreover. They are conducting their advisors’ research.<sup>3</sup> For
+although graduate students typically choose a lab based on their own
+interests, once they are a member of that lab their research agendas,
+and often their particular research questions, are determined by the
+faculty member in charge of it—their “boss,” “PI” (principal
+investigator), or “advisor”—who owns any resulting findings,
+publications, inventions, and patents. As Elizabeth, another former
+chemistry PhD student, explained, though faculty advisors are “usually
+not in the lab doing the research themselves . . . they’re guiding the
+research, and the research is their idea. The grad students are the
+hands that execute the experiments.” Thus, graduate student “hands”
+produce not only their own PhD dissertations but also their faculty
+advisors’ CVs, tenure dossiers, grant applications, and professional
+reputations.</p>
+<p>The result is a pressure-filled power structure with high stakes for
+students and faculty alike. However, because faculty hold nearly all of
+the power in this labor relation, graduate students are in a vulnerable
+position.<sup>4</sup> But they are not just any vulnerable worker.
+Because their advisors have power over their ability to finish their
+degrees and obtain employment in their fields—that is, power over their
+status as PhD candidates and future scientists—their vulnerability stems
+from status coercion.</p>
+<p>The most basic power that science faculty have over graduate students
+is their ability to dismiss students from the lab, which usually means
+being dismissed from graduate school without a PhD. As Laine explained,
+“Your advisor basically will tell you your work is either good enough,
+or not good enough. And if they ever make that decision where they’re no
+longer going to support you, meaning that you can no longer work in the
+lab, that is a big black X on you.” To explain why, the 30-year-old
+white woman continued,</p>
+<p>I’m an inorganic chemist. So if [I] was asked to leave, it was highly
+unlikely that another inorganic chemistry advisor would take me on. I
+would probably have to switch to analytical, or organic, or a diferent
+subdivision, and then go through the entire process again. And so,
+usually if that happens, people leave with a master’s and they’re done
+forever. . . . And it’s unfortunate, because maybe your advisor isn’t
+the nicest person, or maybe they have emotional security issues. Or, you
+know, they’re all socially awkward. These are brilliant, brilliant
+people. And so, if you don’t get along with your advisor for whatever
+reason, they can just walk in, and kick you out.</p>
+<p>Ron, who is now a chemistry professor, said that although “kicking
+[students] out” is not common, he has seen it happen. “The most
+underhanded way that I’ve seen it handled,” the midthirties white man
+said, “is when [students] come up to get into candidacy, the advisor
+speaks to the committee ahead of time, and just says to them, ‘Hey I
+don’t want this person to pass.’ And [the student] will then be failed
+from their candidacy and, if you fail your candidacy, you’re out of the
+PhD program.”</p>
+<p>Yet because of faculty reliance on graduate student labor, Ron said
+that there is often a disincentive for them to dismiss students, even
+those whose work is not satisfactory. In fact, because of this reliance,
+he said that there is also a disincentive for faculty to allow good
+graduate students to finish their degrees and leave the lab. Faculty
+need their labor. Thus, in addition to being kicked out, graduate
+students feared the opposite: not being allowed to leave graduate
+school. As Ron bluntly explained,</p>
+<p>The thing with the graduate students is, they’re terrible, right?
+They’re crap. They’re awful in lab usually until their final year. And
+then, in their final year, that’s when they suddenly learn skills like
+time management, and they learn, “Oh wait, if I do two things at once,
+that will actually speed up the research.” So I’ve absolutely heard tell
+of advisors who have essentially prevented their students from coming up
+for their PhD defense, because out of nowhere they suddenly became
+productive, and [advisors] want to keep them on longer to get more
+production out of them.</p>
+<p>Nearly all of the former graduate students I interviewed were
+familiar with this practice, though a majority of them had not
+experienced it firsthand. Laine did, however. In fact, she said it was
+common practice across the labs in her department. “I haven’t talked to
+anybody where that’s not the case,” she said.</p>
+<p>You’re trying to leave, you’re trying to set up your career, you’re
+going on job interviews, you’re writing your dissertation, you’re
+wrapping up your research, and all the while your professor is trying to
+squeeze every last experiment out of you. . . . Because they’ve spent so
+much time trying to get their lab up and running, and now here you are
+after five years, you’re finally a student that can produce work for
+them. So letting you leave is a detriment to their promotion.</p>
+<p>To get around this issue, Laine said, the students in her department
+developed a “trick”: they would request a defense date one or two
+semesters before they actually wanted to defend their dissertations.
+Laine used this trick herself. “I pushed, and pushed, and pushed” for a
+defense date in the fall, she said, even though she really wanted to
+defend her dissertation in the spring. “Finally [my advisor] was like,
+‘No, no, no, you just can’t, like, it’s not going to happen. But spring
+will happen, spring will happen,’ and I got it in writing, and then I
+was done.”</p>
+<p>Scott encountered a similar obstacle, but such tricks did not work
+for him. Near the end of his tenure in graduate school, the 32-year-old
+white man said that his advisor repeatedly delayed the date of his
+dissertation defense. At the same time, his advisor made clear that
+Scott would be dismissed from the lab when his funding expired, whether
+or not he had defended his dissertation. Scott was “incredibly worried”
+that he would be pushed out of the program without a degree. “I don’t
+know if he was actually going to do it,” he said, “but that’s what he
+told me multiple, multiple, multiple times.” Though Scott could not
+fully explain his advisor’s behavior, he believed that it was largely
+due to his productivity in the lab. “A lot of it had to do with the fact
+that I was used as labor,” he said. “I was used more as labor than as a
+student.” In the end, after multiple defense date cancellations, Scott
+said he went to his department’s director of graduate studies—though
+anonymously because he feared “blowback”—who helped him set and keep a
+defense date. Because he did so, however, he felt that he could not rely
+on his advisor for job recommendations. “To this day, if I’d asked him
+for a letter of recommendation, I don’t know what would have happened.”
+His fear, Scott explained, was that his advisor “would write a bad
+letter . . . to try to, you know, sabotage my future eforts.”</p>
+<p>In terms of recommendation letters, Kimberly Mays was in a similar
+predicament. Because her advisor was not only her boss but also her
+harasser, she felt that she could not rely on him for a letter of
+recommendation. “I can’t use him,” the 37-year-old African American
+woman said.</p>
+<p>I can’t get a letter from him. I wouldn’t want to get a letter from
+him. So, I would have to get a letter from someone else, which would be
+automatically flagged, like, “Wow, why is she not getting endorsed by
+her PhD advisor? There must be some problems there.” And automatically,
+I am assumed to be the problem.</p>
+<p>In the end, though Scott was able to get a letter of recommendation
+from a visiting professor instead of his advisor, Kimberly did not have
+that option. She left academia, and though she is relatively happy in
+her current position, she still “craves” being a scientist.</p>
+<p>I still want to be in the lab. I still want to explore some of the
+scientific problems that are conundrums in the African American
+community. . . . That’s why I got into this, that’s why I wanted to do
+this. I wanted to save lives, I wanted to impact lives of women who look
+like me. And, I kind of feel like, I let him win. Because I’m not doing
+it.</p>
+<p>Then her voice choked, and we sat in silence.</p>
+<p>Kimberly’s and Scott’s experiences highlight another way that
+graduate students experience their advisors’ power: control over their
+future employment through letters of recommendation. As Henry, an
+early-forties white man, explained,</p>
+<p>Without a doubt, the most profound way an advisor can wield power is
+in writing a letter of recommendation. . . . Virtually any employer,
+academic or not academic, is going to give very, very strong weight to
+the graduate advisor, who probably has seen more of that person’s work
+and development than anybody else.</p>
+<p>In this way, graduate work in the sciences difers little from other
+academic disciplines, as faculty recommendations across the academy are
+considered essential to PhD students’ future employment. Yet not all
+faculty advisors are also the bosses of their students’ labor. When they
+are, such recommendation letters become a mechanism for this form of
+labor coercion.<sup>5</sup></p>
+<p>Publications are another means by which graduate students experience
+their advisors’ coercive power. Because the quality and quantity of
+their published articles afect students’ ability to secure academic
+employment and, in some departments, complete their degrees,
+publications are crucial to students’ academic success. Yet in the
+sciences, faculty advisors wield substantial power over students’
+publications. They are nearly always coauthors—typically listed last to
+indicate ownership of the lab and the project—and they control if, when,
+and where a paper is submitted for publication. Even more, faculty
+decide who is included as an author and in what order, signifying the
+relative importance of each author’s contribution.</p>
+<p>A substantial minority of the former graduate students I interviewed
+had experienced some kind of publication problem with their advisor.
+Henry, for example, recalled a major paper on which he was not included
+as an author, even though he believed he had contributed to it in a
+“significant, intellectual way.” Not being an author on such an
+important publication from one’s lab, Henry explained, could afect more
+than one’s résumé. If the paper was at all related to that student’s
+research, he said that it could render the student’s entire research
+agenda redundant, making it “questionable whether that person’s other
+works could ever be published.”</p>
+<p>Henry and the other former graduate students I interviewed described
+a variety of reasons why their advisors might impede their publications,
+ranging from what they saw as innocent but mismanaged eforts to
+distribute credit for the research to outright punitive retribution.
+Emily described yet another way that advisors might do so: by assigning
+them “high-risk research.” At her top-tier university, she explained,
+faculty “are willing to engage in pretty high-risk research . . .
+because they want to advance their careers.”</p>
+<p>If [that research] doesn’t pan out, they’ll just move on to their
+next project, or they have some backup projects running that will keep
+their funding going. But the students who are working on high-risk
+projects, if those don’t come to anything, then they might finish and
+not have any publications, because nothing worked. That’s how you end up
+in situations where somebody finishes grad school [without publications]
+or quits grad school after five years because they don’t have anything,
+and they’re not going to graduate.</p>
+<p>In the sciences, as Emily implied, failed projects often do not yield
+publications, and without publications graduate students in her
+department would not be allowed to graduate, let alone be hired as
+postdocs or professors. In her view, most of the risks of high-risk
+research are borne by graduate students. “That’s the consequence,” she
+said, “of that sort of mentality that people want to advance their
+careers at whatever cost, and they just have peons to do the work for
+them.”</p>
+<p>Emily’s account highlights the status coercion at the crux of this
+labor relation: those at the bottom of this power structure feel that
+those at the top have overly expansive—even punitive—power over them,
+controlling not only their labor in the lab but also their education,
+academic credentials, and future careers. Indeed, because of the very
+real pressure that many faculty members themselves are under, this
+lopsided labor system allows—and sometimes even seems to expect—faculty
+to deploy such levers of coercion in order to transfer at least some of
+this pressure to their subordinates. Of course, not all faculty advisors
+do so, and even when they do, it is not always considered problematic by
+graduate students. Overall, five of the twenty former graduate students
+I interviewed characterized their experiences as highly positive, while
+an equal number characterized theirs as intensely negative. Yet even
+when they had positive experiences, these students also had a deep and
+abiding sense of what their advisors could do for them, or to them.</p>
+<h2 id="college-athletes-if-they-want-you-to-play-and-youre-injured-then-youre-playing">college
+athletes: “if they want you to play, and you’re injured, then you’re
+playing”</h2>
+<p>In terms of power dynamics, college athletes’ labor is similar to
+that of graduate students in the sciences. In both cases, for example,
+their bosses’ jobs seem to be unusually dependent on their labor; just
+as science faculty careers are built on graduate students’ labor in the
+lab, coaches’ careers are built (or broken) by athletes’ labor in the
+stadium. As basketball player Kate said, a coach’s job is “contingent
+upon the win.” Because of this dynamic, she believed that coaches often
+“lose sight of the human beings, lose sight of the fact that these are
+young women who are trying to find their way.” The result, the
+24-year-old Black woman argued, is athletes “exploitation.”</p>
+<p>Instead of, like, guiding them, and mentoring them through that
+stage, it’s more of an exploitation, where [coaches are] like, “Okay,
+they play basketball for me. I’m going to, you know, play them till they
+drop. Or push things [like mental health issues] under the rug because I
+need them to score twenty points.” Or, you know, “I’m going to make
+every decision I need to make in order for us to get a win.”</p>
+<p>In Kate’s view, coaches “lose sight of all morality because money and
+job are on the line,” echoing Emily’s critique of faculty who “advance
+their careers at whatever cost” to graduate students.</p>
+<p>While some athletes, like Kate, held their coaches responsible for
+their sense of exploitation, others blamed the NCAA. For instance,
+according to Zachary Lane, the NCAA is “just a business that uses the
+cheapest product”—college athletes—“to generate revenue.” To emphasize
+his point, the 29-year-old African American man developed an extended
+analogy between Division I college athletics and “pimps,” on the one
+hand, and college athletes and prostitutes on the other. In both cases,
+this former football player argued, those with power “sell a dream” and
+promise “glamour” in order to recruit and ultimately exploit their
+targets. As Zachary explained, a pimp might recruit prostitutes by
+saying,</p>
+<p>“Oh, we’re going to bring you over here, we’re going to make you look
+nice, we’re going to get you all dressed up. You like wearing that nice
+stuf, don’t you? Yeah, you look good. You look really good.” . . . And
+what do the college coaches tell you? “Oh, man, I think you should come
+and play right away for us. Don’t you look good in this jersey? Look at
+our facilities, this is real nice here, right? Look at our lockers, look
+at our cleats.” For an eighteen-year-old kid, you’re like, “Oh yeah, I
+like this, this is nice.” [But] when you get there, it’s work, just like
+the woman. She might like to have sex already. If she [does] that’s even
+better because . . . I don’t have to break your mind now. You’re going
+to do this anyways. . . . Like, for me, I’m going to play football
+anyways. I might do it for free. . . . [But really] I’m paying for my
+education, just like the woman is having sex with these men, getting
+this money, bringing it back to the pimp, to the NCAA, or to the
+university, right? . . . She’s bringing the money back to daddy, she’s
+getting taken care of, and it looks all good. “That’s my favorite
+employee,” [the pimp says]. “I love you. I’m going to take care of you.
+I’m going to make sure everything is good. You’re hurt? Okay, I’ll take
+care of your doctor’s bill. You go to jail? I’m going to bail you out.
+I’m going to take care of you.”</p>
+<p>Yet both prostitutes and college athletes, Zachary said, are at risk
+of “getting used up”: “If they’re done with you, they’re done with you.”
+He was able to avoid this fate, he explained, because his older brother,
+who was also a college football player, warned him against getting
+“pimped.” “The one thing he told me,” Zachary said, “was ‘don’t get
+pimped.’” And so Zachary made sure to get what he needed out of college
+football: “to get to the NFL . . . and leave with my education.”</p>
+<p>As Zachary’s analogy suggests, Division I athletics—much like
+graduate student labor in the sciences—is not only a high-pressure,
+high-stakes labor relation; it is one in which its subordinates
+understand their bosses as having expansive power over them. In fact,
+they experience this power in similar ways. Like graduate students,
+athletes understand their coaches as having control over their education
+and future employment, as well as the much-sought-after chance to play
+their sport at the elite collegiate level. These are the levers of
+status coercion under which college athletes labor.</p>
+<p>For example, just as Laine described graduate students as “always in
+fear of being kicked out” of graduate school, athletes described their
+constant awareness of their coaches’ power to revoke their scholarships
+and therefore their dual status as college athletes and college
+students. “The thing about scholarships is,” former football player M.
+Max said,</p>
+<p>They can literally take your scholarship from you if they want to, if
+you’re not performing.<sup>6</sup> That’s what a lot of people don’t
+know. You have to re-sign for your scholarship every year. It’s not like
+you sign on a dotted line and you get four years of college for free.
+You sign on a dotted line [and] you have to do everything they say or
+they can take your scholarship anytime they want.</p>
+<p>Molly, a former college basketball player, made the same point. In
+fact, she said that her coach would explicitly threaten to revoke the
+athletes’ scholarships. “Our coach would sometimes say, when she’s mad,
+like, ‘You guys are playing horrible,’ blah, blah, blah, ‘I’m going to
+take your scholarship away.’” Though Molly believed that it was unlikely
+that her coach would actually do so (“you have to do something pretty
+bad”), “technically speaking,” the 23-year-old African American woman
+explained, “if you’re not holding yourself up to the standard of the
+coach, or your grades aren’t good, or whatever, your scholarship can get
+taken.”</p>
+<p>For most of the athletes I interviewed, however, the more tangible
+threat was losing playing time. As Zachary explained, “If you do
+something really egregious, they’ll take your scholarship away. If you
+do something just stupid, then they’ll cut your playing time.” Coaches’
+power to cut athletes’ playing time is simply “a given,” former
+basketball player Tom Vine said—so much so that most of the athletes I
+interviewed did not mention it without being asked. Coaches’ power to do
+so was taken for granted. “If you’re not performing well in practice,”
+Mike Smith, another basketball player, said, “if you’re complaining, or
+you’re just an issue, you’re just not going to play.”</p>
+<p>Although coaches’ power to “bench” athletes might not initially seem
+to be a lever of status coercion, closer analysis reveals its punitive
+dimensions for athletes, which make it so. Foremost, athletes repeatedly
+told me, losing playing time means losing something they deeply love.
+“By not playing,” Zachary said, “they’ve just taken away what you love
+to do. That’s the most ramification right there. That’s the biggest
+efect on you, is like, you’re not able to do what you love to do.”
+Football player Bill Murdock agreed. “I felt like all my dreams were on
+the line every single day at practice. And I better do well, or else.”
+Yet playing their sport in college is not just something they love to
+do; it is also something they have worked exhaustively to attain. “You
+came in loving this game,” Molly said, “and didn’t work for a
+scholarship just to sit on the bench.” This sense of their “work” and
+“dreams” being “on the line” is intensified by the fact that for the
+vast majority of these athletes, college sports will be the apex of
+their athletic career. Most of them will not go on to compete
+professionally, and they are repeatedly reminded of this fact by NCAA
+and university oficials alike.<sup>7</sup> Therefore, losing playing
+time means missing out on their athletic acme. This pressure is further
+intensified by the finite number of games and years they can compete.
+Per NCAA regulations, athletes have five years to play four seasons.
+Their eligibility “clock,” as the NCAA calls it, starts ticking when
+they enroll as a full-time student and does not stop even if they do not
+compete for an entire season.<sup>8</sup> As a result, for these
+athletes every game felt important, and their ability to play in any
+given game was controlled by their coach.</p>
+<p>Losing playing time not only afects athletes’ current athletic
+careers; it also afects their future careers as well. Foremost, this is
+because not playing decreases their chances for professional
+recruitment. As Zachary explained, “You’ve got to understand this: the
+thing with the NFL is, they have scouts that come around to watch people
+play. So, if you’re not playing, then you don’t have a chance at all.”
+Likewise, basketball player Lindsay said, “If you’re not playing, you
+know, people are going to be wondering why and, like, they’re not going
+to get to see you on the court. So they won’t get to scout you as much.
+They won’t see how good you are.” Moreover, athletes being “benched”
+suggests that they are a problem in some way, and just as graduate
+students rely on their advisors’ letters of recommendation for future
+jobs, athletes rely on their coaches’ evaluations of them to
+professional recruiters. As Lindsay explained, “Your coach is going to
+be talking to the coaches of the WNBA,” and they are going to be asked,
+“‘What’s this kid like on your team? Like, does she get along with
+everybody? Is she a trouble-maker? Does she cause problems? Or does she
+fall in line?’” The primary risk, Lindsay and the other athletes told
+me, is that their coaches would characterize them as “uncoachable.”
+“That’s a big thing for coaches,” the 25-year-old Black woman said.
+“‘Yeah, she’s uncoachable, she doesn’t really listen, she talks back.’”
+JohnJohn agreed. “Remember,” the 34-year-old Black football player said,
+“we are all trying to get to the League.”</p>
+<p>I don’t need this college scout coming to my coaches and the coach is
+like, “Yeah, he’s not coachable, you know, he doesn’t really follow
+instructions well, he doesn’t take coaching well.” Because that’s the
+biggest thing, that’s the biggest problem you could have as an athlete,
+is you’re not coachable. That you’re hot-headed, and that you’re all for
+yourself, you’re selfish. That’s not what you want.</p>
+<p>Again and again, these athletes said they needed to be
+“coachable”—that is, follow their coaches’ instructions—in order to keep
+their playing time and retain their status as elite athletes.</p>
+<p>Athletes’ constrained mobility only increased their sense of their
+coaches’ power over them. For unlike many more traditional workers, who
+can quit their jobs and seek comparable work,<sup>9</sup> Division I
+athletes (along with the other workers in this book) cannot. The NCAA
+limits their ability to transfer to other Division I sports
+teams,<sup>10</sup> and their coaches can impose additional
+constraints.<sup>11</sup> For instance, athletes are not allowed to
+communicate with other teams’ coaches to determine if transferring is
+even possible without their own coach’s written consent.<sup>12</sup>
+Simply requesting such a “release” can damage their relationship with
+their coach and lead to loss of playing time.<sup>13</sup> Then, if they
+are allowed to transfer, athletes cannot compete the following season,
+losing a year of their already-limited NCAA eligibility.<sup>14</sup> As
+football player Jayce explained, “If you go in and you don’t click with
+the coach, you can’t just get out of that and transfer to another
+Division I school. Well, you can,” the white 29-year-old man allowed,
+“but you’ll sit out for a year. I mean, you don’t really have much you
+can do. . . . You literally miss years. . . . So, if you don’t get along
+with one of your coaches, then you’re kind of SOL.” This sense of being
+“SOL” is even worse for those athletes who have already lost playing
+time, such as those who have been “red-shirted,” that is, kept out of
+competition for a season in order to develop their skills or recover
+from an injury while preserving that season of eligibility. After doing
+so, however, they have only four years—not five—to play their
+four-season allotment, so any additional loss of playing time (such as
+that required by transferring) results in a substantial deficit. This is
+called “handcufing a red-shirt kid,” basketball player Mike Smith said.
+“They kind of have them by the balls.”</p>
+<p>All of these dynamics led college athletes to believe that their
+coaches had expansive power over their athletic careers and their
+education—their “dreams”—which is qualitatively diferent from how most
+“regular” workers experience their bosses’ power. Of course, not all
+coaches deploy these levers of coercion, and even when they do, athletes
+do not always experience them as overly punitive or coercive. Indeed,
+like the graduate students, the athletes I interviewed reported a range
+of experiences; six of the eighteen characterized their college careers
+as “good” or “great,” while five described theirs as at least somewhat
+negative. Among the latter, Bruce’s experience was the worst. In his
+view, being a college football player was “terrible,” even ruinous.
+Although his experience is not representative of those I interviewed, it
+is worth describing in detail because it reveals some of the ways that
+athletes negatively experience their coaches’ coercive powers.</p>
+<p>Bruce is white, now in his early thirties. When he went to college,
+he did not have support from his parents, financial or otherwise, so he
+started of at a junior college hoping to be recruited (and ofered a
+scholarship) by a Division I team the following year. He worked hard to
+make this happen, he said, waking up at four o’clock every morning for
+speed training. His work paid of: at an NFL scouting combine, he ran one
+of the fastest times in the country; so Bruce assumed that Division I
+coaches would contact him with recruiting ofers. But he did not hear
+from any coaches. As an assistant coach told him later, however,
+recruiters had indeed tried to contact him, but his head coach had
+turned them away because he did not want Bruce to leave. As Bruce
+explained, “My junior college was turning into a four-year school, and
+he wanted me to stay . . . [but] I was so upset that this guy ruined
+opportunities for me to go play somewhere else that there’s no way I was
+going to stay and play for him.” So even though recruiting season had
+ended and scholarships were no longer available, Bruce left his junior
+college to “walk on” at a state university.<sup>15</sup></p>
+<p>The next year at his new school Bruce played well—so well, he said,
+that his coach ofered him a scholarship for the following year. “‘Wow,’”
+Bruce remembered his coach saying, “‘we’ve never had a walk-on come and
+contribute the way that you have. We’re going to give you the first
+scholarship that opens up.’” Bruce was overjoyed.</p>
+<p>I’m crying, and I called my mom. That was like the greatest day ever.
+I was, like, finally now I don’t have to work on the side and, you know,
+I can kind of relax, and focus on what I’m doing here in school, spend
+more time studying than on my part-time job. It was the greatest
+moment.</p>
+<p>The following fall, Bruce remembered arriving on campus and asking
+his coach about the scholarship. “Hey, I don’t know how this scholarship
+thing works,” he recalled saying. “I mean, how do I get my books? Like,
+what do I need to do for this?” “‘Oh, I’m sorry,’” he remembered his
+coach saying. “‘We never had a scholarship open up.’” Though he did not
+quite know what to think at the time, Bruce came to believe that the
+coach “could have given [him] one if he wanted to.” But he did not,
+Bruce said, because</p>
+<p>he just knew that, in the NCAA, you can’t transfer without sitting
+out a year, and if you transfer your senior year, you’re done. So, he
+knew he had me there no matter what. He could use that scholarship to
+bring in another player. . . . So, it was more about him and that
+program, than it was about me. . . . I was a starting player, [but]
+like, I was asking other kids to borrow their meal cards. That’s
+pathetic, that should never be that way.</p>
+<p>Not getting that scholarship, Bruce said, “ruined my whole career and
+my whole experience in college.”</p>
+<p>Then he injured his shoulder. If it had been treated right away,
+Bruce said, he would have required only minor surgery, and with a
+medical redshirt he could have preserved that year of eligibility. But
+he felt pressured to play.<sup>16</sup> “They kept trying to get me to
+play and telling me I was going to be okay,” he said.</p>
+<p>You’re always trying to make them happy, I guess. And if they want
+you to play, and you’re injured, then you’re playing. Because you don’t
+want to say “no” . . . because then you think, “Oh well, [the coach] is
+in control, and he can just not play me ever again. And if I have to
+transfer, then I have to sit out a year.” There are just so many
+variables, like, your education, your schooling, where you’re at. There
+are so many things where you just don’t want to mess it up.</p>
+<p>In the end, his shoulder got too bad to play; he needed major
+surgery. Bruce left the team. In fact, he left school altogether. “The
+coach acted like I like quit on him,” Bruce recalled, “like I quit on
+the team and stuf. And I was like . . . I did everything for you. I hurt
+myself. And now my career is over and I really wanted to play NFL. . . .
+And now I have all these student loans.” “I look back at it,” Bruce said
+later in the interview, “there is no way that I should have been set
+back, like, that behind in life, and have to catch up so much.”</p>
+<p>For Bruce, being a college athlete was an almost entirely negative
+experience, and he has continued to feel deeply misused by his former
+coaches. Yet even when the athletes I interviewed had positive
+experiences, they—much like the graduate students—were always aware of
+the power their coaches could wield. Haley is a case in point. Even as
+she proclaimed that playing college basketball was “the best experience
+of [her] life,” she also described having to “stay on [her] toes” in
+order to manage her coach’s verbal outbursts and negotiate her
+less-than-secure status as a walk-on. Kate’s perspective is perhaps even
+more telling. Although her experience was less positive than Haley’s,
+her college basketball career was neither particularly negative nor out
+of the ordinary. Yet she said that talking to me about her experience
+made her feel “absolutely” nervous. Even though she is no longer in the
+basketball world—and has not been for several years—she was worried
+about retribution. “You don’t want to burn bridges,” she explained. “You
+don’t want to, you know, say bad about this program because of how it’s
+going to afect you. It’s kind of like, if I don’t speak on it, and I
+just leave it where it’s going to be, then it doesn’t harm me in any
+way.” For Kate, a deep sense of her coach’s power remained, even after
+leaving the sport.<sup>17</sup></p>
+<h2 id="workfare-workers-you-don-t-have-a-choice-unless-you-want-the-benefits-to-get-cut-off">workfare
+workers: “you don’ t have a choice, unless you want the benefits to get
+cut off”</h2>
+<p>Although Kate, Haley, Bruce, and all of the former athletes and
+graduate students I interviewed could have left their positions had they
+really needed to—and some of them did—the consequences for doing so
+could be severe. Such decisions were thus more of a Hobson’s choice, an
+onlyostensibly “free” decision between equally intolerable alternatives.
+This dynamic is significantly starker for workfare and incarcerated
+workers, for whom the consequences of any form of
+noncompliance—including job exit—can be dire.</p>
+<p>For workfare workers, the primary consequence is being sanctioned:
+losing access to public assistance programs, including cash benefits,
+rent and utility subsidies, Medicaid, childcare and transportation
+assistance, or SNAP benefits.<sup>18</sup> Though such sanctions are
+usually temporary— lasting one to six months among the workers I
+interviewed—they permanently reduce welfare recipients’ lifetime
+allotment of public assistance under TANF (Temporary Assistance for
+Needy Families). In fact, just as NCAA athletes have a five-year
+eligibility “clock” that keeps ticking even if they do not compete, TANF
+recipients have a 60-month benefits “clock” that keeps ticking even when
+they are sanctioned.<sup>19</sup> Thus, welfare sanctions are not only a
+lever of economic coercion, revoking cash assistance from the poor. They
+are also a lever of status coercion, removing the poor from the status
+of “welfare recipient in good standing” and the meager but much-needed
+benefits which that status confers.</p>
+<p>Nearly half of the 43 workfare workers I interviewed had been
+sanctioned at least once, and a significant minority had been sanctioned
+multiple times. Yet all of them described the seemingly ubiquitous
+threat of sanctions. As 30-year-old Shara White said, “That’s their
+favorite. Yeah, that’s their favorite. . . . They’re always trying to
+throw [that] they’re going to sanction you in your face.” While many
+often-minor misdeeds (or simply accusations of such) could provoke
+sanctions, failure to comply with one’s assigned “work activities” was a
+common cause among those I interviewed and, studies show, among welfare
+recipients in general.<sup>20</sup> As workfare worker Kierra Ross
+explained, “You got to do [the work]. They don’t ask if you want to do
+it, you got to do it. . . . You don’t have a choice, unless you want the
+benefits to get cut of.”</p>
+<p>Yet these workers were sanctioned not because they did not want to
+work. Indeed, like most Americans, the workfare workers I interviewed
+believed deeply in the value of productive labor. They wanted to work.
+Instead, they were sanctioned for two work-related reasons: first, when
+external circumstances interfered with their (inflexible) jobs, and
+second, when they challenged problems at work. In the first case, for
+example, Kathy Johnson described being threatened with sanctions when
+her child’s health crisis prevented her from going to work. Although at
+the time of our interview the 45-year-old white woman was the director
+of a women’s shelter, she was once an unemployed, newly divorced mother
+of three assigned to work 25 hours a week in order to receive public
+assistance. She complied with her workfare assignment, she said, until
+one of her sons became gravely ill. She apprised both her caseworker and
+workfare supervisor of the situation and stopped going to work in order
+to stay in the hospital with her son. As a result, Kathy recalled, her
+caseworker threatened to terminate her public assistance.</p>
+<p>I still remember feeling that way, like they’re going to cut me of.
+Because I was sleeping in a hospital chair while my son was there [in
+the hospital] when his lung collapsed, and then the other lung
+collapsed. . . . He went into a partial coma, which turned to be a
+drug-induced coma. He was nonresponsive to medication. I remember them
+coming in and telling me to pray for the best, but prepare for the
+worst. And I’m sitting there on a chair, and I’m in a chaplain at the
+hospital on my knees praying he wake up. And they’re telling me, “We’re
+going to cut your food stamps of.” Well, [I said,] “You do what you have
+to do, because I’m doing what I have to do, and I will not be there. I’m
+telling you, I will not be there.”</p>
+<p>Ultimately, however, Kathy said that her caseworker’s threats did not
+materialize, but only because her workfare supervisor began lying for
+her, claiming that she was at work even as she remained in the hospital
+with her son. “I wasn’t doing anything I shouldn’t have been doing,”
+Kathy told me. “I was being a mom. So they covered for me. They would
+say, ‘Yeah, she was here eight hours today,’ when they hadn’t seen me in
+three days.” Yet it must be noted that the perception of Kathy as a
+“good mother,” especially while not working, has historically been a
+privilege accorded only to white women, both in the welfare system and
+in American culture more broadly.<sup>21</sup> Although we cannot know
+for sure, it is possible that Kathy’s whiteness informed her
+supervisor’s sympathy and willingness to lie—that is, commit fraud—in
+order to protect her benefits. Kathy, meanwhile, was deeply thankful for
+her supervisor’s sympathy, while also frustrated by the fact that her
+ability to be a good mother while receiving public assistance seemed
+entirely dependent on her caseworker and supervisor, each of whom had
+the power to rescind or sustain her family support.<sup>22</sup></p>
+<p>James Pondos recounted a similar story of workfare impinging on his
+ability to be a good parent, but in his case no one lied to protect his
+benefits. For his workfare assignment, the 52-year-old African American
+single father did building maintenance work at a nonprofit agency. He
+worked for a year without incident, he said, until his schedule abruptly
+changed “with no regard for my son and things that I have to do.”
+Instead of starting at nine o’clock and ending at 2:30 in the afternoon,
+he was told—with only one day’s warning—that his new (longer) shift
+would be from 8:30 a.m. to 4 p.m. He told both his caseworker and
+workfare supervisor that he could not comply with the new schedule
+because his young son did not get on the school bus until 8 a.m. and,
+because he lived across town, he could not get to work by 8:30 via city
+buses. In response, James remembered them saying, “‘Either you show or
+you’re sanctioned.’” He came to work late the first week but then
+received a “termination letter” stating that he was dismissed from the
+job and sanctioned from public assistance. “I got a four-months’
+sanction,” James said, “which meant no cash assistance, food stamps, and
+eventually I ended up getting evicted out of my house. Me and my son had
+to go stay in the shelter.” For James and his son, the penalty for not
+being able to comply with his new work schedule was severe indeed.</p>
+<p>The second work-related reason they were sanctioned, these workfare
+workers said, was that they challenged problems in the workplace. This
+was most often an issue for those who had been assigned to one workfare
+site in particular—one of a national chain of nonprofit thrift stores—
+where they had to sort donations in a large warehouse reportedly rife
+with heavy dust, bedbugs, and other environmental hazards. “That was
+horrible,” 26-year-old Sasha Reed said. “They want you to work with old
+dirty clothes and bedbugs and stuf. That was the worst site.” So, this
+young African American woman explained, “I did something to not have to
+go there no more. . . . I left the site, I just left.” To her surprise
+(and my own), she was not sanctioned as a result but was simply assigned
+to another worksite. April Smith, however, said that she was sanctioned
+when after just one day in that warehouse, she could no longer work
+because of her allergic reaction to the dust. As the 30-year-old African
+American woman recalled, “It’s like, a lot of dust. I just sneezed all
+day, uncontrollably, and I was like, ‘Is there something else I could
+do, like clean around the building, anything?’” They would not
+accommodate her request. “‘You have to do this,’” she recalled her
+supervisor saying. “So I walked of,” April said, and was sanctioned for
+“a good month or two” as a result.</p>
+<p>Though Tara Collins had not (yet) been assigned to that particular
+site, she was well aware of its bad reputation. In fact, she said that
+her current workfare supervisor would threaten reassigning the workfare
+workers to that site if they were at all defiant. (Though in point of
+fact, only caseworkers— not workfare supervisors—can formally make such
+decisions, Tara and the other workfare workers I interviewed fully
+believed that their supervisors could prevail on their caseworkers to do
+so.) “If she gets mad at you,” the 38-year-old Black woman said of her
+workfare supervisor, “she’ll send you [to that warehouse]. She has
+control to do that.” Tara then told me about several of her coworkers
+who had recently talked back to that supervisor and had then
+“disappeared,” either sent to the warehouse or sanctioned from public
+assistance altogether. “She brags about stuf like that,” Tara said.</p>
+<p>Like, “Oh okay, you want to keep talking mess? You want to keep
+talking mess? You’ll be sanctioned.” Or, like the boy who just cussed
+her out last week . . . now he got the [thrift store warehouse]. She was
+like, “Now let’s see how he talks over there.”</p>
+<p>For these workfare workers, then, there was an overriding
+belief—borne out by experience—that they would be sanctioned if they did
+not comply with any workplace directive, including untenable work
+schedules and working conditions.</p>
+<p>For Pauline Wilson, it was this pervasive (and very real) threat of
+sanctions in combination with persistent mistreatment that led her to
+defy her supervisor and relinquish her right to public assistance
+altogether. Although at the time of our interview the 57-year-old
+African American woman worked with Kathy Johnson overseeing the women’s
+shelter, several years ago she too was a workfare worker, first cleaning
+at a nonprofit organization and then picking up trash on the highway.
+Pauline said that she did not mind the work. Indeed, she believed that
+she had an “obligation” to work for her public assistance. But she
+detested the ill-treatment that seemed to come along with it. As Pauline
+explained,</p>
+<p>Some people didn’t make it after the first week because they couldn’t
+take it. They said, “You let them talk to you like that?” And then some
+people, they would cry, “Well, I need this money.” But if you’re not cut
+out for that kind of stuf—that kind of humiliation—it’s not going to
+work. And there’s nobody cut out for that.</p>
+<p>Nonetheless, Pauline lasted two years on workfare, until she finally
+got fed up one hot summer day while picking up garbage on the highway
+when her supervisor would not let her get a drink of water. As Pauline
+remembered the incident, she asked her supervisor for a water break but
+he declined, saying, “‘It ain’t break time yet.’” Pauline persisted.
+“‘I’m hot, I feel I’m going to faint,’” she recalled saying. “‘They even
+give water to thirsty dogs. Can I just have a little bit of water?’” He
+would not allow it, she said; break time was not for another 15 minutes.
+She went to the van to get a drink of water anyway, Pauline said, which
+her supervisor saw, of course. He told her to sit down for ten minutes,
+she recalled, and she did. After the time had passed, however, Pauline
+said that she went back to work because if she did not perform the
+labor, regardless of the reason, she believed that she would be marked
+as “noncompliant,” which would result in a sanction. And because it
+would be her second ofense, the sanction would last 90 days. (The first,
+she said, was for missing work without a written “doctor’s excuse.”) As
+she got up to go back to work, Pauline said that her supervisor asked
+angrily, “‘Did I tell you to go back out there?’” “‘It’s been past ten
+minutes,’” she remembered saying. “‘You’re going to mark down that I
+didn’t do anything. . . . Let me go back out here. I feel better now.’”
+He refused. “‘I didn’t tell you [that] you can go back out,’” she
+recalled him saying. By then, Pauline had had enough. “I was speaking my
+mind,” she told me. To her supervisor she said sassily, “‘I’m sick of
+you yelling at me with your smart mouth.’” “‘I’m not the one who needs
+this,’” she remembered him responding. “‘You’re the one who needs this.
+I get a paycheck every month.’” “‘You know what?’” Pauline said. “‘You
+can take that paycheck and stick it up your [ass<sup>23</sup>].’”</p>
+<p>And so we were back and forth until finally I said, “You know what,
+you can kiss my ass.” So he made me sit in the van for the rest of the
+day. When we got back to [Social Services], I didn’t even go upstairs. I
+didn’t go sign out or nothing. I just said, “Y’all can have this,” and I
+walked of.</p>
+<p>In so doing, Pauline said that she lost all of her cash benefits,
+food stamps, and Medicaid. She was unemployed for eight or nine months
+until she found what she considered to be a disreputable job in a bar.
+As she told me with disgust,</p>
+<p>I would rather work in a bar than go through that. Even though I
+wasn’t making that much money, I wasn’t being disrespected like that or
+treated like I’m a common piece of trash. Because I’m not. I’m not.</p>
+<p>Though Pauline ultimately relinquished her benefits rather than be
+sanctioned, her experience reveals at least one way that status coercion
+operates in workfare. For Pauline, the threat of sanctions loomed over
+her whether she did the work or not: had she performed the requisite
+labor, she would not have been following her supervisor’s orders to sit
+down, and had she followed his orders, she would not have performed the
+requisite labor. Either way, she believed her supervisor could (and
+would) mark her as “noncompliant” and trigger a sanction.</p>
+<p>But while such sanctions are routine,<sup>24</sup> their consequences
+are not. In Pauline’s case, not only did she lose access to the social
+safety net, so did her two young children. Her family lost their home,
+though they were able to stay with her sister. “My sister would help
+me,” Pauline recalled. “And thank God for that. I would have been messed
+up.” For James Pondos, being sanctioned pushed him and his son into a
+homeless shelter, a not uncommon occurrence among welfare
+recipients.<sup>25</sup> Meanwhile, New York City workfare worker
+DiMaggio, who was already living in a homeless shelter, said that had he
+been sanctioned, he would have been evicted from the
+shelter.<sup>26</sup> “I could lose everything,” the 51-year-old white
+man said. “If I got sanctioned, I could get thrown out [of the shelter].
+That’s not a misconception, that’s not a scare tactic. They really did
+it. Plenty of guys I knew personally I helped carry their crap out to
+the sidewalk.” Thus, for workfare workers, sanctions have expansive
+repercussions for themselves and their families. By cutting of their
+access to financial, food, utilities, housing, and medical support,
+sanctions have severe and lasting consequences for their health and
+well-being, stability and security, home and future.<sup>27</sup></p>
+<p>prisoners: “either you do it or you’re going to the box”</p>
+<p>For incarcerated workers, the consequences of status coercion are
+broadly similar, though their supervisors have a more diverse array of
+punitive powers at their disposal. For any form of noncompliance,
+corrections oficers (COs) can put prisoners in solitary confinement, in
+which they are confined to a segregated cell for 23 hours a day. COs can
+put them on “keeplock,” solitary confinement’s less extreme cousin, in
+which they are confined to their own cells and lose “privileges,” such
+as movement, recreation, exercise, phone use, family visits, commissary
+purchases, and sentence reductions for good behavior (i.e., parole).
+Oficers can also dispense disciplinary “tickets,” which exact fees and,
+when serious enough, prevent prisoners’ parole. And in more extreme
+cases, they can press new criminal charges, which incur additional
+prison sentences.<sup>28</sup> For incarcerated workers, then, these
+technologies of coercion entail much more than the loss of wages and
+work. They entail the loss of basic human claims such as physical
+freedom, family relationships, and social connection—both within prison
+(through internal segregation) and from prison (through loss of parole
+and added sentences)—all of which has severe long-term efects on the
+health and well-being of prisoners and their families.<sup>29</sup></p>
+<p>Prisoners’ awareness of such consequences permeates their labor and
+lives behind bars. As 31-year-old Qwon explained,</p>
+<p>We know that they got the power of the ticket, we don’t want our
+privileges gone. We don’t want to be locked in our cell twenty-four
+hours a day. We don’t want to not be able to go to commissary and eat
+what we want to eat, or use the phone to contact our loved ones when we
+want to. So, we tuck our tail, you know, grown men, you got to handle it
+. . . because they got the sayso. We don’t have no union, so we subject
+to tolerate a lot more.</p>
+<p>For C. Parks, it was the constant threat of such consequences,
+especially from the more punitive oficers, that made prison labor
+objectionable.</p>
+<p>Otherwise, he did not mind the work. For most of his time in prison,
+the 27-year-old African American man worked in the “mess hall,” waking
+at five o’clock in the morning and “fixing food, serving food, cleaning
+tables” from 5:30 until 9:30 or 10 a.m. The work, he said, was
+relatively easy and he earned enough money to “buy peanut butter and
+jelly for late night.” The only problem, C. Parks explained, was the
+“negativity that came with the work.”</p>
+<p>You got certain oficers that’s on your back, “Do this, do this, do
+this.” You might walk of for one minute to just take a breather and he’s
+on your back, “Do this or I’m sending you back to your block with a
+ticket.”</p>
+<p>“But I never caught a ticket for working in the mess hall,” C. Parks
+said. “No, no. Let me take that back. I did catch a ticket once.” The
+reason, he explained, was a dispute with the oficer who woke him up in
+the morning. As C. Parks recalled, he relied on the sound of his gate
+“popping” open as his alarm clock each morning. “So, one day it didn’t
+open.”</p>
+<p>So, you know, I’m still laying. I figured it’s nowhere near five
+o’clock. So, it finally opens and I come out, and [the CO is] like,
+“Hurry up, you’re late.” I’m like, “I’m late?” And I look at the clock,
+it’s five twenty-five. So I’m like, “I only got five minutes to get
+ready. Why is my gate just being popped?” So he was like, “Don’t worry
+about that, get dressed.”</p>
+<p>C. Parks said that he did so, but he refused to rush. “I got to brush
+my teeth, wash my face, you know what I’m saying? I’m going to an area
+where we set our food out. I’m not going to rush.” As he got ready, C.
+Parks said that the oficer went to the mess hall and then returned,
+telling him, ing that the prisoner in the adjacent cell act as a
+witness. But his request was denied.</p>
+<p>They said, “We don’t need him [as a witness]. There’s no suficient
+reason why he should be here. Just take this fifteen days’ keeplock.”
+So, I settled with having fifteen days on keeplock for that. . . . It
+was a lose-lose situation. . . . The fact that now I got that on my
+disciplinary history, [and] I had to pay of five dollars [for the
+ticket]. I also didn’t get to work for those fifteen days. Nor go to
+program for the fifteen days, [which] I had to make it up later. . . .
+So, that was the worst thing about it. The negativity.</p>
+<p>In C. Parks’s view, it was the many punishments that oficers could
+wield— and some oficers’ propensity to do so—rather than the labor
+itself that rendered prison labor problematic. By being put on keeplock,
+he lost half a month’s wages, plus another week’s wages because of the
+ticket. He lost the human entitlements that become “privileges” in
+prison, including freedom of movement (however restricted), exercise and
+recreation, muchneeded food from the commissary, and social connection
+with fellow prisoners and family members. He also gained a demerit on
+his “disciplinary history,” which could have prevented his parole but
+ultimately did not, he explained, only because he did not “catch” any
+more tickets.</p>
+<p>Brenda Smith did indeed lose her parole date when she refused to work
+shortly before her scheduled release from prison. Initially, the
+53-year-old African American woman recalled, “I did everything I had to
+do. I worked. I worked in a kitchen, I work on a unit. I did everything
+I had to do to make the [parole] board.” But once she got her “outdate,”
+Brenda said that she refused to work because she would not be paid for
+her labor.</p>
+<p>My job was to clean the gallery, the unit, to mop and clean the unit.
+So I told them I wasn’t cleaning it, because you’re not paying me. And
+I’m getting ready to go home Tuesday, and this was a Sunday, so why
+should I have to mop and I’m not getting paid?</p>
+<p>As a consequence, Brenda said that she was put on keeplock for 15
+days and lost her parole date—or, as she described it, “They locked me
+up and they snatched my outdate.”</p>
+<p>Though Brenda and C. Parks did not disclose any concern about
+solitary confinement in those instances, the former prisoners I
+interviewed frequently described the ubiquitous threat of “the box.” As
+Santos said, “Always somebody’s ‘going to the box’” (echoing Shara
+White’s description of welfare sanction threats). Because of such
+threats, the Black 28-yearold man explained, he “knew when to shut up”
+while he was in prison.</p>
+<p>Because I know there it’s like the little slightest thing you can go
+to the box for. Having a newspaper, you know, you go to the box; or
+having pornography, you can go to the box. Taking a cookie from the mess
+hall, you can go to the box. . . . You can’t look at females, [or]
+you’re going to the box.</p>
+<p>Garcia agreed, and because this threat of solitary confinement was
+used to compel prisoners’ labor compliance, he viewed incarcerated labor
+as deeply troubling. As the 27-year-old Black and Hispanic man
+explained, “The worst thing about working while incarcerated, I would
+have to say, is, well, pretty much being forced.”</p>
+<p>You’re forced to do that work. It’s up to you whether you don’t look
+at it as that . . . but, at the end of the day—and at the beginning of
+the day—you’re forced to do all of that. Like, you have no say-so.
+Either you do it or you’re going to the box. Either you do it, or you
+get your ass whooped and then go to the box. So, it’s really like, they
+rule with an iron fist. . . . You can rebel, but there’s still going to
+be the same result.</p>
+<p>In Garcia’s and Santos’s understanding, any form of noncompliance or
+misdeed could land prisoners in solitary confinement, and many of the
+former prisoners I interviewed had experienced it firsthand. O.T.I.
+recounted several instances in which he was put in the box because he
+would not clean bodily fluids. He refused to do such jobs, he explained
+to me, because he had not been trained in biohazard cleanup, though
+other prisoners had. “I was asked to clean urine and feces of of a
+floor,” the 27-year-old African American man said.</p>
+<p>I found that inappropriate and I suggested that they find someone
+that’s in that area [of biohazard cleanup]. You know what I’m saying?
+Because of the HIV. Sometimes, they ask us to clean up blood from
+another inmate, which is very hazardous, and they just give us some
+tissue and some infector and say, “Here, clean this up.”</p>
+<p>Because he refused an oficer’s direct order, O.T.I. said that he got
+a fivedollar ticket and was put in solitary confinement. “If you refuse
+an order,”</p>
+<p>he explained, “you can go to the box. So, I got a ticket for refusing
+an order and I went to the box in that situation. But, I guess they’ve
+seen the situation, they let me out in a week. They gave me a break. I
+could have been in there for thirty days.”</p>
+<p>Unlike O.T.I., Bruce W. did not get such a “break” when he refused to
+clean feces as part of his porter job. “I mean we’re just talking about
+feces,” the 23-year-old African American man said with disgust. “I’m not
+going to clean no feces. I don’t care what gloves you give me.” As a
+consequence, Bruce said that he was put in solitary confinement for 30
+days, as he was on another occasion when he refused to clean the chewing
+tobacco an oficer had spit on the floor. “The other incident I didn’t
+want to clean,” he recalled, was in “a robostation that oversees the
+unit. The CO [who worked there] was nasty. He used to chew snuf and he
+spit on the floor and he expects people to clean it. I wasn’t cleaning
+that stuf.” Once again, Bruce said, he “went to the box” for a
+month.</p>
+<p>Like sanctions for workfare workers, solitary confinement is a
+relatively common consequence for incarcerated workers. Twelve of the
+forty-one ex-prisoners I interviewed said that they had been put in “the
+box” at least once (and a significant minority had been in solitary
+confinement multiple times), broadly reflecting New York State
+trends.<sup>30</sup> Yet those numbers alone do not capture their
+experiences. James D., for example, spent two uninterrupted years in
+solitary confinement, and that was just one of his several stints in the
+box. Moreover, though the “torture” of solitary confinement was the
+worst part of it for these ex-prisoners,<sup>31</sup> they also said
+that going to “the box” was usually accompanied by physical violence.
+Recall, for instance, how Garcia described prison labor: “Either you do
+it, or you get your ass whooped and then go to the box.” Physical abuse
+is a central component of solitary confinement for many prisoners, and I
+examine it in more detail in the next chapter. For now, it is important
+to note that the combination of corporal violence with such a severe and
+common mechanism of status coercion renders “the box” particularly
+damaging for prisoners.</p>
+<p>In addition to solitary confinement, keeplock, and disciplinary
+tickets, incarcerated workers labored under the threat of another
+punishment: new criminal charges and more prison time. Although there
+was a sense among my informants that this consequence was reserved for
+extreme cases of misconduct or insubordination (such as reporting on or
+testifying against oficers), Tim Jones recalled an incident in which an
+oficer casually made such a threat. Tim said that he was working as a
+“rec aide,” organizing the prison’s recreation area, when an oficer
+asked him to do something unusual—something he deemed
+unacceptable—though at the time of the interview he could not remember
+what it was. In describing the request, the 28-year-old African American
+man said,</p>
+<p>It was just like, some things you ask people to do outside their job
+description, it’s like, “Okay, I’ll do it, no problem. I’m not doing too
+much out here anyway.” But it was something he asked me that just seemed
+like, “Huh?” Like, “Excuse me?” . . . And I told him—I forgot exactly
+what it was, but I told him it’s out of my job description, my [job]
+title. He said, “No, it’s a direct order.” I said, “But I’m here at work
+though, right?” And he was like, “Yeah, you’re at work, but I’m telling
+you to do it.”</p>
+<p>In response, Tim remembered saying, “But say, what if I refuse, due
+to the fact it’s not on my job title, and I’m supposed to be technically
+at work?” As Tim recalled, the oficer replied, “‘I’ll put you on the
+wall.’”</p>
+<p>And I said, “You put me on the wall, then what? . . . What’s the
+outcome?” He said, “If I put you on the wall and you even flinch, you’re
+not going to make your date.” I said, “I’m not gonna have no good time
+regardless, so what are you trying to say to me?” He said, “You know
+what I just said.”</p>
+<p>Because “not going to make your date” means not getting out of prison
+as scheduled, Tim’s understanding was that the oficer was threatening
+him with more prison time if he did not comply with the command. Yet as
+Tim made clear, the threat was not losing parole (“good time”), though
+that was a commonly reported coercive technique among the ex-prisoners I
+interviewed and one that is explicitly endorsed in New York State prison
+guidelines.<sup>32</sup> Because Tim was incarcerated for a parole
+violation, he was not eligible for “good time” and so it could not be
+taken away. Instead, Tim believed the oficer’s threat was an additional
+prison sentence. In order to understand why, some explanation is
+required. In New York State prisons, oficers put prisoners “on the wall”
+in order to retain or regain control over them. When “on the wall,”
+prisoners must lean against it at a 45-degree angle with their arms and
+legs outspread, and they are not allowed to move.<sup>33</sup> Any
+movement can be construed as a threat to the oficer, and such threats
+are countered with swift force—even outright violence—as well as
+solitary confinement and, in more extreme cases, criminal charges. (As
+O.T.I. explained, if a prisoner is understood to be threatening an
+oficer, “they have the right to take you down to the box and beat you.”)
+In Tim’s understanding, then, the oficer insinuated that he would
+deliberately construe any “flinch” as a threat, which would lead to
+Tim’s physical beating, solitary confinement, additional charges, and
+more prison time. Perhaps not surprisingly, Tim said that he complied
+with the oficer’s order, though he later requested a job change and
+asked the oficer why he had threatened Tim in this way. (The CO’s
+response: he had been testing Tim’s temper.) Thus, similar to Pauline’s
+experience in workfare, Bruce’s in college football, and Scott’s in
+graduate school, Tim’s experience behind bars highlights some of the
+more punitive technologies of status coercion under which prisoners
+labor.</p>
+<h2 id="coercion-and-compliance-i-didn-t-want-the-consequence">coercion
+and compliance: “i didn’ t want the consequence”</h2>
+<p>As Tim’s story suggests, the primary product of status coercion is
+compliance. Even though these workers regularly engage in acts of
+resistance, they generally acquiesce. This is not surprising, of course.
+As Frances Fox Piven and Richard Cloward observed in their landmark
+study of social movements and social marginalization, “People usually
+remain acquiescent, conforming to the accustomed patterns of daily life
+in their community, and believing those patterns to be both inevitable
+and just.”<sup>34</sup></p>
+<p>In these labor regimes, acquiescence is not only a matter of cultural
+hegemony and human inertia. It is also actively produced and enforced by
+technologies of status coercion. The penalties for defiance are too
+severe. And so, as Qwon said, prisoners “tuck” their “tails.” “You got
+to handle it . . . because they got the say-so.” “You have to train
+yourself immensely to deal with it,” O.T.I. explained, “because you
+can’t really talk back to a superior oficer, because then you put your
+life in jeopardy or—you know what I’m saying—your well-being. So you
+kind of have to take it in stride. I mean, you don’t have to ignore it,”
+he allowed,</p>
+<p>you can file a grievance. But every action comes with a reaction. You
+file a grievance and then they might try to set you up or beat you up on
+the walkway. So, you just kind of have to take the slaps on the face and
+turn the left cheek. . . . You got to really walk on eggshells, because
+you don’t want to get placed in that situation where you’re risking your
+freedom and extra time, when you’re trying to make it home.</p>
+<p>All they wanted to do, these ex-prisoners said again and again, was
+to “make it home,” and so they did whatever they needed to do.</p>
+<p>Workfare workers took a similar approach. “I just do my job, you
+know, whatever I need to, I do it,” Tasha Love said. “It aggravates me
+inside, but what can I do when I feel like they’re just taking control
+of my life?” James Pondos agreed. After sanctions left him and his son
+homeless, he said that he became extra compliant, doing whatever he had
+to do even though he considered the work to be unfair and unsafe. “I’m a
+single parent,” he explained, “so I’m already struggling, that’s why I’m
+here in this situation. . . . It’s just not worth it [to resist]. So you
+comply.” In fact, when James Griggs was a workfare worker, he said that
+“compliance” became a kind of mantra. “You have to be compliant, is what
+I kept thinking,” the 50-year-old Afro-American<sup>35</sup> man
+recalled.</p>
+<p>You have to comply or you’re going to be sanctioned. That’s the whole
+mindset of it. “You have to be compliant or you’re going to be
+sanctioned,” you know, like a parent telling a child, “You have to do
+this or this is going to happen.”</p>
+<p>Meanwhile, although college athletes and graduate students difered
+from these workers in many ways, they generally felt the same way. Even
+though they had more leeway to resist bad bosses and leave their
+positions— than prisoners and welfare recipients at least—they too said
+that they usually complied, even with work and working conditions they
+deemed unjust or abusive. In their view, the stakes were simply too
+high. As basketball player Shevontae explained,</p>
+<p>[If] you have a complaint or a grievance [with your coaches] . . .
+you have more to lose than they do. . . . And if something happens to
+them, they can continue on and find a new job or do something. [But] for
+you, if something happens to you, everything can be tarnished.</p>
+<p>As a result, the Black 26-year-old woman said, “Me personally, I
+didn’t [complain]. I was more like a good soldier. I just wanted to keep
+the peace.” Complaining would have been “unproductive,” she said.
+Instead of solving the problem, it would have “caused unnecessary
+tension in the relationship.”</p>
+<p>Because even when someone says, like, “Open door policy, tell me what
+you want,” we’re humans. So, it’s impossible to fully filter out if you
+dislike someone’s criticism. . . . [I] was like, I don’t want them to
+ever hold it against me or resent me. . . . Some [coaches] really do
+take things out on you . . . and all of a sudden, your minutes decrease.
+. . . I felt like, if I caused tension, or if I speak up, or I’m kind of
+like a rebellious one . . . will I still be in the coach’s favor?</p>
+<p>Staying in the “coach’s favor” is the “main pillar” of college
+sports, Shevontae said. JohnJohn agreed. “In any sport,” he explained,
+“you’re going to not agree totally with what your coach does or says.
+But they’re the coach. And you’re there to be coachable, [so] you follow
+instructions.” For those who have “conflict with coaches,” he went on,
+“there’s usually some kind of consequence involved with that. I didn’t
+need the consequence. I didn’t want the consequence.”</p>
+<p>Likewise, in graduate school, Suzanne said that if a student has a
+problem with her advisor, “there’s not a whole lot you can do.”</p>
+<p>I don’t even know where you would complain. I mean, I think there’s
+usually a person they can go to . . . but it depends. In my case, the
+graduate student advisors were still acting in the best interest of the
+university and of the PIs. . . . The PIs are pretty well protected by
+the universities. I don’t think there’s a lot that can be done. I mean,
+as a graduate student, you’re sort of the lowest part of the whole.</p>
+<p>Emily made a similar point. Employees in more traditional workplaces
+“can appeal to their boss’s boss or to HR for some sort of
+intervention,” she said,</p>
+<p>but your best solution in grad school, if you’re experiencing that
+sort of thing, is to leave your group [lab]—and not just your best
+solution but in many cases your only solution. So, having no recourse at
+all is what really turns it into some kind of like—like, it’s hard to
+believe that people can have that much control over your life in a
+country where otherwise, you know, you’re protected by all kinds of
+labor laws. But those don’t apply, because you’re a “student,” not an
+“employee.”</p>
+<p>Because of this power dynamic, athletes and graduate students
+emphasized the importance of “keeping doors open” and not “burning
+bridges” with their bosses, echoing prisoners’ descriptions of the need
+to “walk on eggshells,” “turn the left cheek,” and “tuck [their] tail.”
+As Lindsay said, athletes have to “swallow” any problems with their
+coaches “because they want to keep that door open.” Kate said that she
+did not want to “burn bridges” and was therefore nervous about being
+interviewed. And Laine said of graduate school, “You can never burn that
+bridge. It’s very stupid to do that in this field.” To emphasize her
+point, she explained that even though one of the faculty members of her
+dissertation committee was “mean” and “nasty,” she “would have never
+spoken out against him in a million years, never, no matter what he did,
+said, anything.” “And he was really bad,” she emphasized again and
+again. “But . . . there’s nothing he could have said or done that I
+would have reported. . . . If you don’t have clout, and if you’re not
+protected, if you don’t have that PhD . . . you’re just so
+vulnerable.”</p>
+<p>The centrality of compliance in these labor regimes is underscored by
+the fact that they all have narratives of noncompliance, that is,
+negative labels for those who do not dutifully acquiesce with their
+bosses’ directives. Behind bars, noncompliant prisoners are often dubbed
+“knuckleheads,”<sup>36</sup> whom Paul D. defined as “someone who
+doesn’t want to do anything, goofs of.” In workfare, they are more
+straightforwardly labeled “noncompliant,” a label which carries
+considerable cultural power because of the narratives of indolence and
+dependence that dominate welfare rhetoric. “They label people like
+they’re useless, lazy,” Pauline Wilson said, “like they’re better than
+them, like it can’t happen to them. [But] it can.” Meanwhile,
+noncompliant college athletes are deemed “uncoachable,” which means that
+“you won’t fall in line,” Lindsay said, “you talk back.” “That’s the
+biggest problem you could have as an athlete,” JohnJohn said. In
+graduate school, such narratives of noncompliance are usually less
+explicit, but, similar to athletes, the noncompliant are seen as “not
+teachable” or not able to “handle it,” because they are deemed not smart
+enough or not willing to work hard enough. Take, for example, D.N., who
+uncomplainingly claimed that he worked one hundred hours a week (and
+more) as a graduate student. In his view, many students who did not
+complete their PhDs were simply “lazy.” “They’ll quit,” he said.</p>
+<p>I mean, some don’t want to stay one hundred hours a week in a lab,
+right? . . . Now, why do people get fired? Yes, there have been so many
+people who got fired in my last month. Basically they’re just too lazy,
+they just don’t get the job done. And then, the supervisor can’t be
+wasting the limited resource of money on that person, right?</p>
+<p>In order to “get the job done,” D.N. maintained, graduate students
+must be “self-motivated” and “self-driven.” Nik agreed. Many students
+are too “immature,” he explained. They are still “trying to figure out
+their lives” and are therefore unable or unwilling to “commit” to
+science. “They’re just, like, too young,” he said.</p>
+<p>They haven’t quite figured out that this is science. . . . Maybe this
+is just my idea of it, but science should be self-directed, you know, a
+choice. If you’re going to make a choice about what to do with your
+life, and you don’t really want to do science and so you’re not really
+sure that that’s how you want to spend sixty or more hours a week . . .
+then I don’t know that you should be there.</p>
+<p>In Nik’s construal, science is an all-encompassing endeavor, one to
+which students must “commit” after deciding that it is what they want
+“to do with [their] life.” Those who are not willing to make such a
+commitment, Nik and D.N. variously argued, are often “immature” or
+“lazy.”</p>
+<p>In each of these labor regimes, then, a premium is placed on worker
+compliance, and those deemed noncompliant are stigmatized as such. Yet
+these labor regimes do not produce compliant subjects for the regimes
+alone. They also produce such subjects for devalued jobs in the
+mainstream economy, because in fact they actively prime workers to
+embrace precarious employment. For instance, graduate school grooms
+newly minted PhDs to accept undervalued and insecure positions as
+adjuncts and postdocs. Indeed, in the sciences postdocs have become
+apparent prerequisites for tenure-track jobs, while at the same time
+their duration has increased significantly.<sup>37</sup> As Suzanne
+said, “There’s a lot of bitterness in the field right now, because you
+end up staying in your postdoc forever.” (Hers lasted eight years.)
+Sunny, another former graduate student, voiced such “bitterness.” “Now
+that [postdocs] have become five years, six years . . . and you don’t
+know if you’re even going to get a [faculty] position, it’s not worth
+it.”</p>
+<p>Workfare and incarcerated workers are also conditioned for compliance
+in the mainstream economy, most often for low-wage, unstable work in
+construction, fast food, and the “temp economy.”<sup>38</sup> In fact,
+four workers I interviewed—C. Parks, Qwon, Jarome W., and Pauline
+Wilson—made this point explicitly. As C. Parks said,</p>
+<p>If you can get through work in prison, when you come home you can do
+anything. There’s a lot of stuf that shouldn’t bother you . . . even
+work at McDonald’s. . . . If you can get through working in prison,
+working out in the free world shouldn’t be that much harder.</p>
+<p>Likewise, Qwon said that the “bare minimum, nothing” he earned in
+prison made him willing to accept low wages outside of prison. As he
+asked rhetorically,</p>
+<p>How can I come out here and not appreciate a job in society, in the
+real world, where it matters, when I was just working for thirty-eight
+cents, or fourteen cents, or twelve cents? You know what I mean? How can
+I not come out here and appreciate it, even if it had to be a minimum
+wage or, you know, a stepping-stone [to a better job]?</p>
+<p>It is not just that these workers are primed to accept “anything,”
+“any kind of job,” as Jarome and Pauline said of their respective job
+searches after prison and welfare. Their embrace of low-wage, precarious
+work is often mandated by the state. In the case of welfare recipients,
+for example, most families receiving public assistance have at least one
+adult working, usually in low-wage jobs.<sup>39</sup> According to New
+York State welfare policy, those workers will be sanctioned—that is,
+they will lose their public assistance—if they quit or lose their job
+“without good cause,”<sup>40</sup> an illdefined stipulation that, among
+my informants at least, usually worked against them. Thus, when Sasha
+Reed quit her job at McDonald’s after a dispute with a manager, she said
+that she was sanctioned for six months, losing both cash benefits and
+food stamps. “Once they found out I quit,”</p>
+<p>she said, “they’re like, Oh, you don’t want the money? . . . So
+[Social Services] fired me, gave me six months of.” As welfare
+recipients experience it, their compliance with seemingly any aspect of
+their job in the lowwage economy is enforced by sanctions. As in
+workfare, they understand that they need to comply with their bosses’
+directives in order to retain access to the social safety net.</p>
+<p>Likewise, as legal scholar Noah Zatz and colleagues have shown, the
+criminal justice system uses the threat of incarceration to compel the
+labor compliance of both former and potential prisoners (i.e., parolees
+and probationers).<sup>41</sup> Parole and probation requirements
+typically mandate that their charges maintain employment as a condition
+of their nonimprisonment, just as courts can do for those who cannot
+aford to pay child support or criminal justice debts. As a result, the
+authors argue, this vast population of Americans who are not
+incarcerated but fall under the ambit of the criminal justice system are
+efectively forced to accept and comply with low-wage, precarious, and
+even dangerous work, for they “cannot aford to refuse a job, quit a job,
+or challenge their employers.”<sup>42</sup> Workers in these forms of
+“carceral labor”—much like workers behind bars—understand that they must
+submit to their bosses’ directives in order to avoid (further)
+confinement.<sup>43</sup></p>
+<p>Among the workers I studied, college athletes were the only
+exception. They are not directly primed for “bad jobs” in the mainstream
+economy. Nonetheless, according to some of my informants, their college
+athletic careers could exert downward pressure on their future
+employment prospects. Inasmuch as their sport is expected to take
+precedence over their education, for example, athletes may not graduate
+as prepared for the workforce as they might otherwise. Football player
+Zachary Lane said that he and his teammates felt pressured to stay away
+from academic majors that were more time-consuming or time-constrained
+than others but which usually led to higher wages.<sup>44</sup> “So, a
+lot of kids want to go there and become business majors . . . or
+engineers,” Zachary said. “But guess what?”</p>
+<p>to take are during the football practice. “Okay, we can’t have him do
+that, try to force him into something else. Try to get him to go over
+here.”</p>
+<p>Furthermore, inasmuch as their sport dominates athletes’ time,
+experience, and aspirations, they often feel significant pressure—both
+internal and external—to play professionally. But although top-tier
+professional athletes earn high (even astronomical) wages, others do
+not. Professional football players in the Arena Football League earn
+less than $15,000 a year, for example, and basketball players in the
+NBA’s D-League earn $18,000–$30,000 a year.<sup>45</sup> Such jobs are
+thus roughly parallel to postdocs in the sciences: underpaid and
+uncertain stepping-stones to highwage, high-status employment.</p>
+<p>In all of these labor regimes, supervisors can wield considerable
+punitive power over their subordinates. Not all of them do so, but doing
+so is par for the course in these regimes. It is simply expected that
+oficers will put prisoners in solitary confinement for not following
+their orders, regardless of the content of those orders. It is expected
+that caseworkers will sanction workfare workers for not following their
+supervisors’ directives at work. It is expected that coaches will dock
+athletes’ playing time for not doing what they say. And it is expected
+that advisors will not grant PhDs, or write positive letters of
+recommendation at least, for graduate students who do not follow their
+instruction.</p>
+<p>Though the severity of these punishments varies widely across these
+groups, all of them are severe enough to produce workers’ compliance,
+the consequences of which extend well beyond these particular labor
+regimes. Athletes, for example, know that they need to be “coachable.”
+They need to follow directions, which may include playing while injured
+or choosing “easy” majors that do not conflict with practice times,
+regardless of their interests or job prospects. Graduate students
+believe science to be an allencompassing endeavor, requiring long hours
+in the lab throughout graduate school and then again through long years
+of postdocs, all with uncertain job returns. Workfare workers—and
+welfare recipients in general— know that compliance is their key to
+retaining access to essential elements of the social safety net, even
+after they obtain “real” jobs. Because such jobs rarely pull them all
+the way out of poverty, they often continue to rely on public
+assistance, but in order to keep it, they have to hang on to their
+low-wage, insecure jobs. And so the welfare system’s “sticks” of status
+coercion continue to enforce their labor compliance. The same is true of
+prisoners. All prisoners know that compliance behind bars is of
+paramount importance. But even after they leave prison, the criminal
+justice system’s coercive “sticks” follow them: they must comply with
+the many (often stringent) requirements of parole, including maintaining
+employment, which is no small feat for the formerly
+incarcerated.<sup>46</sup> If they do not, they may be sent back to
+prison.</p>
+<p>The coercion in these labor regimes has a far-reaching efect,
+producing compliant yet productive workers not only for the regimes
+themselves but also for the low-wage “precariat.”<sup>47</sup> In this
+way, my analysis underscores Michel Foucault’s emphasis on the state’s
+production of docile yet productive bodies.<sup>48</sup> This modern
+mode of governance, Foucault argued, is enacted through dispersed forms
+of state power, including institutional actors, policies, and norms, as
+well as individuals’ embrace of such policies and norms. Such is the
+case for the workers in this book, whose labor productivity and
+compliance are enforced by criminal justice, welfare, and education
+systems’ actors, policies, and norms, as well as by their own
+internalization of those policies and norms. In order to succeed—or
+simply survive—they know they need to be “good soldiers.” Thus this
+analysis also underscores Karl Marx’s argument that the labor process
+produces worker subjectivities as well as commodities.<sup>49</sup> For
+as we have seen, these labor regimes not only produce actions of
+compliance; they produce ideologies of compliance. Although these
+workers hold both hegemonic and counter-hegemonic ideologies of work,
+they generally accept, and often embrace, the importance of being
+coachable, teachable, and compliant: hardworking, unquestioning, and
+acquiescent. Perhaps this is not surprising given the severity of the
+consequences they face if they do otherwise.</p>
+</body>
+</html>
