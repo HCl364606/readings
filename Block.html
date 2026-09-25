@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<h1 id="multidimensional-homophily-in-friendship-networks-">Multidimensional
+homophily in friendship networks-</h1>
+<p>PER BLOCK</p>
+<p>Oxford University, Nufield College, New Road, OX1 1NF, Oxford, United
+Kingdom (e-mail: per.block@nuffield.ox.ac.uk)</p>
+<p>THOMAS GRUND</p>
+<p>Institute for Futures Studies, Box 591, Hollandargatan 13, 10131
+Stockholm, Sweden¨ and</p>
+<p>Department of Sociology, Stockholm University, Sweden (e-mail:
+thomas.grund@iffs.se)</p>
+<h2 id="abstract">Abstract</h2>
+<p>Homophily—the tendency for individuals to associate with similar
+others—is one of the most persistent findings in social network
+analysis. Its importance is established along the lines of a multitude
+of sociologically relevant dimensions, e.g. sex, ethnicity and social
+class. Existing research, however, mostly focuses on one dimension at a
+time. But people are inherently multidimensional, have many attributes
+and are members of multiple groups. In this article, we explore such
+multidimensionality further in the context of network dynamics. Are
+friendship ties increasingly likely to emerge and persist when
+individuals have an increasing number of attributes in common? We
+analyze eleven friendship networks of adolescents, draw on stochastic
+actor-oriented network models and focus on the interaction of
+established homophily efects. Our results indicate that main efects for
+homophily on various dimensions are positive. At the same time, the
+interaction of these homophily efects is negative. There seems to be a
+diminishing efect for having more than one attribute in common. We
+conclude that studies of homophily and friendship formation need to
+address such multidimensionality further.</p>
+<p>Keywords: homophily, network evolution, stochastic actor-oriented
+models, adolescent networks</p>
+<h2 id="introduction">1 Introduction</h2>
+<p>Already Georg Simmel emphasized the way in which individuals are
+involved in multiple dimensions of social life. Individuals occupy
+unique social positions through the combination of individual attributes
+and voluntary associations. And it is at the intersection of so-called
+“social circles” where identity is construed (Simmel, 1950: 135).
+Despite modern times being characterized by unprecedented opportunities
+to combine individuals’ attributes and memberships, thus, situating
+individuals in a multidimensional social space (see also Blau &amp;
+Schwartz, 1984) only little is known about how this multidimensionality
+afects network dynamics—the formation and dissolution of social
+relationships. Existing studies of network dynamics consider, for
+example, the importance of similarities between actors on various
+dimensions, such as age, education, or sex, for the likelihood that a
+network tie forms or dissolves between these actors. These dimensions
+are usually investigated separately, sometimes, controlling for one
+another. A substantive diference between individuals having one or more
+attributes in common, however, is rarely made. Studies of network
+structure do not investigate the qualitative diference that arises when
+individuals are similar on more than one attribute, i.e. the interaction
+of homophily on diferent dimensions.</p>
+<p>Such interactions of homophily efects, however, are potentially
+important for understanding the emergence of integration or segregation
+in network contexts. A positive interaction efect (combined with
+positive homophily efects), i.e. people seek contact to those who are
+similar on as many dimensions as possible, would amplify clustering in
+disconnected, homogenous groups. Conversely, a negative interaction,
+i.e. decreasing returns for similarity on many dimensions, would lead to
+individuals seeking social contact to others who are similar in some,
+but not in all ways and allow heterogeneous groups to form.</p>
+<p>This article aims to contribute filling the gap concerning
+multidimensional homophily in the literature. Drawing on panel data of
+friendship networks in eleven school classes and stochastic
+actor-oriented network models, we investigate the evolution of
+friendship relationships. Such a strategy allows us to investigate the
+interaction of homophily on diferent dimensions, while controlling for a
+large array of other relational and proximity based mechanisms.</p>
+<p>Our findings indicate that in all school classes, across three
+diferent settings, individuals who have the same sex, ethnicity, family
+afluence and similar pocket money are more likely to become friends with
+each other than those who are not, which confirms previous findings of
+homophily. At the same time, perhaps counterintuitively, the interaction
+of homophily efects is negative. For example, having the same sex and
+being of the same ethnicity makes a social relationship less likely to
+form than the combination of both efects would suggest.</p>
+<p>These findings indicate that reducing individuals to single
+dimensions does not account for the complex nature of social
+relationships. Besides controlling for various homophily efects, we need
+to focus on the qualitative diference that arises at the intersection of
+attributes locating individuals at unique positions in social space.
+Such a perspective promises to advance our understanding of integration
+and segregation in network contexts.</p>
+<p>The remainder of the article is structured as follows. First,
+theoretical considerations are presented. Next, the data and the methods
+are introduced. This is followed by a presentation of results, their
+discussion and some concluding remarks.</p>
+<h2 id="theoretical-considerations">2 Theoretical considerations</h2>
+<h2 id="homophily">2.1 Homophily</h2>
+<p>Homophily, defined as the “tendency for friendships to form between
+those who are alike in some designated respect” (Lazarsfeld &amp;
+Merton, 1954: 23), is the most important covariate-based mechanism that
+guides network evolution. A large body of research confirms the
+prevalence of homophily in social networks. In over one hundred studies,
+it has been detected in one form or another (McPherson et al., 2001).
+For example, it has been shown along the lines of race and ethnicity
+(Goodreau et al., 2009; Quillian &amp; Campbell, 2003; Blau, 1984;
+Marsden, 1987; Shrum et al., 1988), age (Fischer, 1977; Feld, 1982;
+Marsden, 1987), religion (Laumann, 1973; Verbrugge, 1977), education
+(Marsden, 1987; Louch, 2000), occupation (Laumann, 1973; Kalmijn 1998),
+sex (Smith-Loving &amp; McPherson, 1993; Marsden, 1987), but also along
+the lines of values (Huston &amp; Levinger, 1978) and behavior (Knecht
+et al., 2010; Cohen, 1977; Kandel, 1978; Alexander, 2001).</p>
+<p>Although homophily shapes social networks in many ways, including but
+not limited to advice, marriage, support, exchange and co-membership, in
+this article we focus on homophily in friendship ties among adolescents.
+We do this for two reasons. First, adolescence is a period of
+re-orientation from family to same age peers. Friendship begins to play
+an important part in individuals’ lives, much more than in childhood and
+later adult life (Steinberg &amp; Morris, 2001). Second, in order to
+study homophilous friendship choices it is necessary to control for
+endogenous network processes, which requires a complete network
+approach, i.e. all friendship choices in a closed network need to be
+known. Schools classes proved to be an excellent setting for such kinds
+of studies meeting these requirements.<sup>1</sup></p>
+<p>Several arguments explain why homophily is so prevalent in
+friendships and how it comes about. For example, it has been suggested
+that it is rational for actors to form social relationships with similar
+others; actors are assumed to decide by themselves with whom they want
+to be friends. McPherson &amp; Smith-Lovin (1987) refer to similarities
+based on such preferences as choice homophily. It is argued that
+similarity of attributes and experience simplifies the process of
+evaluating, communicating with, and even predicting the behavior of
+others (see also Festinger &amp; Hutte, 1954; Hamm, 2000; Werner &amp;
+Parmelee, 1979; Ibarra, 1992). The risks and costs that go along with
+the formation of new social relationships are lower for ties between
+similar actors. Having something in common (for example being of the
+same age, sharing a cultural background, speaking the same language or
+dialect) can make it easier to establish trust and solidarity between
+individuals, both characteristics of friendships. Furthermore, not only
+the formation, but also the maintenance of ties with similar
+counterparts may be less costly than maintenance of ties with dissimilar
+others (Felmlee et al., 1990; Leenders, 1996).</p>
+<p>Another account suggests that similar people occupy positions in
+social space that are proximate to each other, and in consequence,
+similar people are more likely to meet (Blau, 1977; Feld, 1981, 1982).
+This perspective emphasizes that opportunities for meeting and
+interacting with others are pivotal for social relationships. One cannot
+become friends with somebody if one never comes in contact with that
+person. Such a perspective has been developed by Feld (1981), who
+introduced the notion of focused choice. Foci, defined as “social,
+psychological, legal or physical objects around which joint activities
+are organized” (Feld, 1981: 1016), are seen as social structures which
+systematically constrain the formation and maintenance of social
+relationships. In Feld’s (1982: 798) view, homophily is a likely outcome
+to the extent that “people draw their friends from foci, and foci bring
+homogeneous sets of people together.”</p>
+<p>While these two concepts are often presented as competing with each
+other, such a distinction is often less clear, especially in the context
+of friendship dynamics in schools. Adolescents in a school cohort most
+likely meet (and know) all other students in their cohort. Nevertheless,
+even within a school cohort there are social settings, such as organized
+activities, e.g. a soccer team, that provide opportunities and simplify
+the formation and maintenance of friendship ties. At the same time,
+adolescents actively choose which social activities they are part in.
+And these choices are often strongly influenced by what individuals
+perceive as stereotypical for somebody “like them”<sup>2</sup>. Often
+individuals do what they think is appropriate for somebody of their age,
+sex, ethnicity, or social class because similar other do these
+activities as well. Social Identity Theory (Hogg, 2006) extensively
+deals with how self-categorization into groups relates to engaging in
+activities that are perceived as stereotypical for a group-member. As a
+result, adolescents take part in certain activities, because they meet
+others that are similar to themselves through these activities. From
+this perspective, the mechanisms of preference and opportunity are
+amalgamated, as adolescents may prefer activities that create
+opportunities to meet similar others.</p>
+<h2 id="multidimensional-homophily">2.2 Multidimensional homophily</h2>
+<p>Despite consensus on the importance of homophily for social
+relationships as well as on the conceptualization of individuals as
+multidimensional beings, little is known about how both combine. Is
+there a qualitative diference in social relationships when individuals
+have more than one attribute in common? The literature is surprisingly
+silent on such multidimensional homophily. Feld (1982) implicitly
+acknowledges the multidimensionality of social life. According to him
+(1982: 798) “sets of people brought together by foci are [. . .]
+homogeneous in many respects.” Therefore one can expect individuals to
+share more than one attribute with their friends. In another context,
+Blau (1977) as well as McPherson and Smith-Lovin (1987) focus on the
+correlation between individuals’ attributes. When the correlation
+between attributes is high one will necessarily have to observe
+homophily across multiple attributes. In contrast, when the correlation
+between attributes is low, sharing a similar attribute with friends does
+not automatically mean that one shares other attributes with them as
+well.</p>
+<p>Empirical studies treat multidimensional homophily to difering
+degree. For example Marsden (1987) analyzes homophily in discussion
+networks of Americans on diferent dimensions (sex, age, education, and
+ethnicity) using the 1985 General Social Survey not controlling for one
+another. Others study similarities between individuals on more than one
+attribute at the same time (Goodreau et al., 2009; Grund &amp; Densley,
+2012; Wimmer &amp; Lewis, 2010; Preciado et al., 2012). Often, these
+studies apply multivariate designs in order to control for various
+homophily efects. But in the words of Schaefer (2010: 24), “while such
+research considers multiple dimensions simultaneously, thereby
+controlling for consolidation, models typically do not include
+interactions between dimensions. This implicitly assumes that
+interactions between homophily dimensions are independent or
+unimportant.”</p>
+<p>An exception is the study by Schaefer (2010). Using data from the
+1985 General Social Survey, including information on socio-demographic
+characteristics (age, education, ethnicity, religion, sex) of the peers
+nominated by the respondents, Schaefer (2010) analyzed ego-networks and
+applied a set-theoretic approach to identify regularly occurring
+combinations of similarities between friends on multiple dimensions.
+Such multidimensional homophily was compared to a baseline model of the
+amount of multidimensional similarities between social contacts one
+would expect if ties in the network were assigned at random. The main
+finding of the analysis was that individuals form a significantly higher
+proportion of ties than expected to other individuals who are similar in
+at least three, but most often four or five socio-demographic
+dimensions. These findings, however, do not control for network dynamics
+or opportunity structures.</p>
+<p>In spite of lacking theoretical and empirical research, there are
+good reasons to believe that the number of attributes one has in common
+with others matters. One can think of qualitative diferences that arise
+through multidimensional similarities. For example, from a perspective
+that focusses on the returns of a tie it is reasonable to assume that
+individuals who are similar in more than one way are brought together
+even closer. If friendships between similar people are more rewarding,
+additional similarity could increase the value of a tie for an
+individual at the same efort and chances for a network tie to form
+between these individuals are elevated, more than what one would expect
+from the addition of separate dimensions of homophily alone.
+Similarities based on multiple grounds, e.g. cultural heritage,
+language, age, sex and so on, could develop stronger bonds between
+individuals. Taking a perspective that focusses on interaction and
+communication between people, multiple similarity might allow longer and
+deeper conversations that span multiple topics and allow relating
+diferent experiences to one another. In a similar fashion, network ties
+might be easier to maintain when individuals are similar in many
+respects.</p>
+<p>At the same time, the opposite argument can be construed as well.
+Maybe there is a limit in how beneficial social relationships between
+similar others can be. A long tradition of research suggests that social
+network ties that bridge social settings and groups are beneficial
+because they provide access to a diferent set of individuals, with
+diferent thoughts, ideas, and knowledge and so on (Granovetter, 1973;
+Burt, 1992). In consequence, ties between individuals who are similar on
+many dimensions might be less beneficial.</p>
+<p>Additionally, one can argue that similarities between individuals
+might generate opportunities for individuals to meet and become friends.
+However, such meeting opportunities do not necessarily have to translate
+into friendship ties. For example, individuals who do not like each
+other will not initiate a friendship tie simply because they meet more
+often. Therefore, multiple similarity will not make association between
+people more likely than similarity on one dimension.</p>
+<p>Another perspective, originating in psychological research on
+identity (Tajfel, 1974; Tajfel &amp; Turner, 1979; Turner, 1987; Hogg,
+2006), suggests that within the context of one activity that is typical
+for adolescents with a certain attribute (e.g. boys), other dimensions
+are less salient and loose importance for the interaction between
+individuals. For example, when boys play soccer to meet other boys,
+similarity or dissimilarity on other dimensions might be less important;
+all that matters is similarity on the attribute that defines the
+activity. From this perspective, only one dimension at a time is salient
+for the formation of friendship ties, while others are pushed to the
+back. As a result, one could expect decreasing returns to similarity on
+multiple dimensions, as only one attribute at a time is
+considered—therefore, in any given context, adolescents are not more
+likely to choose others that are similar in multiple dimensions compared
+to others that are similar in only the dimension salient in the current
+context.</p>
+<h2 id="data">3 Data</h2>
+<p>We draw on friendship networks from three diferent sources: secondary
+schools in Scotland (the Glasgow data), England and Wales (the ASSIST
+data), and from middle schools in the United States (the DyNet data). In
+total, we use network data from eleven schools to investigate the
+interaction of homophily efects. For all eleven schools, repeated
+observations of the networks are available.</p>
+<p>The three datasets vary considerably in composition of students,
+variables collected and in the method how the data was obtained. But
+this also means that any regularities we might find across datasets are
+unlikely to be artifacts of a specific data collection strategy or
+particular to a certain region or school.</p>
+<p>Data from Glasgow were collected within the context of the Teenage
+Friends and Lifestyle Study (Pearson &amp; Mitchell, 2000). All
+participants were members of one school cohort (aged 12–13) and were
+followed over a period of three years. Children were asked about
+demographic characteristics, lifestyle, and substance use patterns at
+the beginning of each academic year between 1995 and 1997. Furthermore,
+participants could nominate up to 6 persons in their year group as close
+friends. Previous studies using this data found strong homophily efects
+along the lines of sex and pocket money (e.g. Steglich et al., 2010).
+Friendship ties are more likely to evolve and persist between
+individuals who are similar on these attributes. Pocket money homophily
+is often interpreted as an approximation for the similarity in social
+status of parents (see appendix in Table A1 for descriptive
+statistics).</p>
+<p>Data for Wales and England comes from the A Stop Smoking In Schools
+Trial (ASSIST) study. In a number of secondary schools, all members of a
+cohort were administered questionnaires once a year between 2002 and
+2004, in which they indicated various demographic characteristics and
+substance use patterns. Similar to the Glasgow data, they were asked to
+nominate up to 6 friends within their cohort. Homophily efects have been
+found along the lines of sex and a so-called ‘family afluence scale’
+(FAS). The FAS was measured with three items: 1) does the respondent’s
+family own one or more cars, 2) did the family travel away from home
+one, two or more times over the last year, and 3) does the respondent
+have an own bedroom. A more detailed description of the data can be
+found in Steglich et al. (2012) (see appendix in Table A2 for
+descriptive statistics).</p>
+<p>Lastly, data for the United States was collected in the Dynamics in
+Networks (DyNet) study. Data were collected in middle schools in the
+Unites States in Oregon and California between fall 2008 and spring
+2012. All members of the participating middle schools (usually grades
+6–8) were interviewed four times each academic year. For this study only
+the first year of the data is used. Students were asked to fill out a
+questionnaire concerning various demographic characteristics.
+Furthermore, they were asked to select on a list of all participating
+individuals in their school the ones they spend their free time with.
+Individuals nominated their best friends from this subgroup. In this
+data, homophily efects can be found with respect to sex and ethnicity.
+Table A3 in the appendix gives descriptive statistics.</p>
+<p>One guiding principle for the selection of relevant attribute
+dimensions in this study is to remain focused on exogenous attributes
+that cannot be altered by individuals so easily. In contrast, endogenous
+attributes (e.g. political opinion, fashion taste), would introduce the
+additional issue of having to distinguish between efects driven by
+selection, influence, or influence specific to certain dimensions of
+social life.</p>
+<p>Based on previous research that detected homophily along various
+dimensions in the three datasets, we decided to apply the following
+strategy: First, we examined all available attributes of individuals in
+each dataset and tested whether there is a significant homophily efect
+or not. Next, we chose to include the sex of students as a relevant
+dimension for our analyses as it was significant in all three datasets.
+Lastly, for each dataset we selected one additional attribute dimension
+on which homophily was found. There were no other attribute dimensions
+(besides sex) that were available (with a significant homophily efect)
+in all three datasets. The other, homophilous dimensions for the
+diferent datasets were pocket money (Glasgow data), FAS (ASSIST data)
+and ethnicity (DyNet data). All three variables have been found to
+matter for friendship dynamics in their respective setting. Sex,
+ethnicity and social status are generally the strongest exogenous
+predictors (apart from religion) of homophilous tie formation (McPherson
+et al., 2001).</p>
+<h2 id="method">4 Method</h2>
+<p>In order to investigate the role of individuals having one or more
+attributes in common for the dynamics of social relationships we draw on
+stochastic actororiented network models (SAOM’s). These models were
+introduced by Snijders (2001; Snijders et al., 2010) and are implemented
+in RSiena (Ripley et al., 2014). At the core of these models are tie
+changes between network panel waves. Some relationships are formed and
+others disappear in time. These relational changes can be considered to
+be the outcome of the structural position of the actors within the
+network (as in the case of forming a tie to somebody because he/she is
+the friend of a friend), characteristics of the actor (e.g., some actors
+might be more or less attractive because of an attribute they possess),
+or characteristics of pairs of actors (for example, when two actors form
+a tie because they share a certain attribute). SAOM’s have now been
+widely used for the study of network dynamics (van Duijn et al., 2003;
+van de Bunt et al., 2005; de Nooy, 2002; Schaefer et al., 2011) and the
+co-evolution of networks and actor behavior (Checkley &amp; Steglich,
+2007; Burk et al., 2007; Pearson et al., 2006; Steglich et al., 2010;
+Lewis et al., 2012).</p>
+<p>SOAMs apply to longitudinal, complete, and directed network data and
+model change of network ties. Although networks are measured at discrete
+points in time, SAOMs model a continuing underlying process where many
+tie changes occur sequentially. Chains of such tie changes connect the
+networks that are observed at discrete points in time. Each individual
+change of one tie in the network is called a mini-step. A mini-step is
+modeled through two sub-processes. The first one selects the actor who
+is allowed to make a tie change. This is modeled through the rate
+function. In the current case we use a period-wise constant rate
+function, i.e. we assume no diference in the rate of change between
+actors. In the second step, the selected actor evaluates all potential
+changes in her personal network. To this end, the actor considers how
+each tie change (creation or deletion of a tie, as well as keeping the
+current state) would afect her personal network with regards to
+parameters specified by the researcher. The desirability of each
+potential outcome for the focal actor is modeled in the objective
+function. The objective function stands at the core of the SAOMs. It
+combines diferent factors that influence an actor’s decision to
+change/leave ties, called efects. Examples for efects are reciprocity or
+homophily. If the parameters for those efects are positive, an actor is
+more likely to create or maintain a tie to an actor that also has an
+incoming tie to herself, or who is similar to herself, respectively. In
+other words, in the second step the actor compares the outcome of the
+objective function for each network state that results from every
+possible tie change/non-change. The network state with the highest value
+in the objective function is the most likely one to be selected by the
+actor, the network state with the lowest value in the objective function
+is least. The realization of a tie change/non-change concludes a
+mini-step<sup>3</sup>.</p>
+<p>Parameters that attach relative importance to diferent efects are
+estimated from the series of mini-steps that connect the empirical
+network observations. Ultimately, they can be interpreted in the same
+way as parameters from a multinomial logistic regression as they
+influence the relative likelihood of a mini-step to be realized. For
+more details about the method, including diferent methods of parameter
+estimation, we refer to Snijders (2001, 2005). Non-technical
+introductions to the method are given by Steglich et al. (2006) and
+Snijders et al. (2010).</p>
+<p>As mentioned before, the network dynamics are assumed to be driven by
+the tendencies of actors to change network ties which are modeled by
+efects. The structural efects we include in our analyses should be seen
+as important controls and have been selected on the basis of results
+from previous studies using similar data and SAOM’s (Steglich et al.,
+2010) and theoretical considerations based on past experience with these
+models:</p>
+<p>• Outdegree, which can be understood in a similar fashion as an
+intercept in regression analyses and determines the average degree.</p>
+<p>• Reciprocity, the tendency of actors to reciprocate ties to each
+other.</p>
+<p>• Transitive triplets, which technically counts the number of cases
+in which an actor is connected to another one through a direct and an
+indirect tie. Therefore, it models the tendency of actors to be
+connected to friends-offriends, known as transitivity.</p>
+<p>• 3-Cycles, describing situations in which a friend-of-a-friend
+nominates the focal actor as a friend, in contrast to the transitivity
+efect, where a friendof-a-friend is nominated by the focal actor as
+friend. The 3-Cycles efect is generally interpreted as indicating the
+presence or absence of local hierarchies.</p>
+<p>• Indegree-popularity and Outdegree Activity, which control for
+dispersion in indegree and outdegree. Indegree popularity models the
+Matthews efect: is somebody that already has a lot of incoming ties more
+popular as a target for further friendship nominations. Outdegree
+activity models whether actors that nominate a lot of alters are likely
+to nominate even more.</p>
+<p>In all analyses, and for all datasets, we include efects for the sex
+of ego and alter (which refers to the tendencies to send and attract
+ties depending on sex). In addition, in the analysis of the Glasgow data
+we further control for the ego- and alter-efect with respect to the
+amount of available pocket money. In the ASSIST data the egoand
+alter-efect of family afluence are included. As the DyNet data includes
+six diferent ethnicities (White, Black, Latin, Asian, Native, and Other)
+it is not feasible to include ego- and alter-efects for each ethnicity.
+The ego- and alter-efects for being white were tested, as this was the
+majority category in all networks. However, they were not significant
+and therefore excluded from the analysis.</p>
+<p>Of most concern, in the context of this article, are dyadic efects
+indicating the similarity between actors. Such efects capture the idea
+that ties might be more or less likely to form between individuals who
+are similar with respect to a certain attribute. In all analyses, we
+include an efect for having the same sex. The statistic (meaning the
+value of the independent variable) for the efect included in the
+analysis is 1 when the sender and recipient of the tie are of the same
+sex and 0 when they are of diferent sex<sup>4</sup>. In addition, in the
+analysis of the Glasgow data an efect for similarity concerning the
+amount of pocket money is included. Analyses using the ASSIST data
+include an efect that captures the similarity of actors in FAS (family
+afluence scale). The two relevant statistics are 1 when sender and
+recipient of a tie have exactly the same pocket money, or FAS
+respectively; and they are 0 when individuals are most diferent on these
+attributes, with a continuing scale of similarity in between extremes.
+In the analyses using the DyNet data a dyadic efect is modeled, which
+captures whether actors have the same ethnicity. To this end a dyadic
+covariate is created that has the value of 1 when the sender and
+recipient have at least one ethnicity in common and 0 otherwise. A
+dyadic covariate instead of using a “same ethnicity” efect is necessary,
+as multiple nominations for ethnicity were possible.<sup>5</sup></p>
+<p>In line with the general aim of our paper, we include the interaction
+of the homophily efects in the analyses. Concerning the Glasgow data, we
+model an interaction efect, which captures whether the same sex efect is
+more or less pronounced when actors receive similar amounts of pocket
+money. When it comes to the ASSIST data, we include an interaction of
+sex and FAS similarity. The statistic for both interaction efects is
+calculated as the product of the statistic for the same sex efect and
+the statistic for the pocket money similarity, or the FAS similarity
+efect respectively. This means the relevant statistic for the
+interaction efect is 0 when both sender and recipient of a tie are of
+diferent sex and/or at the opposite end of the pocket money (or the FAS
+scale, respectively). In contrast, the statistic for the interaction
+efect only takes a non-zero value when individuals are somewhat similar
+on FAS/pocket money and are of the same sex. Regarding the DyNet data,
+the interaction efect we study is the statistic for the same sex efect
+multiplied by the dyadic covariate for same ethnicity. This means that
+the efect statistic takes the value 0 in all cases, except when sender
+and recipient of a tie are of the same sex and mentioned at least one
+common ethnicity.</p>
+<p>We decided to use SAOMs, as they are well suited to study diferent
+mechanisms that drive network change simultaneously. As the dynamic of a
+network is modeled, i.e. it is conditioned on the first observation of
+the network, no assumptions that the network is in some state of
+equilibrium has to be made. And finally, the multinomial nature of the
+model directly takes opportunity structures in the network into account.
+This means that homophily estimates are net of the distribution of
+attributes in the network.</p>
+<h2 id="results">5 Results</h2>
+<p>The results of our analyses are presented in Tables 1–3. In all
+datasets, ties are more likely to form between individuals who have the
+same sex. Efect sizes vary between 0.44 and 0.95 (these numbers
+correspond to an increase in odds for the formation and maintenance of a
+sex homophilous tie between 1.55 and 2.59, compared to sex-heterophilous
+ties). Furthermore, in the Glasgow data, students nominate more friends
+who receive similar amounts of pocket money. In the ASSIST data,
+significant homophily along the lines of family afluence (FAS) is
+observed. Students with similar FAS are more likely to form friendship
+ties (efect size between 0.46 and 1.08, odds increase between 1.58 and
+2.94). Lastly, individuals in the DyNet data are more likely to become
+friends with others who have the same ethnicity (efect size between 0.14
+and 1.03, odds increase between 1.15 and 2.80).</p>
+<p>Our main focus in this paper rests on the interaction of these
+homophily efects. We study whether the positive efect of having the same
+sex changes when actors are similar on other attributes as well. Our
+results indicate an overwhelmingly clear tendency concerning such
+interaction efects. In nine out of eleven schools that were analyzed,
+the interaction is negative and significant. The magnitude of the
+interactions lies between two thirds and one times the homophily efect
+that is not related to sex. Hence, the interaction efects are not only
+significant but also of substantive magnitude.</p>
+<p>For example in the DyNet Data, we find a clear tendency for
+individuals to choose somebody as a friend who is either of the same sex
+or ethnicity, over somebody who is diferent on both. However, having the
+same ethnicity matters significantly less for forming a friendship
+relationship between two individuals, when both have the same sex
+compared to a scenario where both have opposing sexes. Similarly, when
+an adolescent chooses friends amongst others who have the same
+ethnicity, being of the same sex is less important than when friends are
+chosen amongst others who have a diferent ethnicity. In the Glasgow
+data, the picture looks similar: For same-sex friendships, pocket money
+similarity is not very important, however, for cross-sex friendships
+pocket money similarity becomes a strong predictor. The same pattern
+holds the other way around as well: adolescents who get similar amounts
+of pocket money tend to become friends regardless of whether they share
+the same sex. Only when they receive very diferent amounts of pocket
+money, having the same sex seems important for friendship choice. In the
+ASSIST data, a similar pattern for the interaction between sex and FAS
+is observed as well.</p>
+<p>Table 1. Results glasgow data.</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+</tr>
+<tr>
+<td>Rate parameter Period 1</td>
+<td>11.30</td>
+<td>(0.93)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate parameter Period 2</td>
+<td>7.77</td>
+<td>(0.58)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Outdegree</td>
+<td>-2.21</td>
+<td>(0.20)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Reciprocity</td>
+<td>2.16</td>
+<td>(0.11)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Transitive triplets</td>
+<td>0.72</td>
+<td>(0.04)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>3-Cycles</td>
+<td>-0.44</td>
+<td>(0.08)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Indegree popularity</td>
+<td>-0.03</td>
+<td>(0.02)</td>
+<td>0.021</td>
+</tr>
+<tr>
+<td>Outdegree activity</td>
+<td>-0.15</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Sex alter</td>
+<td>-0.15</td>
+<td>(0.09)</td>
+<td>0.055</td>
+</tr>
+<tr>
+<td>Sex ego</td>
+<td>0.02</td>
+<td>(0.13)</td>
+<td>0.443</td>
+</tr>
+<tr>
+<td>Same sex</td>
+<td>0.95</td>
+<td>(0.11)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Pocket money alter</td>
+<td>0.020</td>
+<td>(0.005)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Pocket money ego</td>
+<td>0.00</td>
+<td>(0.01)</td>
+<td>0.390</td>
+</tr>
+<tr>
+<td>Pocket money similarity</td>
+<td>2.68</td>
+<td>(0.88)</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>Same sex · Pocket money similarity</td>
+<td>-1.90</td>
+<td>(0.92)</td>
+<td>0.019</td>
+</tr>
+</tbody>
+</table>
+<p>Parameters for SAOM estimation of Glasgow data; p-values for
+one-sided tests.</p>
+<p>In Table 4 we show a detailed example how these efects alter the
+likelihood for individuals to become friends in School 1 in the DyNet
+data. We derive the changes in the objective function of the SAOM
+depending on similarity on sex and ethnicity. Having diferent ethnicity
+and diferent sex is the baseline scenario. When two individuals have the
+same sex, but diferent ethnicity a friendship tie becomes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mn>0</mn><mi>.</mi><mn>6</mn><mn>5</mn></mrow></msup><mo>=</mo><mn>1</mn><mi>.</mi><mn>9</mn><mn>2</mn></mrow><annotation encoding="application/x-tex">e ^ { 0 . 6 5 } = 1 . 9 2</annotation></semantics></math>
+times more likely. Similarly, a friendship tie becomes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mn>0</mn><mi>.</mi><mn>5</mn><mn>1</mn></mrow></msup><mo>=</mo><mn>1</mn><mi>.</mi><mn>6</mn><mn>7</mn></mrow><annotation encoding="application/x-tex">e ^ { 0 . 5 1 } = 1 . 6 7</annotation></semantics></math>
+more likely when two individuals have the same ethnicity (but diferent
+sexes) compared to the baseline scenario. Lastly, when two individuals
+have the same sex and the same ethnicity a friendship tie is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mn>0</mn><mi>.</mi><mn>7</mn><mn>1</mn></mrow></msup><mo>=</mo><mn>2</mn><mi>.</mi><mn>0</mn><mn>3</mn></mrow><annotation encoding="application/x-tex">e ^ { 0 . 7 1 } = 2 . 0 3</annotation></semantics></math>
+times more likely than in the comparison scenario where individuals are
+diferent on both dimensions.</p>
+<p>We can now study the relative increases in the objective function for
+diferent scenarios. For example, the score of the objective function
+increases by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>.</mi><mn>2</mn><mn>0</mn><mspace width="0.222em"></mspace><mo>:</mo><mo stretchy="false" form="prefix">(</mo><mo>=</mo><mn>0</mn><mi>.</mi><mn>7</mn><mn>1</mn><mrow><mspace width="0.222em"></mspace><mo mathvariant="normal">−</mo><mspace width="0.222em"></mspace></mrow></mrow><annotation encoding="application/x-tex">0 . 2 0 \ : ( = 0 . 7 1 \mathrm { ~ - ~ }</annotation></semantics></math>
+0.51) for having the same sex amongst those individuals who already have
+the same ethnicity. This means that having the same sex makes a
+friendship tie among individuals who share the same ethnicity only
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mn>0</mn><mi>.</mi><mn>2</mn><mn>0</mn></mrow></msup><mo>=</mo><mn>1</mn><mi>.</mi><mn>2</mn><mn>2</mn></mrow><annotation encoding="application/x-tex">e ^ { 0 . 2 0 } = 1 . 2 2</annotation></semantics></math>
+times more likely (which is much less than the 1.92 that apply when
+ethnicity is ignored). Conversely, the additional efect for sharing the
+same ethnicity when two individuals already have the same sex is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>.</mi><mn>0</mn><mn>6</mn><mspace width="0.222em"></mspace><mo>:</mo><mo stretchy="false" form="prefix">(</mo><mspace width="0.222em"></mspace><mo>:</mo><mo>=</mo><mn>0</mn><mi>.</mi><mn>7</mn><mn>1</mn><mspace width="0.222em"></mspace><mo>:</mo><mi>−</mi><mspace width="0.222em"></mspace><mo>:</mo><mn>0</mn><mi>.</mi><mn>6</mn><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">0 . 0 6 \ : ( \ : = 0 . 7 1 \ : - \ : 0 . 6 5 )</annotation></semantics></math>
+and only marginally increases the chance for a tie to emerge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>e</mi><mrow><mn>0</mn><mi>.</mi><mn>0</mn><mn>6</mn></mrow></msup><mo>=</mo><mn>1</mn><mi>.</mi><mn>0</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">( e ^ { 0 . 0 6 } = 1 . 0 6</annotation></semantics></math>
+times more likely); this is dramatically less compared to when sex is
+ignored (here it a tie was 1.67 times more likely). This overall pattern
+holds for most networks in our study. When two individuals have the same
+sex, additional similarity on another attribute hardly increases the
+likelihood for the formation of a friendship tie.</p>
+<p>Table 2. Results ASISST data.</p>
+<table>
+<tbody>
+<tr>
+<td rowspan="2"></td>
+<td colspan="3">School 22</td>
+<td colspan="3">School 35</td>
+</tr>
+<tr>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+</tr>
+<tr>
+<td>Rate Parameter 1</td>
+<td>11.37</td>
+<td>(1.09)</td>
+<td>&lt;0.001</td>
+<td>15.09</td>
+<td>(1.29)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate Parameter 2</td>
+<td>9.85</td>
+<td>(0.90)</td>
+<td>&lt;0.001</td>
+<td>13.68</td>
+<td>(1.11)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Outdegree</td>
+<td>-1.99</td>
+<td>(0.21)</td>
+<td>&lt;0.001</td>
+<td>-1.17</td>
+<td>(0.21)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Reciprocity</td>
+<td>2.20</td>
+<td>(0.11)</td>
+<td>&lt;0.001</td>
+<td>2.24</td>
+<td>(0.09)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Transitive triplets</td>
+<td>0.72</td>
+<td>(0.04)</td>
+<td>&lt;0.001</td>
+<td>0.60</td>
+<td>(0.03)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>3-Cycles</td>
+<td>-0.54</td>
+<td>(0.07)</td>
+<td>&lt;0.001</td>
+<td>-0.46</td>
+<td>(0.07)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Indegree popularity</td>
+<td>-0.04</td>
+<td>(0.02)</td>
+<td>0.027</td>
+<td>-0.01</td>
+<td>(0.01)</td>
+<td>0.157</td>
+</tr>
+<tr>
+<td>Outdegree activity</td>
+<td>-0.18</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+<td>-0.18</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Sex alter</td>
+<td>-0.01</td>
+<td>(0.11)</td>
+<td>0.478</td>
+<td>0.25</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Sex ego</td>
+<td>-0.02</td>
+<td>(0.14)</td>
+<td>0.443</td>
+<td>0.07</td>
+<td>(0.09)</td>
+<td>0.214</td>
+</tr>
+<tr>
+<td>Same sex</td>
+<td>0.92</td>
+<td>(0.10)</td>
+<td>&lt;0.001</td>
+<td>0.44</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>FAS alter</td>
+<td>0.02</td>
+<td>(0.03)</td>
+<td>0.188</td>
+<td>-0.02</td>
+<td>(0.02)</td>
+<td>0.210</td>
+</tr>
+<tr>
+<td>FAS ego</td>
+<td>0.02</td>
+<td>(0.03)</td>
+<td>0.296</td>
+<td>0.03</td>
+<td>(0.03)</td>
+<td>0.114</td>
+</tr>
+<tr>
+<td>FAS similarity</td>
+<td>1.08</td>
+<td>(0.50)</td>
+<td>0.015</td>
+<td>0.46</td>
+<td>(0.23)</td>
+<td>0.026</td>
+</tr>
+<tr>
+<td>Same sex · FAS similarity</td>
+<td>-0.92</td>
+<td>(0.52)</td>
+<td>0.038</td>
+<td>-0.23</td>
+<td>(0.26)</td>
+<td>0.191</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td rowspan="2"></td>
+<td colspan="3">School 63</td>
+<td colspan="3">School 71</td>
+</tr>
+<tr>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+</tr>
+<tr>
+<td>Rate Parameter 1</td>
+<td>17.52</td>
+<td>(1.18)</td>
+<td>&lt;0.001</td>
+<td>12.52</td>
+<td>(1.31)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate Parameter 2</td>
+<td>12.22</td>
+<td>(0.81)</td>
+<td>&lt;0.001</td>
+<td>16.69</td>
+<td>(1.81)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Outdegree</td>
+<td>-1.17</td>
+<td>(0.21)</td>
+<td>&lt;0.001</td>
+<td>-1.67</td>
+<td>(0.19)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Reciprocity</td>
+<td>2.23</td>
+<td>(0.08)</td>
+<td>&lt;0.001</td>
+<td>2.21</td>
+<td>(0.13)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Transitive triplets</td>
+<td>0.67</td>
+<td>(0.03)</td>
+<td>&lt;0.001</td>
+<td>0.72</td>
+<td>(0.04)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>3-Cycles</td>
+<td>-0.51</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+<td>-0.62</td>
+<td>(0.08)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Indegree popularity</td>
+<td>-0.02</td>
+<td>(0.01)</td>
+<td>0.051</td>
+<td>-0.01</td>
+<td>(0.02)</td>
+<td>0.274</td>
+</tr>
+<tr>
+<td>Outdegree abtivity</td>
+<td>-0.24</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+<td>-0.17</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Sex alter</td>
+<td>0.09</td>
+<td>(0.07)</td>
+<td>0.099</td>
+<td>0.12</td>
+<td>(0.09)</td>
+<td>0.091</td>
+</tr>
+<tr>
+<td>Sex ego</td>
+<td>-0.11</td>
+<td>(0.10)</td>
+<td>0.117</td>
+<td>0.13</td>
+<td>(0.12)</td>
+<td>0.139</td>
+</tr>
+<tr>
+<td>Same sex</td>
+<td>0.87</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+<td>0.60</td>
+<td>(0.09)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>FAS alter</td>
+<td>-0.02</td>
+<td>(0.02)</td>
+<td>0.146</td>
+<td>0.00</td>
+<td>(0.03)</td>
+<td>0.472</td>
+</tr>
+<tr>
+<td>FAS ego</td>
+<td>0.04</td>
+<td>(0.03)</td>
+<td>0.098</td>
+<td>0.03</td>
+<td>(0.04)</td>
+<td>0.231</td>
+</tr>
+<tr>
+<td>FAS similarity</td>
+<td>0.88</td>
+<td>(0.34)</td>
+<td>0.005</td>
+<td>0.77</td>
+<td>(0.36)</td>
+<td>0.016</td>
+</tr>
+<tr>
+<td>Same sex · FAS similarity</td>
+<td>-0.77</td>
+<td>(0.34)</td>
+<td>0.011</td>
+<td>-0.65</td>
+<td>(0.39)</td>
+<td>0.048</td>
+</tr>
+</tbody>
+</table>
+<p>Parameters for SAOM estimation of ASSIST data; p-values for one-sided
+tests.</p>
+<p>One intriguing question is whether one dimension takes primacy over
+the other. Is it that one homophily efect moderates the other one or
+that both decrease in salience at the same time? In other words, do
+adolescents think of the two dimensions as equally important, or do they
+first consider similarity on one dimension and then, if there is no
+similarity, they consider the second? As the interaction efect
+represents the combination of two similarity efects, we cannot parcel
+this out in a quantitative way. From a modeling point of view, having
+the same ethnicity given the same sex is statistically identical to
+having the same sex, given the same ethnicity. Diferent research
+designs, for example, a qualitative study could help to answer this
+puzzle more.</p>
+<p>T<sub>a</sub>bl<sub>e</sub> 3 <sub>.</sub>
+R<sub>esu</sub>lt<sub>s</sub> D<sub>y</sub>N<sub>e</sub>t
+d<sub>a</sub>t<sub>a.</sub></p>
+<table>
+<tbody>
+<tr>
+<td rowspan="2"></td>
+<td colspan="3">School 1</td>
+<td colspan="3">School 2</td>
+<td colspan="3">School 3</td>
+</tr>
+<tr>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+</tr>
+<tr>
+<td>Rate Period 1</td>
+<td>24.25</td>
+<td>(4.34)</td>
+<td>&lt;0.001</td>
+<td>11.83</td>
+<td>(0.74)</td>
+<td>&lt;0.001</td>
+<td>8.91</td>
+<td>(1.06)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate Period 2</td>
+<td>13.00</td>
+<td>(1.01)</td>
+<td>&lt;0.001</td>
+<td>21.38</td>
+<td>(1.60)</td>
+<td>&lt;0.001</td>
+<td>4.95</td>
+<td>(0.63)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate Period 3</td>
+<td>16.89</td>
+<td>(1.66)</td>
+<td>&lt;0.001</td>
+<td>14.02</td>
+<td>(0.86)</td>
+<td>&lt;0.001</td>
+<td>3.54</td>
+<td>(0.42)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Outdegree</td>
+<td>-2.94</td>
+<td>(0.07)</td>
+<td>&lt;0.001</td>
+<td>-2.83</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+<td>-3.54</td>
+<td>(0.15)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Reciprocity</td>
+<td>1.24</td>
+<td>(0.09)</td>
+<td>&lt;0.001</td>
+<td>1.61</td>
+<td>(0.08)</td>
+<td>&lt;0.001</td>
+<td>1.71</td>
+<td>(0.18)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Transitive triplets</td>
+<td>0.21</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+<td>0.49</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+<td>0.67</td>
+<td>(0.13)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>3-Cycles</td>
+<td>-0.20</td>
+<td>(0.04)</td>
+<td>&lt;0.001</td>
+<td>-0.59</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+<td>-0.60</td>
+<td>(0.29)</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>Indegree popularity</td>
+<td>0.04</td>
+<td>(0.01)</td>
+<td>&lt;0.001</td>
+<td>-0.01</td>
+<td>(0.01)</td>
+<td>0.127</td>
+<td>0.03</td>
+<td>(0.03)</td>
+<td>0.177</td>
+</tr>
+<tr>
+<td>Outdegree activity</td>
+<td>0.02</td>
+<td>(0.00)</td>
+<td>&lt;0.001</td>
+<td>0.01</td>
+<td>(0.00)</td>
+<td>&lt;0.001</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sex alter</td>
+<td>0.25</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+<td>0.14</td>
+<td>(0.07)</td>
+<td>0.030</td>
+<td>-0.21</td>
+<td>(0.10)</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>Sex ego</td>
+<td>-0.23</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+<td>-0.03</td>
+<td>(0.04)</td>
+<td>0.260</td>
+<td>0.40</td>
+<td>(0.13)</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>Same sex</td>
+<td>0.73</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+<td>0.51</td>
+<td>(0.04)</td>
+<td>&lt;0.001</td>
+<td>0.73</td>
+<td>(0.12)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Same ethnicity</td>
+<td>0.16</td>
+<td>(0.09)</td>
+<td>0.031</td>
+<td>0.14</td>
+<td>(0.07)</td>
+<td>0.030</td>
+<td>1.03</td>
+<td>(0.26)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Same sex · Same ethnicity</td>
+<td>-0.17</td>
+<td>(0.10)</td>
+<td>0.047</td>
+<td>-0.14</td>
+<td>(0.08)</td>
+<td>0.038</td>
+<td>-0.81</td>
+<td>(0.28)</td>
+<td>0.002</td>
+</tr>
+</tbody>
+</table>
+<p>P<sub>arame</sub>t<sub>ers</sub> f<sub>or</sub> SAOM
+<sub>es</sub>ti<sub>ma</sub>ti<sub>on o</sub>f
+D<sub>y</sub>N<sub>e</sub>t d<sub>a</sub>t<sub>a ;
+p</sub>-<sub>va</sub>l<sub>ues</sub> f<sub>or one</sub>-
+<sub>s</sub>id<sub>e</sub>d t<sub>es</sub>t<sub>s.</sub></p>
+<p>T<sub>a</sub>bl<sub>e</sub> 3 <sub>.</sub>
+C<sub>on</sub>ti<sub>nue</sub>d<sub>.</sub></p>
+<table>
+<tbody>
+<tr>
+<td rowspan="2"></td>
+<td colspan="3">School 4</td>
+<td colspan="3">School 6</td>
+<td colspan="3">School 13</td>
+</tr>
+<tr>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+<td>estimate</td>
+<td>s.e.</td>
+<td>p-val</td>
+</tr>
+<tr>
+<td>Rate Period 1</td>
+<td>22.05</td>
+<td>(2.15)</td>
+<td>&lt;0.001</td>
+<td>16.13</td>
+<td>(1.23)</td>
+<td>&lt;0.001</td>
+<td>12.33</td>
+<td>(1.03)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate Period 2</td>
+<td>23.69</td>
+<td>(2.79)</td>
+<td>&lt;0.001</td>
+<td>18.37</td>
+<td>(1.46)</td>
+<td>&lt;0.001</td>
+<td>9.05</td>
+<td>(0.77)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Rate Period 3</td>
+<td>35.38</td>
+<td>(5.42)</td>
+<td>&lt;0.001</td>
+<td>13.28</td>
+<td>(0.86)</td>
+<td>&lt;0.001</td>
+<td>7.09</td>
+<td>(0.70)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Outdegree</td>
+<td>-2.95</td>
+<td>(0.07)</td>
+<td>&lt;0.001</td>
+<td>-8.88</td>
+<td>(0.07)</td>
+<td>&lt;0.001</td>
+<td>-3.18</td>
+<td>(0.09)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Reciprocity</td>
+<td>1.42</td>
+<td>(0.09)</td>
+<td>&lt;0.001</td>
+<td>1.48</td>
+<td>(0.09)</td>
+<td>&lt;0.001</td>
+<td>1.93</td>
+<td>(0.11)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Transitive triplets</td>
+<td>0.31</td>
+<td>(0.02)</td>
+<td>&lt;0.001</td>
+<td>0.58</td>
+<td>(0.04)</td>
+<td>&lt;0.001</td>
+<td>0.73</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>3-Cycles</td>
+<td>-0.42</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+<td>-0.58</td>
+<td>(0.08)</td>
+<td>&lt;0.001</td>
+<td>-0.61</td>
+<td>(0.12)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Indegree popularity</td>
+<td>0.02</td>
+<td>(0.01)</td>
+<td>0.001</td>
+<td>-0.03</td>
+<td>(0.01)</td>
+<td>0.003</td>
+<td>-0.05</td>
+<td>(0.02)</td>
+<td>0.005</td>
+</tr>
+<tr>
+<td>Outdegree activity</td>
+<td>0.01</td>
+<td>(0.00)</td>
+<td>&lt;0.001</td>
+<td>-0.04</td>
+<td>(0.00)</td>
+<td>&lt;0.001</td>
+<td>0.01</td>
+<td>(0.00)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Sex alter</td>
+<td>-0.17</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+<td>0.10</td>
+<td>(0.06)</td>
+<td>0.039</td>
+<td>0.06</td>
+<td>(0.07)</td>
+<td>0.219</td>
+</tr>
+<tr>
+<td>Sex ego</td>
+<td>-0.17</td>
+<td>(0.05)</td>
+<td>0.001</td>
+<td>-0.36</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+<td>-0.35</td>
+<td>(0.07)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Same Sex</td>
+<td>0.65</td>
+<td>(0.05)</td>
+<td>&lt;0.001</td>
+<td>0.72</td>
+<td>(0.13)</td>
+<td>&lt;0.001</td>
+<td>0.48</td>
+<td>(0.06)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Same ethnicity</td>
+<td>0.51</td>
+<td>(0.14)</td>
+<td>&lt;0.001</td>
+<td>0.56</td>
+<td>(0.12)</td>
+<td>&lt;0.001</td>
+<td>0.32</td>
+<td>(0.10)</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>Same sex · Same ethnicity</td>
+<td>-0.45</td>
+<td>(0.16)</td>
+<td>0.002</td>
+<td>-0.41</td>
+<td>(0.13)</td>
+<td>0.001</td>
+<td>0.15</td>
+<td>(0.12)</td>
+<td>0.109</td>
+</tr>
+</tbody>
+</table>
+<p>P<sub>arame</sub>t<sub>ers</sub> f<sub>or</sub> SAOM
+<sub>es</sub>ti<sub>ma</sub>ti<sub>on o</sub>f
+D<sub>y</sub>N<sub>e</sub>t d<sub>a</sub>t<sub>a ;
+p</sub>-<sub>va</sub>l<sub>ues</sub> f<sub>or one</sub>-
+<sub>s</sub>id<sub>e</sub>d t<sub>es</sub>t<sub>s.</sub></p>
+<p>Table 4. Crosstabulation School 1 DyNet data.</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>Opposite Sex</td>
+<td>Same Sex</td>
+</tr>
+<tr>
+<td>Different Ethn.</td>
+<td>0</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td>Same Ethn.</td>
+<td>0.51</td>
+<td>0.71</td>
+</tr>
+</tbody>
+</table>
+<p>Concerning the other efects included in the study, echoing the
+empirical SAOM literature, efects for reciprocity and transitive ties
+are positive and significant. We find evidence that friendship ties are
+more likely to evolve and persist between individuals who reciprocate
+friendship and who have a friend in common. Our estimates for the
+reciprocity efect lie between 1.24 and 2.24 (increase in odds between
+3.46 and 9.39); estimates for the transitive triplet efects are between
+0.20 and 0.71 (increase in odds between 1.22 and 2.03 for each tie to be
+present when it is part of an additional transitive triplet). The
+3-Cycle efect is usually interpreted as an indicator of local
+hierarchies. In our analyses we find a negative efect (except in the
+Glasgow data) which suggests the presence of local hierarchies (Davis,
+1970). The parameter estimates for indegree popularity and outdegree are
+mostly negative, but in most cases of small relative size.</p>
+<p>Concerning the individual covariates included in the analyses, there
+is no general trend in activity and attractiveness depending on sex. The
+ego- and alter efects included for family afluence (ASSIST data) are
+also not significant. However, there is a clear efect concerning pocket
+money in the Glasgow data. Children who receive more pocket money are
+more attractive as friends.</p>
+<h2 id="discussion-and-conclusion">6 Discussion and conclusion</h2>
+<p>Although most scholars agree that social life is inherently
+multidimensional, homophily research has not explicitly addressed such
+multidimensionality. Previous research finds clear evidence for
+homophily—the tendency for individuals to form social relationships with
+similar others—regarding diferent socio-demographic characteristics,
+such as age, ethnicity, or sex. Yet, we know only little about
+multidimensional homophily.</p>
+<p>Scholars use multivariate designs where more than one homophily efect
+is studied at the same time. Such a strategy explicitly accounts for the
+fact that correlation (positive or negative) between attributes leads to
+perceived homogeneity along multiple variables. The question that
+remained unanswered so far is: What are the substantive implications
+that follow for the formation and dissolution of social relationships
+when individuals have more than one attribute in common? Is the
+interaction between homophily efects significant? We use the
+well-studied and substantially important setting of adolescent
+friendships in school cohorts as a starting point to establish
+regularities in the interaction between diferent dimensions of
+homophily.</p>
+<p>Our study investigates longitudinal friendship data from eleven
+schools in four diferent countries. A longitudinal approach is useful,
+as it allows controlling for many factors that drive the formation and
+dissolution of social relationships. Individuals possess many diferent
+attributes and reducing them to only one attribute at a time does not
+account for the complexities of social life. We find a clear pattern
+pointing towards a more general regularity concerning the interaction of
+homophily efects in friendship networks. The interaction of positive
+homophily efects are negative and overwhelmingly significant. When
+individuals have more than one attribute in common, a social
+relationship between these individuals is not as likely to evolve and be
+maintained as the combination of the separate homophily efects would
+suggest. Additional studies could confirm (or reject) this empirical
+regularity in other settings.</p>
+<p>Several possible explanations could account for this. A
+straightforward explanation for such a negative efect could be that
+there is an upper limit in how beneficial social relationships with
+similar others can be. Several studies proposed that social
+relationships are especially useful when they provide access to a
+diferent set of individuals, with diferent thoughts, ideas, and
+knowledge (Granovetter, 1973; Burt, 1995). Sharing more than one
+attribute with others can create redundancies, which could eventually
+explain the negative interaction efect we do observe.</p>
+<p>Another perspective puts emphasis on multidimensional homophily
+creating multiple opportunities for individuals to meet. Seeing each
+other more often does not necessarily increase the chances for
+individuals to become friends. When individuals do not like each other
+when they meet in one setting, they are unlikely to like each other when
+they meet elsewhere. Therefore, while similarity on more than one
+attribute might increase opportunities to meet, this does not have to
+translate into friendship relationships being formed.</p>
+<p>There is also a situational understanding of homophily based on
+social identity theory (Tajfel &amp; Turner, 1979; Hogg, 2006). Not all
+of individuals’ attributes might be salient and matter when social
+relationships are formed. Individuals behave and focus on norms and
+themes related to current situations, while norms and themes associated
+with other situations are pushed back (Tajfel, 1974; Turner, 1987;
+Lindenberg, 2009). Within certain situations, adolescents might focus on
+similarity in specific domains, while dissimilarity in others are less
+important. Such a mechanism could also explain the negative interaction
+between diferent dimensions of homophily.</p>
+<p>Disentangling various motives for homophilious friendship selection
+is dificult and requires further work. Already, decomposing the origins
+of one-dimensional homophily from each other seems impossible with most
+current designs. Most often, many aspects matter at the same time. And
+of course, context- and attributespecific explanations can be construed
+as well. For example, it might be that adolescents prefer their friends
+to be similar to themselves or that individuals take part in activities
+through which they meet others who are similar. In the context of
+multidimensional homophily this becomes even more complicated as the
+underlying one-dimensional homophily efects might have diferent origins
+to begin with. Nevertheless, this article shows that an overly
+simplified view of homophily is inaccurate. People, or at least
+adolescents, do not always prefer similar others as friends - it is
+highly dependent on similarity on other dimensions. Or in other words:
+similarity makes some ties more likely, but not all.</p>
+<p>Of course, this study also has its limitations. We only test the
+interaction of homophily efects on a limited set of attribute
+dimensions. Our guiding principle in this context was to remain focused
+on exogeneous attributes that cannot be altered by individuals so
+easily. Dimensions that are under more direct control of individuals
+(e.g. political opinion, fashion taste), would introduce the additional
+issue of having to distinguish between efects driven by selection,
+influence, or influence specific to certain dimensions of social
+life.<sup>6</sup> Considering such endogenous attributes (also in other
+settings) could be useful in future studies, but it would also require
+specific designs because individuals can change their attributes as
+well. Sex, ethnicity and social status are generally the strongest
+exogenous predictors (apart from religion) of homophilous tie formation
+(McPherson et al., 2001) and, hence, a reasonable choice for the purpose
+of our study. One may question whether the pattern we observe can also
+be detected for other attribute dimensions. Further research could
+address this more.</p>
+<p>Finally, it remains to conclude that future research should address
+the multidimensionality of social life further and study what it means
+in terms of social network outcomes, regarding additional social
+settings and additional social dimensions. More research is needed to
+clarify the mechanisms that bring about the negative interaction efect
+we detect.</p>
+<h2 id="references">References</h2>
+<p>Alexander, C., Piazza, M., Mekos, D., &amp; Valente, T. (2001).
+Peers, schools, and adolescent cigarette smoking. Journal of Adolescent
+Health, 29(1), 22–30.</p>
+<p>Blau, P. M. (1977). Inequality and heterogeneity : a primitive theory
+of social structure. New York, London: Free Press; Collier
+Macmillan.</p>
+<p>Blau, P. M., &amp; Schwartz, J. E. (1984). Crosscutting social
+circles : testing a macrostructural theory of intergroup relations.
+Orlando: Academic Press.</p>
+<p>Burk, W. J., Steglich, C. E. G., &amp; Snijders, T. A. B. (2007).
+Beyond dyadic interdependence: Actor-oriented models for co-evolving
+social networks and individual behaviors. International Journal of
+Behavioral Development, 31(4), 397–404.</p>
+<p>Burt, R. S. (1992). Structural Holes: The social structure of
+competition. Cambridge, Massachusetts: Harvard University Press.</p>
+<p>Checkley, M., &amp; Steglich, C. (2007). Partners in power: job
+mobility and dynamic deal-making. European Management Review, 4(3),
+161–171.</p>
+<p>Cohen, J. M. (1977). Sources of peer group homogeneity. Sociology of
+Education, 50(4), 227–241.</p>
+<p>Davis, J. A. (1970). Clustering and hierarchy in interpersonal
+relations: Testing two graph theoretical models on 742 sociomatrices.
+American Sociological Review, 35(5), 843–851.</p>
+<p><sup>6</sup> I.e. a confounder of the interaction between homophily
+on e.g. political opinion and occupation would have to control for,
+apart from the main influence efects, whether people of the same opinion
+influence each other their occupational choices and whether people with
+the same occupation influence each other on their political opinion,
+which poses a whole lot of empirical problems.</p>
+<p>De Nooy, W. (2002). The dynamics of artistic prestige. Poetics,
+30(3), 147–167.</p>
+<p>Feld, S. L. (1981). The focused organization of social ties. American
+Journal of Sociology, 86(5), 1015–1035.</p>
+<p>Feld, S. L. (1982). Social structural determinants of similarity
+among associates. American Sociological Review, 47(6), 797–801.</p>
+<p>Felmlee, D., Sprecher, S., &amp; Bassin, E. (1990). The dissolution
+of intimate relationships - a hazard model. Social Psychology Quarterly,
+53(1), 13–30.</p>
+<p>Festinger, L., &amp; Hutte, H. A. (1954). An experimental
+investigation of the efect of unstable interpersonal relations in a
+group. Journal of Abnormal and Social Psychology, 49(4), 513– 522.</p>
+<p>Fischer, C. S. (1977). Networks and places : social relations in the
+urban setting. New York: Free Press.</p>
+<p>Goodreau, S. M., Kitts, J. A., &amp; Morris, M. (2009). Birds of a
+feather, or friend of a friend? Using exponential random graph models to
+investigate adolescent social networks. Demography, 46(1), 103–125.</p>
+<p>Granovetter, M. (1973). The strength of weak ties. American Journal
+of Sociology, 78(6), 1360–1380.</p>
+<p>Grund, T., &amp; Densley, J. (2012). Ethnic heterogeneity in the
+activity and structure of a black street gang. European Journal of
+Criminology, 9(4), 388–406.</p>
+<p>Hamm, J. V. (2000). Do birds of a feather flock together? The
+variable bases for African American, Asian American, and European
+American adolescents’ selection of similar friends. Developmental
+Psychology, 36(2), 209–219.</p>
+<p>Hogg, M. A. (2006). Social identity theory. In P. J. Burke (Ed.),
+Contemporary social psychological theories (pp. 111–136). Palo Alto, CA:
+Stanford University Press.</p>
+<p>Huston, T. L., &amp; Levinger, G. (1978). Interpersonal attraction
+and relationships. Annual Review of Psychology, 29, 115–156.</p>
+<p>Ibarra, H. (1992). Homophily and diferential returns - sex-diferences
+in network structure and access in an advertising firm. Administrative
+Science Quarterly, 37(3), 422–447.</p>
+<p>Kalmijn, M. (1998). Intermarriage and homogamy: causes, patterns,
+trends. Annual Review of Sociology, 24, 395–421.</p>
+<p>Kandel, D. B. (1978). Homophily, selection, and socialization in
+adolescent friendships. American Journal of Sociology, 84(2),
+427–436.</p>
+<p>Knecht, A., Snijders, T. A. B., Baerveldt, C., Steglich, C. E. G.,
+&amp; Raub, W. (2010). Friendship and Delinquency: Selection and
+Influence Processes in Early Adolescence. Social Development, 19(3),
+494–514.</p>
+<p>Laumann, E. O. (1973). Bonds of pluralism : the form and substance of
+urban social networks. New York, London: John Wiley and Sons.</p>
+<p>Lazarsfeld, P. F. &amp; Merton, R. K. (1954). Friendship as a social
+process: A substantive and methodological analysis. In M. Berger, T.
+Abel, &amp; C. H. Page (Eds.), Freedom and control in modern society
+(pp. 18–66). New York: Van Nostrand.</p>
+<p>Leenders, R. (1996). Evolution of friendship and best friendship
+choices. Journal of Mathematical Sociology, 21(1–2), 133–148.</p>
+<p>Lewis, K., Gonzalez, M., &amp; Kaufman, J. (2012). Social selection
+and peer influence in an online social network. Proceedings of the
+National Academy of Sciences of the United States of America, 109(1),
+68–72.</p>
+<p>Lindenberg, S. (2009). Why framing should be all about the impact of
+goals on cognitions and evaluations. In P. Hill, F. Kalter, C.
+Kroneberg, &amp; R. Schnell (Eds.), Hartmut Essers Erklarende
+Soziologie¨ (pp. 53–79). Frankfurt/Main: Campus.</p>
+<p>Louch, H. (2000). Personal network integration: transitivity and
+homophily in strong-tie relations. Social Networks, 22(1), 45–64.</p>
+<p>Marsden, P. V. (1987). Core discussion networks of Americans.
+American Sociological Review, 52(1), 122–131.</p>
+<p>McPherson, J. M., &amp; Smithlovin, L. (1987). Homophily in voluntary
+organizations - status distance and the composition of face-to-face
+groups. American Sociological Review, 52(3), 370–379.</p>
+<p>McPherson, M., Smith-Lovin, L., &amp; Cook, J. M. (2001). Birds of a
+feather: Homophily in social networks. Annual Review of Sociology, 27,
+415–444.</p>
+<p>Pearson, M., &amp; Michell, L. (2000). Smoke rings: social network
+analysis of friendship groups, smoking and drug-taking. Drugs-Education
+Prevention and Policy, 7(1), 21–37.</p>
+<p>Pearson, M., Steglich, C., &amp; Snijders, T. A. B. (2006). Homophily
+and assimilation among sport-active adolescent substance users.
+Connections, 27(1), 47–63.</p>
+<p>Preciado, P., Snijders, T. A. B., Burk, W. J., Stattin, H., &amp;
+Kerr, M. (2012). Does proximity matter? Distance dependence of
+adolescent friendships. Social Networks, 34(1), 18–31.</p>
+<p>Quillian, L., &amp; Campbell, M. E. (2003). Beyond black and white:
+The present and future of multiracial friendship segregation. American
+Sociological Review, 68(4), 540–566.</p>
+<p>Ripley, R. M., Snijders, T. A. B., Boda, Z., Vor ¨ os, A., and
+Preciado, P. (2014). ¨ Manual for RSiena. Oxford: University of Oxford,
+Department of Statistics; Nufield College.</p>
+<p>Schaefer, D. R. (2010). A configurational approach to homophily using
+lattice visualization. Connections, 30(2), 21–40.</p>
+<p>Schaefer, D. R., Kornienko, O., &amp; Fox, A. M. (2011). Misery does
+not love company. American Sociological Review, 76(5), 764–785.</p>
+<p>Shrum, W., Cheek, N. H., &amp; Hunter, S. M. (1988). Friendship in
+school - gender and racial homophily. Sociology of Education, 61(4),
+227–239.</p>
+<p>Simmel, G., ed. Wolf, K. H. (1950). The sociology of George Simmel:
+New York: Free press.</p>
+<p>Smith-Lovin, L., &amp; McPherson, J. M. (1993). You are who you know:
+a network perspective on gender. In P. England (Ed.), Theory on
+gender/Feminism on theory (pp. 223–51). New York: Aldine.</p>
+<p>Snijders, T. A. B. (2001). The statistical evaluation of social
+network dynamics. Sociological Methodology 2001, 31, 361–395.</p>
+<p>Snijders, T. A. B. (2005). Models for longitudinal network data. In
+P. Carrington, J. Scott, &amp; S. Wasserman (Eds.), Models and methods
+in social network analysis (Ch. 11). New York: Cambridge University
+Press.</p>
+<p>Snijders, T. A. B., van de Bunt, G. G., &amp; Steglich, C. E. G.
+(2010). Introduction to stochastic actor-based models for network
+dynamics. Social Networks, 32(1), 44–60.</p>
+<p>Steglich, C., Sinclair, P., Holliday, J., &amp; Moore, L. (2012).
+Actor-based analysis of peer influence in A Stop Smoking in Schools
+Trial (ASSIST). Social Networks, 34(3), 359–369.</p>
+<p>Steglich, C., Snijders, T. A. B., &amp; Pearson, M. (2010). Dynamic
+networks and behaviour: Separating selection from influence.
+Sociological Methodology, 40, 329–393.</p>
+<p>Steglich, C., Snijders, T. A. B., &amp; West, B. (2006). Applying
+SIENA: An illustrative analysis of the co-evolution of adolescents’
+friendship networks, taste in music, and alcohol consumption.
+Methodology, 2(1), 48–56.</p>
+<p>Steinberg, L., &amp; Morris, A. S. (2001). Adolescent development.
+Annual Review of Psychology, 52, 83–110.</p>
+<p>Tajfel, H. (1974). Social identity and intergroup behavior. Social
+Science Information Sur Les Sciences Sociales, 13(2), 65–93.</p>
+<p>Tajfel, H., &amp; Turner, J. C. (1979). An integrative theory of
+intergroup conflict. In W. G. Austin &amp; S. Worchel (Eds.), The social
+psychology of intergroup relations (pp. 33–47). Monterey, CA:
+Brooks/Cole.</p>
+<p>Turner, J. C. (1987). Rediscovering the social group: a
+self-categorization theory. Oxford: Basil Blackwell.</p>
+<p>van de Bunt, G. G., Wittek, R. P. M., &amp; de Klepper, M. C. (2005).
+The evolution of intraorganizational trust networks - The case of a
+German paper factory: An empirical test of six trust mechanisms.
+International Sociology, 20(3), 339–369.</p>
+<p>van Duijn, M. A. J., Zeggelink, E. P. H., Huisman, M., Stokman, F.
+N., &amp; Wasseur, F. W. (2003). Evolution of sociology freshmen into a
+friendship network. Journal of Mathematical Sociology, 27(2–3),
+153–191.</p>
+<p>Verbrugge, L. M. (1977). Structure of adult friendship choices.
+Social Forces, 56(2), 576–597.</p>
+<p>Werner, C., &amp; Parmelee, P. (1979). Similarity of activity
+preference among friends - those who play together stay together. Social
+Psychology, 42(1), 62–66.</p>
+<p>Wimmer, A., &amp; Lewis, K. (2010). Beyond and below racial
+homophily: ERG models of a friendship network documented on facebook.
+American Journal of Sociology, 116(2), 583–642.</p>
+<h2 id="appendix">Appendix</h2>
+<p>Descriptive statistics of the analyzed datasets.</p>
+<p>Table A1. Descriptives Glasgow data.</p>
+<table>
+<tbody>
+<tr>
+<td>N</td>
+<td>160</td>
+</tr>
+<tr>
+<td>indegree wave 1 (mean, min, max)</td>
+<td>3.66, 0, 12</td>
+</tr>
+<tr>
+<td>indegree wave 2 (mean, min, max)</td>
+<td>3.23, 0, 11</td>
+</tr>
+<tr>
+<td>indegree wave 3 (mean, min, max)</td>
+<td>3.11, 0, 10</td>
+</tr>
+<tr>
+<td>Age in first wave</td>
+<td>12–13</td>
+</tr>
+<tr>
+<td>% Girls</td>
+<td>52.5</td>
+</tr>
+<tr>
+<td>Moran&#39;s I for sex (waves 1, 2, 3)</td>
+<td>0.77, 0.84, 0.79</td>
+</tr>
+<tr>
+<td>Pocket money wave 1 (avg (min - max)) £</td>
+<td>8.8 (0–40)</td>
+</tr>
+<tr>
+<td>Pocket money wave 2 (avg (min - max)) £</td>
+<td>11.1 (0–50)</td>
+</tr>
+<tr>
+<td>Moran&#39;s I for pocket money (waves 1, 2, 3)</td>
+<td>0.11, 0.14, 0.11</td>
+</tr>
+<tr>
+<td>% Missing Periods 1, 2</td>
+<td>5, 4</td>
+</tr>
+<tr>
+<td>Jaccard Index Periods 1, 2</td>
+<td>0.28, 0.31</td>
+</tr>
+<tr>
+<td>Correlation sex, Pocket money</td>
+<td>0.05</td>
+</tr>
+</tbody>
+</table>
+<p>Mathematical details of SAOMs:</p>
+<p>The rate function models the diferences in speed of network change
+between actors. It is defined as</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>k</mi></munder><msub><mi>ρ</mi><mi>k</mi></msub><msub><mi>r</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+\lambda_ {i} (x) = \sum_ {k} \rho_ {k} r _ {i k} (x)
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><annotation encoding="application/x-tex">r _ { i k }</annotation></semantics></math>
+are statistics of i’s neighborhood in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">x ,</annotation></semantics></math>
+which are weighted by model parameters
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>k</mi></msub><annotation encoding="application/x-tex">\rho _ { k }</annotation></semantics></math>
+. These weights express whether an actor changes her network more
+frequently
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ρ</mi><mi>k</mi></msub><mo>&gt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">( \rho _ { k } &gt; 0 )</annotation></semantics></math>
+or less frequently
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ρ</mi><mi>k</mi></msub><mo>&lt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">( \rho _ { k } &lt; 0 )</annotation></semantics></math></p>
+<p>The objective function models which network change an actor decides
+to realize. It is defined as</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>k</mi></munder><msub><mi>β</mi><mi>k</mi></msub><msub><mi>s</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+f _ {i} (x) = \sum_ {k} \beta_ {k} s _ {i k} (x)
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><annotation encoding="application/x-tex">s _ { i k }</annotation></semantics></math>
+are statistics that describe characteristics of i’s network, attributes
+of i, or dyadic attributes shared between i and j.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mi>k</mi></msub><annotation encoding="application/x-tex">\beta _ { k }</annotation></semantics></math>
+are weights that express whether a tie yielding a higher statistic is
+more
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mi>k</mi></msub><mo>&gt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">( \beta _ { k } &gt; 0 )</annotation></semantics></math>
+or less
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mi>k</mi></msub><mo>&lt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">( \beta _ { k } &lt; 0 )</annotation></semantics></math>
+likely. Actor i compares the outcome of the objective function for
+making a tie change to all other members in the network and decides
+which tie to change accordingly. The probability to realize a specific
+tie change is given by</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">exp</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>∼</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><mrow><munderover><mo>∑</mo><mrow><mi>h</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi mathvariant="normal">exp</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>∼</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+p _ {i j} (\beta , x) = \frac {\exp (f _ {i} (\beta , x (i \sim j)))}{\sum_ {h = 1} ^ {n} \exp (f _ {i} (\beta , x (i \sim h)))}
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">p _ { i j }</annotation></semantics></math>
+is the probability of i to change the way she is tied to j. The
+numerator in the fraction is the exponent of the objective function of i
+for changing the tie to j
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>∼</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">( i \sim j )</annotation></semantics></math>
+. The denominator is the sum over the exponent of all possible tie
+changes of i plus the option not to make any change to i’s network as a
+normalizing constant. This is the multinomial logit expression.</p>
+<p>The statistics
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><annotation encoding="application/x-tex">s _ { i k }</annotation></semantics></math>
+of the used structural efects, where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x _ { i j } = 1</annotation></semantics></math>
+indicates the presence of a tie from i to j, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x _ { i j } = 0</annotation></semantics></math>
+indicates the absence of that tie, are as follows:</p>
+<p>T<sub>a</sub>bl<sub>e</sub> A2<sub>.</sub>
+D<sub>escr</sub>i<sub>p</sub>ti<sub>ves</sub> ASISS T
+d<sub>a</sub>t<sub>a.</sub></p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>School 22</td>
+<td>School 35</td>
+<td>School 63</td>
+<td>School 71</td>
+</tr>
+<tr>
+<td>N</td>
+<td>149</td>
+<td>158</td>
+<td>236</td>
+<td>102</td>
+</tr>
+<tr>
+<td>indegree wave 1 (mean, min, max)</td>
+<td>3.49, 0, 10</td>
+<td>4.58, 0, 17</td>
+<td>4.63, 0, 11</td>
+<td>3.77, 0, 13</td>
+</tr>
+<tr>
+<td>indegree wave 2 (mean, min, max)</td>
+<td>3.97, 0, 12</td>
+<td>4.82, 0, 16</td>
+<td>4.94, 0, 11</td>
+<td>4.37, 0, 14</td>
+</tr>
+<tr>
+<td>indegree wave 3 (mean, min, max)</td>
+<td>3.38, 0, 9</td>
+<td>4.46, 0, 15</td>
+<td>4.20, 0, 12</td>
+<td>3.98, 0, 10</td>
+</tr>
+<tr>
+<td>Age in first wave</td>
+<td>12–13</td>
+<td>12–13</td>
+<td>12–13</td>
+<td>12–13</td>
+</tr>
+<tr>
+<td>% Girls</td>
+<td>51</td>
+<td>53.8</td>
+<td>52.1</td>
+<td>44.1</td>
+</tr>
+<tr>
+<td>Moran&#39;s I sex (waves 1, 2, 3)</td>
+<td>0.89, 0.89, 0.87</td>
+<td>0.88, 0.81, 0.73</td>
+<td>0.84, 0.85, 0.85</td>
+<td>0.79, 0.76, 0.76</td>
+</tr>
+<tr>
+<td>FAS (avg (min-max))</td>
+<td>3.9 (0–6)</td>
+<td>4.1 (1–6)</td>
+<td>4.2 (0–6)</td>
+<td>3.8 (1–6)</td>
+</tr>
+<tr>
+<td>Moran&#39;s I FAS (waves 1, 2, 3)</td>
+<td>0.02, 0.02, 0.02</td>
+<td>0.03, 0.13, 0.12</td>
+<td>0.03, 0.08, 0.13</td>
+<td>0.08, 0.00, 0.03</td>
+</tr>
+<tr>
+<td>% Missing Periods 1, 2</td>
+<td>1, 4</td>
+<td>1, 4</td>
+<td>0, 5</td>
+<td>8, 5</td>
+</tr>
+<tr>
+<td>Jaccard Index Periods 1, 2</td>
+<td>0.38, 0.38</td>
+<td>0.37, 0.35</td>
+<td>0.33, 0.37</td>
+<td>0.32, 0.30</td>
+</tr>
+<tr>
+<td>Correlation sex, FAS</td>
+<td>0.08</td>
+<td>0.02</td>
+<td>-0.11</td>
+<td>-0.06</td>
+</tr>
+</tbody>
+</table>
+<p>T<sub>a</sub>bl<sub>e</sub> A3 <sub>.</sub>
+D<sub>escr</sub>i<sub>p</sub>ti<sub>ves</sub>
+D<sub>y</sub>N<sub>e</sub>t d<sub>a</sub>t<sub>a</sub></p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>School 1</td>
+<td>School 2</td>
+<td>School 3</td>
+<td>School 4</td>
+<td>School 6</td>
+<td>School 13</td>
+</tr>
+<tr>
+<td>N</td>
+<td>117</td>
+<td>184</td>
+<td>129</td>
+<td>122</td>
+<td>192</td>
+<td>188</td>
+</tr>
+<tr>
+<td>Indegree wave 1 (mean, min, max)</td>
+<td>3.1, 0, 15</td>
+<td>4.5, 0, 14</td>
+<td>3.1, 0, 9</td>
+<td>4.69, 0, 17</td>
+<td>3.63, 0, 11</td>
+<td>2.89, 0, 10</td>
+</tr>
+<tr>
+<td>Indegree wave 2 (mean, min, max)</td>
+<td>4.9, 0, 17</td>
+<td>4.4, 0, 12</td>
+<td>2.1, 0, 6</td>
+<td>4.30, 0, 15</td>
+<td>3.30, 0, 11</td>
+<td>2.46, 0, 10</td>
+</tr>
+<tr>
+<td>Indegree wave 3 (mean, min, max)</td>
+<td>3.58, 0, 15</td>
+<td>5.1, 0, 15</td>
+<td>1.9, 0, 6</td>
+<td>4.70, 0, 14</td>
+<td>4.66, 0, 14</td>
+<td>1.93, 0, 7</td>
+</tr>
+<tr>
+<td>Indegree wave 4 (mean, min, max)</td>
+<td>4.61, 0, 14</td>
+<td>4.2, 0, 14</td>
+<td>2.1, 0, 5</td>
+<td>3.73, 0, 12</td>
+<td>3.48, 0, 14</td>
+<td>1.91, 0, 8</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>12–13</td>
+<td>12–15</td>
+<td>12–18</td>
+<td>12–15</td>
+<td>13–14</td>
+<td>14–15</td>
+</tr>
+<tr>
+<td>% Girls</td>
+<td>47.9</td>
+<td>54.9</td>
+<td>50</td>
+<td>52.5</td>
+<td>50.5</td>
+<td>51.1</td>
+</tr>
+<tr>
+<td>Moran&#39;s I for sex (waves 1, 2)</td>
+<td>0.78, 0.67</td>
+<td>0.72, 0.62</td>
+<td>0.35, 0.38</td>
+<td>0.76, 0.67</td>
+<td>0.65, 0.65</td>
+<td>0.69, 0.64</td>
+</tr>
+<tr>
+<td>Moran&#39;s I for sex (waves 3, 4)</td>
+<td>0.71, 0.70</td>
+<td>0.62, 0.59</td>
+<td>0.36, 0.26</td>
+<td>0.65, 0.64</td>
+<td>0.62, 0.59</td>
+<td>0.64, 0.56</td>
+</tr>
+<tr>
+<td>% White</td>
+<td>61.5</td>
+<td>78.3</td>
+<td>79.8</td>
+<td>81.1</td>
+<td>83.3</td>
+<td>51.1</td>
+</tr>
+<tr>
+<td>% Latin</td>
+<td>11.1</td>
+<td>13.0</td>
+<td>3.1</td>
+<td>2.5</td>
+<td>12.5</td>
+<td>41.5</td>
+</tr>
+<tr>
+<td>% Native</td>
+<td>14.5</td>
+<td>11.4</td>
+<td>9.3</td>
+<td>17.2</td>
+<td>8.9</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>% Other</td>
+<td>26.5</td>
+<td>15.8</td>
+<td>19.4</td>
+<td>23.8</td>
+<td>14.6</td>
+<td>13.3</td>
+</tr>
+<tr>
+<td>% Missing Periods 1, 2, 3</td>
+<td>18, 24, 29</td>
+<td>16, 18, 23</td>
+<td>22, 21, 21</td>
+<td>18, 23, 15</td>
+<td>33, 31, 22</td>
+<td>21, 21, 28</td>
+</tr>
+<tr>
+<td>Jaccard Index Periods 1, 2, 3</td>
+<td>0.25, 0.28, 0.25</td>
+<td>0.35, 0.29, 0.33</td>
+<td>0.20, 0.26, 0.33</td>
+<td>0.26, 0.27, 0.20</td>
+<td>0.25, 0.23, 0.31</td>
+<td>0.26, 0.27, 0.30</td>
+</tr>
+<tr>
+<td>Coorelation sex, White</td>
+<td>-0.06</td>
+<td>0.03</td>
+<td>-0.03</td>
+<td>-0.02</td>
+<td>0.01</td>
+<td>-0.05</td>
+</tr>
+</tbody>
+</table>
+<p>Outdegree / Density:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j} x _ {i j}
+</annotation></semantics></math></p>
+<p>Reciprocity:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>x</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j} x _ {i j} x _ {j i}
+</annotation></semantics></math></p>
+<p>Transitive Triplets:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>j</mi><mo>,</mo><mi>h</mi></mrow></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi><mi>h</mi></mrow></msub><msub><mi>x</mi><mrow><mi>h</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j, h} x _ {i j} x _ {i h} x _ {h j}
+</annotation></semantics></math></p>
+<p>Three-Cycles:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>j</mi><mo>,</mo><mi>h</mi></mrow></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>x</mi><mrow><mi>j</mi><mi>h</mi></mrow></msub><msub><mi>x</mi><mrow><mi>h</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j, h} x _ {i j} x _ {j h} x _ {h i}
+</annotation></semantics></math></p>
+<p>Indegree Popularity:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>j</mi><mo>,</mo><mi>h</mi></mrow></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>x</mi><mrow><mi>h</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j, h} x _ {i j} x _ {h j}
+</annotation></semantics></math></p>
+<p>Oudegree Activity:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>j</mi><mo>,</mo><mi>h</mi></mrow></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>x</mi><mrow><mi>i</mi><mi>h</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j, h} x _ {i j} x _ {i h}
+</annotation></semantics></math></p>
+<p>The covariate dependent efects are defined as follows:</p>
+<p>Dyadic Covariate (used for being of the same ethnicity in the DyNet
+data):</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>−</mo><mover><mi>w</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j} x _ {i j} (w _ {i j} - \bar {w})
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\omega _ { i j }</annotation></semantics></math>
+is the value of the dyadic covariate between i and j, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>ω</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar { \omega }</annotation></semantics></math>
+is the mean value of the covariate.</p>
+<p>Ego Covariate:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>v</mi><mi>i</mi></msub><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = v _ {i} \sum_ {j} x _ {i j}
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mi>i</mi></msub><annotation encoding="application/x-tex">v _ { i }</annotation></semantics></math>
+is the value of the covariate for i.</p>
+<p>Alter Covariate:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>v</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j} x _ {i j} v _ {j}
+</annotation></semantics></math></p>
+<p>Same Covariate:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>I</mi><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j} x _ {i j} I \left\{v _ {i} = v _ {j} \right\}
+</annotation></semantics></math></p>
+<p>where the indicator function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mrow><mo stretchy="true" form="prefix">{</mo><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="true" form="postfix">}</mo></mrow></mrow><annotation encoding="application/x-tex">I \left\{ v _ { i } = v _ { j } \right\}</annotation></semantics></math>
+is one if the condition is fulfilled and 0 otherwise.</p>
+<p>Covariate Similarity:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>x</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mi>i</mi><msubsup><mi>m</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mi>v</mi></msubsup><mo>−</mo><mover><mrow><mi>s</mi><mi>i</mi><msup><mi>m</mi><mi>v</mi></msup></mrow><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+s _ {i} (x) = \sum_ {j} x _ {i j} \left(s i m _ {i, j} ^ {v} - \widehat {s i m ^ {v}}\right)
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>i</mi><msubsup><mi>m</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mi>v</mi></msubsup></mrow><annotation encoding="application/x-tex">s i m _ { i , j } ^ { v }</annotation></semantics></math>
+is the normalized similarity on covariate v between i and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">j</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">{ \mathrm { j } } ,</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mrow><mi>s</mi><mi>i</mi><msup><mi>m</mi><mi>v</mi></msup></mrow><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\widehat { s i m ^ { v } }</annotation></semantics></math>
+is the mean of all similarity scores.</p>
+</body>
+</html>
