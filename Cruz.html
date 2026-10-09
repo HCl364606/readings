@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<h1 id="social-network-determinants-of-cigarette-forgoing-and-quit-related-conversations-in-a-15-day-ecological-momentary-assessment-study-in-mexico-and-the-us">Social
+Network Determinants of Cigarette Forgoing and Quit-Related
+Conversations in a 15-Day Ecological Momentary Assessment Study in
+Mexico and the US</h1>
+<p>Tobacco Use Insights Volume 19:1-12 © The Author(s) 2026 Article
+reuse guidelines: sagepub.com/journals-permissions DOI:
+10.1177/1179173X261430211 journals.sagepub.com/home/tui</p>
+<p>Lizeth Cruz-Jiménez<sup>1</sup> , Kevin A. Carson<sup>2</sup> , James
+F. Thrasher<sup>1</sup> , Katia Gallegos-Carrillo<sup>3</sup> , Dèsirée
+Vidaña-Pérez<sup>1</sup> , and Diego F. Leal<sup>2</sup></p>
+<h2 id="abstract">Abstract</h2>
+<p>Introduction: It is unclear why people of Mexican ancestry who smoke
+report relatively high rates of discussing quittingrelated topics, which
+predicts cessation attempts. Methods: Using Ecological Momentary
+Assessment (EMA), adults from Mexico (n=40) and with Mexican heritage
+living in the US (n=52) who smoked daily were sent texts/emails each
+morning with cessation tips and cessation benefits over 15 days. At
+baseline, participants reported their personal network characteristics
+across up to eight different alters. Each evening of the 15 days,
+participants reported forgoing any cigarettes they normally would smoke
+(yes/no) and having had any quitting-related conversations (yes/no).
+Multilevel logistic models were estimated to regress these day-level
+outcomes of forgoing and, separately, quitting-related conversation on
+the number of EMA surveys participants had completed prior to that day,
+network characteristics, and baseline sociodemographic and
+smoking-related covariates. Results: Participants were more likely to
+forgo cigarettes if they reported a higher proportion of female alters
+(AOR = 2.20, 95% CI 1.16–4.18), had more quitter alters whose opinions
+they respected (AOR = 6.14, 95% CI 1.41–26.75), and as the number of
+prior EMA surveys completed increased (AOR = 1.19, 95% CI 1.14– 1.25).
+Mexican Americans who preferred English were significantly less likely
+to forgo smoking (AOR = 0.20, 95% CI 0.04– 0.99) compared to
+participants residing in Mexico. Greater social bonding (i.e., tightly
+knit networks) was positively associated with having quitting-related
+conversations (AOR = 1.45, 95% CI 1.05–1.99). Conclusions: Combining
+targeted messages with activation of quit-support within networks may
+influence intermediary behaviors that facilitate smoking cessation among
+Latino/a populations, including individuals not intending to quit
+soon.</p>
+<h2 id="keywords">Keywords</h2>
+<p>smoking cessation, tobacco use, digital health intervention, efficacy
+messages, social impact theory</p>
+<p>Received: 30 October 2025; Revised: 22 January 2026; Accepted: 17
+February 2026</p>
+<h2 id="introduction">Introduction</h2>
+<p>Latino/as, the largest racial minority in the United States (US;
+19.5% of the population, with two-thirds of Mexican
+descent),<sup>1</sup> attempt to quit smoking more often than
+non-Latino/a White smokers but face greater barriers in receiving advice
+to quit or using evidence-based cessation methods and
+treatments.<sup>2-4</sup> These disparities are further stratified by
+socioeconomic status (SES), with lower-SES individuals experiencing
+greater challenges in cessation success<sup>5</sup> and being more
+likely to have social networks composed of other lower-SES
+individuals.<sup>6</sup> This paper’s main aim is to provide initial
+evidence of the role of social networks in the context of a low-cost
+intervention designed to encourage Latino/as from low educational
+background to quit smoking through short messages that highlight the
+benefits of quitting and provide tips to support cessation (hereafter,
+‘efficacy messages’), sent daily to respondents via text or email over
+two weeks.</p>
+<p>A substantial body of research shows that network structure
+influences both health behaviors, including smokin g,<sup>7,8</sup> and
+the cognitive elaboration of health information, including
+smoking-related behaviors.<sup>9</sup> Indeed, smoking cessation and
+continued smoking in adulthood are strongly associated with the
+composition and structure of individuals’ social networks.<sup>10</sup>
+Individuals surrounded by more smokers are less likely to quit and more
+prone to relapse.<sup>10-13</sup> Moreover, smoking behavior tends to
+cluster within social networks, and interpersonal influence in these
+networks may help explain similarities in smoking patterns among
+socially connected individuals.<sup>10</sup></p>
+<p>Social network theory provides a robust framework for conceptualizing
+how behaviors and attitudes diffuse through interpersonal
+connections.<sup>14</sup> (Dynamic) Social Impact
+Theory,<sup>15,16</sup> supported by extensive basic and applied
+research,<sup>17</sup> posits that social influence on an individual is
+a multiplicative function of strength (i.e., the perceived authority or
+importance of the influence source); immediacy (i.e., the spatial or
+temporal proximity of the influence source); and number<sup>1</sup>
+(i.e., the size of the influencing group). Building on this framework,
+we develop a weighted version of the E–I index,<sup>18</sup> which has
+long been used to study segregation, in an individual’s network (i.e.,
+in Dynamic Social Impact Theory’s parlance, these groups are the basis
+of ‘persuasive social impact’ [influence by change-supporting alters]
+and ‘supportive social impact’ [influence by change-opposing alters],
+respectively)<sup>16</sup> weighted by the immediacy and strength of
+their respective influence or social impact. This adaptation enables a
+nuanced analysis of social influence processes relevant to smoking
+cessation.</p>
+<p>Health communication literature suggests that interpersonal
+communication acts as a network-level mechanism, amplifying the effects
+of health messages by facilitating their dissemination and reinforcing
+their influence within social groups.<sup>8,21,22</sup> Conversations
+about health messages may promote cognitive elaboration, encouraging
+individuals to critically assess and engage with messages (e.g.,
+anti-smoking messages),<sup>9</sup> thereby increasing the likelihood of
+behavioral changes, such as attempting to quit smoking.<sup>23</sup>
+This mechanism may be especially relevant for Latino/as, who, when
+compared to non-Latino/a Whites, report more frequent interpersonal
+discussions about anti-smoking messages and health warning
+labels.<sup>24,25</sup> Moreover, these conversations have been shown to
+predict cessation attempts across different ethnic groups, suggesting a
+cultural gradient wherein stronger identification with Latino/a or
+Mexican heritage and Spanish language use may further promote message
+sharing and engagement.</p>
+<p>Despite this evidence, existing studies have concentrated on messages
+that emphasize the negative consequences of smoking in anti-smoking
+communication campaigns<sup>22,26</sup> and warning labels on cigarette
+packs.<sup>24,25,27,28</sup> Yet, evidence shows that more positive
+‘efficacy messages’ can be effective in their own right given that, when
+included inside cigarette packs as elaborated messages, they increase
+cessation-related cognitions and behaviors, such as forgoing
+cigarettes.<sup>29-33</sup></p>
+<p>Methodologically, much of the existing research on interpersonal
+communication and smoking relies on retrospective or experimental data,
+which are limited by recall bias and low ecological validity,
+respectively.<sup>34</sup> Ecological Momentary Assessment (EMA)
+overcomes these issues by collecting real-time self-reports near actual
+behaviors, enhancing validity and providing rich longitudinal data on
+experiences and behaviors.<sup>35</sup> This approach enables us to
+examine how conversations within personal networks may influence the
+early steps of smoking cessation in everyday life. This focus is
+especially important since closer, real-time measurements can better
+capture cognition-behavior relationships.<sup>36</sup> The present
+exploratory study utilizes novel EMA data, where participants were
+exposed to efficacy messages each morning for 15 consecutive days and
+completed a nightly survey about their smoking-related behaviors over
+the prior 24 hours. The sample includes individuals of Mexican origin
+residing in both Mexico and the United States. This study may generate
+preliminary evidence on short-term behavioral mechanisms and social
+network influence processes that could inform the development of future
+network-based interventions leveraging key precursors to smoking
+cessation among Latino/as.</p>
+<h2 id="methods">Methods</h2>
+<h2 id="data-source">Data Source</h2>
+<p>We analyzed data from an EMA study conducted between March 2022 and
+October 2023, involving Mexicans in Mexico (n=40) and Mexican Americans
+in the U.S. (n=52) who smoked daily. For 15 days, participants received
+a morning efficacy message and completed an evening survey on smoking
+and conversations. Recruitment combined social media, online panels,
+community outreach, and referrals. Eligibility required
+self-identification as Mexican/Mexican American, age ≥21, high school
+diploma or less, and smartphone ownership. Data were collected in 25
+cohorts (1–18 participants). We excluded isolates (n=4) and cases with
+incomplete alter data (n=13), yielding 1,283 EMA observation days from
+92 individuals with complete network and behavioral information.</p>
+<h2 id="study-protocol">Study Protocol</h2>
+<p>This study employed an exploratory EMA protocol to evaluate
+short-term responses to daily efficacy messages and examine how social
+network characteristics relate to cessation-related behaviors. At
+baseline, participants completed online measures (Qualtrics), viewed a
+brief training video, and took a comprehension quiz. During the 15-day
+study (including two weekends), individuals received one of 14 efficacy
+messages, adapted from prior research,<sup>29-32</sup> which were
+randomly selected (without replacement) and delivered at 8:30 a.m. in
+the respondents’ respective time zones via text or email in English or
+Spanish. In other words, all participants were potentially exposed to
+the same set of 14 messages, with each cohort following a different
+sequence. Messages combined text and graphics, highlighting cessation
+benefits and tips of cessation (Appendix A). Prior work shows such
+messages influence cessation cognitions independently of whether they
+are also exposed to “fear appeal” messages about the harms of smoking
+,<sup>32,33</sup> which are commonly mandated for cigarette package
+warning labels. Additionally, participants were prompted to complete a
+brief nightly EMA survey at 8:00 p.m. in their respective time zones.
+The nightly EMA survey, which took approximately 3 to 5 minutes to
+complete, collected information on participants’ smoking behaviors and
+interpersonal conversations related to smoking during the preceding 24
+hours.</p>
+<h2 id="compliance-and-ethics">Compliance and Ethics</h2>
+<p>To maximize compliance, participants received nightly reminders at
+10:00 p.m. and follow-up reminders the next day for any missed surveys.
+Staff conducted check-ins on days 1, 3, and 7, with follow-ups after two
+missed surveys. Participants were compensated with electronic gift cards
+in proportion to the surveys they completed. All procedures were
+approved by the University of South Carolina Institutional Review Board,
+and informed consent was obtained from all participants prior to their
+participation.</p>
+<h2 id="measures">Measures</h2>
+<h2 id="ema-cessation-related-behaviors">EMA Cessation-Related
+Behaviors</h2>
+<p>Each evening, participants reported whether they had forgone any
+cigarettes they would typically have smoked (yes/no) and whether they
+had engaged in a quit-related conversation within the prior 24 hours. If
+participants indicated that they had discussed quitting smoking with a
+network member on the survey day, they were asked to specify the content
+of the conversation, including whether they discussed strategies to quit
+smoking, received encouragement from the network member to quit smoking,
+expressed their own desire to quit smoking, or talked about the benefits
+of quitting smoking. Any such report was coded as a quit-related
+conversation (yes/no). Participation was tracked with a time-varying
+“EMA day” variable (i.e., cumulative number of prior daily surveys
+completed at the time of the survey, or time t). Each participant
+contributed up to 15 observation-days; on average, respondents completed
+13.9 (SD = 1.4), indicating high compliance.</p>
+<h2 id="social-network-measurements">Social Network Measurements</h2>
+<p>At baseline, following Pachucki and Leal,<sup>37</sup> participants
+identified up to eight alters (aged 16+) using two name generators: (1)
+those “with whom you spent the most free time” and (2) those “with whom
+you felt close discussing important matters.”</p>
+<p>The name generators were shown in random order. For each alter,
+participants reported smoking attributes and relational characteristics
+that were used to construct indices of ‘social bonding’ and ‘social
+bridging.</p>
+<p>Following the approach of Perry et al,<sup>38</sup> social bonding
+was defined as the degree of social integration and emotional support
+within a participant’s network. The bonding index was calculated as the
+sum of four components: (1) number of close ties (very/extremely close),
+(2) average frequency of contact, (3) proportion of kin ties, and (4)
+whether a spouse/partner was named. Additionally, following Perry et al,
+social bridging reflects respondents’ access to diverse and
+non-redundant net works.<sup>38</sup> The bridging index summed seven
+measures: (1) proportion of non-kin ties, (2) network size (0–8 alters),
+(3) solebridge indicator (ego linking at least two disconnected alters
+[yes/no]), (4) network diversity (distinct alter role types [e.g.,
+friend, neighbor]), (5) number of weak ties (not very/extremely close),
+(6) effective size,<sup>39</sup> and (7) inverse ego network
+density.</p>
+<p>To measure the social impact of quitters, we used a two-step
+approach. First, we applied the classic E–I index<sup>18-20</sup> to
+capture the relative number of quitters (former smokers) versus
+non-quitters (current and never smokers) in the respondents’ networks.
+We added 1, so the index ranges from 0 (all alters are non-quitters) to
+2 (all alters are quitters), with 1 indicating balance. This
+transformation centers the index at a positive value and ensures all
+values are non-negative, as negative values would make interpretation
+less straightforward:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>−</mo><msub><mi>I</mi><mrow><mi>i</mi><mi>_</mi><mi>u</mi><mi>n</mi><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><mn>1</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>#</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><msub><mi>s</mi><mi>i</mi></msub><mo>−</mo><mi>#</mi><mi>n</mi><mi>o</mi><mi>n</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><msub><mi>s</mi><mi>i</mi></msub></mrow><mrow><mi>#</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><msub><mi>s</mi><mi>i</mi></msub><mo>+</mo><mi>#</mi><mi>n</mi><mi>o</mi><mi>n</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><msub><mi>s</mi><mi>i</mi></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+E - I _ {i \_ u n w e i g h t e d} = 1 + \left(\frac {\# q u i t t e r a l t e r s _ {i} - \# n o n q u i t t e r a l t e r s _ {i}}{\# q u i t t e r a l t e r s _ {i} + \# n o n q u i t t e r a l t e r s _ {i}}\right)\tag{1}
+</annotation></semantics></math></p>
+<p>Second, we weighted the classic E–I index by immediacy (spatial
+proximity, six levels) and strength (respect for alters opinions, five
+levels), per Social Impact Theory.<sup>15</sup> Specifically, each
+ego–alter tie weight was:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> immediacy </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mn>6</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>×</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> strength </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mn>5</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+w _ {i j} = \left(\frac {\text { immediacy } _ {i j}}{6}\right) \times \left(\frac {\text { strength } _ {i j}}{5}\right)\tag{2}
+</annotation></semantics></math></p>
+<p>The weighted counts of quitters and non-quitters were then defined
+as:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>i</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>#</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>s</mi></mrow></munderover><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>q</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">
+Q _ {i} = \sum_ {j = 1} ^ {\# a l t e r s} w _ {i j} q _ {j}\tag{3}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>#</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>s</mi></mrow></munderover><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>q</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+N _ {i} = \sum_ {j = 1} ^ {\# a l t e r s} w _ {i j} (1 - q _ {j})\tag{4}
+</annotation></semantics></math></p>
+<p>where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>j</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">q _ { j } = 1</annotation></semantics></math>
+if alter j is a quitter, 0 otherwise. Substituting Eq. 3 and Eq. 4 into
+Eq. 1 yields the weighted E-I index:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> Social impact of quitters or </mtext><mspace width="0.333em"></mspace></mrow><mi>E</mi><mo>−</mo><msub><mi>I</mi><mrow><mi>i</mi><mi>_</mi><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><mn>1</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msub><mi>Q</mi><mi>i</mi></msub><mo>−</mo><msub><mi>N</mi><mi>i</mi></msub></mrow><mrow><msub><mi>Q</mi><mi>i</mi></msub><mo>+</mo><msub><mi>N</mi><mi>i</mi></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+\text { Social   impact   of   quitters   or } E - I _ {i \_ w e i g h t e d} = 1 + \left(\frac {Q _ {i} - N _ {i}}{Q _ {i} + N _ {i}}\right)\tag{5}
+</annotation></semantics></math></p>
+<p>Eq. 5 implements the E–I index weighted by strength and immediacy,
+consistent with Social Impact Theory, and is defined where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>i</mi></msub><mo>+</mo><msub><mi>N</mi><mi>i</mi></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Q _ { i } + N _ { i } &gt; 0</annotation></semantics></math></p>
+<p>In addition to the previous measures, for each identified alter,
+participants reported their alters’ sex (male, female), current smoking
+status (1 = smoker vs. 0 = no and don’t know), and their approval of
+ego’s own smoking (1 = strongly disapproves and disapproves vs. 0 =
+neither approves nor disapproves, approves, strongly approves, and don’t
+know).</p>
+<h2 id="other-measurements">Other Measurements</h2>
+<p>Baseline measurements included standard smoking-related variables:
+daily smoking frequency (1–5, 6–10, 10+ cigarettes) and quit intention
+(yes = plan to quit within 6 months; no = later, not planning, or don’t
+know).<sup>40</sup> Sociodemographics included sex (male or female) and
+age (in years). Using information about participants’ country (Mexico or
+the U.S.) and the language (Spanish or English), we derived three
+groups: Mexicans in Mexico, Spanish-preferring Mexican Americans, and
+English-preferring Mexican Americans.</p>
+<h2 id="analysis">Analysis</h2>
+<p>We described baseline characteristics and daily outcomes across 1,283
+observation days from 92 participants. Daily outcomes included the
+number of previous surveys the participant had completed before the EMA
+nightly survey that provided the observation of interest, forwent
+smoking at least one cigarette, and engaged in at least one quit-related
+conversation. Predictors of forgoing and engaging in conversations about
+quitting within the preceding 24 hours were estimated using multilevel
+mixed-effects logistic regression, reporting crude and adjusted odds
+ratios (OR and AOR, respectively). We estimated models with random
+intercepts for each respondent to account for repeated daily
+observations. Covariates included EMA day (i.e., prior daily surveys
+completed) and network measures (i.e., the number of females in the
+network, the number of alters who disapprove smoking, the number of
+smokers, the social impact of quitters, social bridging, and social
+bonding). Sensitivity analyses tested robustness. All analyses were
+conducted in Stata 18.5 (StataCorp, College Station, TX).</p>
+<h2 id="results">Results</h2>
+<p>The analytic sample consisted of Mexicans living in Mexico (43.5%)
+and Mexican Americans in the US who preferred speaking Spanish (25.0%)
+or English (31.5%). The majority were male (67.4%), and the average age
+was 42.9 years (SD = 11.3). Most reported no intention to quit smoking
+(69.6%) and typically smoked between 6 and 10 cigarettes per day (42.4%,
+Table 1). On average, participants forwent cigarettes on 8.1 out of the
+15 study days (SD = 5.1). Additionally, on average, respondents reported
+discussing quitting smoking 2.9 days (SD = 4.0) during the study period
+(Table 1).</p>
+<h2 id="factors-associated-with-forgoing-cigarettes-and-conversations-about-quitting-smoking">Factors
+Associated With Forgoing Cigarettes and Conversations About Quitting
+Smoking</h2>
+<p>Mexican Americans who preferred English were less likely to forgo
+smoking (AOR = 0.20, 95% CI [0.04–0.99]) than participants in Mexico.
+Increasing levels of participation in the study (i.e., ‘EMA day’) were
+associated with higher odds of forgoing cigarettes (AOR = 1.19, 95% CI
+[1.14–1.25], Table 2). The results remain consistent when a sensitivity
+analysis employs a daily indicator (i.e., EMA day dummy variable),
+suggesting a dose–response relationship (see Appendix B).</p>
+<p>Table 1. Baseline Characteristics and Key Variables in EMA Study
+Participants (n = 92)</p>
+<table>
+<tbody>
+<tr>
+<td>Variable</td>
+<td>Count or mean</td>
+<td>% or SD</td>
+</tr>
+<tr>
+<td colspan="3">Baseline characteristics</td>
+</tr>
+<tr>
+<td>Sex (count, %)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Male</td>
+<td>62</td>
+<td>67.4</td>
+</tr>
+<tr>
+<td>Female</td>
+<td>30</td>
+<td>32.6</td>
+</tr>
+<tr>
+<td>Age (mean, sd [range])</td>
+<td>42.9</td>
+<td>11.3 [21-69]</td>
+</tr>
+<tr>
+<td>Group (count, %)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>40</td>
+<td>43.5</td>
+</tr>
+<tr>
+<td>US Spanish</td>
+<td>23</td>
+<td>25.0</td>
+</tr>
+<tr>
+<td>US English</td>
+<td>29</td>
+<td>31.5</td>
+</tr>
+<tr>
+<td>Daily smoking frequency (count, %)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1- 5 cigs</td>
+<td>18</td>
+<td>19.6</td>
+</tr>
+<tr>
+<td>6-10 cigs</td>
+<td>39</td>
+<td>42.4</td>
+</tr>
+<tr>
+<td>&gt;10 cigs</td>
+<td>35</td>
+<td>38.0</td>
+</tr>
+<tr>
+<td>Intention to quit smoking (count, %)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>No</td>
+<td>64</td>
+<td>69.6</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>28</td>
+<td>30.4</td>
+</tr>
+<tr>
+<td colspan="3">Network Characteristics</td>
+</tr>
+<tr>
+<td>Network females (mean, sd)</td>
+<td>1.8</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>Network females (count, %)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>None</td>
+<td>14</td>
+<td>15.2</td>
+</tr>
+<tr>
+<td>One</td>
+<td>27</td>
+<td>29.4</td>
+</tr>
+<tr>
+<td>2 or more</td>
+<td>51</td>
+<td>55.4</td>
+</tr>
+<tr>
+<td>Smoking disapproving (mean, sd)</td>
+<td>1.7</td>
+<td>1.6</td>
+</tr>
+<tr>
+<td>Network smokers (mean, sd)</td>
+<td>1.7</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>Quitter&#39;s social impact (mean, sd)</td>
+<td>0.3</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>Social bridging (mean, sd)</td>
+<td>13.8</td>
+<td>3.8</td>
+</tr>
+<tr>
+<td>Social bonding (mean, sd)</td>
+<td>7.6</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td colspan="3">Daily measurements^a</td>
+</tr>
+<tr>
+<td>Days with EMA evening surveys (mean, sd)</td>
+<td>13.9</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>Days forgoing cigarettes (mean, sd)</td>
+<td>8.1</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>Days with conversations about quitting (mean, sd)</td>
+<td>2.9</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<p><sup>a</sup>Estimates are based on 1,283 observations collected from
+the 92 participants over 15 days of observation. Cigs = cigarettes. EMA
+= Ecological Momentary Assessment.</p>
+<p>Table 2. Multilevel Logistic Regression Analysis of Factors
+Associated With Forgoing Smoking</p>
+<table>
+<tbody>
+<tr>
+<td>Variable</td>
+<td>OR^a</td>
+<td colspan="2">(CI 95%)</td>
+<td>p-value</td>
+<td>AOR^{a,b}</td>
+<td colspan="2">(CI 95%)</td>
+<td>p-value</td>
+</tr>
+<tr>
+<td>Sex</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Male</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Female</td>
+<td>2.94</td>
+<td>(0.91 -</td>
+<td>9.50)</td>
+<td>0.071</td>
+<td>1.81</td>
+<td>(0.43 -</td>
+<td>7.56)</td>
+<td>0.418</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>1.02</td>
+<td>(0.97 -</td>
+<td>1.08)</td>
+<td>0.346</td>
+<td>1.02</td>
+<td>(0.96 -</td>
+<td>1.08)</td>
+<td>0.604</td>
+</tr>
+<tr>
+<td>Group</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>US Spanish</td>
+<td>1.87</td>
+<td>(0.47 -</td>
+<td>7.44)</td>
+<td>0.372</td>
+<td>1.57</td>
+<td>(0.28 -</td>
+<td>8.64)</td>
+<td>0.606</td>
+</tr>
+<tr>
+<td>US English</td>
+<td>0.38</td>
+<td>(0.11 -</td>
+<td>1.36)</td>
+<td>0.137</td>
+<td>0.20</td>
+<td>(0.04 -</td>
+<td>0.99)</td>
+<td>0.049</td>
+</tr>
+<tr>
+<td>Daily smoking frequency</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1- 5 cigs</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6-10 cigs</td>
+<td>1.03</td>
+<td>(0.22 -</td>
+<td>4.72)</td>
+<td>0.973</td>
+<td>1.24</td>
+<td>(0.23 -</td>
+<td>6.56)</td>
+<td>0.802</td>
+</tr>
+<tr>
+<td>&gt;10 cigs</td>
+<td>2.08</td>
+<td>(0.44 -</td>
+<td>9.79)</td>
+<td>0.355</td>
+<td>2.89</td>
+<td>(0.47 -</td>
+<td>17.76)</td>
+<td>0.253</td>
+</tr>
+<tr>
+<td>Intention to quit smoking</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>No</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>2.85</td>
+<td>(0.85 -</td>
+<td>9.50)</td>
+<td>0.089</td>
+<td>3.22</td>
+<td>(0.87 -</td>
+<td>11.96)</td>
+<td>0.080</td>
+</tr>
+<tr>
+<td>EMA day</td>
+<td>1.19</td>
+<td>(1.14 -</td>
+<td>1.25)</td>
+<td>&lt;0.001</td>
+<td>1.19</td>
+<td>(1.14 -</td>
+<td>1.25)</td>
+<td>&lt;0.001</td>
+</tr>
+<tr>
+<td>Network Characteristics</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Network females</td>
+<td>1.64</td>
+<td>(1.08 -</td>
+<td>2.47)</td>
+<td>0.019</td>
+<td>2.20</td>
+<td>(1.16 -</td>
+<td>4.18)</td>
+<td>0.016</td>
+</tr>
+<tr>
+<td>Smoking disapproving</td>
+<td>0.95</td>
+<td>(0.68 -</td>
+<td>1.33)</td>
+<td>0.756</td>
+<td>0.64</td>
+<td>(0.40 -</td>
+<td>1.03)</td>
+<td>0.068</td>
+</tr>
+<tr>
+<td>Network smokers</td>
+<td>1.13</td>
+<td>(0.76 -</td>
+<td>1.66)</td>
+<td>0.550</td>
+<td>1.49</td>
+<td>(0.89 -</td>
+<td>2.47)</td>
+<td>0.127</td>
+</tr>
+<tr>
+<td>Quitters&#39; social impact</td>
+<td>4.66</td>
+<td>(1.22 -</td>
+<td>17.73)</td>
+<td>0.024</td>
+<td>6.14</td>
+<td>(1.41 -</td>
+<td>26.75)</td>
+<td>0.016</td>
+</tr>
+<tr>
+<td>Social bridging</td>
+<td>1.03</td>
+<td>(0.89 -</td>
+<td>1.20)</td>
+<td>0.662</td>
+<td>0.84</td>
+<td>(0.66 -</td>
+<td>1.07)</td>
+<td>0.161</td>
+</tr>
+<tr>
+<td>Social bonding</td>
+<td>1.18</td>
+<td>(0.94 -</td>
+<td>1.49)</td>
+<td>0.152</td>
+<td>1.09</td>
+<td>(0.79 -</td>
+<td>1.50)</td>
+<td>0.619</td>
+</tr>
+</tbody>
+</table>
+<p>Note. The analytical sample comprised 1,283 observations collected
+from 92 individuals. Statistically significant values are in bold. Cigs
+= cigarettes. EMA = Ecological Momentary Assessment.</p>
+<p><sup>a</sup>OR (Odds Ratio) and AOR (Adjusted Odds Ratio).</p>
+<p><sup>b</sup>AOR: Adjusted by all variables in the table.</p>
+<p>Social network characteristics were significantly associated with a
+greater likelihood of forgoing cigarettes, including a higher number of
+female contacts within a participant’s network (AOR = 2.20, 95% CI
+[1.16–4.18]). Similarly, participants whose networks showed higher
+levels of quitter’s social impact (i.e., higher values of the E-I
+quitter index weighted by immediacy and strength) had significantly
+higher odds of forgoing cigarettes (AOR = 6.14, 95% CI [1.41– 26.75],
+Table 2). Appendix D indicates that whether the E–I quitter index is
+entered as presented in Eq. 5, or entered by weighing it only by
+strength or immediacy —each in separate regressions controlling for all
+other variables —it is positively and significantly related to foregoing
+cigarettes. This suggests, as predicted by Social Impact Theory, that
+none of these three factors is solely responsible for the observed
+result. Importantly, Appendix C demonstrates that evidence of the social
+impact of quitters remains if it is measured as strength × immediacy ×
+number of quitters, as originally proposed by Social Impact
+Theory.<sup>15,16</sup> We decided to use a more nuanced measure where
+number is based on the E-I index—instead of the simple number of
+quitters—because the E-I index captures a critical nuance: the relative
+number of quitters vs. nonquitters in the ego’s social network.</p>
+<p>Finally, social bonding, defined as access to a tight-knit social
+network, was the only factor positively associated with a greater
+likelihood of engaging in conversations about quitting smoking (AOR =
+1.45, 95% CI [1.05–1.99], Table 3).</p>
+<h2 id="discussion">Discussion</h2>
+<p>This exploratory EMA study, grounded in communication and social
+network theory, shows that social network char acteristics are
+associated with smoking-related behaviors among Mexican-American adults.
+Smokers with more female contacts and influential quitters in their
+networks were more likely to forgo cigarettes—a consistent predictor of
+smoking cessation attempts that is sensitive to exposure to anti-smoking
+messages on cigarette packs.<sup>41,42</sup> As participants completed
+more EMA nightly surveys, they were more likely to forgo cigarettes,
+possibly due to cumulative exposure to efficacy messages, though future
+research should confirm this. Overall, findings suggest that simple
+efficacy messages delivered via text or email can influence early
+behavioral precursors to smoking cessation among Latino/a smokers.
+Moreover, tight-knit networks—characterized by greater closeness, higher
+contact frequency, and stronger kinship—were associated with more
+conversations about quitting, which can help promote cessation attempts.
+24,25</p>
+<p>Table 3. Multilevel Logistic Regression Analysis of Factors
+Associated With Conversations About Quitting Smoking</p>
+<table>
+<tbody>
+<tr>
+<td>Variable</td>
+<td>OR^a</td>
+<td colspan="2">(CI 95%)</td>
+<td>p-value</td>
+<td>AOR^{a,b}</td>
+<td colspan="2">(CI 95%)</td>
+<td>p-value</td>
+</tr>
+<tr>
+<td>Sex</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Male</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Female</td>
+<td>0.61</td>
+<td>(0.18 -</td>
+<td>2.06)</td>
+<td>0.428</td>
+<td>0.74</td>
+<td>(0.17 -</td>
+<td>3.28)</td>
+<td>0.688</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>1.02</td>
+<td>(0.97 -</td>
+<td>1.07)</td>
+<td>0.419</td>
+<td>1.02</td>
+<td>(0.96 -</td>
+<td>1.08)</td>
+<td>0.592</td>
+</tr>
+<tr>
+<td>Group</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>US Spanish</td>
+<td>0.54</td>
+<td>(0.14 -</td>
+<td>2.12)</td>
+<td>0.374</td>
+<td>0.66</td>
+<td>(0.13 -</td>
+<td>3.51)</td>
+<td>0.629</td>
+</tr>
+<tr>
+<td>US English</td>
+<td>0.15</td>
+<td>(0.04 -</td>
+<td>0.58)</td>
+<td>0.006</td>
+<td>0.24</td>
+<td>(0.05 -</td>
+<td>1.25)</td>
+<td>0.091</td>
+</tr>
+<tr>
+<td>Daily smoking frequency</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1- 5 cigs</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6-10 cigs</td>
+<td>0.77</td>
+<td>(0.16 -</td>
+<td>3.63)</td>
+<td>0.739</td>
+<td>0.81</td>
+<td>(0.16 -</td>
+<td>4.17)</td>
+<td>0.805</td>
+</tr>
+<tr>
+<td>&gt;10 cigs</td>
+<td>0.78</td>
+<td>(0.16 -</td>
+<td>3.78)</td>
+<td>0.758</td>
+<td>0.85</td>
+<td>(0.15 -</td>
+<td>4.95)</td>
+<td>0.861</td>
+</tr>
+<tr>
+<td>Intention to quit smoking</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>No</td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ref.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>2.72</td>
+<td>(0.79 -</td>
+<td>9.29)</td>
+<td>0.111</td>
+<td>1.59</td>
+<td>(0.45 -</td>
+<td>5.57)</td>
+<td>0.468</td>
+</tr>
+<tr>
+<td>EMA day</td>
+<td>1.00</td>
+<td>(0.96 -</td>
+<td>1.04)</td>
+<td>0.954</td>
+<td>1.00</td>
+<td>(0.96 -</td>
+<td>1.04)</td>
+<td>0.948</td>
+</tr>
+<tr>
+<td>Network Characteristics</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Network females</td>
+<td>1.52</td>
+<td>(1.00 -</td>
+<td>2.33)</td>
+<td>0.053</td>
+<td>1.43</td>
+<td>(0.78 -</td>
+<td>2.61)</td>
+<td>0.248</td>
+</tr>
+<tr>
+<td>Smoking disapproving</td>
+<td>1.61</td>
+<td>(1.13 -</td>
+<td>2.28)</td>
+<td>0.008</td>
+<td>1.22</td>
+<td>(0.77 -</td>
+<td>1.95)</td>
+<td>0.393</td>
+</tr>
+<tr>
+<td>Network smokers</td>
+<td>1.39</td>
+<td>(0.94 -</td>
+<td>2.06)</td>
+<td>0.097</td>
+<td>1.51</td>
+<td>(0.92 -</td>
+<td>2.48)</td>
+<td>0.105</td>
+</tr>
+<tr>
+<td>Quitter&#39;s social impact</td>
+<td>3.19</td>
+<td>(0.86 -</td>
+<td>11.82)</td>
+<td>0.083</td>
+<td>2.93</td>
+<td>(0.72 -</td>
+<td>11.87)</td>
+<td>0.132</td>
+</tr>
+<tr>
+<td>Social bridging</td>
+<td>1.16</td>
+<td>(1.00 -</td>
+<td>1.35)</td>
+<td>0.051</td>
+<td>0.82</td>
+<td>(0.64 -</td>
+<td>1.05)</td>
+<td>0.115</td>
+</tr>
+<tr>
+<td>Social bonding</td>
+<td>1.49</td>
+<td>(1.16 -</td>
+<td>1.91)</td>
+<td>0.002</td>
+<td>1.45</td>
+<td>(1.05 -</td>
+<td>1.99)</td>
+<td>0.024</td>
+</tr>
+</tbody>
+</table>
+<p>Note. The analytical sample comprised 1,283 observations collected
+from 92 individuals. Statistically significant values are in bold. Cigs
+= cigarettes. EMA = Ecological Momentary Assessment.</p>
+<p><sup>a</sup>OR (Odds Ratio) and AOR (Adjusted Odds Ratio).</p>
+<p><sup>b</sup>AOR: Adjusted by all variables in the table.</p>
+<p>Online and smartphone-based delivery methods provide innovative,
+rapid, and cost-effective ways to disseminate evidence-based smoking
+cessation interventions.<sup>43</sup> In our study, participants were
+more likely to forgo cigarettes as the number of EMA assessments
+increased, suggesting a dose–response relationship. This pattern
+indicates that cumulative exposure to efficacy messages or repeated
+daily engagement may serve as a low-cost, scalable intervention.
+Similarly, a systematic review and meta-analysis of EMA-based
+interventions found positive short-term effects on smoking cessation,
+particularly among participants recruited from clinical settings, who
+were likely more motivated to quit.<sup>43</sup> In contrast, most
+participants in our study (70%) had no intention to quit within six
+months and were recruited from non-clinical settings, underscoring key
+differences from prior EMA research. Notably, intention to quit was not
+significantly correlated with forgoing smoking, suggesting that
+EMA-based interventions may encourage cessation-related behaviors even
+among smokers not planning to quit, which is the majority of smokers.
+Future research should advance our understanding of EMAbased
+interventions by exploring their potential for broader implementation
+among individuals not actively seeking to quit,<sup>44,45</sup> while
+concurrently establishing robust evidence on their long-term
+effectiveness in supporting the precursors of smoking cessation.</p>
+<p>Networks with more female contacts were associated with a greater
+likelihood of forgoing cigarettes, suggesting that women in smokers’
+social environments play a key role in shaping cessation behaviors, and
+healthy behaviors more generally. This may reflect the central roles
+women occupy in families and communities, often providing stronger
+social support than men.<sup>46</sup> Qualitative research among young
+adult Latino/as has shown that concern for family is a primary
+motivation to quit smoking. Some men even reported they would stop
+smoking if their partner became pregnant,<sup>47</sup> and interventions
+targeting expectant fathers have successfully promoted
+cessation.<sup>48</sup> These findings indicate that women may act as
+influential promoters of smoking cessation, though further research is
+needed to clarify the mechanisms of their influence and to develop
+strategies that strengthen the support they provide.<sup>49</sup></p>
+<p>While exposure to smoking within social networks can undermine
+cessation efforts through peer influence or normalization of smoking,
+these same networks can also provide social support to
+quit.<sup>50</sup> In line with predictions from Social Impact
+Theory,<sup>15</sup> higher levels of quitters’ social impact (i.e., a
+multiplicative function of quitters’ strength, immediacy, and number)
+were significantly associated with the likelihood of forgoing
+cigarettes. This is consistent with a systematic review and
+meta-analysis of randomized controlled trials, which found that
+peer-support interventions significantly increased smoking abstinence,
+particularly when the peer was a former smoker.<sup>51</sup></p>
+<p>Our study refines the understanding of nonsmokers’ roles in social
+networks by distinguishing former smokers who have successfully quit.
+This distinction highlights the potential for successful quitters to act
+as influential agents within smokers social networks, serving as
+catalysts for smoking cessation. Existing research has mainly
+highlighted the negative aspects of peer influence, such as how exposure
+to smokers in a person’s social environment can promote smoking
+behavior.<sup>11,13,52</sup> Much less attention has been given to the
+possible positive impact of network members who have quit. This gap
+suggests an underexplored opportunity to leverage these individuals in
+supporting cessation efforts among their close friends and family.</p>
+<p>Our findings support Social Impact Theory as a useful framework for
+understanding how former smokers influence others within social
+networks. In addition to the number of sources (e.g., quitters), the
+theory posits that social influence is further determined by two
+factors: the strength or perceived importance of the quitter’s opinion
+to the focal individual (ego), and immediacy, referring to the physical
+(or temporal) proximity between the ego and the alter. These factors
+interact multiplicatively to produce social impact. In the literature,
+two primary pathways through which quitters promote cessation can be
+identified: first, by exerting subtle social pressure or reinforcing
+quitting as a prevailing social norm, and second, by providing
+informational, emotional, or instrumental support to those considering
+or attempting to quit.<sup>53</sup> Our results further suggest that the
+effectiveness of these mechanisms depends on the number of ties to
+quitters relative to smokers, the strength of those ties, and their
+physical closeness or immediacy. Future research should help elucidate
+the different pathways through which quitters affect the attitudes and
+behaviors of smokers within their networks, and how these social
+influences contribute to quit intentions and cessation, including the
+ways influence is exerted through different types of networks (e.g.,
+interaction networks, sentiment networks, or role relation networks such
+as friendship networks).<sup>54</sup></p>
+<p>Social bonding (i.e., having close, similar social connections) was
+positively associated with having quit-related discussions in our study.
+Such bonding likely creates a safe and trusting context for sharing
+personal experiences, including quitting strategies, success stories,
+and resources.<sup>55,56</sup> Evidence indicated that larger and more
+tightly knit social networks are linked to higher levels of emotional
+support and social influence among adult smokers attempting to
+quit.<sup>56</sup> Moreover, similar individuals (e.g., kin or alters
+who share life experiences with ego) are often more comfortable engaging
+in sensitive conversations,<sup>57</sup> such as those about quitting
+smoking. Additional studies have shown that smokers with supportive
+friends and family are more likely to intend to quit than those lacking
+such support.<sup>58</sup> Together, these findings suggest that social
+bonding not only builds trust but also helps normalize quit-related
+communication within a shared value system.</p>
+<p>English-preferring Mexican Americans were less likely to forgo
+cigarettes (in adjusted models) and engage in quittingrelated
+conversations (in non-adjusted models) compared with both Mexicans
+residing in Mexico and Spanish-preferring Mexican Americans. This
+pattern aligns with evidence that cultural orientation and language
+preference influence interpersonal communication prompted by
+anti-smoking messages.<sup>24,25,59</sup> Language preference often
+reflects levels of acculturation, with English-preferring Mexican
+Americans typically more acculturated to U.S. mainstream culture and
+less embedded in the collectivist communication norms common in Mexican
+and Spanish-speaking communities.<sup>60</sup> Research indicates that
+Mexican smokers, particularly those residing in Mexico, report higher
+levels of interpersonal communication about quitting smoking, possibly
+due to stronger community-oriented values.<sup>25</sup> Moreover,
+Spanish preference among Mexican-origin populations in the U.S. has been
+associated with a greater likelihood of discussing cigarette warning
+labels,<sup>24</sup> suggesting that language use functions not only as
+a marker of acculturation but also as an indicator of communication
+styles and social support structures. Further research should confirm
+this association, as the present study may have limited statistical
+power to draw firm conclusions.</p>
+<p>While our study offers essential insights into smoking behaviors
+among Mexicans and Mexican Americans, several limitations must be
+acknowledged. First, social network characteristics were assessed only
+at baseline, potentially missing shifts in network dynamics over time,
+although we expect such shifts to be minimal given the brief two-week
+study period. Moreover, the observational design cannot definitively
+distinguish between peer influence, peer selection, and unmeasured
+confounding, the latter of which may affect observed associations and
+constrain the ability to draw strong causal inferences in studies of
+this type. Second, the modest sample size and focus on a specific
+Latino/a subgroup may limit both generalizability and statistical power
+to detect differences between subpopulations. This sample size is in the
+range used in many intensive EMA protocols, while also reflecting
+feasibility constraints around recruitment and the exploratory nature of
+this study, which aimed to provide initial evidence on mechanisms
+linking social network characteristics and cessationrelated behaviors.
+Finally, the short study duration limits the ability to draw conclusions
+about long-term cessation outcomes and the role of quit-related
+conversations. However, the 15-day window was intentionally selected to
+capture short-term, real-time processes using EMA, which is best suited
+for examining immediate behavioral responses, momentto-moment
+fluctuations in decision-making, and interpersonal influences. This
+early-phase design allows for precise assessment of proximal indicators
+of cessation—such as forgoing cigarettes and engaging in quit-related
+conversations— that are consistent predictors of subsequent cessation
+attempts, including among Mexicans and U.S. Latino/as. Moreover, the use
+of daily EMA reduces recall bias due to the shorter time frames on which
+people report behaviors, thereby yielding a more accurate approximation
+of those behaviors in “real-time” compared to typical surveys that
+require recall of events that take place over much longer periods of
+time. In this way, the study’s use of intensive data collection over a
+relatively short duration aligns with its focus on early precursors of
+cessation rather than on long-term abstinence trajectories that would
+require larger samples and much longer follow-up to capture. Our design
+involved exposing all participants to the same messages from two
+efficacy domains (response efficacy, self-efficacy), which is suitable
+for an early-phase, mechanism focused EMA study; however, people who
+smoke may require different messages and types of support as they go
+through the quitting process. Future research should investigate
+adaptive, stage-matched, or behavior-responsive message systems that
+tailor message content and delivery based on user data, including
+real-time user engagement.</p>
+<p>This study provides encouraging evidence that delivering daily
+efficacy messages via text or email may help Mexican origin Latino/a
+smokers engage in intermediary behaviors, such as forgoing cigarettes,
+that can lead to cessation attempts even among those not currently
+motivated or attempting to quit. The findings underscore the potential
+value of incorporating principles from Social Impact Theory into
+intervention designs, particularly by leveraging the influence of former
+smokers within social networks, as this subgroup may be especially
+responsive to such interventions. Moreover, because Latino/a populations
+from low SES groups often encounter structural and cultural barriers to
+accessing evidence-based cessation services, digital delivery of brief
+efficacy messages, including those that activate quit support within
+existing networks, may complement and even overcome barriers that
+characterize current clinic-based cessation strategies.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This exploratory EMA study provides evidence that social network
+characteristics may influence smoking cessationrelated behaviors among
+Mexican-origin adults with relatively low education. Having more females
+and former smokers in one’s social network increases the likelihood of
+forgoing cigarettes, an important early indicator of cessation.
+Moreover, individuals in tighter, more supportive networks report more
+conversations about quitting. Our initial findings suggest that
+completing more prior EMA surveys is associated with forgoing
+cigarettes, indicating potential benefits of repeated exposure to simple
+efficacy messages. Together, these findings suggest that brief digital
+efficacy messages, combined with supportive social network structures,
+may promote early steps toward smoking cessation among Latino/a smokers.
+Overall, this work provides guidance for developing network-based
+strategies that leverage key social influences to promote smoking
+cessation among Latinos/a.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>Research reported in this publication was supported by the National
+Cancer Institute of the National Institutes of Health (R01 CA215466- S01
+and R01 CA290828). The content is solely the responsibility of the
+authors and does not necessarily represent the official views of the
+National Institutes of Health</p>
+<h2 id="orcid-ids">ORCID iDs</h2>
+<p>Lizeth Cruz-Jiménez https://orcid.org/0000-0002-3261-2250</p>
+<p>Kevin A. Carson https://orcid.org/0009-0001-5762-2586</p>
+<p>James F. Thrasher https://orcid.org/0000-0001-6418-4863</p>
+<p>Katia Gallegos-Carrillo https://orcid.org/0000-0001-6056-8587</p>
+<p>Dèsirée Vidaña-Pérez https://orcid.org/0000-0002-2503-4739</p>
+<p>Diego F. Leal https://orcid.org/0000-0001-9973-4626</p>
+<h2 id="ethical-considerations">Ethical Considerations</h2>
+<p>All study procedures were approved by the University of South
+Carolina Institutional Review Board (Protocol No. Pro00102530).</p>
+<h2 id="consent-to-participate">Consent to Participate</h2>
+<p>Participants provided electronic informed consent before study
+enrollment.</p>
+<h2 id="author-contributions">Author Contributions</h2>
+<p>Lizeth Cruz-Jiménez contributed to conceptualization, methodology,
+formal analysis, investigation, writing–original draft, writing– review
+and editing. Kevin A. Carson contributed to formal analysis,
+writing–original draft, and writing–review and editing. James F.
+Thrasher contributed to conceptualization, methodology, writing–review
+and editing, and supervision. Katia Gallegos contributed to the
+writing–review, and editing. Dèsirée Vidaña-Pérez contributed to the
+writing–review and editing. Diego F. Leal contributed to
+conceptualization, methodology, formal analysis, investigation,
+writing–original draft, writing–review, editing, and supervision.</p>
+<h2 id="funding">Funding</h2>
+<p>The authors disclosed receipt of the following financial support for
+the research, authorship, and/or publication of this article: This work
+was supported by the National Cancer Institute of the National
+Institutes of Health (R01 CA215466-S01 and R01 CA290828). The content is
+solely the responsibility of the authors and does not necessarily
+represent the official views of the National Institutes of Health</p>
+<h2 id="declaration-of-conflicting-interests">Declaration of Conflicting
+Interests</h2>
+<p>The authors declared no potential conflicts of interest with respect
+to the research, authorship, and/or publication of this article.</p>
+<h2 id="supplemental-material">Supplemental Material</h2>
+<p>Supplemental material for this article is available online.</p>
+<h2 id="references">References</h2>
+<ol type="1">
+<li><p>US Census Bureau. New estimates highlight differences in growth
+between the U.S. Hispanic and non-Hispanic populations. 2024
+https://www.census.gov/newsroom/press-releases/2024/population-estimates-characteristics.html.
+Accessed 10 October 2024.</p></li>
+<li><p>Levinson AH, Pérez-Stable EJ, Espinoza P, Flores ET, Byers TE.
+Latinos report less use of pharmaceutical aids when trying to quit
+smoking. Am J Prev Med. 2004;26(2):105-111.
+doi:10.1016/j.amepre.2003.10.012.</p></li>
+<li><p>Babb S, Malarcher A, Asman K, et al. Disparities in Cessation
+Behaviors Between Hispanic and Non-Hispanic White Adult Cigarette
+Smokers in the United States, 2000–2015. Prev Chronic Dis.
+2020;17:190279. doi:10.5888/pcd17.190279.</p></li>
+<li><p>Lee J, Contrera Avila J, Ahluwalia JS. Differences in cessation
+attempts and cessation methods by race/ethnicity among US adult smokers,
+2016–2018. Addict Behav. 2023;137:107523.
+doi:10.1016/j.addbeh.2022.107523.</p></li>
+<li><p>Assari S, Sheikhattari P. Social determinants of successful
+smoking cessation: an eight-year analysis of Population Assessment of
+Tobacco and Health (PATH) data. J Biomed Life Sci. 2024;4(2):60-70.
+doi:10.31586/jbls.2024.1070.</p></li>
+<li><p>Mijs JJB, Roe EL. Is America coming apart? Socioeconomic
+segregation in neighborhoods, schools, workplaces, and socia networks,
+1970–2020. Sociol Compass. 2021;15(6):e12884.
+doi:10.1111/soc4.12884.</p></li>
+<li><p>Smith KP, Christakis NA. Social Networks and Health. Annu Rev
+Sociol. 2008;34(1):405-429. doi:10.1146/annurev.soc.34.040507
+134601.</p></li>
+<li><p>Valente TW, Pitts SR. An Appraisal of Social Network Theory and
+Analysis as Applied to Public Health: Challenges and Opportunities. Annu
+Rev Public Health. 2017;38(1):103-118.
+doi:10.1146/annurev-publhealth-031816-044528.</p></li>
+<li><p>Guilbeault D, Centola D. Networked collective intelligence
+improves dissemination of scientific information regarding smoking
+risks. PLoS One. 2020;15(2):e0227813. doi:10.1371/journal.pone.0227813.
+Zollo F, ed. </p></li>
+<li><p>Christakis NA, Fowler JH. The Collective Dynamics of Smoking in a
+Large Social Network. N Engl J Med. 2008;358(21): 2249-2258.
+doi:10.1056/NEJMsa0706154.</p></li>
+<li><p>Blok DJ, de Vlas SJ, van Empelen P, van Lenthe FJ. The role of
+smoking in social networks on smoking cessation and relaps among adults:
+A longitudinal study. Prev Med (Baltim). 2017;99:105-110.
+doi:10.1016/j.ypmed.2017.02.012.</p></li>
+<li><p>Moore S, Teixeira A, Stewart S. Effect of Network Social Capital
+on the Chances of Smoking Relapse: A Two-Year Follow-up Study of
+Urban-Dwelling Adults. Am J Public Health. 2014;104(12):e72-e76.
+doi:10.2105/AJPH.2014.302239.</p></li>
+<li><p>Takagi D, Yokouchi N, Hashimoto H. Smoking behavior prevalence in
+one’s personal social network and peer’s popularity: A population-based
+study of middle-aged adults in Japan. Soc Sci Med. 2020;260:113207.
+doi:10.1016/j.socscimed.2020.113207.</p></li>
+<li><p>Gondal N. Diffusion of innovations through social networks:
+Determinants and implications. Sociol Compass. 2023;17(5):e13084
+doi:10.1111/soc4.13084.</p></li>
+<li><p>Latané B. The psychology of social impact. Am Psychol.
+1981;36(4):343-356. doi:10.1037/0003-066X.36.4.343.</p></li>
+<li><p>Latané B. Dynamic Social Impact: The Creation of Culture by
+Communication. J Commun. 1996;46(4):13-25. doi:10.1111/j.1460-
+2466.1996.tb01501.x.</p></li>
+<li><p>Kitts JA, Shi Y. Toward an Analytic Framework of Social
+Influence: Behavioral Diffusion. 2018. https://people.umass.edu/jkitts
+pubs/NationalAcademyofSciences_2018.pdf. Accessed 21 January
+2026.</p></li>
+<li><p>Krackhardt D, Stern RN. Informal Networks and Organizational
+Crises: An Experimental Simulation. Soc Psychol Q. 1988;51(2): 123-140.
+doi:10.2307/2786835.</p></li>
+<li><p>Bojanowski M, Corten R. Measuring segregation in social networks.
+Soc Networks. 2014;39(1):14-32. doi:10.1016/J.SOCNET
+2014.04.001.</p></li>
+<li><p>Leal DF. Locating Cultural Holes Brokers in Diffusion Dynamics
+Across Bright Symbolic Boundaries. Sociol Methods Res. 2025;
+00491241251322517. doi:10.1177/00491241251322517. Published online March
+19.</p></li>
+<li><p>Southwell BG, Yzer MC. When (and Why) Interpersonal Talk Matters
+for Campaigns. Communication Theory. 2009;19(1):1-8.
+doi:10.1111/j.1468-2885.2008.01329.x.</p></li>
+<li><p>Southwell BG, Yzer MC. The roles of interpersonal communication
+in mass media campaigns. Ann Int Commun Assoc. 2007;31: 419-462. In:
+Beck CS, ed. Communication Yearbook. Lawrence Erlbaum
+Associates.</p></li>
+<li><p>Morgan JC, Golden SD, Noar SM, et al. Conversations about
+pictorial cigarette pack warnings: Theoretical mechanisms of influence.
+Soc Sci Med. 2018;218:45-51.
+doi:10.1016/j.socscimed.2018.09.063.</p></li>
+<li><p>Lambert VC, Davis RE, Popova L, Thrasher JF. Cessation
+Conversations and Quit Attempts: Differences by Ethnicity and Language
+Preference. Am J Health Behav. 2020;44(4):473-487.
+doi:10.5993/AJHB.44.4.9.</p></li>
+<li><p>Thrasher JF, Abad-Vivero EN, Huang L, et al. Interpersonal
+communication about pictorial health warnings on cigarette packages:
+Policy-related influences and relationships with smoking cessation
+attempts. Soc Sci Med. 2016;164:141-149. doi:10.1016/j
+socscimed.2015.05.042.</p></li>
+<li><p>Van Den Putte B, Yzer M, Southwell BG, De Bruijn GJ, Willemsen
+MC. Interpersonal communication as an indirect pathway for the effect of
+antismoking media content on smoking cessation. J Health Commun.
+2011;16(5):470-485. doi:10.1080/10810730 2010.546487.</p></li>
+<li><p>Morgan JC, Southwell BG, Noar SM, Ribisl KM, Golden SD, Brewer
+NT. Frequency and Content of Conversations About Pictoria Warnings on
+Cigarette Packs. Nicotine Tob Res. 2018;20(7):882-887.
+doi:10.1093/ntr/ntx180.</p></li>
+<li><p>Hall MG, Peebles K, Bach LE, Noar SM, Ribisl KM, Brewer NT.
+Social Interactions Sparked by Pictorial Warnings on Cigarette Packs.
+Int J Environ Res Public Health. 2015;12(10):13195-13208.
+doi:10.3390/IJERPH121013195.</p></li>
+<li><p>Thrasher JF, Islam F, Davis RE, et al. Testing Cessation Messages
+for Cigarette Package Inserts: Findings from a Best/Worst Discrete
+Choice Experiment. Int J Environ Res Public Health. 2018;15(2):282.
+doi:10.3390/ijerph15020282.</p></li>
+<li><p>Thrasher JF, Anshari D, Lambert-Jessup V, et al. Assessing
+Smoking Cessation Messages with a Discrete Choice Experiment. To Regul
+Sci. 2018;4(2):73-87. doi:10.18001/TRS.4.2.7.</p></li>
+<li><p>Loud EE, Lambert VC, Porticella N, Niederdeppe J, Thrasher JF.
+Evaluating Cigarette Pack Insert Messages with Tips to Quit. To Regul
+Sci. 2021;7(3):203-209. doi:10.18001/TRS.7.3.5.</p></li>
+<li><p>Thrasher JF, Hackworth EE, Ferguson SG, et al. Differential
+Responses to Cigarette Package Labeling Alternatives Among Adults Who
+Smoke: Results From a Randomized Trial. Nicotine Tob Res.
+2024;26(12):1646-1655. doi:10.1093/ntr/ntae139.</p></li>
+<li><p>Lambert VC, Ferguson SG, Niederdeppe J, et al. Self-reported
+attention and responses to cigarette package labels at the end of a
+two-week randomized trial of cigarette package labeling configurations.
+Tob Induc Dis. 2024;22:1-11. doi:10.18332/tid/189198</p></li>
+<li><p>Baumeister RF, Vohs KD, Funder DC. Psychology as the Science of
+Self-Reports and Finger Movements: Whatever Happened to Actual Behavior?
+Perspect Psychol Sci. 2007;2(4):396-403.
+doi:10.1111/j.1745-6916.2007.00051.x.</p></li>
+<li><p>Shiffman S, Stone AA, Hufford MR. Ecological Momentary
+Assessment. Annu Rev Clin Psychol. 2008;4(1):1-32. doi:10.1146/
+annurev.clinpsy.3.022806.091415.</p></li>
+<li><p>Ferguson SG, Shiffman S. Using the methods of ecological
+momentary assessment in substance dependence research–smoking cessation
+as a case study. Subst Use Misuse. 2011;46(1):87-95.
+doi:10.3109/10826084.2011.521399</p></li>
+<li><p>Pachucki MC, Leal DF. Is having an educationally diverse social
+network good for health? Network Science. 2020;8(3):418-444
+doi:10.1017/nws.2020.14.</p></li>
+<li><p>Perry BL, McConnell WR, Peng S, et al. Social Networks and
+Cognitive Function: An Evaluation of Social Bridging and Bonding
+Mechanisms. Gerontologist. 2022;62(6):865-875.
+doi:10.1093/geront/gnab112. In: Meeks S, ed. </p></li>
+<li><p>Burt RS. Structural Holes: The Social Structure of Competition.
+1995. Harvard University Press. Cambridge. https://www.hup.
+harvard.edu/books/9780674843714.</p></li>
+<li><p>Thompson M, Fong G, Boudreau C, et al. Methods of the ITC Four
+Country Smoking and Vaping Survey, wave 1 (2016). Addiction
+2019;114((suppl Suppl 1):S6-s14. doi:10.1111/add.14528.</p></li>
+<li><p>Cho YJ, Thrasher JF, Swayampakala K, et al. Does Reactance
+against Cigarette Warning Labels Matter? Warning Label Responses and
+Downstream Smoking Cessation amongst Adult Smokers in Australia, Canada,
+Mexico and the United States. PLoS One. 2016; 11(7):e0159245.
+doi:10.1371/journal.pone.0159245. In: Gorlova OY, ed. </p></li>
+<li><p>Partos TR, Borland R, Thrasher JF, et al. The predictive utility
+of micro indicators of concern about smoking: Findings from the
+International Tobacco Control Four Country study. Addictive Behaviors.
+2014;39(8):1235-1242. doi:10.1016/j.addbeh.2014 04.001.</p></li>
+<li><p>Eghdami S, Ahmadkhaniha HR, Baradaran HR, Hirbod-Mobarakeh A.
+Ecological momentary interventions for smoking cessation: a systematic
+review and meta-analysis. Soc Psychiatry Psychiatr Epidemiol.
+2023;58(10):1431-1445. doi:10.1007/s00127-023- 02503-2.</p></li>
+<li><p>McClure JB, Heffner JL, Krakauer C, Mun S, Klasnja P, Catz SL.
+Feasibility, Acceptability, and Potential Impact of a Novel mHealth App
+for Smokers Ambivalent About Quitting: Randomized Pilot Study. JMIR
+Mhealth Uhealth. 2023;11:e46155. doi:10 2196/46155.</p></li>
+<li><p>Businelle MS, Benson L, Hébert ET, et al. Project phoenix: Pilot
+randomized controlled trial of a smartphone-delivered intervention for
+people who are not ready to quit smoking. Drug Alcohol Depend.
+2024;260:111351. doi:10.1016/j.drugalcdep.2024.111351</p></li>
+<li><p>Read JG, Gorman BK. Gender and Health Inequality. Annu Rev
+Sociol. 2010;36(1):371-386. doi:10.1146/annurev.soc.012809
+102535.</p></li>
+<li><p>Foraker RE, Patten CA, Lopez KN, Croghan IT, Thomas JL. Beliefs
+and attitudes regarding smoking among young adult Latinos: A pilot
+study. Prev Med (Baltim). 2005;41(1):126-133.
+doi:10.1016/j.ypmed.2004.10.018.</p></li>
+<li><p>Khanal S, Miani C, Finne E, Zielke J, Boeckmann M. Effectiveness
+of behavior change interventions for smoking cessation among expectant
+and new fathers: findings from a systematic review. BMC Public Health.
+2023;23(1):1812. doi:10.1186/s12889-023- 16713-5.</p></li>
+<li><p>Faseru B, Richter KP, Scheuermann TS, Park EW. Enhancing partner
+support to improve smoking cessation. Cochrane Database Syst
+Rev. 2018;2018(9):CD002928. doi:10.1002/14651858.CD002928.pub4.</p></li>
+<li><p>Burgess-Hull AJ, Roberts LJ, Piper ME, Baker TB. The social
+networks of smokers attempting to quit: An empirically derived and
+validated classification. Psychol Addict Behav. 2018;32(1):64-75.
+doi:10.1037/adb0000336.</p></li>
+<li><p>Yuan P, Westmaas JL, Thrul J, Toussaert S, Hilton JF, White JS.
+Effectiveness of Peer-Support Interventions for Smoking Cessation: A
+Systematic Review and Meta-analysis. Nicotine and Tobacco Research.
+2023;25(9):1515-1524. doi:10.1093/ntr ntad059.</p></li>
+<li><p>Mercken L, Snijders TAB, Steglich C, de Vries H. Dynamics of
+adolescent friendship networks and smoking behavior: Social network
+analyses in six European countries. Soc Sci Med. 2009;69(10):1506-1514.
+doi:10.1016/j.socscimed.2009.08.003.</p></li>
+<li><p>Westmaas JL, Bontemps-Jones J, Bauer JE. Social support in
+smoking cessation: Reconciling theory and evidence. Nicotine Tob Res.
+2010;12(7):695-707. doi:10.1093/ntr/ntq077.</p></li>
+<li><p>Kitts JA, Leal DF. What is(n’t) a friend? Dimensions of the
+friendship concept among adolescents. Social Networks. 2021;66: 161-170.
+https://linkinghub.elsevier.com/retrieve/pii/S0378873321000125.</p></li>
+<li><p>Li C, Li H, Suomi R, Liu Y. Knowledge sharing in online smoking
+cessation communities: a social capital perspective. Internet Research.
+2022;32(7):111-138. doi:10.1108/INTR-03-2020-0113.</p></li>
+<li><p>Lakon CM, Zheng Y, Pechmann C. Social network tie functions of
+social support and social influence and adult smoking abstinence. PLoS
+One. 2024;19(3):e0296458. doi:10.1371/journal.pone.0296458. In: Hensel
+DJ, ed. </p></li>
+<li><p>Small ML, Brant K, Fekete M. The Avoidance of Strong Ties. Am
+Sociol Rev. 2024;89(4):615-649. doi:10.1177/ 00031224241263602.</p></li>
+<li><p>Soulakova JN, Tang CY, Leonardo SA, Taliaferro LA. Motivational
+Benefits of Social Support and Behavioural Interventions for Smoking
+Cessation. J Smok Cessat. 2018;13(4):216-226.
+doi:10.1017/jsc.2017.26.</p></li>
+<li><p>Arillo-Santillán EJ, Rodríguez-Bolaños R, Gallegos-Carrillo K,
+Monterrubio-Flores E, Vidaña-Pérez D, Thrasher JF. Conversations about
+cigarette health warning labels and smoking cessation attempts in
+Mexico. Salud Publica Mex. 2024;67(1):74-82. doi:
+10.21149/16044</p></li>
+<li><p>Lara M, Gamboa C, Kahramanian MI, Morales LS, Hayes BDE.
+Acculturation and Latino health in the United States: a review of the
+literature and its sociopolitical context. Annu Rev Public Health.
+2005;26(1):367-397. doi:10.1146/annurev.publhealth.26
+021304.144615.</p></li>
+</ol>
+</body>
+</html>
