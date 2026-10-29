@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<h1 id="introduction">Introduction</h1>
+<p>A few years ago I attended a conference in Liverpool, UK. The scope
+of the meeting was international journalism, and thus included an
+extraordinarily colorful palette of participants from diferent parts of
+the world. However, I definitely missed my fellow Eastern European
+colleagues and it was only on the third day that I heard a Hungarian
+word for the first time. Unfortunately, it was not part of a
+sophisticated academic argument, but the Hungarian version of the
+F-bomb, since the cleaning woman had accidentally dropped something
+outside the conference hall and felt that she had to label the situation
+in her mother tongue. That evening, I checked some statistics and found
+that there are about 500,000 Hungarians in the United Kingdom, most of
+them in the capital city, but typically live in low-income areas and
+would be unlikely to frequent prestigious places like conference halls
+and other venues of academic meetings.</p>
+<p>Of course, this book is not about my personal experiences, but I will
+never deny the fact that academic inequality as it is experienced by all
+researchers of the Global South and by all scholars without an elite
+education is the fuel of research on power relations in global academia
+for many scholars, including myself. It is no surprise that most
+researchers in women’s studies and feminism are female, most academics
+writing about gender and LGBTQ inequality are members of the LGBTQ
+community, and that the social movements against racism have been
+initiated by people with an ethnic background other than white.
+Similarly, the systematic bias against Global South academics is one
+that is mostly investigated by Global South authors, not only because
+they are the devalued, often exploited participants of this global
+inequality, but also because Global North academics often have the
+privilege of never having to encounter the problems of their Global
+South peers. This does not mean, of course, that Global North academics
+are evil or uncaring; instead they are, to some extent, blind to the
+problems of their Global South colleagues. While this is the typical
+case, there are many Global North academics that face similar problems
+as their geopolitically disadvantaged peers, namely elitism, exclusion
+and exploitation. These are the academics that work in a
+periphery-within-the-center position, either because they are working in
+downgraded institutions such as state universities or community colleges
+maintained for the masses, because they belong to a disadvantaged
+minority or are from the lower social classes (Arunachalam 2002;
+Bourdieu 1996). Thus, academic inequalities, academic oppression and
+academic exploitation could be observed and experienced on both
+geopolitical and societal levels. Consequently, I consider it my duty to
+define my position as a scholar working on the topic of academic
+inequalities. I come from a Hungarian working class family, and
+consequently, I have a typical education pattern of relatively talented
+working-class people: attending local schools and a state university
+reserved for the mass education of the non-elite classes. As soon as I
+had finished my Ph.D., I started to perceive the consequences of my
+peripherality. It was extremely hard to find an academic job, since even
+in Hungary, academic positions are—albeit informally—maintained for the
+elite. It was also extremely dificult to publish in elite international
+journals. On one occasion, I submitted a paper to a not too highly-rated
+but still internationally recognized journal that desk-rejected my
+article. A few months later, I found out that the same journal had
+published an article very similar to mine by an American professor, one
+which was not only considerably lower in quality than my proposed title,
+but even contained some paragraphs from my paper. When I wrote the
+editor about this issue, I was astonished by the reply: the editor could
+imagine how frustrating it is to be an Eastern</p>
+<p>European scholar who wants international contribution and has been
+rejected, but to please not bother them again. It was around that time
+that I decided to dedicate all of my scholarly interest to the problem
+of academic inequalities. In a very early stage of my research, I
+realized that my own personal experiences as a peripheral scholar
+seeking international recognition coincided to a great degree with the
+experiences of many other scholars in the same position (Ake 1982; Aman
+2016; Bandyopadhyay 2017; Canagarajah 2002; Shi-xu 2009). After this
+discovery, I wanted to understand the processes of elitism and
+geopolitical exclusion—how these work in a way that is clearly visible
+for the oppressed but, in most cases, totally invisible for the
+beneficiaries of the system.</p>
+<p>This social blindness is detrimental not only to the oppressed social
+groups, but to all of society. By “socially blind”, I mean that most
+members of the dominant group—including professionals—truly think that
+the members of the underprivileged groups somehow fall below the
+standard. Aristotle, one of the greatest Western philosophers of all
+time, honestly thought that women are less intelligent than men and that
+they are even not adults, but eternal children. In his Politics, he
+maintained the idea that women should be governed like children, and the
+only diference between women and children is that children—of course
+only boys and never girls—will grow up one day. The father of Western
+rationalism, René Descartes, wrote in the preface of his Discourse on
+the Method that he had written his paper in a style which would allow
+even women to understand something from it, but that he hoped that more
+intelligent readers would also find it valuable. And we should not
+forget that, even in enlightened Western democracies, women were unable
+to vote until quite recently on the basis that they do not have the
+appropriate intellectual capacity to assess political issues. In order
+to be taken seriously, women had to, and sometimes still have to, act
+like men: they had to wear suits, short hair to become similar to their
+male peers. In the same countries, people with a non-white ethnic
+background were, and in many cases, still are regarded as less valuable
+than their white counterparts. For many years, for example, it was
+maintained that African-Americans have lower IQs than whites (Rushton
+and Jensen 2005). Accordingly, black and other non-white individuals
+have had to, and sometimes they stil have to, act like their white peers
+in order to achieve recognition. The very same phenomenon can be seen
+among LGBTQ people. We should not forget that homosexuality was
+considered a deadly sin for a long time, and in later years it was
+regarded as a mental illness. It was only by the second half of the
+twentieth century, in 1973, when the American Psychological Association
+removed homosexuality from the Diagnostic and Statistical Manual, where
+it had been listed under the mental illness heading of paraphilia.
+Accordingly, homosexuals were somewhat tolerated as long as they
+appeared to be heterosexuals or, as a minimum, did not appear to be
+homosexual. As a matter of fact, in most countries, LGBTQ people still
+do not have the same rights as their straight fellow citizens, and can
+only be themselves behind closed doors.</p>
+<p>In brief: women were disqualified for a long time on the basis that
+they failed to meet the standards of men; people with non-white ethnic
+backgrounds failed to accomplish the standards of white men: and LGBTQ
+people were discriminated against on the understanding that they do not
+meet heterosexual standards. The main purpose of this book is to show
+that, similarly to other unjust exclusions, we should examine the
+serious discrimination against Global South academics, who are usually
+regarded as people who do not comply with the standards of the Global
+North, and against lower class academics that do not share all of the
+cultural, epistemic and academic values of their elite colleagues.</p>
+<p>But why so many people are blind to the problems of the underrated?
+The point here is that most members of the dominant part of society are
+almost always convinced that the social order is fair and square, and
+that if they are in a privileged position, it is due to their merit and
+value. Louisa Ha, for example, the distinguished communication professor
+and editor-in-chief of Journalism and Mass Communication Quarterly, one
+of the oldest and most prestigious periodicals in the field of
+communication and media studies, compared the world of global academia
+to the Olympic Games. She said that in both domains of global
+competition, we are judged based on global standards set by our peers in
+the field through a refereed process.</p>
+<p>More touching stories cover the athletes as human beings and
+individuals: how their talents were discovered by their coaches or
+parents, how they struggled, overcame dificulties, achieved and
+maintained their success.</p>
+<p>The success metrics for scholars are typically research publication
+citations, research awards, fellowships, and productivity ranking.
+Recently, altmetrics such as news media coverage and social media
+mention of research are also gaining importance. Similarly, published
+works or research award glamor only represent a small portion of the
+researcher’s work. Many behind-the scene revisions, coordination, failed
+projects, prior rejections, labor in data collection and analysis,
+background research that culminates many years, and many more other
+things are not known to the public. In refereed journal publications,
+how authors survive through the review process and improving their
+manuscript, how reviewers act as the anonymous coaches, and how the
+editor helps authors to get the best out of the manuscript are all a
+story of its own. (Ha 2016, p. 725)</p>
+<p>However suggestive and lively this description of the field of
+academy is, it is, unfortunately, not real. As I will show in the
+present book, especially in Chap. 3, the world of science—especially in
+social sciences and the humanities—is similar to a hypothetical Olympic
+Games where at least 90% of gold medals are guaranteed to Western and
+especially American competitors, where athletes must wear Western
+clothing, or risk being disqualified before even entering the
+competition, and where they can only reach the Olympic podium if they
+look exactly like a Western (preferably American) athlete.</p>
+<p>Although the main concern of this book is, at first sight, the world
+of global academia, and especially social sciences, I will argue that
+the moral of the story is much broader. It is about a need for social
+change to ensure that Global South competitors are equally respected on
+the global job market, in the cultural industry and, of course, in the
+field of science. As we will see later in this book, Global South
+workers are systematically employed at levels below their competence and
+value in almost every segment of academic pursuit. What is more, most
+Global North and even Global South colleagues usually think that this
+is, at least in a “What can we do” sense, an inevitable aspect of
+globalization. In this present work, I will show that the
+underestimation of Global South employees in the world-system of
+transnational labor and especially in knowledge production on the
+grounds of their origin being the Global South is no less unfair than
+the underestimation of women or diferent minority groups by reason of
+their identity. If the global job market in general, and the world of
+global academia in particular, want to claim to be merit-based, they
+will have to jettison their preconceptions against Global South authors
+just as they have started (but not yet finished) abandoning their
+prejudices against women, ethnic groups and LGBTQ people. In this way,
+global academia might provide a positive example to other fields such as
+politics, economy, education and any areas of global collaboration that
+are subject to international power relations.</p>
+<p>One can say that the Global South is not a homogenous, unstructured
+mass; it is rather a general term for world regions (in our case, in
+terms of academic production) with diferent levels and trajectories of
+development, even in a structural sense. For example, Latin America has
+been able to set up a huge alternative and almost autonomous academic
+hub which has increasing weight without essentially increasing its
+Global North capital. As opposed to Latin America, China does the
+opposite: instead of establishing an autonomous academic hub, it tries
+to acquire as much Global North capital as it can. However, in terms of
+inequalities, all Global South regions should face the serious biases in
+global academia. While most edited volumes on the similar topic
+concentrate on diferent world regions individually (Heilbron
+et al. 2018; Kuhn and Vessuri 2016; Keim et al. 2014), this present
+monograph deals with both general features of the Global South and with
+the alternative paths of diferent world regions of the periphery so it
+can discuss diferent world regions in a common conceptual framework.
+Thus, this book is the first attempt to provide a monographic view on
+the issue of global inequality in the world-system of knowledge
+production as it is represented in social sciences.</p>
+<h2 id="some-remarks-on-terminology-and-classification">Some Remarks
+on Terminology and Classification</h2>
+<p>In this book, I have generally followed the categorizations used in
+the fields of economics, political science or international relations.
+However, my approach is not always in line with the divisions of the
+world used by other scholars. In the following lines, I will briefly
+introduce my categorization scheme and explain why I have used it.</p>
+<p>A comprehensive discussion on the division or conceptualization of
+the world into the Global North and the Global South would require a
+separate book. Thus I have decided to define my understanding of this
+classification and simply present my categorization scheme. It
+corresponds to most decolonial conceptions of the Global North/Global
+South divide (Amin 2011; Kiely 2016; Parnell and Oldfield 2014; Rigg
+2007), and also correlates with the economic understanding of this issue
+(Amin 1997; Soederberg 2004). In short, following both dependency
+theories and world-systems research, I considered “Global South” as a
+generic term for the geopolitically dependent, typically colonized and
+historically exploited regions of the world. It is typical to count
+Latin America, Africa, the Middle East and non-Westernized or less
+wealthy Asia (often called “developing Asia”) as parts of the Global
+South, and to this list, I add Eastern Europe. I will argue for this
+categorization of Eastern Europe as part of the Global South later in
+this book, here I only refer to its dependent position in the European
+context both in terms of economics and knowledge production. In contrast
+to the regions and countries of the Global South, the Global North
+typically refers to those regions that were—and from several points of
+view, still are—the exploiters of the South economically and
+academically. Since most parts of this book directly address how the
+Global North practices academic exploitation and knowledge colonization,
+here I only present the list of world regions that, in my understanding,
+are part of the Global North: the US, the UK, Western Europe (including
+Scandinavia), Canada, Australia and New Zealand, Israel, as well as the
+developed Asian countries like Japan, Taiwan, Hong Kong, Singapore and
+South Korea.</p>
+<p>Maybe the most controversial issue is my categorization of the Latin
+hub, usually referred to as Latin America. I have to point out at the
+beginning of the book that, as in the case of other classifications, I
+have followed the empirical results of my scientometric analyses. There
+are several legitimate arguments for referring to the “language divide”
+between Brazil and Hispanic America, and thus it is problematic to group
+them in a common Latin hub (Ávila Reyes 2017; Bazerman 2016; Navarro
+et al. 2016). The “language divide” results in fewer cross-citations
+between</p>
+<p>Brazil and Hispanic America, less non-Brazilian authors in Brazilian
+journals, and less scholarly collaborations between regions. Moreover,
+as Navarro points out, Chile, for instance, has a state-funded policy
+that pays private and public institutions direct money for each paper
+that gets published in WoS-indexed journals. Therefore Chile’s
+WoS-indexed publications have more than doubled in a decade (Navarro
+2020, in press). Brazil, on the other hand, has its own international
+journal indexing system that is not exclusively based on impact factor,
+and Brazilian journals can be found in the same category as top
+international journals. There are also diferences in the research efort
+of the diferent countries. In particular, Brazil stands out in terms of
+demographics (+200 million people) and research investment, while other
+countries have limited expenditures on research and little to no indexed
+journals.<sup>1</sup> However, when we take a closer look at the
+academic cooperation between Brazil and Hispanic America, we can find
+suficient justification for categorizing them in a common Latin hub.
+While it is true that Hispanic American countries cooperate with each
+other more frequently than they do with Brazil, they still have more
+joint academic endeavors with Brazil than with any other countries
+(except Spain). Considering three major Brazilian journals in
+communication (Informacao e Sociedade, Texto Livre and Transinformacao),
+Scopus shows that Brazil is followed by Spain, Portugal, and Latin
+American countries like Colombia, Mexico, Uruguay, Chile and Argentina
+in both author and citation counts. Most of the authors published in the
+prestigious Brazilian journal Cadernos de Pesquisa are from Brazil, but
+they are followed by authors from Portugal, Argentina, Chile and Spain.
+A review of citations shows a similar pattern, with most cita tions to
+this journal coming from Brazil, followed by citations from Chile,
+Spain, Portugal and Colombia. Consequently, at least in terms of
+scientometrics, there clearly is a Latin American hub, and, augmented by
+Spain and Portugal, it forms a strong Ibero-American hub. The
+Organization of Ibero-American States, including all Spanish- and
+Portuguese-speaking countries, deliberately seeks to promote
+intergovernmental cooperation among its member nations, primarily in the
+fields of education, science, technology and the arts.<sup>2</sup> Thus,
+at least in scientometrics, one could legitimately speak of a Latin hub
+that includes both Brazil and the Hispanic American countries, and of an
+Ibero-American hub that extends to Portugal and Spain as well. But,
+since both Portugal and Spain are strongly connected to Western Europe
+in a scientometric sense, I have decided to use the term Latin (and not
+Ibero-American) hub, and to categorize Spain and Portugal as Western
+European countries.</p>
+<p>Other contested aspects of categorization might be my decision to
+include China as part of developing Asia, Israel as part of the center,
+and transcontinental Turkey as a Middle Eastern country. Among these
+issues, the most important is the case of China. One can justly argue
+that, in the scientometric sense, China has not only caught up to the
+Western world, but in several disciplines, has even overtaken the most
+successful countries such as the US or the UK. The tendency is quite
+clear: in a few years, China will be the leading producer of global
+knowledge. However, if we take a closer look at the data provided by
+Scimago, we can see that the Chinese contribution has increased mainly
+in a quantitative sense, as measured in the number of published papers.
+In this respect, China performs extremely well even in the social
+sciences, since it is the third most successful country (behind the US
+and the UK) in terms of the number of published papers. But the
+qualitative dimension is much less impressive: the citation per document
+index of China is relatively low, as China ranks 59th on the global
+list, and only 13th on the list of countries with the highest H-index.
+Nevertheless, I am sure that this is the last time that I will count
+China as part of developing Asia in the context of global knowledge
+production, and that within a few years, it will become one of the most
+important players on the field.</p>
+<p>From a scientometric perspective, Israel is much closer to the center
+than to the periphery, and in particular, closer to the US than to any
+Middle Eastern countries. Israel is the typical example of the “center
+within the periphery” phenomenon: its role in global knowledge
+production is similar to the most successful Western countries in
+aspects such as publication output, international collaboration or the
+prestige of its higher education institutions. It should also be noted
+that Israel is the</p>
+<p>OECD country with the highest share of GDP spending on research and
+development (4.91% in 2018).<sup>3</sup> Thus, it is reasonable to
+classify Israel as part of the global core in knowledge production.
+Finally, Turkey is transcontinental with several connections to both
+Europe and the Middle East. In this case, I followed Scimago’s
+categorization that counts Turkey as part of the Middle East.</p>
+<p>Another categorization problem emerges when we want to define social
+sciences. One can justifiably claim that “social sciences” is a very
+inclusive umbrella term that covers a legion of disciplines, ranging
+from those closer to the natural sciences (such as experimental
+psychology and linguistics), to those that bear more similarity to the
+arts and humanities (such as cultural studies). Since there is no
+general consensus on which disciplines the category of social sciences
+should include, I again used Scimago’s classification, whereby (as in
+most scientometric studies), the social sciences are those that have
+become typically embedded in  local cultures and epistemologies such as
+cultural studies, development studies, gender studies, communication,
+political science and similar disciplines. Accordingly, my conception of
+social sciences does not include those disciplines with strong
+methodological and epistemological ties to natural sciences such as
+formal linguistics, social psychology, psychology, economics and so
+on.</p>
+<h2 id="the-scope-of-the-book">The Scope of the Book</h2>
+<p>Generally, my analysis concentrates on the realm of social sciences,
+because these are the disciplines where cultural, epistemic and
+methodological diferences between diferent geopolitical locations play
+crucial roles insomuch as they cause systemic biases against non-core
+world regions and non-elite agents of the system of knowledge
+production, including individual agents such as researchers, and
+collective agents like higher education institutions. Put simply: while
+the development of mathematics is almost independent of any specific
+culture, and natural sciences (excluding infrastructural and financial
+inequalities) function in diferent geopolitical locations in a very
+similar way, social sciences function almost as many ways as there are
+diferent geopolitical locations. These diferences relate not only to the
+thematic foci of research actions, but also to the applied theoretical
+frameworks, methods and rhetoric of the interpretation of the results.
+As we will see later in this book, these cultural, epistemic and
+rhetorical diferences between geopolitical locations do not result in a
+diverse, inclusive and pluralistic global academic field, but instead
+help to develop an elitist, Westernized world-systemic structure of
+knowledge production. In this transnational academy, central agents have
+substantive control over the whole system, and though this control, they
+systemically exclude the non-elite social classes and the geopolitical
+periphery from global knowledge production. These phenomenon is labelled
+by many names, such as knowledge colonization (Mignolo 2011), academic
+imperialism (Mignolo 2018) or simply knowledge hegemony and exploitation
+(de Santos 2018). But the fact that this phenomenon happens within
+academia has a significant importance because, unlike other societal
+subfields such as politics, law or economics, the academic field
+presents itself as a meritocracy, with equality and independence from
+any interests and values other than the strictly academic. Consequently,
+it is extremely important to shed light on systemic inequalities,
+unfairness and biases within the field, to criticize them and to, as
+much as possible, fight against them. In this way, we are neither
+pessimists nor optimists, but activists.</p>
+<p>Over the last few years, I have had several opportunities to discuss
+the basic ideas of the present book in front of numerous scholars at
+prestigious international events such as the annual conferences of the
+Development Studies Association or the Human Development and
+Capabilities Association. At almost every occasion, I had to explain a
+very important pivot of the above delineated criticism, since my usual
+antielitist critique could be easily misunderstood or, what is worse, be
+considered as a personal assault against diferent members of the central
+elite. Thus, I would like to state as a principle in this introductory
+chapter that my anti-elite and, in some cases, anti-establishment
+criticism never means that we have to fight against the members of the
+ruling elite as individuals, in contradistinction to the peripheral
+agents of the global system of knowledge production. I explicitly think
+that global academia should be the societal field in which the global
+community can show that overcoming current hegemon structures are just
+as important for the members of the academic elite as for the oppressed
+peripheral actors, despite the fact that—as is the case in all fields of
+society—hegemon structures work for the elite and against the periphery.
+All the necessary changes should be performed and obtained from both the
+center and the periphery in parallel, because the global community
+should recognize that the academic field, insofar as it seeks to uphold
+its self-definition as a meritocracy, must abolish its center/periphery
+structure, make every talent visible regardless of geopolitical
+position, educational trajectory and social class, and it should do
+everything in its power to apprehend global processes in their
+totality.</p>
+<p>In this book I argue that, in the shadow of the material capital
+accumulation, a diferent type of capital, namely academic or knowledge
+capital, is also continuously being accumulated and disseminated. In
+this process, the world is divided into central, semi-peripheral and
+peripheral knowledge domains that could be matched with both
+geopolitical locations and social classes. In the course of the
+accumulation of academic capital, the center maintains and even
+strengthens its hegemony by, mostly, the exploitation of the periphery,
+but the periphery also contributes to this process by the
+self-stigmatization of peripheral or non-core knowledge. This
+self-stigmatization (Gofman 1963) incorporates the constant downgrading
+of non-Western epistemic traditions, methodologies and academic cultures
+by emerging peripheral agents and institutions as they aim to perfectly
+assimilate to their Western counterparts (de la Garza 2018). As a
+result, self-stigmatizing peripheral agents of the world-system of
+knowledge production could be, at most, very good imitations of central
+academics. As theoretical frameworks, I will use a specific alloy of
+field theory (Bourdieu 1988), dependency theories (Prebisch 1959) and
+world-systems theory (Wallerstein 2004), and I will explain the
+geopolitical and societal inequalities of the academic field through the
+lenses of these perspectives. However, I should confess, already in this
+introduction, that I will not faithfully follow any of these theories,
+but will instead try to give a new perspective on the dynamics of global
+academia in the light of former approaches. In other words, I will use
+and apply field theory, world-systems theory and dependency theories,
+rather than extensively discuss or develop any of them. What is more, I
+present my own simple model in Chap. 2 in which both societal
+stratification and geopolitical positions could be equally represented.
+I should note however that this present work does not seek to pose
+itself as a theoretical novelty, but rather aims, on the one hand, to
+empirically prove those critical assertions that have been already made
+in other research fields— typically in decolonization studies—but
+without accurate empirical demonstrations. On the other hand, this work
+is deliberately critical, as it aims to call out the questionable
+aspects of current global academia through extensive empirical analysis
+and thus calls not only for reflection, but for substantial changes as
+well. As it is due to the systemic operation of global academia that
+these questionable aspects in question relate to fundamental parts of
+the world-system of knowledge production, epistemic and cultural racism
+within the field cannot be altered without systemic and substantive
+reforms.</p>
+<h2 id="the-structure-of-the-book">The Structure of the Book</h2>
+<p>The book—apart from the technical Appendix—consists of two parts that
+include seven chapters. Part I includes this Introduction and two
+theoretical chapters that position the empirical results discussed in
+Part II. Chapter 2 introduces the main theoretical frameworks of the
+book, namely the Bourdieusian frame theory and the Wallersteinian
+worldsystem theory. We will see how international scholars collect
+academic capital or, in other words, transnational human capital by
+acquiring central degrees, credentials, research grants and, ideally,
+more and more central positions in the form of elite afiliations. I have
+constructed a three-dimensional model in which to analyze both the
+social stratification of Bourdieu and the geopolitical center/periphery
+relations of the world-systems research in a common framework. Thus, the
+empirical data will be discussed in the newly developed model introduced
+in this chapter. I will provide a comprehensive picture of the main
+concepts such as agents, field, capital, habitus, center, periphery and
+intellectual hegemony and, through our three-dimensional model, I will
+directly apply them to the industry behind global knowledge production.
+We will see that the hegemon structure of global knowledge production is
+a very complex one where geopolitical hegemony (in the form of the rule
+of elite central institutions) is tightly interwoven with societal
+(class-based) stratification since, as I will show, even those
+peripheral knowledge producers who succeed in acquiring some central
+capital are from the upper class of their native society. These are
+individuals who have access to the highly privileged and extremely
+expensive “center-within-the-periphery” institutions where they could
+collect global capital in their homelands. On the other hand, we have
+the “periphery-within-the-center” phenomenon whereby those coming from a
+lower social class are less likely to collect central academic capital
+even if they were born and live in the center.</p>
+<p>Chapter 3 deals with the dynamics behind the problem of inequality by
+discussing economic, epistemic, moral and institutional problems,
+including those directly linked to global academia. I will also discuss
+the main processes that have historically led to a core/periphery
+structure in international science. After a brief historical outline of
+the development of the aforementioned structure, I will link my
+theoretical considerations to the colonization/decolonization discussion
+that takes place in the field of global knowledge production. By
+“economic problems”, I mean the problems due to the uneven accumulation
+global academic capital which could lead to a serious fallback in
+knowledge production, and I will propose calculations that show how to
+maintain optimal growth in productivity. The discussion on moral
+problems entails issues related to the self-definition of science,
+i.e. that academic merit (such as talent and diligence) should be the
+only currency in the field of science. All inequalities, including bias
+based on social class and geopolitical position, run contrary to this
+principle, and thus raise serious ethical and moral issues. I will also
+present the problems of the epistemic monoculture, as described in the
+relevant literature: the so-called standards of global science tend to
+exclude all those—typically peripheral—epistemologies that are diferent,
+although they are not, as I will argue, inferior to the central
+episteme. Finally, under the topic of institutional problems, I will
+discuss the network-based operation of the elite institutions through
+which they systematically overvalue each other’s academic capital,
+thereby creating an exclusive elitism similar to Bourdieu’s notion of
+State Nobility, which could be termed Global Nobility in this case.</p>
+<p>Part II includes those chapters dealing with the Global South’s
+participation in the field of international science. Chapter 4 begins
+with the categorization problems of the world of science. I will argue
+that, while semi-peripheral and peripheral regions are diferent both
+historically and culturally, from a world-systems perspective, they all
+could be considered as peripheries of the world-system of global
+knowledge production. As a case study, I will present the situation of
+Eastern Europe: how its Soviet oppression led to the Sovietization of
+the region and how it could be compared with imperial colonization. I
+will show that, as polity theory suggests, central cultural hegemony
+leads to the peripheralization of al regions other than the
+Anglo-American ones, and I will also argue that this cultural
+imperialism goes hand in hand with the uneven distribution of material
+resources such as publishing houses, journals, research grants and
+international associations. After defining (and slightly modifying)
+recent categorization patterns, the book discusses the dynamics behind
+the uneven distribution of global academic capital by using the
+theoretical framework developed in Chap. 2. This chapter also introduces
+the current academic capital of the Global South in diferent
+disciplines. This in-depth analysis deals with publishers, journals,
+editorial boards, universities and international associations in a
+global context, and I will make comparisons with Global North
+institutions to show the striking degree of inequality. I will argue
+that the so-called international character of the sciences cannot be
+proven through empirical analysis. On the contrary, this analysis shows
+a clear division of the field between a few winner and many loser
+countries. The situation is very much the same in the case of the most
+important gatekeepers of global publishing: the national diversity of
+editorial boards. Research shows that the national or regional
+composition of journal editorial boards significantly correlates with
+the national or regional diversity of the articles published in those
+journals. Thus, the more diverse an editorial board is, the more diverse
+the authorship of the journal will be. Currently, research shows that
+the editoria boards of top-tier journals are often exclusively made up
+of central scholars. In this chapter however, we will be able to
+diferentiate between peripheral world regions, since some are more
+successful in terms of scientific autonomy and independence. We will
+show that a Latin hub has evolved with a relatively strong academic
+presence and, with China and India as leading countries, an Asian hub
+has also started to emerge. On the other hand, neither Eastern Europe
+nor Africa have been able to find a leading country and to establish a
+relatively strong scientific network. Also, in this chapter, I
+demonstrate some practices that Global South regions have used to try to
+break away from the center. These attempts include establishing regional
+networks and periodicals, but detrimental practices like publishing in
+fake, semi-predatory or predatory journals might also occur. Based on
+the fact that diferent agents of the world-system of knowledge
+production interact with each other to a great extent, some peripheral
+regions have recognized the “rules of the global game” and found ways to
+strengthen their positions in the field. As case studies and
+representatives of good practice, I will present formerly peripheral
+periodicals that have succeeded in reaching a leading or at least a very
+prestigious position in the global field. I will show how language
+policy, topical selectiveness and conscious citation universe building
+could lead to global recognition without central assistance. I will also
+present the efort of central agents to stop or, more frequently, to
+absorb these emerging peripheral periodicals by coemption and thus
+making them part of the hegemon academic center. On the other hand, I
+will also show how the emerging fake publishing practices have become
+doubleedged swords that work against developing world regions by making
+peripheral institutions and agents more suspect in the eyes of central
+gatekeepers.</p>
+<p>Chapter 5 presents a great volume of empirical data from my previous
+research on the science output of diferent world regions in social
+sciences in general and in communication and media studies in
+particular. I will show that the visibility of the global South is under
+1% in both Scopus and Web of Science, and I will also discuss the
+network of successful countries in the field. I will also show
+comparative data and I will contrast the uneven distribution of academic
+capital in diferent scientific disciplines such as the social sciences,
+psychology, communication, philosophy, chemistry, physics and
+mathematics. We will see that while each discipline has a diferent
+distribution of academic capital, the center/periphery structure of the
+field of knowledge production is rather similar in the case of all
+disciplines with the absolute hegemon position of the US, the UK and
+other developed countries of Western Europe. Moreover, we will see that
+academic collaborations hardly overstep the borders of regional or, more
+precisely, center/peripheral networks: central scholars tend to
+collaborate each other strategically, while center/periphery
+collaborations are very rare and almost always hierarchical in nature.
+The chapter also shows how emerging scholars from the Global South
+collect academic capital and boost their careers by earning Global North
+degrees, fellowships and, finally, tenured positions. On the other hand,
+I will also show that elite institutions systematically exclude agents
+without the appropriate reeducation, that is, without central academic
+capital. As a case study, I will present the results of my former
+research in which we analyzed the career paths of more than 3000
+academics at elite universities and found that there was not one without
+central re-education. I wil also argue that this exclusion of the South
+and the excessive brain drain and reeducation practices maintain Global
+North hegemony to a great extent, while also causing even the most
+successful peripheral authors to lose their authentic voices. As
+counterexamples, I will present the more adaptive, state-funded tactics
+of BRICS countries that have succeeded in raising their visibility
+without losing their talented people.</p>
+<p>In this chapter I will also argue that institutional development in
+university structures has an efect on the performance of individual
+academics. Moreover, I propose some approaches that could reduce or even
+eliminate the bias against peripheral knowledge producers. Chapter 5
+also sets out to study the characteristics of the network of global
+academia by showing and explaining the most important connections
+between publishers, universities, authors, professional organizations,
+as well as some external economic and political factors. I will show the
+manifest and the hidden (latent) interests of the participants, and will
+argue that their largely predictable behavior serves as a barrier not
+only for peripheral participants, but also for global science itself.
+From an evolutional point of view, a social field (considered as a
+niche) is the healthiest when it is the most diverse. But unfortunately,
+in the case of global elite science, the selection pool is almost
+exclusively limited to those elite central scholars from elite
+institutions and central countries. This leads to an enormous amount of
+wasted talent and the emergence of a sort of “academic freakishness”. We
+can already see its first signs: in leading periodicals, we can often
+read mainstream, standardized, seemingly machine-produced articles using
+with mainstream methods, on mainstream topics, and with virtually no
+surprising or controversial results. In this chapter, the dynamics of
+the world-system of knowledge production will be analyzed by the (mostly
+economic) theories of profit maximization and capital accumulation and I
+will show that science, as a subsystem operating in the worldsystem of
+global capitalism, is no exception from this rule.</p>
+<p>Chapter 6 presents the most important considerations behind editorial
+policies. I will concentrate here on the so-called invisible motives,
+and I will argue that since editors have to maintain or, preferably,
+raise the rank of their journals, they will encounter issues concerning
+the Matthew efect, topical and thematic biases, preferential attachment
+or the rich get richer efect. Based on the literature and my own
+empirical research, I will argue that, in order to be published, even
+peripheral scholars have to adapt to Western epistemology, central
+methodology and have to prefer mainstream (i.e. central) topics as well.
+In accordance with the operation of the world-system of knowledge
+production, the center provides theories and methodologies while the
+role of the periphery is, in most cases, reduced to that of data
+provider. Moreover, in many cases, peripheral phenomena have to be
+investigated by central scholars in order to be published in leading
+periodicals—a process that could justly be called academic exploitation.
+As we will see, many structural features of the world-system of
+knowledge production interact against the emergence of the periphery:
+journal rankings, publishing practices and standards, epistemic and
+methodological requirements, language issues and even topical
+preferences work against peripheral scholars and in favor of their
+central peers.</p>
+<p>Chapter 7 sets out to study the characteristics of the network of
+global academia by showing and explaining the most important connections
+between publishers, universities, authors, professional organizations
+and some external economic and political factors. This final chapter
+also poses the question as to what should be done. As a possible answer,
+I will discuss the failure of centrally initiated de-Westernization
+processes in knowledge production and I will propose an Easternization
+or peripheralization project which entails Global North professionalism
+without westernizing Global South values. I will also argue that Global
+South agents should learn the game that international scientists play in
+order to use and subsequently modify current biased rules. As a minimum
+requirement, I propose that selection processes should be transparent
+and anonymized in a way that only the product itself could be known by
+gatekeepers like editors, reviewers, and selection committee members. As
+in the case of gender and race, where, ideally, the color or the gender
+of an applicant cannot play any role in the selection process, I will
+argue that the same must be done regarding center/periphery positions.
+Thus, it would be desirable that the current afiliation and even the
+place of the degrees of a potential author or candidate remain unknown
+for journal editors or selection board members until they make their
+decision. In this way, peripheral knowledge producers would not be
+coerced to mask, hide or even eliminate their authentic voices, episteme
+and academic culture.</p>
+<p>Beyond the narrow professional readership, I intend for this book to
+serve all those readers who are interested in the global processes of
+knowledge production, or who take an interest in cultural exclusion, the
+downside of globalization, or who want to learn more about academic
+inequalities in general. Consequently, I have tried to limit technical
+jargon and details in the text. For those readers who are interested in
+the empirical bases supporting the argumentation, I ofer, on the one
+hand, the technical Appendix in which I introduce the methodologies of
+source selection, data collection, coding, calculations and the
+technical bases of interpretation, and, on the other hand, frequent
+references to my journal articles that cover all the necessary technical
+details, from sampling to data analysis.</p>
+<h2 id="references">References</h2>
+<p>Ake, C. (1982). Social Science as Imperialism. The Theory of
+Political Development. Ibadan: The Ibidan University Press.</p>
+<p>Aman, R. (2016). Delinking from Western Epistemology. En Route from
+University to Pluriversity via Interculturality. In R. Grosfoguel,
+R. Hernández, &amp; R. E. Velásquez (Eds.), Decolonizing the Westernized
+University (pp. 95–115). London: Lexington Books.</p>
+<h1 id="the-dynamics-behind-the-problem-of-inequality-the-world-system-of-global-inequality-in-knowledge-production">The
+Dynamics Behind the Problem of Inequality: The World-System of Global
+Inequality in Knowledge Production</h1>
+<p>In the spring of 2019, an internationally broadcasted media storm
+broke out as a consequence of a “revelation” that many American
+celebrities, including film stars, had paid a significant amount of
+money to elite American universities in order to ensure admission for
+their children. ABC News called it a smashing scandal, and it was
+largely condemned by the public, as these allegations went against the
+myth that elite universities (with admissions rates under 10 or even 5%)
+operate in a merit-based fashion and select their students based on
+characteristics such as talent and diligence. The possibility that there
+might be a connection between admission to elite universities and the
+economic capital of students (or of their families) was shocking to the
+general public. It is noteworthy that even the founding father of the
+sociology of science, Robert Merton (1968), was under the sway of the
+myth of meritocratic science to some extent. Since his time, the
+delusion that academia is a merit-based societal field has been
+supported by academic circles and beyond. But, as Bourdieu puts it
+(1990), it is extremely naive to accept the self-definition of a
+societal field like science, since it is, similarly to other societal
+fields like politics or religion, about capital, power relations and the
+struggle to maintain or change the current establishment. It was also
+Bourdieu (1998) who claimed in his The State Nobility: Elite Schools in
+the Field of Power that modern higher education, as a network whose main
+role is to reproduce the elite, never was an agent of building
+meritocracy, but always an impediment to social mobility (Demeter and
+Tóth 2020). Elite schools play a very important role in maintaining the
+cultural and epis temic hegemony of the elite, and the separation
+politics of schooling start from nursery school, which is the first
+place where the elites demarcate their children from those of the lower
+classes (Gerhards et al. 2017). A legion of research papers prove that
+selection committees systematically select elite students, and these
+students have been trained to be enrolled in elite universities from
+Russell Group, the Ivy League or the Hautes Ecoles from a very early age
+(Burris 2004; Cowan and Rossello 2018; Creat and Musselin 2010; Golden
+2007). Bourdieu himself likened edu cation to Maxwell’s demon who makes
+a selection from students from diferent backgrounds. Thus, the education
+system maintains and even reinforces existing hegemonies by separating
+students with high cultural capital from those from families with less
+cultural or symbolic capital (Bourdieu 1998). Thus, the education system
+draws borders that are quite similar to those which once separated
+nobles from commoners, and in this way, the education system produces a
+permanent categorization. It designates the chosen ones for a lifetime
+by ascertaining that they are the alumni of an elite university, and
+this classification certifies that elite people with elite education
+substantially and legitimately difer from the common people (Golden
+2007). The chance for a student from the lower classes to be admitted to
+an elite college is very low, especially considering that they should be
+highly represented at universities, given that the lower classes are
+much more populous than the elites. Moreover, as it is well documented
+by both Bourdieu (1998) and Golden (2007), in order get a top position
+after graduation, having an elite diploma is mandatory. Consequently,
+elite diplomas literally work like titles under feudalism (Enders 2001).
+In line with the exclusive nature of the elite, despite the fact that
+the number of university degrees ofered for common people has
+drastically increased in the last few decades, the number of elite
+degrees has not increased at all (Gerhards et al. 2017). In the
+so-called knowledge society or, as it is sometimes called, in the
+knowledge economy (Unger 2019), there is no such a thing as social
+mobility. It is a mere illusion (or delusion) that since more and more
+people get some sort of university degree, society has become more
+mobile and provides mobility opportunities to people from the lower
+classes. The increasing number of educated people means only one thing:
+the elite needs more educated people to serve them in lower positions,
+while the former maintain their elite positions. The elites established
+mass education for the lower classes, while they could easily make
+distinctions between diferent universities and diferent diplomas
+(Bourdieu 1998). For a better understanding of the extent of this
+elitism, I will show empirical evidence in Chap. 5, where I present my
+analysis of the CVs of more than 3000 sociologists working at the top
+100 sociology departments of the world. From these thousands of
+sociologists, there are no scholars without elite education, which has
+negative consequences on our knowledge about society. Let us consider
+elite students are educated on the basis of their elite education, which
+was based on elite education, and so on. In sociology, this means that
+the elite systematically reproduces elitism, not only in terms of the
+student body, but also in terms of curriculum. Both the people and
+theories from the lower classes are systematically excluded in the
+market of sociological knowledge production, which means that people all
+over the Western world are indoctrinated with the theories selected and
+disseminated by the elite. In this case, it pertains to not only elite
+students, but to the students of mass education as well, because the
+curriculum according to which all students are educated is more likely
+to originate from academics working at elite colleges and not from
+“commoner” scholars afiliated with universities designed for mass
+education. Another example of reproducing elitism can be presented by
+the example of Milestone Institute, located in Hungary—a semi-peripheral
+Eastern European country. In Hungary, there are no universities that are
+listed among the top 500  in sociology. Thus, Hungarian elites must have
+their children educated abroad. Milestone Institute is deliberately
+designed for this purpose: it serves as a jumping board to help elite
+students get admitted to Oxford, Cambridge and other Russel Group
+universities. In metaphoric terms, Milestone is the Eton College of
+Hungary. Of course it is not that Milestone Institute asks for a
+pedigree from its applicants: instead, the very high tuition fees, the
+expectation of fluent English and the fact that people from lower
+classes (due to a lack of the appropriate social network and social
+capital) typically are not even aware of the existence of this
+institution, are all suficient to ensure that only members of the elite
+apply.</p>
+<p>Together with the above mentioned problems, one could still think
+that, besides ensuring the continuance of the elites’ social capital,
+elite schools provide superior knowledge. Based on this assumption, one
+could even think that elite schools have nothing to do with the elite’s
+capital accumulation and diferentiation from the masses, but that elite
+students want to acquire knowledge of higher value. Since top positions
+need superior knowledge, the idea that students from elite schools that
+provide superior knowledge then get top positions seems to be totally
+reasonable. This creates a closed circle of justified elitism: top
+positions should be filled by agents with superior knowledge, and since
+it is the elite that has knowledge or academic capital, it should also
+have those power positions by which they can invest and circulate
+academic capital. We can raise several objections against this popular
+narrative. The simple fact that the members of the elite are willing to
+pay hefty sums to get their children admitted to elite schools shows the
+capital nature of education. As the 2019 admission scandal showed,
+millions of dollars are involved. Why are celebrities willing to pay a
+sum like that? Is it reasonable to think that, in a networked world
+where almost any kind of knowledge can be obtained from digital
+libraries, software, databases, podcasts, masterclasses, distance
+learning facilities, webinars and online seminars, elite universities
+provide knowledge that is worth millions? Since the focus of this book
+is social science, we can also exclude those diferences between the
+technological supply of a rich elite university and a poor regional
+college that could be significant in the area of natural sciences. I
+argue that it is more reasonable to think that elite parents do not buy
+their children superior knowledge, but academic and social capital. They
+consider degrees from elite universities as a kind of passport that can
+guarantee their children entry to top positions. As a matter of fact,
+the results of many empirical studies that will be presented in the
+empirical chapters show that this latter assumption seems to be closer
+to the truth. Many research papers show that future productivity can be
+predicted by past productivity, and not by the place of education
+(Fumasoli et al. 2015). Other studies find that, although the place of
+the diploma does not correlate with future productivity, it correlates
+highly with future career success (Burris 2004). This phenomenon can be
+perceived on the field of global knowledge production as serious bias
+against candidates without an elite education. It is much more likely
+that an elite university will hire a candidate with elite degrees but
+without a significant publication record than a candidate with a
+considerable publication record but no elite education (Long 1978).
+Empirical studies also show that it is almost impossible to be hired by
+an elite university without elite education. As a consequence,
+candidates from the Global South are frequently willing to re-educate
+themselves, by enrolling in central universities and getting their MAs
+and PhDs again. As a result of these features of the elite educational
+system, it is easy to find faculty members with elite degrees but
+without any significant scholarly contributions. However, there are no
+faculty members without an elite education or central re-education, even
+if they have a significant publication record. It also means that elite
+diplomas tend to place their holders in top positions almost without any
+reliance on their scholarly merits. In this sense, as has already been
+mentioned, elite diplomas bear more resemblance to the titles of the
+nobility than to mere certificates that testify to the merits of their
+bearers. It does not mean, of course, that holders of elite diplomas are
+not talented or hardworking—it only means that, for every talented elite
+student, there might be hundreds of talented students from the lower
+classes who would never have a chance to reach top positions, including
+power positions in the field of knowledge production. This feature of
+global academia is in line with Robert Frank’s views in his Success and
+Luck (2017), whereby achieving economic success and top positions
+depends more on luck than on work and talent. Frank’s work, which
+provides very basic and important facts about the reality of social
+mobility and the false mythology behind success, lacks however the
+critical observation that the luck factors he mentions are by no means
+random; on the contrary, they are socially determined. Social features
+like the family into which people are born, or the neighborhoods they
+live in, and what healthcare they can access may be seen as a matter of
+luck from an individual point of view, but in a broader perspective,
+they are socially coded and determine facts that have nothing to do with
+luck. As we will see later in this book, the position one can achieve in
+the world-system of global knowledge production in the culturally
+determined disciplines, typically in the social sciences, is not a
+question of luck, but the result of social and geopolitical hegemonic
+power relations into which people are born, independent of their
+will.</p>
+<p>The exclusivist nature of elite universities, allowing access to
+outsiders only in exceptional, well-defined cases—typically with
+outstanding sports achievements—also explains why parents who invest so
+much money need not worry that their children, whose admission to
+prestigious universities was secured through great sums or even by
+fraud, would fail to graduate. They know very well that once a door
+opens, there is no turning back: elite universities with very high
+selection rates have to demonstrate that their admissions procedures are
+working well, otherwise we might wonder how an extremely selective
+process could result in the admittance of a student who is unable to
+graduate from university. The elite nature of these universities is
+further reinforced by the fact that the capitalizable nature of their
+diplomas is ensured by the network of elite universities, since they are
+very keen to re-employ the former students of the connected elite
+network (Golden 2007).</p>
+<p>Further empirical analyses support the capital-like behavior of elite
+diplomas, as research shows that during the first eight years of an
+academic career, the various admissions committees focus primarily on
+the educational background of candidates, and productivity is less
+important (Maliniak et al. 2018). Elite diplomas seem to be a one-way
+road to paradise: the world of top positions—but only for those who, in
+terms of their social background, come from there already (Tomlinson and
+Freeman 2018).</p>
+<p>We can be annoyed, of course, that rich people can buy the
+possibility for their children to enter elite education, sometimes even
+resorting to fraudulent means and corruption. But there is a more
+important structural problem: these diplomas, although not always in the
+form of lumpsum bribes, are actually bought by everyone through
+expensive preparatory trainings, private tutors and foundation money,
+which only paid the upper middle classes and above can aford. Elite
+university places, in a much more complicated way, but one which is at
+least as unfair as paying bribes, are almost always purchased, not
+awarded as a result of fair competition. As long as elite institutions
+are crowded with upper-class children, and while key knowledge-producing
+and gatekeeper positions cannot be filled without these diplomas, there
+is no way to break the exclusionary and elitist vicious circle of global
+knowledge production. The extreme overvaluation of the academic capital
+acquired at elite universities assists in maintaining a system in which
+hegemonic positions are occupied by people from the social elite, almost
+independently of their merits, while even the most talented and most
+productive candidates with a lower social background have no chance to
+occupy a central position in the system of knowledge production. This
+not only gives rise to ethical concerns, but is also problematic in
+terms of the knowledge economy, because with the elitism of knowledge
+production, the vast majority of society is excluded from the dominant
+positions. As a result, the talent which is, according to every
+conceivable assumption, equally distributed amongst people from diferent
+social backgrounds, is largely wasted. The outrageous phenomenon that
+the rich sometimes obtain places for their children at elite
+universities, even at the cost of fraud, is nothing more than a symptom
+of a more general system-wide corruption.</p>
+<p>The inequalities in knowledge production, as we will see later in the
+empirical chapters, do not only occur in education but also in science
+communication. All the international patterns found in elite education
+networks can be matched with elite journal publishing networks, which
+also show clear center/periphery relationships. This means that global
+inequalities in the production of knowledge are almost identical in the
+input (education) and output (publication) stages of the process, and
+these distorting processes mutually reinforce each other. In this
+introductory chapter, I would like to refer to a single current process,
+which, despite its seemingly positive intentions, might cause the
+consolidation and further strengthening of the hegemonic situations
+prevailing in science communication, under the guise of a more equal
+world.</p>
+<p>The initiative in question, known as Plan S, intends to help make
+scientific knowledge accessible. It is known that in the classic
+scholarly publication model, although authors do not have to pay for
+publication (nor do they receive any royalties), the published articles
+are placed behind a paywall, that is, they can only be read by
+institutional or individual subscribers (Haug 2019). Articles can be
+downloaded individually in the humanities and social sciences for an
+average sum of between 30 and 100 dollars (Demeter and Istratii 2020).
+This creates a situation in which richer universities in richer
+countries are more likely to make their global knowledge production
+accessible to their employees than poorer universities in poorer
+countries. Plan S wants to change this system—and there is no reason to
+disagree with the need for change. The initiative proposes that authors
+should publish the results of their publicly-funded research through the
+open access model, in which the reader has immediate and free access to
+the content of the published research papers. At first glance, the
+proposed reform and the initiative behind it seem to be a positive
+intervention to reduce global inequality, as mandatory open access
+publishing may eliminate the above-mentioned inequalities of
+accessibility on the reader’s side. Unfortunately, on the
+knowledge-producing side that is the defining side of the hegemonic
+relations in the world-system of knowledge production, Plan S does not
+reduce inequalities (Istratii and Demeter 2020; Istratii and Porter
+2018) but directly increases them (Demeter 2018). When talking about
+“strict quality criteria”, Plan S actually talks about enforcing Western
+standards, which many (otherwise excellent) peripheral journals cannot
+meet for purely financial and institutional reasons. This results in the
+exclusion of a number of regional periodicals from the list of eligible
+journals, because they are unable to meet certain conditions, typically
+the criterion of publishing regularly and in a predictable way. More
+importantly, in the open access model, the very high publication fee
+suggested by Plan S (around 2000 USD) is simply unafordable for
+peripheral researchers. Therefore, even if, despite all their
+disadvantages, they can publish their work, it cannot reach as wide an
+audience as their colleagues at richer universities, where the
+institution can easily pay for the publication fees. The publication
+disadvantage caused by the geopolitical inequalities translates into a
+science communication disadvantage. Researchers in peripheral regions
+are already at a disadvantage in the international publishing
+competition, and now their disadvantages will be further aggravated due
+to their financial situation, since they will not be able to publish
+their accepted papers within the open access model. The introduction of
+Plan S would create a system that would deliver a double-hit to
+peripheral authors, while giving diplex preference to central authors,
+who not only have easier access to the publishing space at elite
+journals but also have free access to the public through open access
+publication. In addition, researchers in the center have a significant
+advantage in that their institutions provide better infrastructure
+support to their staf than peripheral ones. In the West, and especially
+in elite Western universities, there are usually separate institutional
+teams to help apply for research funding, both in administration and
+management. In contrast, for African, Asian, Latin American or even
+Eastern European researchers, applying for research funding is a major
+problem, not only because there are very limited domestic funding
+possibilities available, but also because they do not have professional
+support staf to help them navigate highly bureaucratic and rigorous
+international grant application processes (Beaudry et  al. 2018). Most
+higher education research facilities in peripheral regions simply do not
+have the capacity to meet the Western expectations of institutions and
+researchers for funding international projects. Without appropriate and
+necessary structural changes in the funding and research development
+system, the introduction of Plan S would further widen the gap between
+the central and peripheral regions of knowledge production.</p>
+<p>In summary, even well-intentioned but centrally initiated action
+plans are unable to identify and critically analyze the systemic
+problems of knowledge production that they intend to solve in order to
+develop a fairer scientific field. In addition to the systemic
+distortions discussed in this book (the disproportionate accumulation of
+academic capital, the dysfunctional overvaluation of elite education,
+and the Western hegemony of publication at elite journals), the
+initiators of Plan S are introducing another inequality, this time in
+science communication. Central authors and institutions have already
+controlled the international field of knowledge production through
+academic power demarcation by defining elite training and the
+appropriate publishing practices for elite journals and publishers. If
+they now also gain the benefits of science communication, it would be a
+crushing blow for the periphery, and detrimental to the international
+scientific community as a whole. In this new situation, the freedom of
+science would mean the freedom of silent listening for the periphery,
+without being able to make its voice heard. From now on, the periphery
+will be limited to consuming Western-specific knowledge, Western
+theories and methodologies as well as topics of importance to the
+West—free of charge. At the same time, the periphery might be forced to
+restrict its own topics, methods and interpretations to the regional
+level or, at most—according to the labeling of the so-called
+international, in fact Western scientific community—to categorize these
+under ethno-science, having only regional importance (Ake 1982).
+Throughout this book, I argue that this detrimental tendency is already
+gaining prominence in a variety of areas of international science, and
+that strategic actions are needed to counter it.</p>
+<p>As a concise yet accurate summary of what has been said so far, I
+quote Emily Callaci’s (2020) critique of the characteristic of global
+academic elitism, according to which almost only one type of human being
+is allowed to reach elite status in academia, the West-educated,
+Westernworking, independent and mobile, usually white man. According to
+the author, some lifestyles are better received and valued by global
+academia than others. The acknowledgments at the beginning of academic
+books clearly show what types of people our institutions value and
+serve, who have access to research resources, and which is the
+preferably working style. A typical future member of the academic elite
+is someone with elite Western education, who can be awarded
+scholarships, often announced for Westerners or even for Americans only,
+and who have few—or, ideally, no—dependent relatives and thus can easily
+break away from their local communities for long periods of time. They
+have passports that make it easy to travel anywhere. Either they have no
+dependent children at all or are able to take care of them by the aid of
+their partner—typically a female partner—or by employing a nanny. The
+ideal researcher of the current academic elite is independent, mobile
+and flexible, so their larger family cannot count on them when it comes
+to long-term care for infants, elderly or sick relatives. Of course, the
+author does not say that there is any problem with such researchers—the
+question is what we lose in terms of perspectives, intellectual
+contributions and creativity if only this type of human being gets
+admitted into the world of elite academia (Akiko 2018; Jack 2019).</p>
+<h2 id="struggle-for-equality-ethical-dimensions">Struggle for Equality:
+Ethical Dimensions</h2>
+<p>It is well known from the history of the struggle for social equality
+that dominant groups generally consider the existing system which
+guarantees, maintains and even enhances their hegemony, to be just and
+equitable. Members of the elite tend to attribute their privileged
+position to their merits, hard work, talent and (less often) luck (Frank
+2017), and are almost always blind to the underlying social structures
+that provide them various privileges. One of the most illustrative
+metaphors in the field of international science is, in my opinion, the
+discourse that compares the competition on the field of academic
+knowledge production to the Olympic Games. Maybe the best expression of
+this metaphor is associated with Louisa Ha (2016), editor-in-chief of
+the prestigious Journalism and Mass Communication Quarterly. This is the
+oldest journal in my narrower research field (communication and media
+studies), but in almost 100 years, I am the first Hungarian to have a
+published article in a regular issue of the journal (Demeter 2019a, b,
+c). As this article was devoted to exploring the scandalous inequalities
+in communication research and associate disciplines, Louisa Ha organized
+an invited forum following the article, published in a later issue of
+the journal (Ang et al. 2019). More recently, she invited me to join the
+editorial board of the journal, and also asked me to edit a virtual
+theme collection that deals with articles relating to Eastern Europe.
+When collecting the articles from the past 10 years, I found that
+(besides my own papers), there was only one paper published in the
+prestigious journal that was written by an Eastern European author who
+still works in the region. While there were five more articles from
+originally Eastern European authors, these scholars have very typical
+carrier trajectories: after their BA, all of them emigrated to the West,
+typically to the US, to get their MA and PhD degrees. After that, they
+remained in the host countries and are still afiliated with Western
+universities. This re-education is a typical pattern: in order to be
+acknowledged in an international field, scholars have to go West and
+undertake Western education. Moreover, among the aforementioned
+scholars, most obtained their BA degrees from an American university in
+their home country. In these cases, it was the American University in
+Bulgaria, but other center-within-the-periphery institutions could be
+found in many regions of the periphery. To mention a few: the Central
+European University in Hungary, the American University of Beirut or the
+American University in Cairo have the same goals: to collect talent from
+the periphery and lure them to the center. In Chap. 5, I will show that
+these career paths are not just extremely common amongst scholars from
+the periphery that aim to make an international career, they are
+apparently the only way for them to have such a career.</p>
+<p>The basic idea behind the Olympic game metaphor introduced by Lousia
+Ha is that the Olympic Games and the knowledge production market are
+similar in that both areas are subject to international competition
+overseen by external judges. Under this analogy, both fields are
+characterized by rules that are clear, predictable, fair and subject to
+objective review processes. The counterparts of the judges assessing
+Olympic competitors are the journal editors and reviewers who assess the
+submitted papers, the selection committee members who assess the
+candidates that apply for various academic positions and the members of
+expert panels that assess academic projects seeking external funding.
+But unfortunately, it is quite clear to a scholar engaged in the study
+of international academic life that there is little truth to this
+attractive image of global academia. As we will see later, the
+scientific field—and this is especially true for the humanities and
+social sciences—resembles an Olympic Games where more than 90% of the
+gold medals are guaranteed to be won by American and Western European
+athletes, and where there are only American and Western European judges
+and referees. To win, any competitor should wear American or Western
+European clothes, because if they appear to be outside the elite team,
+they can forget about the Olympic podium. Discernibly non-Western
+athletes are disqualified in these hypothetical Olympic Games before
+they step onto the field, so peripheral athletes have to be as similar
+to their Western counterparts as possible.</p>
+<p>Readers familiar with sport politics may well argue that the spirit
+of fair play that outsiders generally attribute to sport do not always
+prevail at the Olympic Games. Financial and prestige issues, soft power
+relations and even a multitude of political attitudes play into how a
+country performs at the Olympics. It is not surprising that economically
+and politically strong states are in a very good position on both the
+imaginary “hall of fame” of knowledge production and the Olympic medal
+rankings. Still, in the field of sports, there are exceptions at least.
+For example, Hungary ranks eighth in the Olympic medal charts, which is
+a very high position, and Romania, Cuba or Poland have better positions
+than many rich Western countries such as Norway, Denmark or
+Switzerland.</p>
+<p>Ethiopia ranks better on this list than Austria, and Israel, ranked
+very high on the academic rankings, lags behind Uganda, Zimbabwe or
+Cameroon in terms of the number of Olympic medals. Such exceptions
+cannot be found at all on the imaginary Olympic list of global knowledge
+production: as we will see in more detail later, not a single
+non-Western country appears in the top 20 on the list of social science
+publishing production, and peripheral regions are severely
+underrepresented even in the top 50. The world of global knowledge
+production is fundamentally different from the world of the Olympics,
+and while the latter is not devoid of various distorting mechanisms, the
+field of knowledge production is fundamentally based on distorted,
+hegemonic systems. In her The long read on decolonising knowledge
+(2019), Romina Istratii counts three types of epistemic colonization by
+which the center maintains its hegemon position: Western theory making,
+the dominance and internalization of English language and the Anglophone
+standards dictating mainstream and so-called universal knowledge
+production. Moreover, Istratii also points out that international
+research funding typically favors Western countries, since funding
+agencies prescribe rigorous and Western-specific application standards
+that are hard to meet by authors from countries with poorer
+infrastructural and economic conditions.</p>
+<h2 id="struggle-at-the-periphery-and-the-camouflage-identities">Struggle
+at the Periphery and the Camouflage Identities</h2>
+<p>In this book, I argue that the world system of global knowledge
+production (which includes the publishing industry and higher education)
+is a highly exclusive, hegemonic system in which not only the members of
+the hegemonic group (the central agents of the field), but also the
+oppressed scholars are maintaining or even reinforcing the exclusionist,
+oppressive nature of the system. I will argue that through a kind of
+selfstigmatization, peripheral agents tend to develop a type of
+character that I call “camouflage identity” in order to be accepted and
+acknowledged by the international scientific community. I consider
+camouflage identity to be a culturally and culturally destructive
+phenomenon, leading to assimilation, homogenization of knowledge and
+loss of authentic voices, and which—especially in the social
+sciences—fatally impoverishes diversity. In my view, members of the
+academic periphery should (instead of developing camouflage identities)
+develop an attitude that could be called systemic protagonism that aims
+for more equal knowledge production in both the geopolitical and
+socioeconomic senses. In other words: the field of global academia needs
+an emancipatory movement that advocates a more decentralized production
+of global knowledge (Mignolo 2018; Santos 2018). An important result of
+the movement would be if peripheral scholars were able to discard their
+camouflage identities and instead show their authentic, autonomous and
+non-Western academic selves.</p>
+<p>I argue that a global, world-systemic discrimination occurs in the
+field of global knowledge production (Efranmanesh et al. 2017). The
+structure and procedures of global academia favor central agents to a
+great extent (Heilbron et al. 2018). The mere fact that academic English
+has become the only interlingua of international scholarship guarantees
+the advantage of native English academics over those who need to make
+additional eforts to master this language (Curry and Lillis 2018; Lillis
+and Curry 2015). The role of language in global academic hegemonies is
+welldocumented in the literature of academic literacy/second-language
+writing (Cargill and Burgess 2017). Habibe and Hyland (2019) dedicated a
+special edition to the problems that young non-native English
+researchers face in publishing international journals because of
+language barriers. Cademan argues that there might be a “causal
+relationship between the global dominance of English for ‘international’
+publication and the suppression of alternative knowledges” (Cademan
+2017, p. 33). Qi (2015) even states that, through English language and
+Western theoretical dominance, the center develops an intellectual
+knowledge hierarchy.</p>
+<p>The same can be said about central methodologies, epistemic values
+and the central determination of current research directions (Istratii
+2020; Walter et al. 2018). Thus, it is obvious how dificult it is for a
+non-English speaking peripheral agent who has not been educated at a
+central elite university to publish in leading journals where central
+standards prevail. In addition, in a global context, the quality of
+applicants’ scientific output is measured by their publications in elite
+central papers, both in the context of job applications and in research
+funding applications (Clauset et al. 2015).</p>
+<p>As a result, a peripheral position as well as the lack of knowledge
+of English and central methodologies means direct exclusion from the
+elite of the international academic community. The ideology behind this
+kind of cultural racism is based on the illusion of the existence of a
+global, universal academic norm or standard, and it gives the agents of
+the center the opportunity to disqualify the results of peripheral
+knowledge production by saying they do not meet the universal (in fact,
+central) expectations. Empirical research largely confirms that these
+exclusionary practices are widespread in the centers of global knowledge
+production (Canagarajah 2002).</p>
+<p>Of course, the unjust situation described above can only be altered
+through the active involvement of both the center and the periphery. The
+decentralization of academic knowledge production and the rehabilitation
+of peripheral knowledge can only occur if the critique of central
+hegemony is prioritized at both the center and the periphery. Until
+then, we can reasonably assume that the central elite that accumulates a
+disproportionately large part of global academic capital will make every
+efort to maintain its hegemonic status (Schott 1998). In the definition
+of “institutional racism”, whether the term is used literally or
+epistemically, the oppressed groups need not be numerically in the
+minority (Pilkington 2011). All that matters is the structure of power
+relations, as it leads to a situation in which virtually no members of
+the oppressed group can be found in top positions, despite the fact that
+they may otherwise be in the majority in the global or local
+community.</p>
+<p>This phenomenon can be clearly observed in higher education: power
+relations in the world-system of knowledge production are demonstrated
+by the fact that members of non-white minorities are extremely
+underrepresented in elite universities and tend to be concentrated in
+newer institutions with significantly less prestige than the older
+universities (Shiner and Modood 2002). Minority students have a much
+lower chance of being admitted to the classical elite universities, and
+of course this is reflected in the significant narrowing of their future
+career prospects (Parekh 2000). Empirical data corroborate Bourdieu’s
+earlier observations to the efect that the ruling elite systematically
+distances itself from the masses through education. This practice leads
+to the formation and maintenance of a global academic nobility,
+typically composed of white, upper-class people educated at the elite
+universities of the center. In addition, as shown by the empirical
+results of Shiner and Modood (2002), peripheral researchers, even in
+central positions, must continually compensate for their background in
+order to feel secure in their positions. Carter’s research (2003) shows
+an even sadder picture: people from minority groups are not only
+significantly underrepresented in academic positions, but are more
+likely to be hired on temporary contracts than their peers from the
+hegemon social group. In addition, in the system of global knowledge
+production, cultural racism increases with the prestige of the
+positions: the higher an academic position is, the less likely it is to
+be filled by a peripheral researcher (Carter 2003). As Pilkington’s
+empiri cal research reveals, within the academic sphere, at least 20% of
+minority candidates have encountered explicit racism, either during job
+interviews or in connection with promotions. The exclusionary structure
+of elite higher education has been studied and demonstrated by a number
+of further studies (Davies et al. 1997; Jary and Jones 2006; Reay
+et al. 2005). As a summary, Pilkington concludes that the results of
+empirical research thus pose serious challenges to those who still
+consider universities to be meritocratic institutions. As I will
+demonstrate in the empirical chapters later, global publication patterns
+accurately reflect educational inequalities: elite journals are full of
+Western authors, while hardly any peripheral authors can be found in
+them, and there are virtually no major international publishers
+operating outside the Global North. The discrimination against noncore
+agents in the field of education goes hand in hand with discrimination
+on the labor market—in our case, on the field of knowledge
+production.</p>
+<p>From an ethical point of view, we should consider whose ethics we
+should follow when discussing global inequalities in knowledge
+production. What is typical in any field of society is that the members
+of the hegemonic group are considered normal and prototypical, while the
+members of the oppressed group are described in terms of their
+observable deviations from the prototype, which always involves some
+form of devaluation. We can see exactly the same phenomenon in the world
+of knowledge production, where scholars and gatekeepers at elite centers
+so often talk about international, global standards in both education
+and the publishing industry, emphasizing the normative character of
+these standards, while these are actually standards of certain
+capitalist Western countries, typically those of the United States.
+Consequently, divergent cultural standards are not interpreted as
+alternative ways of conducting scholarship, but as degraded, imperfect
+variants of the alleged international (in fact central) standards
+(Canagarajah 2002). Thus, it must be emphasized that the center does not
+generally claim that peripheral academic cultures have diferent
+standards, rather that there is only one global standard that is
+observed in the West, but not in the peripheries.</p>
+<p>Moreover, external oppression frequently results in internal
+selfstigmatization and the development of a subordinated habitus. As
+Bourdieu (2001) observed, members of the subdominant group tend to
+exclude themselves from central positions, often even after external
+barriers have been removed. This self-stigmatization is no doubt true
+for many scholars in the periphery. As Canagarajah argues (2002),
+periphera authors may tend to use Western knowledge exclusively for at
+least two reasons. The first reason is practical: sometimes peripheral
+scholars are technically unable to print and copy their works, while
+Western science is, at least in part, accessible to the peripheries
+thanks to widespread Western imperialism. The second reason is directly
+related to the above mentioned subordinated habitus. Peripheral agents
+may strategically use Western literature to become acceptable to their
+central peers, or even because they consider their own knowledge
+(including the knowledge of their geopolitical region) to be inferior to
+that of the center, at least in terms of knowledge production.</p>
+<p>Another common perception by the dominant central community is that
+they implicitly consider some scholarly activities to be too low to be
+performed by members of the hegemonic group. Research has shown that
+certain activities are maintained exclusively for central agents, while
+lower status (and consequently much less well-paid) jobs are outsourced
+to the periphery. For example, publishing cutting-edge research results,
+theory building, or developing research methodologies are typically
+central activities, while data collection, data analysis and assistant
+work (such as layering) tend to be concentrated in the Global South
+(Demeter 2019a, b, c). As we read in the literature of world systems
+analysis, the global labor market specifically defines central and
+peripheral positions, creating strong centers and dependent peripheries.
+It is the systematic, institutionalized nature of dependence itself that
+severely limits the capabilities of peripheral countries and reproduces
+inequalities in the worldsystem (Jacobs and Van Rossem 2016).</p>
+<p>The decentralization of global knowledge production would require
+nothing less than the cessation of peripheralization of the field, the
+elimination of the devaluation of knowledge from the South.
+Decentralization here is not about homogenization, but about recognizing
+diferent traditions as equals (Freedman 2002). In the field of global
+knowledge production, this means that peripheral perspectives should be
+valued as much as their Western counterparts. While homogenization would
+mean that the periphery should also follow the standards of the center,
+the recognition of equal values means that the international scientific
+community must treat peripheral epistemologies on an equal basis.</p>
+<h2 id="the-image-of-the-non-central-scientist-a-showdown-with-camouflage-identities">The
+Image of the Non-central Scientist: A Showdown with Camouflage
+Identities</h2>
+<p>Diferent emancipatory waves may have similar elements. At the first
+stage of these movements, the oppressed group wants tolerance without
+questioning the status quo and the legitimacy of the hegemonic group. At
+this stage, members of the subjugated group tend to develop camouflage
+identities in order to keep their original characteristics (based on
+which they are oppressed) hidden. Emancipatory movements desirable in a
+world system of knowledge production are currently in this first phase:
+researchers from the Global South can—while significantly less likely to
+do so than their Western counterparts—hold elite positions and appear in
+high-profile journals, but only if they appear to be central. Since the
+academic field is not classically but epistemically racist, we are
+thinking here not of external similarity but of having central capital,
+typically a central (Western) education, in order to be taken into
+account internationally. For peripheral researchers, camouflage identity
+means making your CV look like that of a Western scholar. Similarly,
+peripheral scholars tend to use almost exclusively Western literature.
+However, it would be a serious injustice to claim that the proliferation
+of Western authors in peripheral works can be solely explained by the
+phenomenon of selfstigmatization. When peripheral authors try to publish
+their work on the international scene, they may think—not without
+reason—that the editor wants to see familiar (that is, Western)
+references.</p>
+<p>Emancipatory movements can only succeed if they find supporters among
+members of the hegemonic group. But before that happens, advocates of
+emancipatory movements must find a common position from which they can
+emerge as an integrated and increasingly powerful power in a given
+social field. They have to discard camouflage identities and develop
+autonomous and authentic identities. Therefore, instead of masking
+themselves through Western re-education, non-central agents of global
+knowledge production should express themselves as non-Western scholars
+who are proud of their epistemic values, topics and rhetorical/
+communication traditions.</p>
+<h2 id="references-1">References</h2>
+<p>Ake, C. (1982). Social Science as Imperialism: The Theory of
+Political Development. Ibadan: The Ibadan University Press.</p>
+<p>Akiko, F. (2018). Needs of Students Seeking Carriers of Communication
+Sciences and Disorders and Barriers to Their Success. Journal of
+Communication Disorders, 72, 40–53.</p>
+<p>Ang, P.  H., Knobloch-Westerwick, S., Aguaded, I., Munoz-Uribe,
+J.-F., Wasserman, H., &amp; Athique, A. (2019). Intellectual
+Balkanization or Globalization: The Future of Communication Research
+Publishing. Journalism and Mass Communication Quarterly, 96(4),
+963–979.</p>
+<p>Beaudry, C., Mouton, J., &amp; Prozesk, H.  E. (2018). The Next
+Generation of Scientists in Africa. Cape Town: African Minds.</p>
+<p>Bourdieu, P. (1990). Animadversionis in Mertonem. In J. Clark &amp;
+S. Modgil (Eds.), Robert K. Merton: Consensus and Controversy
+(pp. 297–301). London/ New York: Palmer Press.</p>
+<p>Bourdieu, P. (1998). State Nobility. Elite Schools in the Field of
+Power. Stanford: Stanford University Press.</p>
+<p>Bourdieu, P. (2001). Masculine Domination. Stanford: Stanford
+University Press.</p>
+<p>Burris, V. (2004). The Academic Caste System: Prestige Hierarchies in
+PhD Exchange Networks. American Sociological Review, 69(2), 239–264.</p>
+<p>Cademan, K. (2017). Introducing Research Rigour in the Social
+Sciences: Transcultural Strategies for Teaching ERPP Writing, Research
+Design and</p>
+</body>
+</html>
