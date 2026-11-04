@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<h1 id="working-algorithms-software-automation-and-the-future-of-work">Working
+Algorithms: Software Automation and the Future of Work</h1>
+<p>Work and Occupations 2017, Vol. 44(4) 376–423 ! The Author(s) 2017
+Reprints and permissions: sagepub.com/journalsPermissions.nav DOI:
+10.1177/0730888417726119 journals.sagepub.com/home/wox SAGE</p>
+<p>Benjamin Shestakofsky<sup>1</sup></p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<h2 id="abstract">Abstract</h2>
+<p>While some argue that the rise of software automation threatens
+workers with obsolescence, others assert that new complementarities
+between humans and software systems are likely to emerge. This study
+draws on 19 months of participant-observation research at a software
+firm to investigate how relations between workers and technology evolved
+over three phases of the company’s development. The author finds two
+forms of human–software complementarity: computational labor that
+supports or stands in for software algorithms and emotional labor aimed
+at helping users adapt to software systems. Instead of perfecting
+software algorithms that would progressively push people out of the
+production process, managers continually reconfigured assemblages of
+software and human helpers, developing new forms of organization with a
+dynamic relation to technology. The findings suggest how the dynamism of
+the organizations in which software algorithms are produced and
+implemented will contribute to labor’s enduring relevance in the digital
+age.</p>
+<h2 id="keywords">Keywords</h2>
+<p>technology, algorithms, automation, computational labor, emotional
+labor, organizational change</p>
+<p>How is software automation transforming work and employment? In light
+of rapid advancements in artificial intelligence (AI), big data, and
+machine learning, many social scientists and information technologists
+predict that in diverse sectors of the economy, ‘‘smart’’ machines will
+increasingly replace the human element of production, leaving mass
+joblessness in their wake (Benzell, Kotlikof, LaGarda, &amp; Sachs,
+2015; Brynjolfsson &amp; McAfee, 2014; Elliott, 2014; Ford, 2015; Frey
+&amp; Osborne, 2017; Kaplan, 2015; Sachs &amp; Kotlikof, 2012; Srnicek
+&amp; Williams, 2015). Others dispute the technological unemployment
+thesis, arguing that although software technologies will supplant some
+workers, they will also give rise to new and previously unforeseen
+complementarities between human labor and digital systems (Arntz,
+Gregory, &amp; Zierahn, 2016; Autor, 2015a, 2015b; Bessen, 2015a, 2015b;
+Davenport &amp; Kirby, 2016; Ekbia &amp; Nardi, 2017; Howcroft &amp;
+Taylor, 2014; Mindell, 2015; Mokyr, Vickers, &amp; Ziebarth, 2015).
+Existing studies attempt to project employment trends by marshaling
+statistical models (Arntz et al., 2016; Autor, Levy, &amp; Murnane,
+2003; Benzell et al., 2015; Frey &amp; Osborne, 2017; Sachs &amp;
+Kotlikof, 2012), historical comparison and deductive logic (Autor,
+2015a; Bessen, 2015b; Mokyr et al., 2015), and evidence aggregated from
+prior research, news reports, conversations with scientists, and
+in-person demonstrations of cutting-edge technologies (Brynjolfsson
+&amp; McAfee, 2014; Davenport &amp; Kirby, 2016; Ekbia &amp; Nardi,
+2017; Ford, 2015; Kaplan, 2015). Despite the recent influx of interest,
+however, we still know surprisingly little about the conditions under
+which software systems function autonomously—and when they rely on the
+assistance of complementary human workers—in real-world settings.</p>
+<p>This study contributes to contemporary debates around the future of
+work by examining the processes through which assemblages of software
+and workers coevolve within a particular organizational setting. I draw
+on 19 months of participant-observation research at a San
+Francisco-based tech start-up called AllDone, which aimed to transform
+local service markets by using technology to more eficiently connect
+buyers and sellers of services ranging from house cleaning to wedding
+photography to tutoring and beyond.<sup>1</sup> I demonstrate the uneven
+development of relations between software and the people who create and
+use it. Each phase of AllDone’s development revealed mismatches between
+humans and machines generated by the firm’s shifting strategic
+imperatives. To address these lags, AllDone relied on two forms of
+complementary labor performed by a distributed, online workforce located
+across the Philippines and the Las Vegas area. The results suggest how
+the dynamism of the organizations in which software algorithms are
+produced and implemented will contribute to labor’s enduring relevance
+in the digital age.</p>
+<p>In the following section, I evaluate the contemporary debate
+surrounding software automation and the end of work in light of prior
+research on the relationship between work and technology. I argue that
+existing studies of software automation neglect to examine
+organizational dynamics that are likely to contribute to the emergence,
+reproduction, and transformation of human–software configurations. After
+introducing the research site, I present evidence from three phases of
+AllDone’s development to demonstrate how a high-tech firm’s assemblages
+of workers and machines unfolded over time as managers confronted
+problems within a shifting organizational context. I conclude by
+discussing how the internal dynamism of firms can drive ongoing
+innovation in human–machine assemblages rather than progressive
+automation.</p>
+<h2 id="work-and-technology-in-historical-perspective">Work and
+Technology in Historical Perspective</h2>
+<p>The history of industrial capitalism has been punctuated by waves of
+anxiety surrounding technological change, with scholars and critics
+repeatedly asking whether the evolution of production technologies could
+progressively reduce aggregate demand for labor (Brick, 2000; Keynes,
+1963; Simon, 1965; Winner, 1977). In spite of monumental scientific
+achievements, such predictions have not yet come to pass. While in some
+cases new technologies have substituted for workers, they have also
+consistently created new complementarities between people and machines
+(Autor, 2015a).</p>
+<p>Economists and economic historians commonly cite the historical
+recurrence of three processes through which technological innovation can
+produce jobs. First, when technology replaces some human activities, it
+may also increase demand for other types of work. For example, during
+the industrial revolution, mechanics tended to new machines, while
+supervisors, accountants, and administrators emerged to manage
+large-scale enterprises. Substitution in one industry may also be
+counterbalanced by new complementarities in others: In the early 20th
+century, automation caused massive job loss in the U.S. agricultural
+sector that would eventually be ofset by gains in manufacturing and
+services (Autor, 2015a). Second, product innovation can create new
+sources of consumer demand, giving rise to new occupations and even
+sectors of the economy (Mokyr et al., 2015). For instance, people are
+employed to build and maintain hardware, software, and
+telecommunications networks using Internet and mobile technologies that
+did not begin to achieve widespread distribution until the late 20th
+century. Third, automation that reduces the cost of labor can result in
+cheaper goods, which can increase consumer demand and in turn boost
+demand for labor. When power looms automated an estimated 98% of the
+labor required to weave a yard of cloth in the 19th century, consumer
+demand increased so sharply that the number of weaving jobs actually
+rose, and workers’ remaining tasks became increasingly valuable (Bessen,
+2015b).</p>
+<p>Close examinations of production technologies in a variety of
+industries have supported theories of complementarity by demonstrating
+that, rather than fully replacing human workers, automation may instead
+create new and sometimes unanticipated interactions between humans and
+mechanized systems. The high cost, limited capacities, fragility, or
+rigidity of automated equipment often leads employers to search for
+human helpers. During the industrial revolution, the introduction of
+innovative technologies to a variety of manufacturing processes
+intensified the physical labor required for production in and around
+new, fast-paced machines (Samuel, 1977). In chemical plants, the
+‘‘scientific work’’ performed in a modern control room characteristic of
+continuous production methods can go hand in hand with the ‘‘donkey
+work’’ of shoveling fertilizer, lifting and carrying massive bags,
+driving trucks, and maintaining machinery amid heat, thick dust, and
+noise (Nichols &amp; Beynon, 1977). Plant owners who invested in
+automated machine tools found that ‘‘[i]n reality, [numerical control]
+machines do not run themselves . . . the new equipment, like the old,
+requires a spectrum of manual intervention and careful attention to
+detail’’ (Noble, 1999, p. 172). Automation and computerization can also
+spur the development of new skills by transforming the nature of work
+tasks (Walker, 1958; Zubof, 1988).</p>
+<p>Technological innovations can replace work, transform it, or create
+new jobs; technology can also lead to de-skilling or up-skilling and at
+times will have no discernable efect on work. What, then, determines how
+any given technological advancement will afect work and employment?
+Rejecting a technological determinism according to which the outcomes of
+innovation are predetermined by scientific progress or rational
+considerations of eficiency, science and technology scholars have
+demonstrated that the relationship between work and technology is the
+product of a constellation of social relations (MacKenzie &amp; Wajcman,
+1999). The efects of technology on work are thus inseparable from the
+social settings—more specifically, the organizational contexts—in which
+they interact (Barley, 1986; Barley &amp; Kunda, 2001;</p>
+<p>Liker, Haddad, &amp; Karlin, 1999; Wajcman, 2006). The existence of a
+technological object alone does not dictate if or how an organization
+will use it; power relations between workers and managers, managerial
+philosophy, and the processes through which new technologies are
+developed and implemented are just some of the factors that can produce
+particular, contingent sociotechnical systems (Liker et al., 1999).
+Barley’s (1986) study of the introduction of computed tomography
+scanners in two hospital radiology departments is exemplary in this
+regard, demonstrating that the same technological innovation afected
+work roles and practices diferently depending upon the distribution of
+technical expertise within each department. The efects of technology on
+work are nonlinear and complex; understanding the conditions that give
+rise to variable configurations of workers and software requires
+examination of the organizations in which they are embedded.</p>
+<h2 id="is-this-time-different">Is This Time Different?</h2>
+<p>At the end of the 20th century, some social scientists and critics
+were again cautioning that the historical balance between substitution
+and complementarity would soon break down. This time, it was
+advancements in information and communications technologies that
+heralded a coming crisis of widespread unemployment (Aronowitz &amp;
+DiFazio, 1994; Noble, 1995; Rifkin, 1995). In recent years, such
+warnings have taken on renewed urgency amid the emergence of ‘‘big
+data’’ and ‘‘machine learning’’ techniques in software development that
+may help programmers overcome longstanding barriers to automating
+tasks.</p>
+<p>Until recently, computers were largely limited to performing
+‘‘codified, repetitive information-processing tasks’’ (Autor, 2015b,
+p. 247). Programmers developed software capable of simulating human
+cognition by instructing it to ‘‘follow precise, well-understood
+procedures’’—for example, ‘‘the mathematical calculations involved in
+simple bookkeeping [or] the retrieving, sorting, and storing of
+structured information typical of clerical work’’ (Autor, 2015a, p. 11).
+However, there remain many tasks that cannot be simulated in this manner
+because humans cannot articulate the exact ‘‘rules’’ necessary for
+accomplishing them. Following philosopher Michael Polanyi’s (1966)
+statement that ‘‘[w]e know more than we can tell,’’ Autor (2014)
+observes that ‘‘the tasks that have proved most vexing to automate are
+those demanding flexibility, judgment and common sense—skills that we
+understand only tacitly’’ (p. 136). For instance, most untrained human
+children could visually identify whether or not an object is a chair
+with a high degree of accuracy by reasoning about what the object is
+‘‘for.’’ It is far more dificult, however, to program a computer to
+consistently succeed at the same task because it is dificult to define a
+specific set of attributes that a chair will possess: Some have four
+legs, while some have none; some have a back, arms, or wheels, while
+others do not (Autor, 2015a).</p>
+<p>Rather than telling software precisely how to perform certain
+operations, machine learning allows computers to infer patterns
+approximating tacit rules from large sets of ‘‘training’’ data
+(Alpaydin, 2014; Pratt, 2015). Imagine again the task of visually
+identifying a chair. Software engineers could ‘‘feed’’ their program a
+vast number of human-completed operations (i.e., thousands of images
+marked ‘‘chair’’ or ‘‘not chair’’), and the software would use
+statistical modeling akin to inductive logic, rather than deductive
+reasoning, to ‘‘learn’’ how to perform the operation (Autor, 2015a).</p>
+<p>Contemporary discontinuity theorists argue that breakthroughs in
+machine learning and AI signal an inflection point in the historical
+link between technological innovation and job creation (Brynjolfsson
+&amp; McAfee, 2014; Elliott, 2014; Frey &amp; Osborne, 2017; Kaplan,
+2015; Sachs &amp; Kotlikof, 2012; Srnicek &amp; Williams, 2015). Machine
+learning can teach computers to perform tasks across a variety of
+occupational domains that previously required tacit knowledge and
+complex human cognition. In some settings, computers can make more
+accurate and less biased judgments than well-trained humans, process
+language, and even detect human emotions and facial expressions
+(Tufecki, 2015). Discontinuity theorists cite the rapid development of
+self-driving cars; speech recognition software capable of understanding
+complex communication (like the technology behind the iPhone’s Siri);
+increasingly accurate algorithmic language translation services; the
+Watson computer that in 2011 beat Jeopardy! champions at their own game;
+and continued advances in factory robotics (Brynjolfsson &amp; McAfee,
+2014; Ford, 2015). Indeed, AI is already substituting for the work of
+journalists (Smith, 2015), human resources managers (Miller, 2015),
+medical lab technicians (Tufecki, 2015), and equities traders (Popper,
+2016). In light of these trends, some social scientists and information
+technologists warn that societies must prepare for a future in which
+employment opportunities will continue to diminish as ‘‘smart’’ machines
+encroach on an increasing percentage of job tasks. According to one
+widely cited estimate, 47% of U.S. employment is at risk of
+computerization within the next 10 to 20 years (Frey &amp; Osborne,
+2017).</p>
+<p>Continuity theorists, on the other hand, predict that the complex
+historical dynamics of human–machine interaction will continue to hold
+(Arntz et al., 2016; Autor, 2015a, 2015b; Bessen, 2015a, 2015b;
+Davenport &amp; Kirby, 2016; Ekbia &amp; Nardi, 2017; Mindell, 2015;
+Mokyr et al., 2015). Economist David Autor (2015a, 2015b) has produced
+the most thorough and convincing case for continuity, emphasizing that
+those interested in the future of work must look beyond substitution to
+identify the limitations of computerization and the complex interactions
+between technology and employment.</p>
+<p>Although in the popular imagination software algorithms often take on
+mythic qualities of near-omnipotence (Ziewitz, 2016), in reality,
+developers continue to grapple with their limitations. Continuity
+theorists remain skeptical that computers can provide an adequate
+substitute for tacit knowledge in many settings. Although on average
+machine learning may be capable of providing accurate output in a
+variety of applications, machine-learning algorithms often fail in ways
+that are dificult to predict. For example, whereas discontinuity
+theorists cite the fact that a computer defeated human Jeopardy!
+champions as evidence of computing’s swift progress, Autor emphasizes
+how the computer got one question spectacularly wrong.<sup>2</sup>
+Although machine learning can ofer ‘‘good and useful approximation[s]’’
+of mental processes (Alpaydin, 2014, p. 2), results often remain
+inconsistent and incomplete. Furthermore, it can be dificult, if not
+impossible, to reverse engineer machine-learning algorithms to explain
+the reasoning underlying their decisions (Burrell, 2016).</p>
+<p>Scholars have also called into question the purported autonomy of AI
+by emphasizing the essential role of human activity in the
+implementation of AI systems (Ekbia &amp; Nardi, 2017; Goldberg, 2015;
+Mindell, 2015). (See Appendix A for further details on debates
+surrounding the nature of AI.) For example, many observers seem unaware
+that machinelearning algorithms are often powered by human labor—not
+only of the software engineers who design them but also of workers who
+create vast amounts of training data to teach them (Irani, 2015c), which
+in some cases must be frequently updated to adapt to changing
+environments. In addition to the aforementioned limitations of machine
+learning, some cite the high cost of building and maintaining digital
+machinery and the dificulty of programming it to adjust to new and
+unpredictable conditions as reasons why many employers will continue to
+rely on humans to perform nonroutine work (Autor, 2015a, 2015b; Ekbia
+&amp; Nardi, 2017). Many tasks requiring flexibility, situational
+adaptability, creativity, judgment, intuition, spoken language,
+interpersonal interaction, and persuasion are unlikely to be fully
+automated anytime soon.</p>
+<p>Continuity theorists’ argument that the rise of ‘‘smart’’ machines
+does not signal the end of work holds not only that many work tasks will
+not be automated but also that, as in the past, technological change
+will increase demand for labor that complements new machinery. Yet, it
+remains dificult to predict the shape of new human–machine
+configurations: While one can regularly find news stories about
+technologies that threaten to substitute for human labor, ‘‘[t]he
+ofsetting efects of complementarities and rising demand in other areas
+are, however, far harder to identify as they occur’’ (Autor, 2015a,
+p. 26). Economists have sought to deduce future employment trends from
+theory and historical comparison; however, their approaches are pitched
+at a level of abstraction that precludes systematic investigation of
+continuity’s form and dynamics within concrete social settings. With
+their methodological pluralism, sociologists and organization scholars
+are uniquely positioned to ofer ethnographic insights capable of
+advancing debates around the future of work. Organizational
+ethnographers influenced by the perspectives of social studies of
+science and technology have been ‘‘especially attuned to the
+contradictions, contingencies, and nuances of technological
+development’’ (Wajcman, 2006, p. 782). Only by examining organizations
+in which software algorithms are being developed and implemented can
+researchers uncover the nature of human–software complementarities that
+are arising, the contextual factors that influence their form, and how
+these configurations change over time.</p>
+<p>This study examines how the relationship between work and technology
+evolved during three phases of a start-up company’s development. During
+the first phase of my research, AllDone’s executives hoped to take
+advantage of the company’s first round of venture capital funding by
+increasing demand for the product. Software engineers prioritized
+building and expanding systems that drew new users to the website and
+facilitated their activity. Developers confronted machine lag, or gulfs
+between their imagination and the realities of technology’s limitations
+and the firm’s scarce resources. They addressed machine lag by deploying
+computational labor in the form of Philippine workers who performed
+repetitive information-processing tasks to complement software
+infrastructure. During the second period of research, managers shifted
+their focus toward generating a sustainable revenue stream that would
+ensure the company’s longevity and attract a second round of funding.
+Human lag arose when users were reluctant to accept the performance of
+AllDone’s software systems. Human lag was addressed by the emotional
+labor of phone support workers distributed across the Las Vegas area who
+managed relationships with users and helped them adjust to AllDone’s
+changing product and policies. During the final phase of research,
+AllDone secured a second round of VC funding and began to combine its
+previous goals of expansion and revenue generation. The dual goals of
+growing the customer base while simultaneously squeezing more money out
+of their activities created tensions that systematically reproduced
+machine lag and human lag. In response to this permanent lag, AllDone
+continued to expand the ranks of complementary workers whose eforts
+supported technological systems.</p>
+<h2 id="research-setting">Research Setting</h2>
+<p>This study draws on data gathered during 19 months of
+participantobservation research conducted at AllDone between February
+2012 and August 2013. (See Appendix B for details on data-gathering and
+analytic procedures.) The organization comprised three work teams. For
+the majority of my tenure with the company, the San Francisco ofice
+(known as AllDone San Francisco, or ADSF) was home to about 20 full-time
+employees in engineering, design, marketing, business, and operations
+divisions. A distributed, work-from-home team of 200 people across the
+Philippines (AllDone Philippines, or ADP) typically handled routinized
+data-processing tasks. And a distributed, work-fromhome team of 10 in
+the Las Vegas area (AllDone Las Vegas, or ADLV) interfaced with AllDone
+users via telephone.<sup>3</sup> Members of the two remote teams
+generally held full-time, open-ended independent contractor positions.
+ADP contractors were recruited, hired, and supervised via oDesk, a
+platform designed to facilitate online freelancing projects. ADLV
+workers were recruited using local job postings on Craigslist and then
+supervised via oDesk.</p>
+<p>AllDone had launched its nationwide, online marketplace in early
+2010. The company was one of many aiming to build ‘‘Amazon for local
+services,’’ a website that would eventually make it as easy to find and
+hire providers of local services online as it is to buy products. More
+than 600 service categories were represented, ranging from home
+improvement (e.g., plumbers and electricians), to event services (e.g.,
+DJs and caterers), to guitar teachers, locksmiths, and many others.
+Buyers who visited AllDone from a computer or mobile device were
+presented with a text box in which they could enter the type of service
+they were looking for. Buyers would then fill out a short form,
+answering three or more questions about the details of the job.
+Completed buyer requests were distributed via e-mail or text message to
+sellers (service providers) in the buyer’s area who might be capable of
+performing the job. Those who were available and interested could pay
+AllDone a fee to send a quote to the buyer including a price estimate,
+information about what was included in their price, and a pitch
+describing why they were qualified for the job. Buyers and sellers
+managed any subsequent communication, provision of service, and payment;
+AllDone assumed no formal responsibility for the outcome of market
+activities.</p>
+<p>High-tech start-ups often look to venture capital (VC) firms to
+supply needed funds. VCs receive an equity stake in emerging enterprises
+in exchange for capital that entrepreneurs can use to fund operations
+and growth, along with the VC’s counsel, credibility, and connections.
+Venture-backed start-ups are funded in stages or rounds, with early
+investors typically receiving the most favorable terms, having invested
+when the company’s prospects were more dificult to evaluate. VCs derive
+returns from the appreciation of the value of the firms in which they
+invest. Rather than funding companies that aim to steadily build
+reliably profitable businesses, VCs develop portfolios of high-risk,
+highreward firms, seeking exponential returns via the sale of their
+investments in corporate acquisitions or initial public stock oferings
+(Gompers &amp; Lerner, 2004; Kenney &amp; Florida, 2000; Zider,
+1998).</p>
+<p>Like most start-up companies, AllDone developed amid conditions of
+uncertainty and fluidity. Nascent firms in unsettled markets typically
+struggle to secure scarce resources including customers, capital, and
+employees. Unable to make substantial investments in research or
+long-term strategic planning, entrepreneurial firms are frequently
+presented with unanticipated challenges and opportunities. Entrepreneurs
+thus pursue a strategy of ‘‘opportunistic adaptation,’’ developing ad
+hoc responses to unexpected problems as they arise and experimenting
+with a multitude of new initiatives whose outcomes are uncertain (Bhide´
+, 2000). AllDone’s executives frequently shifted the company’s strategic
+direction as they sought to convince successive rounds of VCs to provide
+the resources the company needed to supercharge its growth.</p>
+<p>As a successful high-tech start-up that would eventually be valued at
+more than $1 billion, AllDone provided an ideal setting in which to
+examine the relationship between work and technology in the digital age.
+The company was part of a new wave of firms using software to
+‘‘disrupt’’ traditional local service markets. Like Uber, Airbnb, and a
+host of other digital platform providers, AllDone aggregated a vast
+array of local markets into one online clearinghouse. Such online
+marketplaces are designed to make it easier for buyers and sellers to
+locate and transact with one another while also providing an opportunity
+for platform providers to extract fees from users and profit from their
+brokerage positions.</p>
+<p>AllDone experienced rapid growth during the course of my fieldwork.
+By June 2013, more than 250,000 sellers had signed up with</p>
+<p>AllDone. During that month alone, 25,000 submitted at least one quote
+to a consumer. AllDone was acquiring 4,000 new sellers per month, and
+sending sellers more than 100,000 consumer requests, representing a 200%
+increase in request volume in just 5 months, and a 400% increase over
+the previous year.</p>
+<p>After leaving the field and reviewing my fieldnotes, I identified
+three analytic phases, each corresponding to a roughly 6-month period of
+my research and the company’s development. The construction of each
+analytic phase was based on my observations of major ‘‘breakpoints,’’
+when exogenous events and shifts in organizational strategy ofered new
+‘‘occasions for structuring’’ the relationship between work and
+technology (Barley, 1986). In the empirical sections that follow, I
+trace three distinct configurations of software and labor at AllDone.
+The first phase was a period of expansion in which the firm grew its
+team in the Philippines to perform computational labor that complemented
+software systems designed to attract new users to the website and
+facilitate market activity. In the second period, when revenue
+generation became of paramount importance, the company relied on
+emotional labor provided by phone support agents in Las Vegas to build,
+repair, and preserve users’ trust in AllDone. With its new business
+model in place, AllDone then raised a second round of VC funding. In
+this third phase of development, the company combined its prior goals of
+expansion and revenue generation. As the ranks of software engineers
+swelled, their increased pace of innovation necessitated the continual
+intervention of complementary workers to bring technology up to speed
+with developers’ vision and to help users adapt to changing systems.</p>
+<h2 id="phase-i-from-machine-lag-to-computational-labor">Phase I: From
+Machine Lag to Computational Labor</h2>
+<p>We know what the future of local services is [. . .]. [. . .] But
+we’re not the only people that know this is the future. And, more
+importantly, there’s lots of people—smart, scrappy, and well-funded
+people—building our vision. [. . .] Someone is going to do it. And it
+looks like it’s going to happen soon. [. . .] We just have to finish
+building faster than anyone else and we will win. We have to. (Carter,
+AllDone’s President, in an email to San Francisco stafers)</p>
+<p>Executives planned to take advantage of AllDone’s first round of VC
+funding by prioritizing the expansion of the company’s staf and user
+base. Only by growing quickly could AllDone hope to secure the
+advantages that accrue to ‘‘first movers’’ in an industry that continued
+to welcome an ever-expanding array of competitors. Enlarging the
+fourperson engineering staf would significantly increase AllDone’s pace
+of innovation, enhancing the company’s ability to devise plans, run
+experiments, assess results, and implement changes to the product.</p>
+<p>AllDone’s software engineers were heavily involved in selecting their
+new colleagues, sacrificing their productivity to build the team.
+Reflecting on the first quarter of2012, Josh, ADSF’s product manager,
+reported that AllDone’s engineers had ‘‘accomplished very little’’ in
+terms of their production goals because they had been ‘‘very, very
+focused on recruiting’’ activities that reportedly consumed at least
+half of their work time.</p>
+<p>The push for rapid growth created machine lag, as software
+developers’ needs and imagination frequently outstripped the
+capabilities of technology and available engineering resources. To
+address machine lag, AllDone expanded its digital assembly line in the
+Philippines, where workers performed computational labor to complement
+software systems. I use the term computation to refer to ‘‘the
+transformation of information by means of an algorithm or program’’ that
+‘‘defines rules by which information will change’’ (Gershenson, 2013,
+p. 62; cf. Ekbia &amp; Nardi, 2017; Irani, 2015a; Michelucci, 2013).
+Humans perform computational labor when they implement
+information-processing algorithms. Computational labor allowed AllDone
+to accomplish its goal of spurring substantial user growth in spite of
+the impediments to software production imposed by recruiting activities.
+During the first quarter of 2012, AllDone received almost 50% more
+consumer requests than it had during the last 3 months of 2011; during
+the second quarter, that mark increased again by 75%.</p>
+<p>Computational labor complemented software systems in three ways. In
+some instances, workers’ tacit skills gave them an advantage over
+computer code in performing nonroutine tasks. In other cases, the
+company relied upon reverse substitution, using workers to imitate
+software algorithms that otherwise would have been too costly or
+time-consuming to produce. In addition, some ADP stafers provided
+workarounds, performing routine tasks to subvert systems designed to
+detect software automation.</p>
+<h2 id="nonroutine-tasks">Nonroutine Tasks</h2>
+<p>In some instances, AllDone complemented software systems with human
+workers because people possessed competencies grounded in tacit
+knowledge that could not easily be programmed. For example,</p>
+<p>ADSF turned to Filipino workers to undertake a marketing project that
+software alone was ill-suited to handle. AllDone focused its buyer
+acquisition eforts on ‘‘search engine optimization’’ (SEO). SEO
+describes a set of techniques designed to bump a website’s pages to the
+top of search engine results. One way that websites can enhance their
+standing in search engine results is by obtaining incoming links from
+other websites—particularly from websites that search engine companies
+believe are widely respected by Web users. In early 2012, ADSF conducted
+a survey of AllDone sellers about the local business environments in
+which they operated. The company then packaged the survey results on its
+website and tried to get other websites to link to those new pages.
+AllDone paid a public relations firm $30,000 to assist with outreach to
+news organizations.</p>
+<p>Simultaneously, two ADSF managers orchestrated a ‘‘data mining’’
+experiment to find out if a combination of technology and workers could
+outperform the professional PR firm. Managers in San Francisco asked
+Christine, a team leader in the Philippines, to recruit two dozen
+workers to join a temporary survey team. The ADSF managers created
+detailed documents instructing members of this new team on how to
+systematically scour the Web for the first and last name, e-mail
+address, Twitter handle, and organizational afiliation of people and
+platforms in the United States that might publish a story about local
+business issues. It would have been exceedingly dificult to teach
+software to accurately gather unstructured data from such a vast array
+of sources, each of which was formatted in a unique manner. AllDone’s
+human workers, however, possessed a tacit understanding of how to
+identify the desired information and could perform these operations with
+relative ease.</p>
+<p>Team members spent weeks accumulating and classifying data about
+50,000 journalists, bloggers, nonprofits, politicians, and think tanks,
+recording entries into a complex series of spreadsheets. I then wrote
+detailed instructions for ADP survey team members to ‘‘clean’’ and
+standardize each entry to ensure that an ADSF manager could use an
+automated system to send each target a ‘‘personalized’’ e-mail pitch.
+ADP’s survey team then recorded recipients’ responses to ADSF’s e-mails
+in the spreadsheets. Finally, I wrote instructions specifying under what
+conditions survey team members should follow-up via e-mail or Twitter
+with contacts who had not yet responded. The experimental survey team
+was wildly successful, yielding hundreds of incoming links—50 times as
+many stories as had the PR firm that AllDone had retained for the same
+purpose, at one third of the cost.<sup>4</sup></p>
+<p>The survey project introduced me to what members of ADSF called
+‘‘establishing process,’’ or routinizing knowledge work to be ofshored
+to a mass of flexible workers distributed across the Philippines. If
+ADSF’s software engineers wrote code in specialized programming
+languages to guide the central processing units and servers powering the
+company’s technological infrastructure, I had become a process engineer
+writing code in plain English to guide the people who constituted what
+managers often called AllDone’s ‘‘human machine.’’ Like the software
+engineers, I too was crafting algorithms, ‘‘sequence[s] of instructions
+that should be carried out to transform [any given] input to output’’
+(Alpaydin, 2014, p. 2). And like computer code, the instructions I wrote
+were designed to leave nothing to the imagination, sometimes including
+graphical decision trees to help workers understand how to handle all
+possible contingencies (e.g., Figure 1). With every operation explicitly
+detailed, workers became nearly as interchangeable as central processing
+units in a network, with each person developing approximately the same
+interpretation of each task. My algorithms were ‘‘debugged’’ by managers
+in the Philippines who reviewed the tasks I assigned and asked me
+questions to help me clarify the instructions before they were
+distributed to team members for human computation.</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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S3Wf+2H/AKPjruK4f4v/APJLdZ/7Yf8Ao+Ou4oJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKDRRQByPij/kY/D3/Xy38hXXCuR8Uf8jH4e/6+W/kK64UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUGig0Ac/42/5FG/8A9z+orR0b/kEWn/XJf5VneNv+RRv/APc/qK0dG/5BFp/1yX+VAF+iiigD488af8j14h/7Cdz/AOjWoo8af8j14h/7Cdz/AOjWooKPov4v/wDJLdZ/7Yf+j467iuH+L/8AyS3Wf+2H/o+Ou4oJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKDQByPij/kY/D3/AF8t/IV1wrkfFH/Ix+Hv+vlv5CuuFABRRRQAUUUUAFFFJQAtFcRq/wAStO0Xxrb+HLuGRWmxifjaCema1tU8Uw6Z4j0vR2hZ3v8AO11IwuKAOhoqN5o48eZIiZ/vMBTg4IBBBHqKAHUVG8yRDMkiJ/vMBSiRWXcrAqe4OaAH0VD9qh+bEqHaMkBhxWRp/iix1fT7q509xIYGZNjEKWZewoA3aKx/D2qXeqaPHd6hZGymYndEzA4981ppPHISI5Eb/dYGgCWiomnjTO+RFwcHLAU8MGwQQQfSgB1FFFABRRRQAUGig0Ac/wCNv+RRv/8Ac/qK0dG/5BFp/wBcl/lWd42/5FG//wBz+orR0b/kEWn/AFyX+VAF+iiigD488af8j14h/wCwnc/+jWoo8af8j14h/wCwnc/+jWooKPov4v8A/JLdZ/7Yf+j467iuH+L/APyS3Wf+2H/o+Ou4oJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKDRRQByPij/AJGPw9/18t/IV1wrkfFH/Ix+Hv8Ar5b+QrrhQAUUUUAFFFFABSHrS0hFAHjviXw5F4m+ImsWJwJ/sKtBJ3RwOKyNF8RS614w8K2l9ldU05nguUPXIyM/jXrcPhmOHxfP4gE7GSWERGLHAx3rLm+HWnP47i8VRStFcLy8Sr8rn1oA5TSdDi8d+JvEF1rF3c7LWdoIII5CoQDjNbPwsnuo7fVtKmunuorC6aKGSQ5O0Hpmp9W+GzXGt3WqaRrdzpct3/x8JEuVc+vWug8LeFrPwppf2K1Z5GZt8sz/AHpGPUmgDivH0ui3HiaGzng1XUb8R8Wdk2FRfU5Irl9L1/UtM+GOviCW4heG7MEPnnLxKTjBPtXo3iHwAdW8QDWrDV59OvGj8qRo1DblqPSvhpYWPh7UtHubua8hvnLyPIMMCe9AFLSfhtpcFlbXI1C9aWSAiZjMSJdw5rkfA3gDSNQ0DVbiZ7wPDcSqpWYjhScV3Ph/4d3OjajbT3PiK8vre1/1NvIMKPrzzUuk/D9tH1q7u7XWLgWVyzubLb8gLZ7/AI0Aefm+vZfAXhnSI7yWFNSuxbzTb/mCZ6ZrW1bQ4vAnizw3No95chby4W3nilkLB1PU11M/w2sLnwjBoUl1Lut38yG5UYaNuoIqLR/hwbTWbfVNX1m51Wa1/wBQswwqH1x60Ac5B4Ui8VeN/EbX9/drbwMBHBHIVAOOtdD8KZ7h/DU1rcTvP9luXiR3OSVB4rotL8OR6Zq2qX6zs7X7hmUrwuPSk8MeGovDVrcwRztMJ5mmJYYwSelAG7RRRQAUUUUAFBooNAHP+Nv+RRv/APc/qK0dG/5BFp/1yX+VZ3jb/kUb/wD3P6itHRv+QRaf9cl/lQBfooooA+PPGn/I9eIf+wnc/wDo1qKPGn/I9eIf+wnc/wDo1qKCj6L+L/8AyS3Wf+2H/o+Ou4rh/i//AMkt1n/th/6PjruKCQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDkfFH/Ix+Hv+vlv5CuuFcj4o/5GPw9/18t/IV1woAKKKKACiiigAooprdzQAuRS5rx2LQ9X8UeIvEhbxBd21paTlYYom6ED+VUbjxprFl8JoHNy73r3JtDcKMtgNjI96APb8ijIrxLQ7vUNP8U6V/Zcuu3MEh2Xi3sJC4/vCtOx0zU/Huu61dS65d2Vtaztb20VucYwepoA9ayPWlyK8U8U6veR+LbPwzd32om0tLZXmeyjJkmbHf2pNMvPFJ8NeI7LTf7RlWP5rKW5j2yle4570Ae15HrRuHrXlfw9vLS4+1Cz1fUX1JYMSWV8MFXx1H41leB73d4lhh1zVtUtNbErbre4XEU3PAU0Ae05FLkV4R401GziuNYntPEmrz6hDukRbaImGIjopPStHVLrXPEdl4Nt7fVZbOa/jBnljPUbefxoA9lyPWlyK8o1SC/8B614duG1W6u9Peb7NcGduPm4BNa3hXUbzxB491m+S5dtLtQLeFAflLdzQB6DRRRQAUUUUAFBooNAHP8Ajb/kUb//AHP6itHRv+QRaf8AXJf5VneNv+RRv/8Ac/qK0dG/5BFp/wBcl/lQBfooooA+PPGn/I9eIf8AsJ3P/o1qKPGn/I9eIf8AsJ3P/o1qKCj6L+L/APyS3Wf+2H/o+Ou4rh/i/wD8kt1n/th/6PjruKCQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACg0UUAcj4o/wCRj8Pf9fLfyFdcK5HxR/yMfh7/AK+W/kK64UAFFFFABRRRQAUh70tFAHN6L4bl0q81mZ7hXGoTGUAD7mR3rBT4aK/g2TQ7m9zL9oa4hnRfuMTkV6FRQBw2h+HPF1pqFs+qeIbe4tIfvRxwkNJ9TVG88A67a63f3vhzX0sIL5i80MkZbDHuuK9HooA881T4fak9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" alt="image" /></p>
+<p>Figure 1. Example of algorithmic decision tree.</p>
+<p>ADP managers would also field questions from team members as they
+arose, reducing the number of queries that made it to San Francisco.</p>
+<p>Recognizing the value of ADP’s functional and numerical flexibility,
+members of ADSF began to imagine new tasks requiring tacit knowledge
+that could be completed by human workers. When the survey project was
+completed, the team that had powered it was disbanded as easily (from
+the perspective of ADSF managers) as it had been summoned. However, the
+experiment proved so powerful that other members of ADSF were soon
+asking me to devise algorithmic instructions for their own ‘‘special
+projects’’ to take advantage of ADP’s human computation. For example, I
+established a process through which members of ADP would promote job
+openings at AllDone by gathering contact information for and reaching
+out to college computer science programs. I initially ofered such
+projects on an ad hoc basis to ADP team members who wanted more work,
+but later Christine was asked to reconstitute her group as a permanent
+special projects team. ADSF stafers could call upon this group’s eforts
+whenever they wanted to quickly and cheaply execute a ‘‘random’’
+data-gathering or -processing task without using up (or waiting for)
+scarce technological resources. Just as software engineers often rely on
+‘‘software-as-a-service’’—integrating other companies’ ready-made
+software products into their own code—all of ADSF could access ADP’s
+‘‘humans-as-a-service’ (Irani, 2015a), using a flexible, on-demand
+workforce to pick up or drop projects at a moment’s notice. Managers
+encouraged all ADSF employees—from software engineers to the ofice
+manager—to ‘‘outsource’’ as many tasks as possible. As my supervisor
+wrote in my initial performance review:</p>
+<p>[I]f you spend all your time on grinder projects that take many
+hours, we lose you for other projects that could be equally valuable for
+you to work on. You should always think about how you can set up a
+process, delegate to someone else (an outside contractor or someone on
+ADP/ADLV), and move on.</p>
+<p>Ofloading ‘‘grinder projects’’ to ADP had two benefits for ADSF.
+First, ‘‘outsourcing’’ freed more costly workers from routine tasks,
+allowing them to spend more time on more ‘‘valuable’’ work. Second, ADP
+altered ADSF employees’ vision of technology’s horizons, expanding the
+company’s scope of action by unlocking innovative schemes (like the
+survey project) that could be completed quickly, cheaply, and efectively
+only by an agglomeration of human workers.<sup>5</sup></p>
+<h2 id="reverse-substitution">Reverse Substitution</h2>
+<p>Conceptualizing, developing, testing, and refining complex software
+algorithms is a costly and time-consuming process. Even when software
+could technically be crafted to handle a task, AllDone’s small team of
+software engineers often believed that the resources required to code
+and implement it would be prohibitive or could be better allocated
+elsewhere. In these instances, developers relied upon reverse
+substitution, stripping routine computation work from computers and
+displacing it onto workers. These workers stood in for software
+algorithms not because full automation was impossible but because
+developers believed that achieving it would be ineficient. Although
+machine learning uses computational ‘‘brute force’’ to simulate human
+cognition, reverse substitution replaces software algorithms with the
+‘‘brute force’’ of largescale, routinized labor processes.</p>
+<p>Because AllDone’s SEO strategy was yielding an ever-increasing volume
+of buyer requests, the company had to connect far more buyers with
+sellers. Indeed, AllDone’s core function as a broker was to connect
+potential buyers with sellers of local services. However, AllDone’s
+developers chose not to develop software algorithms to perfect this
+process. Instead of devoting scarce engineering resources to matching,
+AllDone maintained a workforce in the Philippines to manually construct
+every introduction.</p>
+<p>Members of ADP’s matching team used a Web portal that displayed the
+details of each buyer request. They began by vetting requests and
+deleting those that appeared to be fraudulent (e.g., a request placed by
+‘‘Mickey Mouse’’). Team members were then provided with a list of local
+AllDone sellers who might be eligible to receive the request because
+they worked in related service categories. Workers would select all of
+the sellers who they judged to be an appropriate match, and the sellers
+would then be automatically notified via e-mail or text message of the
+incoming request. AllDone’s users would never know that human workers,
+rather than a computer algorithm, had handcrafted each introduction. To
+keep up with the rapid rise in request volume during the first half of
+2012, the matching team’s managers hired 38 new members, more than
+doubling the team’s size from 30 to 68.</p>
+<p>If in some instances software engineers used reverse substitution to
+manage long-term organizational processes, in others reverse
+substitution was deployed to reduce the engineering burden that came
+with developing new and experimental product features. In one such case,
+members of ADP were used to test whether it would be worth an engineer’s
+time to ‘‘code up’’ a new product feature. ADSF’s product team wanted to
+determine whether providing a link to a seller’s Web page on Yelp (a
+consumer review website) would increase a buyer’s likelihood of
+contacting the seller. Yelp ofers developers tools that allow them to
+embed Yelp users’ business information directly into their own websites.
+However, Bill, the engineer in charge of the project, preferred not to
+spend his time learning how to use Yelp’s tools without first knowing
+whether or not the new feature was likely to succeed. He devised a test
+whereby members of ADP substituted for software algorithms by manually
+searching for 9,000 sellers on Yelp and gathering information from their
+user profiles. Bill experimented with putting some of this information
+on relevant AllDone pages, and, upon finding that that it did not have a
+statistically significant efect on buyer behavior, abandoned the test.
+By using ADP workers to stand in for software infrastructure, Bill was
+able to save valuable engineering time that otherwise would have been
+wasted learning how to use development tools to conduct a test that was
+destined to fail. ADP workers enacting reverse substitution often
+supported what software engineers referred to as ‘‘quick and dirty’’
+tests. By manually executing algorithmic tasks, they provided proof of
+concept before developers invested time and resources in devising
+elegant software solutions. 6</p>
+<p>Computers are generally expected to replace humans in ‘‘codified,
+repetitive information-processing tasks’’ (Autor, 2015b, p. 248). At
+AllDone, however, resource constraints or the experimental nature of new
+product features could lead to the reverse outcome, with humans
+performing programmable digital processes by hand. The existence of
+software solutions did not necessarily result in their deployment at
+AllDone; instead, the direction of substitution depended upon the
+organizational context in which it was implemented.</p>
+<h2 id="workarounds">Workarounds</h2>
+<p>Users do not always passively accept technological innovations;
+instead, they often develop interpretations of and adaptive responses to
+technology—also known as ‘‘workarounds’’—that can undermine designers’
+intentions (Lee, Kusbit, Metsky, &amp; Dabbish, 2015; Lim, Dey, &amp;
+Avrahami, 2009; Yang &amp; Newman, 2013; Zubof, 1988).<sup>7</sup> At
+AllDone, workarounds combined elements of reverse substitution and
+nonroutine tasks. Like reverse substitution, the eforts of employees
+providing workarounds stood in for software algorithms that technically
+could have been created to perform a task. In these cases, routinized
+human labor possessed a comparative advantage over computer code because
+workers’ performance of tasks using tacit knowledge allowed them to
+subvert a system designed to detect and prevent software automation that
+followed precise rules.</p>
+<p>ADP’s writing team helped AllDone work around the systems that search
+engine companies implement to prevent Web developers from ‘‘gaming’’
+their search algorithms. In addition to accruing incoming links from
+other websites, another SEO technique is to create Web pages rich in the
+‘‘keywords’’ that potential users are likely to search for (e.g., ‘‘best
+locksmith,’’ ‘‘afordable tutor’’). Ideally, AllDone’s software engineers
+would develop software algorithms to add vast amounts of keyword-rich
+text to their Web pages. However, this strategy was deemed too risky
+because search engine companies deploy their own algorithms to detect
+autogenerated SEO text and penalize websites that attempt to ‘‘game’’
+their systems by posting artificial content.</p>
+<p>Given the risks of automating SEO content generation, AllDone instead
+built a writing team in the Philippines to help the firm attract buyers.
+A software engineer set up an administrative portal that would show
+writers descriptions of AllDone sellers and the most popular keywords
+for the services they ofered. Every month, ADP team members wrote
+approximately 50,000 keyword-rich descriptions of the services that
+sellers ofered, which ADSF engineers then added to thousands of
+automatically generated pages.<sup>8</sup> During the second quarter of
+2012, the writing team almost doubled its output as its managers in the
+Philippines opened 16 new positions (growing from 37 to 53) and
+implemented a change in the team’s pay scale (from an hourly wage to a
+piece-rate) to boost productivity. Direct observation of human–software
+complementarities at AllDone reveals an advantage of tacit knowledge not
+previously predicted by continuity theorists. When software systems are
+designed to defend against algorithmic eforts to ‘‘game’’ them, human
+variability and imperfection may be able to circumvent software’s
+strictures.</p>
+<p>At the same time that ADP’s writing task functioned to draw buyers to
+the website, it operated in tandem with machine-learning algorithms
+designed to recruit sellers. Vince, an ADSF software engineer, created a
+‘‘Web crawler’’ program that would scour the Internet for information
+associated with prospective sellers. The machine-learning algorithm was
+tuned by ‘‘big data’’ gathered from ADP workers who viewed the
+algorithm’s assessments of more than 10,000 Web pages. Workers recorded
+whether the program had accurately determined whether the Web page
+belonged to a prospective seller and whether it had accurately
+determined each seller’s name, e-mail address, services ofered, and
+location.</p>
+<p>The workers’ corrections were then fed back into the program to help
+to refine the algorithm.</p>
+<p>When a buyer placed a request on AllDone, her request would be sent
+to relevant sellers who had already established profiles on AllDone and
+also to all of the e-mail addresses that the crawler had identified as
+belonging to potential sellers of the service in that area who might be
+interested in joining AllDone and getting in touch with the buyer. By
+early 2013, the crawler had visited 12 billion Web pages and found 7
+million potential sellers; of those, 400,000 had signed up (though about
+one third would later deactivate their profiles), at a cost of 40 cents
+per acquisition.<sup>9</sup> AllDone thus used a combination of human
+labor and machine learning to build a nationwide user network at minimal
+cost.</p>
+<p>In sum, during the first phase of my fieldwork, AllDone confronted
+machine lag as software engineers’ vision outstripped the limitations of
+technology and the organization’s resource deficits. The company
+deployed functionally and numerically flexible computational labor to
+support growth and innovation, complementing software algorithms by
+enacting nonroutine tasks, reverse substitution, and workarounds.</p>
+<h2 id="phase-ii-from-human-lag-to-emotional-labor">Phase II: From Human
+Lag to Emotional Labor</h2>
+<p>With Series A [funding rounds], you’re selling a dream [to
+investors]. With Series B, you’re selling a spreadsheet. (Peter,
+AllDone’s CEO)</p>
+<p>During the second phase of my research, AllDone’s executive team
+redirected its focus from generating more user activity to generating
+more revenue. They began to present data in weekly staf meetings
+tracking the firm’s progress toward becoming a profitable,
+self-sustaining company—and, by implication, a worthy investment for
+later stage venture capitalists.</p>
+<p>Eforts to convert user growth into revenue growth drew top
+management’s attention to—and at times exacerbated—instances of human
+lag, when users were reluctant to accept or resisted AllDone’s software
+systems. Users who were confused by or dissatisfied with AllDone’s
+service were less likely to become or remain paying customers; worse,
+some threatened to damage AllDone’s reputation. AllDone’s phone support
+team in the Las Vegas area complemented technological systems by
+performing emotional labor to help users adapt to the software. These
+frontline workers regulated their emotional display in an efort to
+instill particular emotional states in the customers with whom they
+interacted (Hochschild, 1983; Wharton, 2009). ADLV supported revenue
+growth by managing relationships with sellers, helping to keep them
+engaged and satisfied with the product.</p>
+<p>ADLV’s emotional labor was aimed at building, repairing, and
+preserving users’ trust in AllDone’s service. Trust is an essential
+element of market brokerage. For brokerage relationships to endure in
+competitive markets, buyers and sellers must believe that the broker is
+capable of meeting their needs and that the broker will not exploit its
+advantageous position to unduly gain at their expense (Stovel &amp;
+Shaw, 2012). Trusttakers engage in emotion management to produce
+trustworthiness, ‘‘perform[ing] acts of self-presentation in order to
+win the trust-giver’s trust’’ (Bandelj, 2009, p. 356). Trust-takers
+attempt to generate positive emotional responses in trust-givers by
+signaling their commitment, congruence of expectation, competence, and
+integrity (Beckert, 2006). ADLV’s emotional labor mobilized human
+intuition, creativity, problem-solving skills, and powers of persuasion
+in interpersonal interactions to solve problems of trust—functions that
+were nearly impossible to automate, yet integral to the operation of
+AllDone’s software and business.</p>
+<h2 id="building-trust">Building Trust</h2>
+<p>Sellers often struggled to understand how to take advantage of
+AllDone’s marketplace. Because AllDone had prioritized building a
+nationwide network of users as quickly as possible, its Web pages were
+designed to funnel sellers directly into the signup process, minimizing
+the presentation of complex information about how the service worked.
+Once they had joined AllDone and begun to use the marketplace, some
+participants struggled to understand core features of the product,
+including the quoting system, the payment structure, and the user
+interface. Misunderstandings and mistrust could be exacerbated by ADSF’s
+frequent experimentation with the user interface and market rules.
+Initial tests of new features might be underdeveloped, and engineers
+often chose not to provide afected users with explanations of
+experimental changes. Rather than investing limited engineering
+resources in perfecting experimental product features that might
+eventually be abandoned, it was far easier for AllDone to, as one
+manager put it, ‘‘throw bodies at the problem’’ to help keep users
+engaged.</p>
+<p>When users required extensive assistance, members of ADLV undertook
+interactive emotional labor to help confused buyers and sellers
+understand market rules and norms. In these cases, members of</p>
+<p>AllDone Las Vegas taught sellers about the AllDone process over the
+phone, as in a 15-minute exchange that I observed in team leader Carol’s
+home ofice.</p>
+<p>As we’re sipping tea at her desk, the phone rings. Carol puts on a
+smile as she answers on speakerphone. The man on the other end speaks
+haltingly, asking for Theresa. ‘‘We don’t have a Theresa,’’ Carol
+responds, ‘‘but can I help you with anything?’’ After a little
+back-and-forth, Carol deduces that this seller, Ted, received a request
+from a buyer named Theresa. But Ted doesn’t seem to understand what that
+means, or what he can do with the request. In fact, I’m beginning to get
+the sense that Ted doesn’t even understand what AllDone is.</p>
+<p>After a few failed attempts at gathering Ted’s account information,
+Carol is finally able to locate him in the system. Now that Ted has
+learned what a request is, Carol wants him to take a look at his queue.
+‘‘Are you close to a computer?’’ she asks. ‘‘Uhhhhhh’’ is Ted’s hesitant
+reply. ‘‘Or I could go over them [with you over the phone] if you’d
+like!’’ Carol ofers without missing a beat.</p>
+<p>It turns out that Theresa’s request won’t work for Ted: he says he
+refinishes furniture, but doesn’t upholster it. Carol launches into an
+explanation of how AllDone works. ‘‘AllDone, as you’re unaware of what
+we do, we’re a marketplace for local service providers.’’ She outlines
+how requests are gathered from buyers and distributed to sellers, and
+informs him that it’s ‘‘your responsibility to check your dashboard to
+see the leads you’ve been sent.’’</p>
+<p>‘‘In other words, it costs me a dollar ninety-nine?’’</p>
+<p>‘‘Yes, if you’d chosen to accept Theresa’s lead.’’</p>
+<p>Finally, Ted says that he wants to talk to his business partner about
+how they’ll use AllDone. Carol says that Ted can call her back after
+he’s done so, when she can ‘‘walk you through the whole process and get
+you up and running and get you lots of business, I hope!’’</p>
+<p>Carol’s conversation with Ted highlights the challenges inherent in
+AllDone’s eforts to rapidly draw a large number of new users into the
+marketplace. Carol was available to patiently explain to Ted how he
+could use AllDone to meet potential buyers. ADLV team members were
+equipped to explain both formal rules of exchange (e.g., how to reach
+out to potential clients; AllDone’s fees) and informal norms (e.g., how
+to build a positive online reputation). Team members often went to great
+lengths to satisfy users—for example, they might ofer to upload photos
+to a seller’s profile if the seller was having trouble learning how to
+do so herself. ADLV employees thus endeavored to alleviate sellers
+confusion and leave them confident that AllDone could support them in
+growing their businesses.</p>
+<h2 id="repairing-trust">Repairing Trust</h2>
+<p>When sellers were dissatisfied with the results of the introductions
+AllDone provided, their trust in the company could be shaken. AllDone
+used ADLV to rebuild sellers’ trust when market outcomes did not align
+with their expectations. Support agents strove to turn detractors into
+advocates by listening, counseling, reassuring, and caring for
+individual sellers.</p>
+<p>Sellers who invested time in creating profiles and then paid to
+submit quotes to buyers tended to expect that their eforts would yield
+new clients. Some sellers’ expectations were violated when they did not
+get hired for jobs or did not even receive written replies from buyers.
+Some sellers accused AllDone of brokering in bad faith: of connecting
+them with people who were just ‘‘price shopping’’ and not serious about
+hiring someone, or even of fabricating fraudulent consumer requests to
+increase revenue. After receiving no contact from buyers on two quotes,
+one seller complained via e-mail: ‘‘Like so many of these online systems
+yours is inherently corrupt. And I think you must know this. Neither of
+these folks are serious. I’ve wasted a bag of groceries for my kids on
+false leads.’’ More than one seller would note that if five wedding
+photographers quoted on a bad request, AllDone would have made $75, with
+the sellers having no chance to realize any returns.</p>
+<p>When users’ experiences fell short of their expectations—when they
+complained of feeling dissatisfied, taken advantage of, misled,
+disappointed, or disillusioned—threats formed that could, on the
+aggregate, jeopardize AllDone’s position as a broker. A recorded phone
+call from one seller began:</p>
+<p>Let me tell you: I canceled my subscription to AllDone. I hope you’re
+recording this—you guys are the biggest piece of shit I have seen [. .
+.]. It is absolutely, utterly useless. On the one hand, I feel you guys
+have stolen my money. On the other hand, I never got any responses. I
+make it a point to badmouth AllDone to other photographers.</p>
+<p>The seller’s anger is rooted in a betrayal of trust (‘‘I feel like
+you guys have stolen my money’’). These perceptions could be damaging to
+a broker whose revenue stream relies upon a reputation for making
+high-quality connections.</p>
+<p>Members of ADLV endeavored to repair relationships with sellers who
+believed that the company was taking advantage of them, applying
+interactive emotional labor aimed at ‘‘turning them around’’ or
+reversing sellers’ sense of betrayal and convincing them that it was in
+their interest to continue to use AllDone’s services. In addition to
+ofering material concessions such as refunds or credit, ADLV team
+members most frequently used a combination of three tactics to
+accomplish this: ‘‘tough love,’’ education and counseling, and
+personalized attention.</p>
+<p>Phone agents dispensed ‘‘tough love’’ to help sellers develop more
+realistic expectations about market outcomes. During a videoconference
+between ADLV team member Nancy, Carol, and I, Nancy recounted an
+exchange with a contractor who was upset that the in-home estimates he
+had given to AllDone buyers had not resulted in jobs. ‘‘You have to give
+them a wake-up call,’’ she said, summarizing the conversation. ‘‘‘I
+understand [your frustration]—but how’s your business outside of
+AllDone? Do you usually get every job you go on?’ ‘No, I don’t.’ ‘Well,
+this is the same thing.’ [. . .] They need to hear this.’’ In ofering
+‘‘tough love,’’ team members attempted to persuade sellers to accept
+blame for their poor market outcomes.</p>
+<p>In the process of adjusting sellers’ expectations, team members would
+also try to teach sellers how they could improve their performance in
+the future by demonstrating their competence and motivation to potential
+customers (Cook, Cheshire, Gerbasi, &amp; Aven, 2009). When sellers
+called because they were upset that buyers were not responding to their
+quotes, Nancy would often investigate their records and see that the
+sellers had been ‘‘really sloppy’’ with their responses to buyers,
+sending quotes containing poor spelling or grammar that buyers might
+find unprofessional. Nancy reported frequently asking sellers to imagine
+that they were the buyer reading the seller’s message.</p>
+<p>‘‘Would you respond if you received that quote? You have to work on
+this. The leads will not work themselves.’’ [. . .] You have to show
+them how to stand out from the rest, how to answer in a nice way so
+people want to respond.</p>
+<p>Carol concurred: ‘‘Often they put a generic thing in there. Nancy and
+I tell them you’ve got to stand out.’’ At an ADLV team party, Casey,
+another phone agent, remarked, ‘‘I need a button to press to be like,
+‘you need to work on your profile’’’ because she frequently found
+herself repeating this instruction to sellers.</p>
+<p>Sellers at risk of leaving AllDone were often simply reassured by the
+personalized attention that they received from support agents, sometimes
+within the context of ongoing relationships. As Carol explained to me
+during my first visit to her home ofice,</p>
+<p>We have special-needs [sellers]. You hear all about their personal
+life: ‘‘my boyfriend,’’ etcetera. We do therapy, as well, at ADLV! But
+we give them love. We handle them all the same way, we give them love,
+and whatever they need.</p>
+<p>I later observed what team members often dubbed ‘‘AllDone love’’ in
+action during a 45-minute call with a seller:</p>
+<p>The phone rings again. This woman is having trouble logging in to her
+AllDone account for her drapery business. Carol says she is happy to
+help, and adds some pleasant chit-chat as she looks up the account.
+‘‘How’s your day going so far, Sue? Looking forward to the holiday
+weekend?’’</p>
+<p>Sue says that she hasn’t been receiving requests. ‘‘Do you have
+time?’’ Carol asks. ‘‘We can go into your user page and take a look, see
+what’s going on. Because we generally find the more information you give
+us, the better we can match you with the requests that come in.’’</p>
+<p>Carol’s phone chirps to signal that calls are coming in on the other
+line and going straight to voicemail while she coaches Sue. ‘‘Yay!’’ she
+cries out at one point, clapping her hands three times. ‘‘Good job,
+honey, you’re good at this!’’ Sue tells Carol about her new iPad and her
+issues with identity theft. ‘‘We’ll have to see if we can get you some
+more business, Sue,’’ Carol says, redirecting the conversation. She
+adjusts Sue’s service categories, and her travel preferences, as Sue
+describes the parts of Wisconsin where she is most likely to find a
+market for her drapery business. ‘‘My God, can you imagine doing drapery
+for a mansion that size?’’ Carol marvels politely. ‘‘Goodness me. Well,
+drapery is a skill, not everybody can do it. What a great talent that
+is, Sue.’’</p>
+<p>Carol goes on to explain, ‘‘We’re not like some companies where you
+can pay to get on top of the list’’ of buyer searches. Now Sue is having
+trouble logging into her account from her iPad. Carol finally wraps it
+up: ‘‘You can call this number any time and you can call us whenever you
+need us. We have a plan, Sue! We have a plan,’’ she giggles. ‘‘Great
+chatting with you, Sue! I’ll be talking to you later on or
+tomorrow.’’</p>
+<p>Sue had called because she was having trouble accessing her account,
+but she then revealed that the service was not working as she’d expected
+it to: She had not been receiving requests from potential buyers. Carol
+patiently walked Sue through her account settings to improve the
+introductions she’d receive. In addition to providing the seller with
+accurate and useful information, Carol flattered her and engaged her in
+conversation unrelated to her drapery business. At the end of a long
+call, Carol promised to follow-up with Sue to make sure that everything
+had worked out.<sup>10</sup> Carol’s interventions were aimed at making
+Sue feel like the company cared about her and wanted to help her
+business succeed.</p>
+<p>When market outcomes violated sellers’ expectations, AllDone deployed
+emotional labor to help users adjust to its software systems and to
+secure sellers’ ongoing participation in the market. Each aspect of the
+task was suficiently nuanced to require human intervention. Workers
+assessed market participants’ emotional states, displayed empathy,
+understood and addressed their needs, and quickly developed
+relationships that in many cases restored users’ confidence and trust in
+the company. Team members used their interpersonal skills to persuade
+many sellers to continue their relationship with AllDone by convincing
+them that, although the system hadn’t met their expectations in
+particular instances, in general AllDone itself was trustworthy and
+fair.</p>
+<h2 id="preserving-trust">Preserving Trust</h2>
+<p>AllDone’s pursuit of revenue could also exacerbate human lag by
+leading to changes in the service that users perceived as unfair. A year
+earlier, in a bid to incentivize sellers to submit more quotes to buyer—
+and to convince potential investors that AllDone could connects a high
+volume of market participants—the company had created a ‘‘subscription’’
+payment option that allowed sellers to send unlimited quotes to buyers
+for a flat monthly fee. Quote volume increased dramatically, helping
+AllDone secure its first major round of funding. Soon, however,
+management began to worry that subscriptions were limiting AllDone’s
+revenue potential: Analyses showed that even as AllDone’s investments in
+SEO were bringing more and more buyers to the website to place requests,
+revenue growth was not keeping pace with user growth. In efect, sellers’
+responses to the avalanche of new requests had already been paid for.
+For example, a seller paying a flat fee to respond to 10 requests per
+month in 2011 paid the same price to respond to 20 requests per month in
+2012.</p>
+<p>AllDone’s senior managers developed a new payment model through which
+revenue would increase linearly with request volume. Sellers would pay
+to purchase AllDone’s internal currency of ‘‘coins’’ and would
+relinquish coins for each quote they wished to submit to buyers. The
+more quotes a seller submitted, the more she would have to pay AllDone.
+The stakes were high in the company’s transition to the coin system.
+AllDone’s most valuable relationships were generally with sellers who
+submitted a large volume of quotes in competitive service categories and
+locations. Some would see the price they paid to contact potential
+clients increase by as much as 10 times. The transition would succeed
+only if AllDone could convince a substantial fraction of its high-value
+subscribers to remain active on the market while paying higher fees. If
+the change alienated too many existing sellers, revenue would plummet,
+leaving the company’s future in doubt.</p>
+<p>ADSF first experimented with explaining the change to a small group
+of sellers via automated e-mail messages and received overwhelmingly
+negative responses. Adam, the director of engineering, soon sent an
+e-mail to me and Josh, the product manager, with an idea for subsequent
+tests: ‘‘What if we did the coin transition for the high value
+subscribers via individual phone call?’’ Josh liked the idea—not only
+could this method help AllDone preserve relationships with its most
+important clients, but one-on-one phone calls would also allow the firm
+to better understand users’ questions and concerns, as the phone team
+could record sellers’ reactions and relay them to ADSF to help inform
+the company’s messaging around the transition to the coin system.</p>
+<p>The following week, Carol and Nancy placed nearly 100 experimental
+transition calls. After they had finished the calls, we held a
+videoconference to discuss the results. While both Carol and Nancy
+remained professional, they were clearly exasperated: As expected, most
+of the afected sellers were livid. ‘‘We’re beaten up this week,’’ Carol
+told me. Nancy likened the calls to a ‘‘frontline battle’’; Carol called
+it ‘‘guerilla warfare’’ conducted ‘‘in the trenches.’’ ‘‘They’re
+insane,’’ Nancy said of the sellers she called. ‘‘People don’t like
+change.’’ Nancy recalled telling some sellers about the transition: ‘‘So
+many people were like, ‘What are you talking about?’’’ Later, the
+sellers would read the e-mail AllDone’s engineers had sent them
+detailing the termination of subscriptions ‘‘and call up
+screaming.’’</p>
+<p>I was worried about the emotional toll that these calls would take on
+the team. It made me very uncomfortable to hear about the verbal
+thrashing that Carol and Nancy were absorbing, given that if their tests
+were successful, the entire team would be enlisted to complete this task
+with thousands of additional sellers. I sent an e-mail to Adam and Josh
+detailing the results of ADLV’s initial tests, emphasizing how
+‘‘brutal’’ the calls had been, and forwarding a message from Carol
+detailing their dificulties. What stood out to Adam, however, was not
+the abuse that sellers were heaping upon Carol and Nancy, but rather
+Carol’s description of what the team had been able to accomplish under
+pressure: ‘‘We’ve managed to get most of them to come around and agree
+to try the coins, but some of these calls are taking a lot of time and a
+lot of tap dancing, with jazz hands, of course! ’’ Carol and Nancy had
+patiently listened to sellers’ concerns and worked to persuade angry
+sellers that AllDone would continue to provide a strong return on their
+investment. In most cases, a dificult 15- or 20-minute conversation
+would help to assuage sellers’ fears. Adam’s reply underscored the
+critical function of ADLV’s emotional labor:</p>
+<p>My first thought is this is a really good use of the phone team if
+they are able to consistently turn people’s anger into trying the new
+program. At the end of the day we have to convert people to paying 5-10x
+as much as they were previously for the same thing, so there is no tap
+dancing around that issue or tricks we can pull (other than messaging it
+the best way we can).</p>
+<p>The company’s head software engineer was now convinced that there was
+no technological solution to the problem. AllDone’s software systems
+alone could not manage sellers’ feelings of betrayal amid a radical
+change in the payment structure. It was precisely the fact that ADLV’s
+one-on-one conversations with sellers were so dificult that revealed
+just how crucial they would be to a successful transition.</p>
+<p>After 4 months of testing and refining the program, the product team
+was confident that the company could safely undertake a site-wide
+transition to the coin system because ADLV had demonstrated that they
+could convince many subscribers to pay more to continue to use AllDone.
+Carol and I began to train every member of ADLV to make transition
+calls, and coins were introduced to all sellers over a period of 5
+weeks. Every week, ADLV team members called hundreds of AllDone’s most
+active subscribers, announced the change, and tried to persuade sellers
+to try the new program. In total, they reached out to nearly 5,000
+high-value subscribers and received calls from many more.</p>
+<p>Like customer support representatives in ofline settings, ADLV’s
+female, frontline workers paid an emotional toll to uphold exchange
+relationships and the accumulation of profit (Brotheridge &amp; Grandey,
+2002; Hochschild, 1983; Weeks, 2007). Team members were battered with
+insults and verbal abuse for 8 hours a day throughout the transition
+period, and none escaped without being brought to tears. But the rollout
+proved successful: Revenue climbed as a significant portion of former
+subscribers continued to use AllDone in spite of the higher fees. Years
+later, executives continued to view the termination of subscriptions as
+the most pivotal moment in AllDone’s history, unlocking the company’s
+revenue growth for years to come. As Carter later reflected in an
+e-mail, ‘‘We absolutely could not have made this critical transition
+without Vegas.’’ Technology alone was incapable of solving the problems
+that arose when AllDone sought to profit from using software to
+administer a nationwide marketplace. Instead, the company used emotional
+labor to help bring users’ expectations in line with its software
+systems.</p>
+<h2 id="phase-iii-permanent-lag">Phase III: Permanent Lag</h2>
+<p>When I interview engineering candidates, one of the most common
+questions they ask me is what’s changed the most at AllDone since I
+started. I tell them that at first we had no time to work on the stuf we
+wanted to work on. Now we have enough people to do what we want. (Brett,
+AllDone software engineer)</p>
+<p>After AllDone completed its transition to a new business model, its
+executives began to meet with VC firms and soon accepted more than $12
+million from one of the industry’s leading VCs. With considerable
+financial resources at their disposal, AllDone’s leaders sought to
+combine the company’s two prior strategies. As in Phase I, AllDone would
+again seek to grow the organization, the user base, and the product;
+this time, however, expansion would occur within the revenue generation
+framework that was introduced in Phase II, which would help the firm
+remain an attractive target for later stage VC investments. The dual
+goals of expansion and revenue generation existed in tension with one
+another: On one hand, AllDone sought to draw more users into the website
+and convert them into active, paying customers; on the other hand, the
+company’s attempts to monetize their activities could spur user
+dissatisfaction and exit. These tensions contributed to the reproduction
+of machine lag and human lag, as developers’ ambitions continued to race
+ahead of technology, and users continued to chafe at AllDone’s software
+systems. The expansion and institutionalization of AllDone’s
+complementary work teams to address these problems demonstrated
+management’s recognition that machine lag and human lag were not
+temporary features of software development to be shed by a more mature
+firm, but rather that they represented a permanent lag inherent to the
+dynamics of the enterprise.</p>
+<p>Much of AllDone’s newfound funding was funneled into the engineering
+team, greatly expanding the company’s capacity to develop software.
+Members of the organization began to confront the possibility that these
+developments could sever the previously symbiotic relationship between
+technological systems and human workers. ADSF’s engineers were making
+significant progress toward automating the laborintensive processes of
+vetting buyer requests and manually matching buyers and sellers, tasks
+that now occupied nearly half of ADP’s 200 workers. Automation was
+accomplished through the implementation of machine-learning algorithms
+that were ‘‘trained’’ by the vast dataset of workers’ past operations.
+The vetting algorithm used buyer request text and metadata to determine
+which were most likely to be rejected by human screeners, and the
+matching algorithm learned which types of requests, in which locations,
+were most likely to be matched with particular types of sellers. The
+software algorithms took over an increasing percentage of each task as
+developers continued to tune them. ADSF engineers had formulated plans
+to automate other ADP functions as well (e.g., running background checks
+on sellers and sending follow-up e-mails to apologize to buyers who did
+not receive quotes), or to create systems that would ofload ADP’s labor
+onto users (e.g., the process of categorizing sellers in the AllDone
+database). Carter asked Ross, the leader of ADP’s matching team, to
+create detailed plans to prepare for the termination of a significant
+portion of his team. Hoping to cushion the blow of the anticipated
+layofs, the cofounders reached out to executives at other start-ups in
+search of a company that might ‘‘adopt’’ the team for its own
+purposes.</p>
+<p>Although much of ADP’s reverse substitution was itself reversed by
+automation, the anticipated cuts to ADP’s workforce never materialized.
+In fact, as the ranks of ADSF software engineers increased from 8 to 50
+over the subsequent 2 years, ADP swelled from 200 to 800 workers.
+Meanwhile, recognizing the importance of emotional labor to the
+company’s continued success, executives moved the company’s phone
+support functions to an ofice in the Salt Lake City area (known as
+AllDone Salt Lake, or ADSL), where ADLV’s team of 10 was replaced by 200
+employees. Even as AllDone raised three additional rounds of VC funding
+totaling more than $250 million—and achieved a valuation of more than $1
+billion—technological change increased demand for existing functions
+that could not be automated while creating new work in and around
+changing software systems. Below, I detail two instances in which
+AllDone used human workers to compensate for the systematic reproduction
+of machine lag and human lag.</p>
+<h2 id="machine-lag-and-computational-labor">Machine Lag and
+Computational Labor</h2>
+<p>Although software engineers’ increased rate of innovation led to the
+automation of some computational labor, it also created new demand for
+computational labor designed to balance the interests of sellers with
+those of the firm. One example emerged when ADSF’s product team
+attempted to build new software systems to mitigate the tension between
+user growth and revenue generation. Although the transition to the coin
+system had enabled revenue growth, half of the sellers who had submitted
+five or more quotes per month before the transition were no longer
+submitting any quotes afterward, indicating widespread dissatisfaction.
+Previously, a seller with a subscription could, without incurring any
+additional costs, send a quote to a buyer whose request was vague simply
+to ask for more information. With the introduction of coins, sellers
+were submitting consumer requests to far greater scrutiny because they
+now had to risk their money on a job that might be revealed to be a poor
+fit once they paid to submit a quote and then received additional
+information from the consumer. Even sellers who had not previously been
+using the subscription model found themselves subject to a more
+restrictive refund policy.</p>
+<p>In response to these concerns, AllDone’s product team sought to
+devise a process that would allow sellers to solicit more information
+from buyers while simultaneously ensuring that they continued to pay to
+pitch their services. ADSF engineers tested a ‘‘Q&amp;A’’ feature that
+would allow a select group of sellers to ask buyers for more information
+about their requests before submitting a quote. However, some sellers
+discovered that they could use the Q&amp;A feature to subvert AllDone’s
+payment model: Rather than simply posing a query, sellers might include
+their contact information or a price estimate as if they were submitting
+a paid quote; others asked buyers to reply with their own contact
+information. To combat sellers’ abuse of the system, ADSF’s product team
+publicized guidelines specifying which kinds of questions were permitted
+and forbidden, but the issues continued. When engineers built software
+algorithms to filter phone numbers and e-mail addresses out of Q&amp;A
+messages, sellers developed ‘‘workarounds’’ like spelling out their
+phone numbers (‘‘seven seven zero . . . ’’) and e-mail or Web addresses
+(‘‘Jim [at] AceConstruction [dot] com’’). When some sellers abused the
+system, others who had abided by the rules would denounce the violators
+in rancorous messages to the buyer and to AllDone.</p>
+<p>In light of sellers’ problematic responses to the Q&amp;A feature,
+the product team called upon complementary workers to prevent sellers
+from circumventing AllDone’s payment model. One developer created a Web
+portal through which members of ADP could screen each message before it
+was distributed. Workers studied the program’s rules and vetted each
+message accordingly, editing or deleting those that violated AllDone’s
+guidelines. They also edited questions for grammar and spelling errors
+to improve buyers’ impressions of AllDone sellers. Users whose messages
+were edited or deleted received an automated e-mail informing them of
+the nature of their transgression. When the Q&amp;A program was proven
+to have no significant deleterious efect on quote volume, it was
+instituted site-wide. Whenever a market participant submitted a question
+or response, day or night, workers in the Philippines would be on call
+to vet it immediately and distribute only approved messages to buyers
+and sellers. Workers’ tacit knowledge and common sense allowed them to
+determine which sellers were trying to cheat the system, helping AllDone
+balance its goals of expansion and revenue generation.</p>
+<h2 id="human-lag-and-emotional-labor">Human Lag and Emotional
+Labor</h2>
+<p>As the engineering corps grew, ADSF’s pace of experimentation and
+production increased. When developers worked to optimize AllDone’s
+product, they introduced the possibility that users would struggle to
+adapt to novel and sometimes opaque systems. Emotional labor remained
+crucial to sustaining sellers’ trust amid continual innovation and
+periodic price increases.</p>
+<p>The activities of the engineering subunit in charge of AllDone’s
+matching algorithms provide one such example. Previously, buyer requests
+had been distributed to all of the eligible sellers in any given area,
+with AllDone accepting quotes from the first five sellers to respond.
+But as AllDone grew, some cities became saturated with hundreds of
+active sellers, many of whom were frustrated that they could not respond
+quickly enough to be one of the first five sellers to submit their
+quotes to buyers. ADSF’s software developers began to use machine
+learning to optimize request distribution, gathering information about
+sellers’ past behavior to determine who was most likely to submit a
+quote on each incoming buyer request. The software then ‘‘reasoned’’
+from this information to generate decisions about which sellers should
+receive new requests. These new matching algorithms were designed to
+send requests to only as many people in a given locality as the models
+predicted would be needed to deliver at least three quotes to each buyer
+within 24 hours.</p>
+<p>As ADSF tinkered with the matching algorithm, some of the sellers who
+had previously been frustrated that they received too many requests that
+they were unable to quote on were now upset that they were no longer
+receiving enough requests at all. When sellers noticed that something
+had changed, they could reach out to phone support agents who worked to
+reassure them that AllDone was refining its systems to create the best
+possible experience for its users. The growth of AllDone’s phone support
+team reflected the significant role that workers continued to play in
+educating users and keeping them engaged amid ADSF’s frequent
+experimentation with market systems.</p>
+<p>AllDone’s developers did not anticipate that the company would ever
+settle on a perfected, static set of rules and systems. According to
+Brett, ADSF’s lead on the matching algorithms, ‘‘there are no easy
+answers’ because software algorithms cannot determine ‘‘one clear right
+way’’ to balance the shifting interests of buyers, sellers, and the
+company. Frequent changes to the product put pressure on AllDone’s phone
+support agents to assuage users’ concerns and to transmit user feedback
+to ADSF so that it could be incorporated into further changes. For
+another project, Brett’s team used machine-learning algorithms to
+formulate a dynamic pricing model. The model was trained on data from
+past requests to predict how many sellers would be likely to submit a
+quote for each new request. If the model predicted that a request would
+be desirable, it would charge sellers more to send a quote; if it
+predicted low demand, prices would decrease. Even before releasing the
+feature, Brett was anticipating the response: ‘‘I know [sellers] are
+gonna be upset’’ when the program is implemented and some discovered
+that they would have to pay more to submit quotes, he explained. Brett
+confirmed that ADSL would again play a crucial role in intervening to
+sustain sellers’ trust in AllDone as the company tried to squeeze more
+revenue out of users.</p>
+<p>ADSF’s increased pace of production and ongoing experimentation with
+market rules and systems increased demand for computational labor to
+help software systems meet developers’ needs and emotional labor aimed
+at bringing users up to speed with changes. Machine lag and human lag
+were never permanently ‘‘solved,’’ as the company continually
+recalibrated its systems to balance its own interests with those of its
+users. The expansion of the complementary labor that addressed these
+issues revealed that the uneven development of relations between humans
+and machines was not simply an artifact of an immature firm but instead
+represented a permanent lag inherent in the dynamics of the
+enterprise.</p>
+<h2 id="discussion">Discussion</h2>
+<p>While some argue that the rise of software automation threatens
+workers with obsolescence, others assert that new complementarities
+between humans and software systems are likely to emerge. This study of
+a software firm operating on the frontiers of the digital economy ofers
+a longitudinal account of the processes through which computer code and
+human labor coevolved within a particular organizational context. During
+Phase I, when AllDone prioritized expansion with little regard for
+profitability, the pace of product innovation often outstripped the
+capabilities of technology and the company’s resources. The firm relied
+on computational labor to grow its user base: Workers were called upon
+because their tacit knowledge gave them a comparative advantage over
+software in performing nonroutine work; they executed routine algorithms
+by hand in a process I call reverse substitution; and they enacted
+workarounds designed to ‘‘game’’ software systems. In Phase II, the
+strategic pivot to revenue generation made it increasingly important for
+the company to help users adjust to its software systems. AllDone used
+emotional labor to build users’ trust in its service, to reactively
+repair damaged ties with users, and to proactively preserve users’ trust
+in the face of changes to market rules. During Phase III, machine lag
+and human lag were systematically reproduced by AllDone’s simultaneous
+prioritization of expansion and revenue generation. This permanent lag
+increased demand for complementary labor, and the intertwining of
+technology and work remained a durable aspect of organizational
+development amid accelerating automation.</p>
+<p>By closely examining an organization where software algorithms were
+produced and implemented, this study makes both empirical and
+theoretical contributions to research on how software automation is
+transforming work and employment. Continuity theories reject
+technological determinism and instead anticipate that digital
+technologies will spur new human–machine complementarities. Empirically,
+I have detailed two ways in which human workers can complement software
+systems: by providing computational labor that supports or stands in for
+software algorithms and emotional labor aimed at helping users adapt to
+software systems. As an increasing proportion of economic exchange
+becomes technologically mediated, demand for workers who supplement
+software infrastructure is likely to increase. Human brokers, support
+agents, consultants, and salespeople whose skills in advising and
+persuading clients are dificult to automate may play an important role
+in smoothing the misunderstandings and frustrations that can arise when
+humans interact with software systems (cf. Bessen, 2015a).</p>
+<p>Theoretically, I have identified one mechanism that generates the
+systematic reproduction of the machine lag and human lag that give rise
+to shifting configurations of workers and machines: the internal
+dynamics of organizations. Organizations are generally dynamic insofar
+as they are constantly competing for scarce resources—including
+customers and capital—and even because of the ingenuity of their
+customers, who may devise creative ways to avoid paying fees. The
+organizational contexts in which sociotechnical systems are embedded
+matter for how human– machine configurations emerge, endure, and change.
+The specific articulations of AllDone’s work teams changed as the
+company adapted its goals to meet venture capitalists’ expectations. At
+each stage of AllDone’s development, software alone was unable to
+resolve all of the problems that the firm faced as it grew; indeed, the
+application of technology itself often caused new problems that created
+new demand for human workers capable of performing complementary tasks.
+Instead of perfecting software algorithms that would progressively push
+people out of the production process, managers continually reconfigured
+assemblages of software and human helpers, developing new forms of
+organization with a dynamic relation to technology.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Formulated as a refutation of discontinuity, continuity theory fails
+to grasp these organizational dynamics of continuity: the discontinuity
+in continuity. Contemporary inquiries into the relationship between
+software automation and work have largely investigated macrolevel
+phenomena such as labor markets, job categories, and general work tasks.
+This study reveals processes through which, at the level of the firm,
+complementary labor is continually incorporated into and displaced from
+software systems. At AllDone, full automation of every task was
+impractical given the instability of the firm’s environment and product.
+Software engineers’ innovations often required the assistance of
+complementary workers. When particular complementary tasks were
+automated, outdated labor processes were typically replaced by new
+functions that supported new innovations. As continuity theorists
+predict, human labor remained integral to the operation as software
+automation increased at AllDone; however, the texture of continuity was
+itself dynamic and discontinuous, the result of repeated transformations
+in human–machine configurations. The very fact of continual change in
+markets and firms in an age of so-called ‘‘disruption’’ is what makes
+the continual application and reconfiguration of complementary labor
+vital to organizational success, whether workers are helping a firm
+experiment with new processes to grow faster, managing users’ emotional
+responses to rapid change, or doing what software alone cannot
+accomplish. One of the sources of labor’s enduring relevance in the
+digital age may thus be the dynamism of firms.</p>
+<p>In linking the phases of capital accumulation to organizational form
+within a new venture, this study also suggests that the rate of
+organizational change will be an important determinant of the outcomes
+of human–software configurations. This study was based on observations
+of variation within one organization over time. Researchers may discover
+additional human–machine complementarities and develop further insights
+into their dynamics by drawing comparisons between organizations. The
+use of online, distributed workers to complement computer code extends
+far beyond software start-ups: Large and well-established organizations
+in both the high-tech field (Google, LinkedIn, Netflix, AOL) and in more
+‘‘traditional’’ sectors (Unilever, Walmart, Coca-Cola, Proctor &amp;
+Gamble, U.S. Army) frequently call upon them as well (Bergvall-Ka˚
+reborn &amp; Howcroft, 2014; Kingsley, Gray, &amp; Suri, 2015). Nascent
+firms relying on ‘‘opportunistic adaptation’’ (Bhide´ , 2000) to secure
+scarce resources in unsettled markets may be more likely to experiment
+with using low-cost and abundant workers to complement software
+infrastructure than established firms operating in more stable markets,
+which are likely to experience a lower rate of strategic ‘‘breakpoints’’
+(Barley, 1986). In larger firms, human–software configurations are
+likely to change more slowly than at start-ups like AllDone. This
+stability could correspond to a higher rate of automation and
+substitution. In short, the outcomes of technological innovation are
+unlikely to be monolithic but will instead be dependent upon the context
+in which software development is applied and the rate at which that
+context changes.</p>
+<p>Sociologists and organization scholars have devoted surprisingly
+little attention to the ways in which software automation is
+transforming work and employment. This is particularly unfortunate
+because their diverse methodological approaches make them uniquely
+suited to contribute to the debate by examining the processes through
+which work and technology are coevolving within dynamic organizational
+contexts. Instead of accepting discontinuity theorists’ vision of a
+linear march toward autonomous machines that replace humans, researchers
+must continue to view technological innovations with the following
+questions in mind: ‘‘Where are the people? Which people are they? What
+are they doing? When are they doing it?’’ (Mindell, 2015, p. 13). When
+scholars examining the future of work and employment focus their
+inquiries only on how technology substitutes for workers, they are
+likely to miss ever-more intimate interconnections between people and
+technology. The shape of this interplay—and our ability to render it
+visible—may be among the defining issues for scholars of work and
+employment in the 21st century.</p>
+<h2 id="appendix-a-defining-ai">Appendix A: Defining AI</h2>
+<p>In the most general sense, computer scientists agree that AI aims
+‘‘to simulate [the] intelligence and rationality of humans’’ (Zackova,
+2015, p. 32) or to create ‘‘systems that can reasonably be called
+intelligent’’ (Russell &amp; Norvig, 2010, p. 34). Yet, scientists and
+practitioners have long debated the boundaries of ‘‘intelligence,’’ with
+their positions shifting over time as expectations for AI have ebbed and
+flowed along with the field’s successes and failures (Ekbia, 2008; Wise,
+1998). For example, the first computer programs capable of simulating
+human chess players were widely hailed as ‘‘intelligent’’; today, the
+architecture behind early programs would be viewed as nothing more than
+rudimentary decision trees. An AI program can manipulate some of the
+structures of language to hold a coherent conversation with a human but
+cannot ‘‘understand’’ the logic of language as humans do nor can it
+comprehend why diferent forms of expression are appropriate in diferent
+contexts (Dreyfus, 1992; Winograd &amp; Flores, 1987). A
+machine-learning algorithm might predict outcomes with a high degree of
+accuracy, but its opacity can make it dificult to reverse engineer the
+algorithm to interpret the reasoning underlying its decisions (Alpaydin,
+2014; Burrell, 2016). There remains widespread disagreement surrounding
+the extent to which such software should be considered
+‘‘intelligent.’’</p>
+<p>Practitioners approach devising AI systems from many perspectives,
+resulting in a great deal of definitional ambiguity (Ekbia, 2008). Some
+focus on processes through which computers can ‘‘think’’ and reason.
+Others emphasize diferent sorts of ‘‘behavior,’’ or the output of
+software systems. Both camps are themselves split between those who
+strive to develop AI that replicates human thought or action and those
+who aim to produce programs that measure up to a nonhuman, ‘‘rational’’
+ideal (Russell &amp; Norvig, 2010).</p>
+<p>In practice, most real-world applications of AI aim to construct
+‘‘rational agents’’ programmed to act ‘‘so as to achieve the best
+outcome or, when there is uncertainty, the best expected outcome’’
+(Russell &amp; Norvig, 2010, p. 4). Although in AI’s earliest
+incarnations computer scientists envisioned smart machines that could
+act upon general-purpose laws across domains, more recent advances are
+typically task-specific: One set of algorithms might be programmed to
+play chess; another to estimate bus arrival times; another to diagnose
+diseases; and yet another to write poetry (Zackova, 2015). Eschewing the
+Herculean task of modeling the workings of the human brain, modern AI
+systems based on ‘‘neural networks’’ or ‘‘machine learning’’ instead use
+large data sets and statistical logic to infer and respond to patterns
+(Autor, 2015a; Dreyfus, 1992; Pratt, 2015).</p>
+<p>AI has already become part of our everyday lives: ‘‘AI technologies
+underlie many Internet tools, such as search engines, recommender
+systems, and Web site aggregators’’ (Russell &amp; Norvig, 2010,
+pp. 26–27). AllDone is no diferent in this respect. Rather than
+attempting to build an integrated, ‘‘generalized’’ AI, AllDone’s
+software engineers developed discrete machine-learning algorithms to
+perform particular tasks.</p>
+<h2 id="questioning-the-humanmachine-boundary-in-ai">Questioning the
+Human–Machine Boundary in AI</h2>
+<p>Popular understandings of AI frequently draw too sharp a distinction
+between human and machine. Researchers from a variety of disciplinary
+backgrounds have demonstrated that, in practice, the boundaries between
+workers and technologies are more fluid than we are often led to
+believe. Such scholars call into question the autonomy—indeed, the very
+artificiality—of AI.</p>
+<p>AI has long been associated with notions of autonomy (Ekbia, 2015;
+Ekbia &amp; Nardi, 2017), raising expectations of machines acting free
+from direct human involvement. However, just as computer scientists have
+debated what constitutes ‘‘intelligence,’’ so too have they called into
+question the notion of ‘‘artificiality.’’ Since the early days of
+computing, theorists and practitioners have pointed to the role of human
+interaction in supporting the functioning of ‘‘smart’’ machines
+(Mindell, 2002;</p>
+<p>Suchman, 2007). After finding that AI systems frequently failed in
+complex, unpredictable, and dynamic real-world environments (Dreyfus,
+1992), many of the early pioneers of AI eventually came to disavow the
+notion that ‘‘intelligent’’ computer systems should be designed to
+function without human intervention. Instead, leading figures in the AI
+community began to advocate that programmers focus on creating useful
+assemblages of software and humans that would simultaneously take
+advantage of the computational powers of machines and the multifarious
+(and sometimes mysterious) capacities of human cognition (Winograd &amp;
+Flores, 1987). This would require developers to reframe how they thought
+of AI: Instead of conceiving of computers as replacing human brains,
+programmers began to consider how AI works ‘‘in the context of human
+practice,’’ as part of the broader social systems into which they are
+inserted and which they enable (Winograd &amp; Flores, 1987, p. 4).</p>
+<p>Scholars across the natural sciences, social sciences, and humanities
+are becoming increasingly attentive to how human social practices
+interface with and are often constitutive of ‘‘intelligent’’ software
+systems. In the words of a Microsoft researcher, ‘‘[i]nformation systems
+are always swarming with people; we just can’t always see them’’
+(Gillespie, 2016, p. 26). Conceiving of AI as fully ‘‘artificial’’
+reinforces a vision of autonomy that does not always reflect reality
+(Romportl, 2015). According to engineer and roboticist Ken Goldberg,
+today’s AI practitioners often focus on ‘‘designing interfaces that keep
+humans in the loop.’’ (2015, p. 321). Rather than building toward an AI
+‘‘singularity,’’ Goldberg argues, engineers are instead embracing
+‘‘multiplicity,’’ a term that describes ‘‘an emerging category of
+systems in which diverse groups of humans work together with diverse
+groups of machines to solve dificult problems.’’ (p. 321). Accounts of
+the power of AI to eliminate the human element of production, Goldberg
+(2017, p. 7) posits, often miss ‘‘the essential role that humans play’’
+in smart software systems (p. 7). In his examinations of robotic
+vehicles, historian and engineer David Mindell, too, challenges the
+‘‘myth of full autonomy’’ by pointing to the ways in which
+‘‘[a]utomation changes the type of human involvement required and
+transforms but does not eliminate it’’ (Mindell, 2015, p. 10). In
+addition, scholars of human-computer interaction (Lee et al., 2015) and
+computer-supported cooperative work (Raval &amp; Dourish, 2016) continue
+to emphasize the often-overlooked activities of human workers in AI
+systems.</p>
+<p>The work of informatics scholars Hamid Ekbia and Bonnie Nardi is
+particularly relevant to understanding AllDone as a case of AI in
+action. Ekbia and Nardi (2017) contend that whereas observers tend to
+focus on how AI catalyzes automation that reduces demand for human
+labor, AI can also spur heteromation, a term that denotes how humans
+‘‘are drawn back into the computational fold in new ways,’’ often
+operating ‘‘on the margins of machines and computerized organizations.’’
+Researchers and journalists have documented many pertinent examples of
+software systems that are widely recognized as AI, yet whose functioning
+is nonetheless enabled by hidden human labor. Indeed, much of the recent
+impact of AI on our everyday lives can be attributed to the fusion of
+specialized software systems with human cognition:</p>
+<p>Google’s search algorithms sort through billions of Web pages to
+return relevant results to users. Google relies not only on ‘‘smart’’
+software that learns people’s preferences by tracking clicks and
+gathering user feedback but also on input from paid human workers who
+rate the relevance of search results according to Google’s written
+guidelines. Workers’ ratings are then fed back into the search
+algorithms to improve their performance (Irani, 2015c).</p>
+<p>Or consider the driving directions generated by Google Maps to help
+users reach their destination as quickly as possible. Google Maps
+software algorithms draw on current and historical user location data to
+predict trafic conditions. But they also rely on the activities of
+hundreds of human operators whose numbers are commensurate with the
+‘‘big data’’ that they handle. Operators use street-level photographs to
+manually code features like speed limits, one-way streets, or prohibited
+left turns into accurate digital representations of the physical world
+(Madrigal, 2012).</p>
+<p>Similarly, the AI technology behind self-driving cars also requires
+human workers to painstakingly label thousands of images to train the
+software that ‘‘sees’’ roads, pedestrians, street signs, and other
+objects (Both, 2014).</p>
+<p>Netflix combines human and machine intelligence to provide users with
+recommendations in ‘‘personalized genres’’ (e.g., ‘‘British set in
+Europe Sci-Fi &amp; Fantasy from the 1960s’’). Netflix ofered a $1
+million prize to the engineering team that could best improve the
+accuracy of its recommendation algorithms, which make suggestions based
+on users’ stated preferences, viewing history, and similar viewers’
+taste profiles. However, the company ultimately found the new models
+unsatisfactory and instead chose to hire workers to view and classify
+all of its content. Workers receive a 36-page training document to
+assist them in labeling each movie or TV show according to dozens of
+attributes. These workers’ eforts help Netflix categorize content into
+nearly 77,000 microgenres that can be microtargeted to individual
+viewers (Madrigal, 2014).</p>
+<p>Facebook’s News Feed uses machine-learning algorithms to determine
+which posts to present to each user and which materials to hide.
+However, software alone cannot keep up with the deluge of violent,
+disturbing, and inappropriate content uploaded by users every day. Like
+other social media companies, Facebook employs content moderators who
+follow complex guidelines to screen out material that threatens to make
+Facebook an unsafe—and unprofitable—environment (Hopkins, 2017; Roberts,
+2016). In response to violent incidents streamed live on Facebook, the
+company recently announced plans to hire 3,000 additional content
+moderators (Goel, 2017).</p>
+<p>AllDone’s founders may have initially imagined that they would be
+building a fully autonomous software system. However, like many other
+software developers, they soon learned that they could develop software
+most efectively by combining machines with human workers to execute
+particular functions. As in the above examples, I conceive of AI not as
+a finished product emptied of human labor nor do I view AllDone’s
+product as a unitary ‘‘AI interface.’’ Instead, AllDone’s product is
+constituted by an assemblage of evolving sociotechnical systems in which
+humans are at times incorporated into and at other times displaced from
+computational infrastructure. Aware of AI’s limitations, developers
+integrate human workers into AI systems to exploit the comparative
+advantages of each. At AllDone, human workers did not simply ‘‘fill the
+gaps’’ when technology fell short. The coconstitution of software
+algorithms and human labor was instead integral to the design and
+implementation of myriad sociotechnical systems. This is, I believe, one
+of the important contributions of the article, which demonstrates that
+only by observing software systems within their social contexts can we
+understand the complex dynamics of human–machine interaction.</p>
+<h2 id="appendix-b-methodology">Appendix B: Methodology</h2>
+<p>I entered the field intending to investigate the relationship between
+organizational culture and employee commitment in San Francisco’s
+youthful high-tech industry. A friend helped me gain access to AllDone
+by introducing me to Martin—a former high school classmate and one of
+AllDone’s cofounders—via e-mail. Martin agreed to meet with me and
+following our conversation ofered me an unpaid internship. I would come
+to the ofice 1 day per week and assist Martin with marketing projects in
+exchange for research access. Within a month, Martin proposed that I
+take a part-time, paid position. As I began an assignment involving
+members of AllDone’s remote team in the Philippines, the focus of my
+research extended to include the human–machine systems that I quickly
+discovered were integral to AllDone’s operations. A few months later,
+senior executives and I agreed that I would take on a fulltime role for
+1 year while continuing my research activities. I became AllDone’s
+director of customer support and operations manager, reporting to
+Carter, AllDone’s president. In this role, I interacted frequently with
+leaders and team members across the organization. I participated in
+three weekly meetings with ADSF principals and held multiple weekly
+calls and videoconferences with ADP and ADLV leaders; I also traveled to
+the Philippines three times and to Las Vegas on nine occasions to meet
+with team leaders and employees. In addition, I reviewed thousands of
+documents and e-mails during and after my tenure with the company.</p>
+<p>Engaging in systematic and sustained participant-observation research
+within an organization operating on the frontiers of the digital economy
+allowed me to observe the complementarities that emerged between workers
+and innovative software systems. I employed a longitudinal research
+design (Fine, Morrill, &amp; Surianarain, 2009) to observe how the
+relationship between work and technology unfolded over time within a
+dynamic organizational context. Whereas most studies of work and
+technological change examine how the introduction of new machinery
+afects the organization and execution of work, I investigate how
+configurations of software and workers were transformed as an
+organization adapted to shifting pressures from investors, competitors,
+and users.</p>
+<p>I recorded extensive jottings (Emerson, Fretz, &amp; Shaw, 2011)
+while I was in the field, usually on a work computer as events were
+occurring, sometimes on a mobile phone, and occasionally in a small
+notebook. On my subway ride home each night, I began to turn jottings
+into full fieldnotes; I then reread the fieldnotes and wrote analytic
+commentary on the day’s events. This process typically took 1 to 2 hours
+or longer. Reviewing and analyzing each day’s fieldnotes helped me
+identify emergent patterns in the data, link data to concepts and
+themes, integrate insights, and formulate questions to investigate in
+subsequent fieldwork. Systematically engaging in such mental activities
+allows researchers who are personally involved in their field sites to
+sustain a ‘‘professional distance’’ essential to generating insights
+from data (Anteby, 2013). After leaving the field as a full-time
+employee, I continued to gather data by conducting informal interviews
+with informants across the organization and examining public
+sources.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>The author gratefully acknowledges Michael Burawoy, Stephen Barley,
+Herbert Docena, Martin Eiermann, Fidan Elcioglu, Neil Fligstein, Marion
+Fourcade, Andrew Jaeger, Shreeharsh Kelkar, Zachary Levenson, Katherine
+Maich, Christopher Muller, Josh Seim, Shelly Steward, Jonah Stuart
+Brundage, and Kim Voss for comments on previous versions of this
+article. The article also benefitted from the feedback of participants
+in the UC Berkeley Center for Culture, Organization, and Politics
+workshop and the 2015–2016 Berkeley Connect workshop, and from comments
+provided by two anonymous reviewers.</p>
+<h2 id="declaration-of-conflicting-interests">Declaration of Conflicting
+Interests</h2>
+<p>The author(s) declared no potential conflicts of interest with
+respect to the research, authorship, and/or publication of this
+article.</p>
+<h2 id="funding">Funding</h2>
+<p>The author(s) disclosed receipt of the following financial support
+for the research, authorship, and/or publication of this article: This
+project was supported in part by a grant from the Horowitz Foundation
+for Social Policy.</p>
+<h2 id="notes">Notes</h2>
+<ol type="1">
+<li><p>The company’s name and the names of individuals have been
+changed.</p></li>
+<li><p>When provided the clue, ‘‘its largest airport was named for a
+World War II hero; its second largest, for a World War II battle’’ under
+the category ‘‘U.S. Cities,’’ Watson’s answer was Toronto, a Canadian
+metropolis.</p></li>
+<li><p>Each of AllDone’s three work sites was demographically distinct.
+All ADSF staffers were educated at selective or elite colleges, almost
+all were in their 20s, and all but two were male. Most members of ADP
+were college educated and between 20 and 40 years old, and more than two
+thirds were women. ADLV’s staff was almost exclusively female; most were
+middle-aged and did not have college degrees.</p></li>
+<li><p>AllDone’s distributed workforce was used to perform a variety of
+other nonroutine tasks to complement software. These included reviewing
+seller profiles and removing those that violated AllDone’s community
+guidelines, as well as proofreading and editing the text that sellers
+wrote on their profile pages to ensure they met a minimum editorial
+standard of professionalism.</p></li>
+<li><p>AllDone’s software engineers not only experimented with code but
+also experimented with labor to increase the pace of production. The
+nature of software work is altered when engineers have access to
+computational labor: Developers who outsource the most tedious tasks are
+able to innovate more quickly, making their work more ‘‘creative,’’ both
+symbolically and, arguably, in practice (Irani, 2015b).</p></li>
+<li><p>Other instances of reverse substitution included the following:
+screening out sellers who appeared on the Department of Justice’s
+national sex offender registry; adding badges to profiles that passed a
+series of verifications; checking sellers’ professional license numbers
+against relevant state databases; running voluntary criminal background
+checks; and sending personalized e-mails apologizing to buyers whose
+requests received zero quotes from sellers.</p></li>
+<li><p>Some Uber drivers, for example, become frustrated by the lack of
+transparency into the algorithms that assign passengers to drivers. In
+response, drivers attempt to decipher and then ‘‘game’’ the system by
+developing alternative behavioral strategies that subvert the patterns
+imposed by Uber’s software (Lee et al., 2015).</p></li>
+<li><p>For example, the following description of a seller’s services
+contains two phrases (shown here in italics) that buyers commonly
+include in Web searches: ‘‘Meghan Traynor is a passionate professional
+wedding photographer who uses an artistic documentary style in taking
+wedding photos. She also does lifestyle portraits touched with her
+signature editing effects.’’</p></li>
+<li><p>Each new seller signup helped to generate new consumer requests
+by expanding the content on AllDone’s Web pages. ADP writers could pen
+keywordrich descriptions of each new seller, which when posted to the
+website would help to increase search traffic to AllDone’s pages,
+thereby producing more consumer requests. More requests meant more
+e-mails to send to prospective sellers, which would lead to still more
+signups in a virtuous cycle.</p></li>
+<li><p>Some ADLV team members were so devoted to clients that they would
+transgress company directives. Employees frequently provided sellers
+with their personal phone extensions even though managers advised them
+not to so that sellers with whom agents had established relationships
+could reach them directly the next time a problem arose.</p></li>
+</ol>
+<h2 id="references">References</h2>
+<p>Alpaydin, E. (2014). Introduction to machine learning (3rd ed.).
+Cambridge, MA: MIT Press.</p>
+<p>Anteby, M. (2013). Relaxing the taboo on telling our own stories:
+Upholding professional distance and personal involvement. Organization
+Science, 24(4), 1277–1290.</p>
+<p>Arntz, M., Gregory, T., &amp; Zierahn, U. (2016). The risk of
+automation for jobs in OECD countries: A comparative analysis (OECD
+Social, Employment and Migration Working Papers No. 189). Paris, France:
+OECD Publishing.</p>
+<p>Aronowitz, S., &amp; DiFazio, W. (1994). The jobless future: Sci-tech
+and the dogma of work. Minneapolis, MN: University of Minnesota
+Press.</p>
+<p>Autor, D. (2014). Polanyi’s Paradox and the shape of employment
+growth (National Bureau of Economic Research Working Paper No. 20485).
+Cambridge, MA: National Bureau of Economic Research.</p>
+<p>Autor, D. H. (2015a). Why are there still so many jobs? The history
+and future of workplace automation. Journal of Economic Perspectives,
+29(3), 3–30.</p>
+<p>Autor, D. H. (2015b). Paradox of abundance: Automation anxiety
+returns. In S. Rangan (Ed.), Performance andprogress: Essays on
+capitalism, business, and society (pp. 237–260). New York, NY: Oxford
+University Press.</p>
+<p>Autor, D. H., Levy, F., &amp; Murnane, R. J. (2003). The skill
+content of recent technological change: An empirical exploration.
+Quarterly Journal of Economics, 118(4), 1279–1333.</p>
+<p>Bandelj, N. (2009). Emotions in economic action and interaction.
+Theory and Society, 38, 347–366.</p>
+<p>Barley, S. R. (1986). Technology as an occasion for structuring:
+Evidence from observations of CT scanners and the social order of
+radiology departments. Administrative Science Quarterly, 31(1),
+78–108.</p>
+<p>Barley, S. R., &amp; Kunda, K. (2001). Bringing work back in.
+Organization Science, 12(1), 76–95.</p>
+<p>Beckert, J. (2006). Trust and markets. In R. Bachmann &amp; A. Zaheer
+(Eds.), Handbook of trust research (pp. 318–331). Northampton, MA:
+Edward Elgar Publishing.</p>
+<p>Benzell, S. G., Kotlikoff, L. J., LaGarda, G., &amp; Sachs, J. D.
+(2015). Robots are us: Some economics of human replacement (National
+Bureau of Economic Research Working Paper No. 20941). Cambridge, MA:
+National Bureau of Economic Research.</p>
+<p>Bergvall-Ka˚ reborn, B., &amp; Howcroft, D. (2014). Amazon Mechanical
+Turk and the commodification of labour. New Technology, Work and
+Employment, 29(3), 213–223.</p>
+<p>Bessen, J. (2015a). Toil and technology. Finance &amp; Development,
+52(1), 16–19.</p>
+<p>Bessen, J. (2015b). Learning by doing: The real connection between
+innovation, wages, and wealth. New Haven, CT: Yale University Press.</p>
+<p>Bhide´ , A. V. (2000). The origin and evolution of new businesses.
+New York, NY: Oxford University Press.</p>
+<p>Both, G. (2014, April 3). What drives research in self-driving cars?
+Part 2: Surprisingly not machine learning. CASTAC. Retrieved from
+http://blog.
+castac.org/2014/04/03/what-drives-research-in-self-driving-cars-part-2-surprisingly-not-machine-learning/</p>
+<p>Brick, H. (2000). Age ofcontradiction: American thought and culture
+in the 1960s. Ithaca, NY: Cornell University Press.</p>
+<p>Brotheridge, C., &amp; Grandey, A. (2002). Emotional labor and
+burnout: Comparing two perspectives of ‘‘people work.’’. Journal of
+Vocational Behavior, 60, 17–39.</p>
+<p>Brynjolfsson, E., &amp; McAfee, A. (2014). The second machine age:
+Work, progress, and prosperity in a time of brilliant technologies. New
+York, NY: W.W. Norton.</p>
+<p>Burrell, J. (2016). How the machine ‘‘thinks’’: Understanding opacity
+in machine learning algorithms. Big Data &amp; Society, 3(1), 1–12.</p>
+<p>Cook, K., Cheshire, C., Gerbasi, A., &amp; Aven, B. (2009). Assessing
+trustworthiness in providers. In K. Cook, C. Snijders, V. Buskens &amp;
+C. Cheshire (Eds.), eTrust: Forming relationships in the online world
+(pp. 189–214). New York, NY: Russell Sage.</p>
+<p>Davenport, T. H., &amp; Kirby, J. (2016). Only humans need apply:
+Winners and losers in the age of smart machines. New York, NY: Harper
+Business.</p>
+<p>Dreyfus, H. (1992). What computers still can’t do: A critique of
+artificial reason. Cambridge, MA: MIT Press.</p>
+<p>Ekbia, H. R. (2008). Artificial dreams: The quest for non-biological
+intelligence. New York, NY: Cambridge University Press.</p>
+<p>Ekbia, H. R. (2015). Heteronomous humans and autonomous agents:
+Toward artificial relational intelligence. In J. Romportl, E. Zackova
+&amp; J. Kelemen (Eds.), Beyond artificial intelligence: The
+disappearing human-machine divide (pp. 63–78). New York, NY:
+Springer.</p>
+<p>Ekbia, H. R., &amp; Nardi, B. A. (2017). Heteromation and other
+stories of computing and capitalism. Cambridge, MA: MIT Press.</p>
+<p>Elliott, S. W. (2014). Anticipating a luddite revival. Issues in
+Science and Technology, 30(3), 27–36.</p>
+<p>Emerson, R. M., Fretz, R. I., &amp; Shaw, L. L. (2011). Writing
+ethnographic fieldnotes (2nd ed.). Chicago, IL: University of Chicago
+Press.</p>
+<p>Fine, G. A., Morrill, C., &amp; Surianarain, S. (2009). Ethnography
+in organizational settings. In D. A. Buchanan &amp; A. Bryman (Eds.),
+The SAGE handbook of organizational research methods (pp. 602–619).
+Thousand Oaks, CA: Sage.</p>
+<p>Ford, M. (2015). Rise of the robots: Technology and the threat of a
+jobless future. New York, NY: Basic Books.</p>
+<p>Frey, C. B., &amp; Osborne, M. A. (2017). The future of employment:
+How susceptible are jobs to computerisation? Technological Forecasting
+and Social Change, 114, 254–280.</p>
+<p>Gershenson, C. (2013). Information and computation. In P. Michelucci
+(Ed.), Handbook of human computation (pp. 61–70). New York, NY:
+Springer.</p>
+<p>Gillespie, T. (2016). Algorithm. In B. Peters (Ed.), Digital
+keywords: A vocabulary of information society and culture (pp. 18–30).
+Princeton, NJ: Princeton University Press.</p>
+<p>Goel, V. (2017, May 3). Facebook scrambles to police content amid
+rapid growth. The New York Times. Retrieved from
+https://www.nytimes.com/
+2017/05/03/technology/facebook-moderators-q1-earnings.html</p>
+<p>Goldberg, K. (2015). Countering singularity sensationalism. Nature,
+526, 320–321.</p>
+<p>Goldberg, K. (2017, January 1). Re: A.I. New York Times Magazine,
+7.</p>
+<p>Gompers, P., &amp; Lerner, J. (2004). The venture capital cycle (2nd
+ed.). Cambridge, MA: MIT Press.</p>
+<p>Hochschild, A. (1983). The managed heart: Commercialization of human
+feeling. Berkeley, CA: University of California Press.</p>
+<p>Hopkins, N. (2017, April 21). Revealed: Facebook’s internal rulebook
+on sex, terrorism, and violence. The Guardian. Retrieved from
+https://www.theguardian.com/news/2017/may/21/revealed-facebook-internal-rulebook-sex-terrorism-violence</p>
+<p>Howcroft, D., &amp; Taylor, P. (2014). ‘‘Plus ca change, plus la meme
+chose?’’—Researching and theorising the ‘‘new’’ new technologies. New
+Technology, Work and Employment, 29(1), 1–8.</p>
+<p>Irani, L. (2015a). The cultural work of microwork. New Media &amp;
+Society, 17(5), 720–739.</p>
+<p>Irani, L. (2015b). Difference and dependence among digital workers:
+The case of Amazon Mechanical Turk. South Atlantic Quarterly, 114(1),
+225–234.</p>
+<p>Irani, L. (2015c, January 15). ‘‘Justice for ‘data janitors’.’’
+Public Books. Retrieved from
+http://www.publicbooks.org/nonfiction/justice-for-data-janitors/</p>
+<p>Kaplan, J. (2015). Humans need not apply: A guide to wealth and work
+in the age of artificial intelligence. New Haven, CT: Yale University
+Press.</p>
+<p>Kenney, M., &amp; Florida, R. (2000). Venture capital in Silicon
+Valley: Fueling new firm formation. In M. Kenney (Ed.), Understanding
+Silicon Valley: The anatomy of an entrepreneurial region (pp. 98–123).
+Stanford, CA: Stanford University Press.</p>
+<p>Keynes, J. M. (1963). Economic possibilities for our grandchildren.
+In Essays in persuasion (pp. 358–373). New York, NY: W.W. Norton.</p>
+<p>Kingsley, S. C., Gray, M. L., &amp; Suri, S. (2015). Accounting for
+market frictions and power asymmetries in online labor markets. Policy
+&amp; Internet, 7(4), 383–400.</p>
+<p>Lee, M. K., Kusbit, D., Metsky, E., &amp; Dabbish, L. (2015). Working
+with machines: The impact of algorithmic and data-driven management on
+human workers. Proceedings of the 33rd Annual ACM Conference on Human
+Factors in Computing Systems, 1603–1612.</p>
+<p>Liker, J. K., Haddad, C. J., &amp; Karlin, J. (1999). Perspectives on
+technology and work organization. Annual Review of Sociology, 25,
+575–596.</p>
+<p>Lim, B. Y., Dey, A. K., &amp; Avrahami, D. (2009). Why and why not
+explanations improve the intelligibility of context-aware intelligent
+systems. Proceedings of the SIGCHI Conference on Human Factors in
+Computing Systems, 2119–2128.</p>
+<p>MacKenzie, D., &amp; Wajcman, J. (1999). The technology of
+production: Introduction. In D. MacKenzie &amp; J. Wajcman (Eds.), The
+social shaping of technology (pp. 141–151). Philadelphia, PA: Open
+University Press.</p>
+<p>Madrigal, A. C. (2012, September 6). How Google builds its maps—And
+what it means for the future of everything. The Atlantic. Retrieved from
+https://
+www.theatlantic.com/technology/archive/2012/09/how-google-builds-itsmaps-and-what-it-means-for-the-future-of-everything/261913/</p>
+<p>Madrigal, A. C. (2014, January 2). How Netflix reverse engineered
+Hollywood. The Atlantic. Retrieved from
+https://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679</p>
+<p>Michelucci, P. (Ed.). (2013). Handbook of human computation. New
+York, NY: Springer.</p>
+<p>Miller, C. C. (2015, June 25). Can an algorithm hire better than a
+human? The New York Times. Retrieved from
+http://www.nytimes.com/2015/06/26/
+upshot/can-an-algorithm-hire-better-than-a-human.html</p>
+<p>Mindell, D. (2002). Between human and machine: Feedback, control, and
+computing before cybernetics. Baltimore, MD: Johns Hopkins University
+Press.</p>
+<p>Mindell, D. A. (2015). Our robots, ourselves: Robotics and the myths
+of autonomy. New York, NY: Viking.</p>
+<p>Mokyr, J., Vickers, C., &amp; Ziebarth, N. L. (2015). The history of
+technological anxiety and the future of economic growth: Is this time
+different? Journal of Economic Perspectives, 29(3), 31–50.</p>
+<p>Nichols, T., &amp; Beynon, H. (1977). Living with capitalism: Class
+relations and the modern factory. Boston, MA: Routledge.</p>
+<p>Noble, D. F. (1995). Progress without people: New technology,
+unemployment, and the message of resistance. Toronto, Canada: Between
+the Lines.</p>
+<p>Noble, D. F. (1999). Social choice in machine design: The case of
+automatically controlled machine tools. In D. MacKenzie &amp; J. Wajcman
+(Eds.), The social shaping of technology (pp. 161–176). Philadelphia,
+PA: Open University Press.</p>
+<p>Polanyi, M. (1966). The tacit dimension. New York, NY: Doubleday.</p>
+<p>Popper, N. (2016, February 25). The robots are coming for Wall
+Street. New York Times Magazine. Retrieved from
+http://www.nytimes.com/2016/02/28/
+magazine/the-robots-are-coming-for-wall-street.html</p>
+<p>Pratt, G. A. (2015). Is a Cambrian explosion coming for robotics?.
+Journal of Economic Perspectives, 29(3), 51–60.</p>
+<p>Raval, N., &amp; Dourish, P. (2016). Standing out from the crowd:
+Emotional labor, body labor, and temporal labor in ridesharing.
+Proceedings of the 19th ACM Conference on Computer-Supported Cooperative
+Work &amp; Social Computing, 97–107.</p>
+<p>Rifkin, J. (1995). The end of work: The decline of the global labor
+force and the dawn of the post-market era. New York, NY: Putnam.</p>
+<p>Roberts, S. T. (2016). Commercial content moderation: Digital
+laborers’ dirty work. In S. U. Noble &amp; B. M. Tynes (Eds.), The
+intersectional internet: Race, sex, class and culture online
+(pp. 147–160). New York, NY: Peter Lang.</p>
+<p>Romportl, J. (2015). Naturalness of artificial intelligence. In J.
+Romportl, E. Zackova &amp; J. Kelemen (Eds.), Beyond artificial
+intelligence: The disappearing human-machine divide (pp. 211–216). New
+York, NY: Springer.</p>
+<p>Russell, S., &amp; Norvig, P. (2010). Artificial intelligence: A
+modern approach (3rd ed.). San Francisco, CA: Prentice Hall.</p>
+<p>Sachs, J. D., &amp; Kotlikoff, L. J. (2012). Smart machines and
+long-term misery (National Bureau of Economic Research Working Paper
+No. 18629). Cambridge, MA: National Bureau of Economic Research.</p>
+<p>Samuel, R. (1977). Workshop of the world: Steam power and hand
+technology in mid-Victorian Britain. History Workshop, 3, 6–72.</p>
+<p>Simon, H. A. (1965). The shape of automation for men and management.
+New York, NY: Harper &amp; Row.</p>
+<p>Smith, S. V. (2015, May 20). An NPR reporter raced a machine to write
+a news story. Who won? Planet Money. Retrieved from
+http://www.npr.org/sections/money/2015/05/20/406484294/an-npr-reporter-raced-a-machine-towrite-a-news-story-who-won</p>
+<p>Srnicek, N., &amp; Williams, A. (2015). Inventing the future:
+Postcapitalism and a world without work. New York, NY: Verso.</p>
+<p>Stovel, K., &amp; Shaw, L. (2012). Brokerage. Annual Review of
+Sociology, 38, 139–158.</p>
+<p>Suchman, L. (2007). Human-machine reconfigurations: Plans and
+situated actions (2nd ed.). New York, NY: Cambridge University
+Press.</p>
+<p>Tufecki, Z. (2015, April 18). The machines are coming. New York
+Times. Retrieved from
+http://www.nytimes.com/2015/04/19/opinion/sunday/themachines-are-coming.html</p>
+<p>Wajcman, J. (2006). New connections: Social studies of science and
+technology and studies of work. Work, Employment &amp; Society, 20(4),
+773–786.</p>
+<p>Walker, C. R. (1958). Life in the automatic factory. Harvard Business
+Review, 36(1), 111–119.</p>
+<p>Weeks, K. (2007). Life within and against work: Affective labor,
+feminist critique, and post-Fordist politics. Ephemera: Theory and
+Politics in Organization, 7(1), 233–249.</p>
+<p>Wharton, A. S. (2009). The sociology of emotional labor. Annual
+Review of Sociology, 35, 147–165.</p>
+<p>Winner, L. (1977). Autonomous technology: Technics-out-of-control as
+a theme in political thought. Cambridge, MA: MIT Press.</p>
+<p>Winograd, T., &amp; Flores, F. (1987). Understanding computers and
+cognition: A new foundation for design. Boston, MA: Addison-Wesley.</p>
+<p>Wise, J. M. (1998). Intelligent agency. Cultural Studies, 12(3),
+410–428.</p>
+<p>Yang, R., &amp; Newman, M. W. (2013). Learning from a learning
+thermostat: Lessons for intelligent systems for the home. Proceedings of
+the 2013 ACM International Joint Conference on Pervasive and Ubiquitous
+Computing, 93–102.</p>
+<p>Zackova, E. (2015). Intelligence explosion quest for humankind. In J.
+Romportl, E. Zackova &amp; J. Kelemen (Eds.), Beyond artificial
+intelligence: The disappearing human-machine divide (pp. 31–44). New
+York, NY: Springer.</p>
+<p>Zider, B. (1998). How venture capital works. Harvard Business Review,
+76(6), 131–139.</p>
+<p>Ziewitz, M. (2016). Governing algorithms: Myth, mess, and methods.
+Science, Technology, &amp; Human Values, 41(1), 3–16.</p>
+<p>Zuboff, S. (1988). In the age ofthe smart machine: Thefuture ofwork
+andpower. New York, NY: Basic Books.</p>
+<h2 id="author-biography">Author Biography</h2>
+<p>Benjamin Shestakofsky is a PhD candidate in the Department of
+Sociology at the University of California, Berkeley. His research
+centers on how digital technologies are affecting work and employment,
+organizations, and economic exchange.</p>
+</body>
+</html>
