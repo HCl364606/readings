@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<h1 id="grassroots-globalization-and-the-research-imagination">Grassroots
+Globalization and the Research Imagination</h1>
+<p>Arjun Appadurai</p>
+<p>Anxieties of the Global</p>
+<p>lobalization is certainly a source of anxiety in the U.S. academic
+world.G And the sources of this anxiety are many: Social scientists
+(especially economists) worry about whether markets and deregulation
+produce greater wealth at the price of increased inequality. Political
+scientists worry that their field might vanish along with their favorite
+object, the nation-state, if globaliza tion truly creates a “world
+without borders.” Cultural theorists, especially cultural Marxists,
+worry that in spite of its conformity with everything they already knew
+about capital, there may be some embarrassing new possibilities for
+equity hidden in its workings. Historians, ever worried about the
+problem of the new, realize that globalization may not be a member of
+the familiar archive of large-scale historical shifts. And everyone in
+the academy is anxious to avoid seeming to be a mere publicist of the
+gigantic corporate machineries that celebrate globalization. Product
+differentiation is as important for (and within) the academy as it is
+for the corporations academics love to hate.</p>
+<p>Outside the academy there are quite different worries about
+globalization that include such questions as: What does globalization
+mean for labor markets and fair wages? How will it affect chances for
+real jobs and reliable rewards? What does it mean for the ability of
+nations to determine the economic futures of their populations? What is
+the hidden dowry of globalization? Christianity?
+Cyberproletarianization? New forms of structural adjustment?
+Americanization disguised as human rights or as MTV? Such anxieties are
+to be found in many national public spheres (including that of the
+United States) and also in the academic debates of scholars in the
+poorer countries.</p>
+<p>Among the poor and their advocates the anxieties are even more
+specific: What are the great global agencies of aid and development up
+to? Is the World Bank really committed to incorporating social and
+cultural values into its developmental agenda? Does Northern aid really
+allow local communities to set their own agendas? Can large banking
+interests be trusted to support microcredit? Which parts of the national
+state are protectors of stakeholding communities and which parts are
+direct affiliates of global capital? Can the media ever be turned to the
+interests of the poor?</p>
+<p>In the public spheres of many societies there is concern that policy
+debates occurring around world trade, copyright, environment, science,
+and technology set the stage for life-and-death decisions for ordinary
+farmers, vendors, slum-dwellers, merchants, and urban populations. And
+running through these debates is the sense that social exclusion is ever
+more tied to epistemological exclusion and concern that the discourses
+of expertise that are setting the rules for global transactions, even in
+the progressive parts of the international system, have left ordinary
+people outside and behind. The discourse of globalization is itself
+growing dangerously dispersed, with the language of epistemic
+communities, the discourse of states and inter-state fora, and the
+everyday understanding of global forces by the poor growing steadily
+apart.</p>
+<p>There is thus a double apartheid evolving. The academy (especially in
+the United States) has found in globalization an object around which to
+conduct its special internal quarrels about such issues as
+representation, recognition, the “end” of history, the spectres of
+capital (and of comparison), and a host of others. These debates, which
+still set the standard of value for the global professoriate,
+nevertheless have an increasingly parochial quality.</p>
+<p>Thus the first form of this apartheid is the growing divorce between
+these debates and those that characterise vernacular discourses about
+the global, worldwide, that are typically concerned with how to
+plausibly protect cultural autonomy and economic survival in some local,
+national, or regional sphere in the era of “reform” and “openness.” The
+second form of apartheid is that the poor and their advocates find
+themselves as far from the anxieties of their own national discourses
+about globalization as they do from the intricacies of the debates in
+global fora and policy discourses surrounding trade, labor, environment,
+disease, and warfare.</p>
+<p>But a series of social forms has emerged to contest, interrogate, and
+reverse these developments and to create forms of knowledge transfer and
+social mobilization that proceed independently of the actions of
+corporate capital and the nation-state system (and its international
+affiliates and guarantors). These social forms rely on strategies,
+visions, and horizons for globalization on behalf of the poor that can
+be characterised as “grassroots globalization” or, put in a slightly
+different way, as “globalization from below.” This essay is an argument
+for the significance of this kind of globalization, which strives for a
+democratic and autonomous standing in respect to the various forms by
+which global power further seeks to extend its dominion. The idea of an
+international civil society will have no future outside of the success
+of these efforts to globalize from below. And in the study of these
+forms lies an obligation for academic research that, if honored, might
+make its deliberations more consequential for the poorer 80 percent of
+the population of the world (now totalling 6 billion) who are socially
+and fiscally at risk.</p>
+<p>To take up this challenge to American academic thought about
+globalization, this essay moves through three arguments. The first is
+about the peculiar optical challenges posed by the global. The second is
+about area studies—the largest institutional epistemology through which
+the academy in the United States has apprehended much of the world in
+the last fifty years. The third concerns the very ground from which
+academics typically and unwittingly speak—the category of “research”
+itself. These three steps bring me to a conclusion about the relations
+between pedagogy, activism, and research in the era of
+globalization.</p>
+<h2 id="the-optics-of-globalization">The Optics of Globalization</h2>
+<p>Globalization is inextricably linked to the current workings of
+capital on a global basis; in this regard it extends the earlier logics
+of empire, trade, and political dominion in many parts of the world. Its
+most striking feature is the runaway quality of global finance, which
+appears remarkably independent of traditional constraints of information
+transfer, national regulation, industrial productivity, or “real” wealth
+in any particular society, country, or region. The worrisome
+implications of this chaotic, high velocity, promiscuous movement of
+financial (especially speculative) capital have been noted by several
+astute critics (Greider 1997; Rodrik 1997; Soros 1998, among others) so
+I will not dwell on them here. I am among those analysts who are
+inclined to see globalization as a definite marker of a new crisis for
+the sovereignty of nation-states, even if there is no consensus on the
+core of this crisis or its generality and finality (Appadurai 1996;
+Rosenau 1997; Ruggie 1993; Sassen 1996).</p>
+<p>My concern here is with the conditions of possibility for the
+democratization of research about globalization in the context of
+certain dominant forms of critical knowledge, especially as these forms
+have come to be organised by the socia sciences in the West. Here we
+need to observe some optical peculiarities. The first is that there is a
+growing disjuncture between the globalization of knowledge and the
+knowledge of globalization. The second is that there is an inherent
+temporal lag between the processes of globalization and our efforts to
+contain them conceptually. The third is that globalization as an uneven
+economic process creates a fragmented and uneven distribution of just
+those resources for learning, teaching, and cultural criticism that are
+most vital for the formation of democratic research communities that
+could produce a global view of globalization. That is, globalization
+resists the possibility of just those forms of collaboration that might
+make it easier to understand or criticise.</p>
+<p>In an earlier, more confident epoch in the history of social
+science—notably in the 1950s and 1960s during the zenith of
+modernization theory—such epistemological diffidence would have been
+quickly dismissed, since that was a period when there was a more secure
+sense of the social in the relationship between theory, method, and
+scholarly location. Theory and method were seen as naturally
+metropolitan, modern, and Western. The rest of the world was seen in the
+idiom of cases, events, examples, and test sites in relation to this
+stable location for the production or revision of theory. Most varieties
+of Marxist theory, though sharply critical of the capitalist project
+behind modernization theory, nevertheless were equally “realist,” both
+in their picture of the architecture of the world system and in their
+understanding of the relationship between theory and cases. Thus much
+excellent work in the Marxist tradition had no special interest in
+problems of voice, perspective, or location in the study of global
+capitalism. In short, a muscular objectivism united much social science
+in the three decades after World War II, whatever the politics of the
+practitioners.</p>
+<p>Today, one does not have to be a postmodernist, relativist, or
+deconstructionist (key words in the culture wars of the Western academic
+world) to admit that political subjects are not mechanical products of
+their objective circumstances, that the link between events
+significantly separated in space and proximate in time is often hard to
+explain, that the kinds of comparison of social units that relied on
+their empirical separability cannot be secure, and that the more
+marginal regions of the world are not simply producers of data for the
+theory mills of the North.</p>
+<h2 id="flows-and-disjunctures">Flows and Disjunctures</h2>
+<p>It has now become something of a truism that we are functioning in a
+world fun damentally characterised by objects in motion. These objects
+include ideas and ideologies, people and goods, images and messages,
+technologies and techniques. This is a world of flows (Appadurai 1996).
+It is also, of course, a world of structures, organisations, and other
+stable social forms. But the apparent stabilitie that we see are, under
+close examination, usually our devices for handling objects
+characterised by motion. The greatest of these apparently stable objects
+is the nation-state, which is today frequently characterised by floating
+populations, transnational politics within national borders, and mobile
+configurations of tech nology and expertise.</p>
+<p>But to say that globalization is about a world of things in motion
+somewhat understates the point. The various flows we see—of objects,
+persons, images, and discourses—are not coeval, convergent, isomorphic,
+or spatially consistent. They are in what I have elsewhere called
+relations of disjuncture. By this I mean that the paths or vectors taken
+by these kinds of things have different speeds, axes, points of origin
+and termination, and varied relationships to institutional structures in
+different regions, nations, or societies. Further, these disjunctures
+themselves precipitate various kinds of problems and frictions in
+different local situations. Indeed, it is the disjunctures between the
+various vectors characterising this world-in-motion that produce
+fundamental problems of livelihood, equity, suffering, justice, and
+governance.</p>
+<p>Examples of such disjunctures are phenomena such as the following:
+Media flows across national boundaries that produce images of well-being
+that cannot be satisfied by national standards of living and consumer
+capabilities; flows of discourses of human rights that generate demands
+from workforces that are repressed by state violence which is itself
+backed by global arms flows; ideas about gender and modernity that
+circulate to create large female workforces at the same time that
+cross-national ideologies of “culture,” “authenticity,” and national
+honor put increasing pressure on various communities to morally
+discipline just these working women who are vital to emerging markets
+and manufacturing sites. Such examples could be multiplied. What they
+have in common is the fact that globalization — in this perspective a
+cover term for a world of disjunctive flows—produces problems that
+manifest themselves in intensely loca forms but have contexts that are
+anything but local.</p>
+<p>If globalization is characterised by disjunctive flows that generate
+acute problems of social well-being, one positive force that encourages
+an emancipatory politics of globalization is the role of the imagination
+in social life (Appadurai 1996). The imagination is no longer a matter
+of individual genius, escapism from ordinary life, or just a dimension
+of aesthetics. It is a faculty that informs the daily lives of ordinary
+people in myriad ways: It allows people to consider migration, resist
+state violence, seek social redress, and design new forms of civic
+association and collaboration, often across national boundaries. This
+view of the role of the imagination as a popular, social, collective
+fact in the era of globalization recognises its split character. On the
+one hand, it is in and through the imagination that modern citizens are
+disciplined and controlled—by states, markets, and other powerful
+interests. But is it is also the faculty through which collective
+patterns of dissent and new designs for collective life emerge. As the
+imagination as a social force itself works across national lines to
+produce locality as a spatial fact and as a sensibility (Appadurai
+1996), we see the beginnings of social forms without either the
+predatory mobility of unregulated capital or the predatory stability of
+many states. Such social forms have barely been named by current social
+science, and even when named their dynamic qualities are frequently
+lost. Thus terms like “international civil society” do not entirely
+capture the mobility and malleability of those creative forms of social
+life that are localised transit points for mobile global forms of civic
+and civil life.</p>
+<p>One task of a newly alert social science is to name and analyse these
+mobile civil forms and to rethink the meaning of research styles and
+networks appropriate to this mobility. In this effort, it is important
+to recall that one variety of the imagination as a force in social
+life—the academic imagination—is part of a wider geography of knowledge
+created in the dialogue between social science and area studies,
+particularly as it developed in the United States after World War II.
+This geography of knowledge invites us to rethink our picture of what
+“regions” are and to reflect on how research itself is a special
+practice of the academic imagination. These two tasks are taken up
+below.</p>
+<h2 id="regional-worlds-and-area-studies">Regional Worlds and Area
+Studies</h2>
+<p>As scholars concerned with localities, circulation, and comparison,
+we need to make a decisive shift away from what we may call “trait”
+geographies to what we could call “process” geographies. Much
+traditional thinking about “areas” has been driven by conceptions of
+geographical, civilisational, and cultural coherence that rely on some
+sort of trait list — of values, languages, material practices,
+ecological adaptations, marriage patterns, and the like. However
+sophisticated these approaches, they all tend to see “areas” as
+relatively immobile aggregates of traits, with more or less durable
+historical boundaries and with a unity composed of more or less enduring
+properties. These assumptions have often been further telescoped
+backward through the lens of contemporary U.S. security-driven images of
+the world and, to a lesser extent, through colonial and postcolonial
+conceptions of national and regional identity.</p>
+<p>In contrast, we need an architecture for area studies that is based
+on process geographies and sees significant areas of human organization
+as precipitates of various kinds of action, interaction, and
+motion—trade, travel, pilgrimage, warfare, proselytisation,
+colonisation, exile, and the like. These geographies are nec essarily
+large scale and shifting, and their changes highlight variable congeries
+of language, history, and material life. Put more simply, the large
+regions that dominate our current maps for area studies are not
+permanent geographical facts. They are problematic heuristic devices for
+the study of global geographic and cultural processes. Regions are best
+viewed as initial contexts for themes that generate variable
+geographies, rather than as fixed geographies marked by pregiven themes.
+These themes are equally “real,” equally coherent, but are results of
+our interests and not their causes.</p>
+<p>The trouble with much of the paradigm of area studies as it now
+exists is that it has tended to mistake a particular configuration of
+apparent stabilities for permanent associations between space,
+territory, and cultural organisation. These apparent stabilities are
+themselves largely artifacts of the specific trait-based idea of
+“culture” areas, a recent Western cartography of large civilisational
+landmasses associated with different relationships to “Europe” (itself a
+complex historical and cultural emergent), and a Cold War–based
+geography of fear and com petition in which the study of world languages
+and regions in the United States was legislatively configured for
+security purposes into a reified map of geographical regions. As happens
+so often in academic inquiry, the heuristic impulse behind many of these
+cartographies and the contingent form of many of these spatial
+configurations was soon forgotten and the current maps of “areas” in
+“area studies” were enshrined as permanent.</p>
+<p>One key to a new architecture for area studies is to recognise that
+the capability to imagine regions and worlds is now itself a globalized
+phenomenon. That is, due to the activities of migrants, media, capital,
+tourism, and so forth the means for imagining areas is now itself
+globally widely distributed. So, as far as possible, we need to find out
+how others, in what we still take to be certain areas as we define them,
+see the rest of the world in regional terms. In short, how does the
+world look—as a congeries of areas—from other locations (social,
+cultural, national)?</p>
+<p>For example, the Pacific Rim is certainly a better way of thinking
+about a certain region today, rather than splitting up East Asia and the
+Western coast of North America. But a further question is: How do people
+in Taiwan, Korea, or Japan think about the Pacific Rim, if they think in
+those terms at all? What is their topology of Pacific traffic?</p>
+<p>To seriously build an architecture for area studies around the idea
+that all “areas” also conceive or produce their own “areas,” we need to
+recognise the centrality of this sort of recursive refraction. In fact
+this perspective could be infinitely regressive. But we do not have to
+follow it out indefinitely: One or two moves of this type would lead us
+a long way from the U.S. Cold War architecture with which we
+substantially still operate.</p>
+<p>Following this principle has a major entailment for understanding the
+apparatus through which areal worlds are globally produced. This
+production happens substantially in the public spheres of many
+societies, and includes many kinds of intellectuals and “symbolic
+analysts” (including artists, journalists, diplomats, businessmen, and
+others) as well as academics. In some cases, academics may be only a
+small part of this world-generating optic. We need to attend to this
+varied set of public spheres, and the intellectuals who constitute them,
+to create partnerships in teaching and research so that our picture of
+areas does not stay confined to our own first-order, necessarily
+parochial, world pictures. The potential payoff is a critical dialogue
+between world pictures, a sort of dialectic of areas and regions, built
+on the axiom that areas are not facts but artifacts of our interests and
+our fantasies as well as of our needs to know, to remember, and to
+forget.</p>
+<p>But this critical dialogue between world pictures cannot emerge
+without one more critical act of optical reversal. We need to ask
+ourselves what it means to internationalize any sort of research before
+we can apply our understandings to the geography of areas and regions.
+In essence, this requires a closer look at research as a practice of the
+imagination.</p>
+<h2 id="the-idea-of-research">The Idea of Research</h2>
+<p>In much recent discussion about the internationalization of research,
+the problem term is taken to be “internationalization.” I propose that
+we focus first on research, before we worry about its global
+portability, its funding, and about training people to do it better. The
+questions I wish to raise here are: What do we mean when we speak today
+of research? Is the research ethic, whatever it may be, essentially the
+same thing in the natural sciences, the social sciences, and the
+humanities? By whatever definition, is there a sufficiently clear
+understanding of the research ethic in the academic world of North
+America and Western Europe to justify its central role in current
+discussions of the internationalization of academic practices?</p>
+<p>Such a deliberately naive, anthropological reflection upon the idea
+of research is difficult. Like other cultural keywords, it is so much
+part of the ground on which we stand and the air we breathe that it
+resists conscious scrutiny. In the case of the idea of research, there
+are two additional problems. First, research is virtually synonymous
+with our sense of what it means to be scholars and members of the
+academy, and thus it has the invisibility of the obvious. Second, since
+research is the optic through which we typically find out about
+something as scholars today, it is especially hard to use research to
+understand research.</p>
+<p>Partly because of this ubiquitous, taken-for-granted, and axiomatic
+quality of research, it may be useful to look at it not only
+historically — as we might be inclined to do—but anthropologically, as a
+strange and wonderful practice that transformed Western intellectual
+life perhaps more completely than any other single procedural idea since
+the Renaissance. What are the cultural presumption of this idea and thus
+of its ethic? What does it seem to assume and imply? What special
+demands does it make upon those who buy into it?</p>
+<p>Today, every branch of the university system in the West, but also
+many branches of government, law, medicine, journalism, marketing, and
+even the writing of some kinds of fiction and the work of the armed
+forces must demonstrate their foundation in research in order to command
+serious public attention or funds. To write the history of this huge
+transformation of our fundamental protocols about the production of
+reliable new knowledge is a massive undertaking, better suited to
+another occasion. For now, let us ask simply what this transformation in
+our understanding of new knowledge seems to assume and imply.</p>
+<p>Consider a naive definition. Research may be defined as the
+systematic pursuit of the not-yet-known. It is usually taken for granted
+that the machine that produces new knowledge is research. But the
+research ethic is obviously not about just any kind of new knowledge. It
+is about new knowledge that meets certain criteria. It has to plausibly
+emerge from some reasonably clear grasp of relevant prior knowledge. The
+question of whether someone has produced new knowl edge, in this sense,
+requires a community of assessment, usually preexistent, voca tional,
+and specialised. This community is held to be competent to assess not
+just whether a piece of knowledge is actually new but whether its
+producer has complied with the protocols of pedigree: the review of the
+literature, the strategic citation, the delineation of the appropriate
+universe—neither shapelessly large nor myopically small—of prior,
+usually disciplinary, knowledge. In addition, legitimate new knowledge
+must somehow strike its primary audience as interesting. That is, it has
+to strike them not only as adding something recognisably new to some
+predefined stock of knowledge but, ideally, as adding something
+interesting. Of course, boring new knowledge is widely acknowledged to
+be a legitimate product of research, but the search for the
+new-and-interesting is always present in professional systems of
+assessment.</p>
+<p>Reliable new knowledge, in this dispensation, cannot come directly
+out of intuition, revelation, rumor, or mimicry. It has to be a product
+of some sort of systematic procedure. This is the nub of the strangeness
+of the research ethic. In the history of many world traditions
+(including the Western one) of reflection, speculation, argumentation,
+and ratiocination, there has always been a place for new ideas. In
+several world traditions (although this is a matter of continuing
+debate) there has always been a place for discovery, and even for
+discovery grounded in empirical observations of the world. Even in those
+classical traditions of intellectual work, such as those of ancient
+India, where there is some question about whether empirical observation
+of the natural world was much valued, it is recognised that a high value
+was placed on careful observation and recording of human activity. Thus,
+the great grammatical works of Panini (the father of Sanskrit grammar)
+are filled with observations about good and bad usage that are clearly
+drawn from the empirical life of speech communities. Still, it would be
+odd to say that Panini was conducting research on Sanskrit grammar, any
+more than that Augustine was conducting research on the workings of the
+will, or Plato on tyranny, or even Aristotle on biological structures or
+politics. Yet these great thinkers certainly changed the way their
+readers thought, and their works continue to change the way we think
+about these important issues. They certainly produced new knowledge and
+they were even systematic in the way they did it. What makes it seem
+anachronistic to call them researchers?</p>
+<p>The answer lies partly in the link between new knowledge,
+systematicity, and an organised professional community of criticism.
+What these great thinkers did not do was to produce new knowledge in
+relation to a prior citational world and an imagined world of
+specialised professional readers and researchers. But there is another
+important difference. The great thinkers, observers, discoverers,
+inventors, and innovators of the pre-research era invariably had moral,
+religious, political, or social projects, and their exercises in the
+production of new knowledge were therefore, by definition, virtuoso
+exercises. Their protocols could not be replicated, not only for
+technical reasons but because their questions and frameworks were shot
+through with their political projects and their moral signatures. Once
+the age of research (and its specific modern ethic) arrives, these
+thinkers become necessarily confined to the protohistory of the main
+disciplines that now claim them or to the footnotes of the histories of
+the fields into which they are seen as having trespassed. But in no case
+are they seen as part of the history of research, as such. This is
+another way to view the much discussed growth of specialised fields of
+inquiry in the modern research university in the course of the
+nineteenth and twentieth centuries.</p>
+<p>These considerations bring us close to the core of the modern
+research ethic, to something that underpins the concern with
+systematicity, prior citational contexts, and specialised modes of
+inquiry. This is the issue of replicability, or, in the aphoristic
+comment of my colleague George Stocking, the fact that what is involved
+here is not search but re-search. There is of course a vast technical
+literature in the history and philosophy of science about verifiability,
+replicability, falsifiability, and the transparency of research
+protocols. All of these criteria are intended to eliminate the virtuoso
+technique, the random flash, the generalist’s epiphany, and other
+private sources of confidence. All confidence in this more restricted
+ethic of new knowledge reposes (at least in principle) in the idea that
+results can be repeated, sources can be checked, citations can be
+verified, calculations can be confirmed by one or many other
+researchers. Given the vested interest in showing their peers wrong,
+these other researchers are a sure check against bad protocols or lazy
+inferences. The fact that such direct cross-checking is relatively rare
+in the social sciences and the humanities is testimony to the abstract
+moral sanctions associated with the idea of replicability.</p>
+<p>This norm of replicability gives hidden moral force to the idea,
+famously associated with Max Weber, of the importance of value-free
+research, especially in the social sciences. Once the norm of value-free
+research successfully moves from the natural sciences into the social
+and human sciences (no earlier than the late nineteenth century), we
+have a sharp line not just between such “ancients” a Aristotle, Plato,
+and Augustine on the one hand and modern researchers on the other, but
+also a line between researchers in the strict academic sense and such
+modern thinkers as Goethe, Kant, and Locke. The importance of value-free
+research in the modern research ethic assumes its full force with the
+subtraction of the idea of moral voice or vision and the addition of the
+idea of replicability. It is not difficult to see the link of these
+developments to the steady secularisation of academic life after the
+seventeenth century.</p>
+<p>Given these characteristics, it follows that there can be no such
+thing as individual research, in the strict sense, in the modern
+research ethic, though of course individuals may and do conduct
+research. Research in the modern, Western sense, is through and through
+a collective activity, in which new knowledge emerges from a
+professionally defined field of prior knowledge and is directed toward
+evaluation by a specialised, usually technical, body of readers and
+judges who are the first sieve through which any claim to new knowledge
+must ideally pass. This fact has important implications for the work of
+“public” intellectuals, especially outside the West, who routinely
+address nonprofessional publics. I will address this question below.
+Being first and last defined by specific communities of reference (both
+prior and prospective), new knowledge in the modern research ethic has
+one other crucial characteristic that has rarely been explicitly
+discussed.</p>
+<p>For most researchers, the trick is how to choose theories, define
+frameworks, ask questions, and design methods that are most likely to
+produce research with a plausible shelf life. Too grand a framework or
+too large a set of questions and the research is likely not be funded,
+much less to produce the ideal shelf life. Too myopic a framework, too
+detailed a set of questions, and the research is likely to be dismissed
+by funders as trivial, and even when it is funded, to sink without a
+bubble in the ocean of professional citations. The most elusive
+characteristic of the research ethos is this peculiar shelf life of any
+piece of reliable new knowledge. How is it to be produced? More
+important, how can we produce institutions that can produce this sort of
+new knowledge predictably, even routinely? How do you train scholars in
+developing this faculty for the lifelong production of pieces of new
+knowledge that function briskly but not for too long? Can such training
+be internationalized?</p>
+<p>I have already suggested that there are few walks of modern life,
+both in the West and in some other advanced industrial societies, in
+which research is not a more or less explicit requirement of plausible
+policy or credible argumentation, whether the matter is child abuse or
+global warming, punctuated equilibrium or consumer debt, lung cancer or
+affirmative action. Research-produced knowledge is everywhere, doing
+battle with other kinds of knowledge (produced by personal testimony,
+opinion, revelation, or rumor) and with other pieces of researchproduced
+knowledge.</p>
+<p>Though there are numerous debates and differences about research
+style among natural scientists, policy makers, social scientists, and
+humanists, there is also a discernible area of consensus. This consensus
+is built around the view that the most serious problems are not those to
+be found at the level of theories or models but those involving method:
+data gathering, sampling bias, reliability of large numerical data sets,
+comparability of categories across national data archives, survey
+design, problems of testimony and recall, and the like. To some extent,
+this emphasis on method is a reaction to widespread unease about the
+multiplication of theoretical paradigms and normative visions,
+especially in the social sciences. Furthermore, in this perspective,
+method, translated into research design, is taken to be a reliable
+machine for producing ideas with the appropriate shelf life. This
+implicit consensus and the differences it seeks to manage take on
+special importance for any effort to internationalize social science
+research.</p>
+<h2 id="democracy-globalization-and-pedagogy">Democracy, Globalization,
+and Pedagogy</h2>
+<p>We can return now to a deeper consideration of the relationship
+between the knowledge of globalization and the globalization of
+knowledge. I have proposed that globalization is not simply the name for
+a new epoch in the history of capital or in the biography of the
+nation-state. It is marked by a new role for the imagination in social
+life. This role has many contexts: I have focused here on the sphere of
+knowledge production, especially knowledge associated with systematic
+academic inquiry. I have suggested that the principal challenge that
+faces the study of regions and areas is that actors in different regions
+now have elaborate interests and capabilities in constructing world
+pictures whose very interaction affects global processes. Thus the world
+may consist of regions (seen processually), but regions also imagine
+their own worlds. Area studies must deliberate upon this aspect of the
+relationship between regions, as must any discipline that takes
+subjectivity and ideology as something more than ephemera in the saga of
+capital and empire. Such deliberation is a vital prerequisite for
+internationalizing academic research, especially when the objects of
+research themselves have acquired international, transnational, or
+global dimensions of vital interest to the human sciences.</p>
+<p>One aspect of such deliberation involves a recognition of the
+constitutive peculiarities of the idea of research, which itself has a
+rather unusual set of cultural diacritics. This ethic, as I have
+suggested, assumes a commitment to the routinised production of certain
+kinds of new knowledge, a special sense of the systematics for the
+production of such knowledge, a quite particular idea of the shelf life
+of good research results, a definite sense of the specialised community
+of experts who precede and follow any specific piece of research, and a
+distinct positive valuation of the need to detach morality and political
+interest from properly scholarly research.</p>
+<p>Such a deparochialisation of the research ethic—of the idea of
+research itself— will require asking the following sorts of questions.
+Is there a principled way to close the gap between many U.S. scholars,
+who are suspicious of any form of applied or policy-driven research, and
+scholars from many other parts of the world who see themselves as
+profoundly involved in the social transformations sweeping their own
+societies? Can we retain the methodological rigor of modern social
+science while restoring some of the prestige and energy of earlier
+visions of scholarship in which moral and political concerns were
+central? Can we find ways to legitimately engage scholarship by public
+intellectuals here and overseas whose work is not primarily conditioned
+by professional criteria of criticism and dissemination? What are the
+implications of the growing gap, in many societies, between institutions
+for technical training in the social sciences and broader traditions of
+social criticism and debate? Are we prepared to move beyond a model of
+internationalizing academic research that is mainly concerned with
+improving how others practice our precepts? Is there something for us to
+learn from colleagues in other national and cultural settings whose work
+is not characterised by a sharp line between social scientific and
+humanistic styles of inquiry? Asking such questions with an open mind is
+not just a matter of ecumenism or goodwill. It is a way of enriching the
+answers to questions that increasingly affect the relationship between
+academic research and its various constituencies here in the United
+States as well.</p>
+<p>If we are serious about building a genuinely international and
+democratic community of researchers—especially on matters that involve
+cross-cultural variation and intersocietal comparison—then we have two
+choices. One is to take the elements that constitute the hidden armature
+of our research ethic as given and unquestionable and proceed to look
+around for those who wish to join us. This is what may be called “weak
+internationalization.” The other is to imagine and invite a conversation
+about research in which, by asking the sorts of questions I have just
+described, the very elements of this ethic could be subjects of debate.
+Scholars from other societies and traditions of inquiry could bring to
+this debate their own ideas about what counts as new knowledge and what
+communities of judgement and accountability they might judge to be
+central in the pursuit of such knowledge. This latter option—which might
+be called strong internationalization—might be more laborious, even
+contentious. But it is the surer way to create communities and
+conventions of research in which membership does not require
+unquestioned prior adherence to a quite specific research ethic. In the
+end, the elements I have identified as belonging to our research ethic
+may well emerge from this dialogue all the more robust for having been
+exposed to a critical internationalism. In this sense, Western
+scholarship has nothing to fear and much to gain from principled
+internationalization.</p>
+<p>It may be objected that this line of reasoning fails to recognise
+that all research occurs in a wider world of relations characterised by
+growing disparities between rich and poor countries, by increased
+violence and terror, by domino economic crises, and by runaway traffic
+in drugs, arms, and toxins. In a world of such overwhelming material
+dependencies and distortions, can any new way of envisioning research
+collaboration make a difference?</p>
+<h2 id="globalization-from-below">Globalization from Below</h2>
+<p>While global capital and the system of nation-states negotiate the
+terms of the emergent world order, a worldwide order of institutions has
+emerged that bears witness to what we may call “grassroots
+globalization,” or “globalization from below.” The most easily
+recognisable of these institutions are NGOs (nongovernmental
+organizations) concerned with mobilizing highly specific local,
+national, and regional groups on matters of equity, access, justice, and
+redistribution. These organizations have complex relations with the
+state, with the official public sphere, with international civil society
+initiatives, and with local communities. Sometimes they are
+uncomfortably complicit with the policies of the nation-state and
+sometimes they are violently opposed to these policies. Sometimes they
+have grown wealthy and powerful enough to constitute major political
+forces in their own right and sometimes they are weak in everything
+except their transparency and local legitimacy. NGOs have their roots in
+the progressive movements of the last two centuries in the areas of
+labor, suffrage, and civil rights. They sometimes have historical links
+to the socialist internationalism of an earlier era. Some of these NGOs
+are self-consciously global in their concerns and their strategies, and
+this subgroup has recently been labelled transnational advocacy networks
+(hereafter, TANs), whose role in transnational politics has only
+recently become the object of serious study (Keck and Sikkink 1998).
+Although the sociology of these emergent social forms—part movements,
+part networks, part organizations —has yet to be developed, there is a
+considerable progressive consensus that these forms are the crucibles
+and institutional instruments of most serious efforts to globalize from
+below.</p>
+<p>There is also a growing consensus on what such grassroots efforts to
+globalize are up against. Globalization (understood as a particular,
+contemporary configuration in the relationship between capital and the
+nation-state) is demonstrably creating increased inequalities both
+within and across societies, spiraling processes of ecological
+degradation and crisis, and unviable relations between finance and
+manufacturing capital, as well as between goods and the wealth required
+to purchase them. The single most forceful account of this process is to
+be found in the work of William Greider (1997), though his alarming
+prognostications have not gone unchallenged (Krugman 1998; Rodrik 1997).
+Nevertheless, in implying that economic globalization is today a runaway
+horse without a rider, Greider has many distinguished allies (Garten
+1997; Soros 1998). This view opens the prospect that successful TANs
+might offset the most volatile effects of runaway capital.</p>
+<p>Global capital in its contemporary form is characterised by
+strategies of predatory mobility (across both time and space) that have
+vastly compromised the capacities of actors in single locations even to
+understand, much less to anticipate or resist, these strategies. Though
+states (and what we may call “state fractions”) vary in how and whether
+they are mere instruments of global capital, they have certainly eroded
+as sites of political, economic, and cultural sovereignty. This sense of
+compromised sovereignty—to which I referred earlier—is the subject of
+intense debate among political theorists and analysts, but a significant
+number of these theorists concede that momentous changes in the meaning
+of state sovereignty are underway (Keohane 1995; Rosenau 1997; Ruggie
+1993, 1998; Sassen 1998). These changes suggest that successful
+transnational advocacy networks might be useful players in any new
+architecture of global governance.</p>
+<p>But — and here is the challenge to the academy — most TANs suffer
+from their inability to counter global capital precisely in its global
+dimensions. They often lack the assets, the vision, the planning, and
+the brute energy of capital to globalize through the capture of markets,
+the hijacking of public resources, the erosion of state sovereignties,
+and the control of media. The current geographical mobility of capital
+is unique in its own history and unmatched by other political projects
+or interests. Again, there is some debate about whether globalization
+(as measured by the ratio of international trade to GDP) has really
+increased over the last century (see Sassen, in this issue), but a
+significant number of observers agree that the scale, penetration, and
+velocity of global capital have all grown significantly in the last few
+decades of this century (Castells 1996; Giddens 1996; Held 1995),
+especially when new information technologies are factored in as measures
+of integration and interconnectivity.</p>
+<p>Thus it is no surprise that most transnational advocacy networks have
+thus far had only limited success in self-globalization, since there is
+a tendency for stakeholder organizations concerned with bread-and-butter
+issues to oppose local interests against global alliances. Thus, their
+greatest comparative advantage with respect to corporations—that they do
+not need to compete with each other —is underutilized. There are many
+reasons for this underutilization, ranging from political obstacles and
+state concerns about sovereignty to lack of information and resources
+for networking. While the number of nonstate actors has grown
+monumentally in the last three decades, especially in the areas of human
+rights and environmental activism (Keck and Sikkink 1998), there is much
+more confusion about their relative successes in competing with the
+organized global strategies of states and corporate interests (Matthews
+1997).</p>
+<p>But one problem stands out. One of the biggest disadvantages faced by
+activists working for the poor in fora such as the World Bank, the U.N.
+system, the WTO, NAFTA, and GATT is their alienation from the vocabulary
+used by the university-policy nexus (and, in a different way, by
+corporate ideologues and strategists) to describe global problems,
+projects, and policies. A strong effort to compare, describe and
+theorize “globalization from below” could help to close this gap. The
+single greatest obstacle to grassroots globalization — in relation to
+the global power of capital—is the lack of a clear picture among their
+key actors of the political, economic, and pedagogic advantages of
+counterglobalization. Grassroots organizations that seek to create
+transnational networks to advance their interests have not yet seen that
+such counterglobalization might generate the sorts of locational,
+informational, and political flexibility currently monopolized by global
+corporations and their national-civic allies.</p>
+<p>By providing a complex picture of the relationship between
+globalization from above (as defined by corporations, major multilateral
+agencies, policy experts, and national governments) and below,
+collaborative research on globalization could contribute to new forms of
+pedagogy (in the sense of Freire 1987) that could level the theoretical
+playing field for grassroots activists in international fora.</p>
+<p>Such an account would belong to a broader effort to understand the
+variety of projects that fall under the rubric of globalization, and it
+would also recognise that the word globalization, and words like
+freedom, choice, and justice, are not inevitably the property of the
+state-capital nexus. To take up this sort of study involves, for the
+social sciences, a serious commitment to the study of globalization from
+below, its institutions, its horizons, and its vocabularies. For those
+more concerned with the work of culture, it means stepping back from
+those obsessions and abstractions that constitute our own professional
+practice to seriously</p>
+<p>Public Culture</p>
+<p>consider the problems of the global everyday. In this exercise, the
+many existing forms of Marxist critique are a valuable starting point,
+but they too must be willing to suspend their inner certainty about
+understanding world histories in advance. In all these instances,
+academics from the privileged institutions of the West (and the North)
+must be prepared to reconsider, in the manner I have pointed to, their
+conventions about world knowledge and about the protocols of inquiry
+(“research”) that they too often take for granted.</p>
+<p>There are two grounds for supposing that this sort of exercise is
+neither idle nor frivolous. The first is that all forms of critique,
+including the most arcane and abstract, have the potential for changing
+the world: Surely Marx must have believed this during his many hours in
+the British Museum doing “research.” The second argument concerns
+collaboration. I have already argued that those critical voices who
+speak for the poor, the vulnerable, the dispossessed, and the
+marginalised in the international fora in which global policies are made
+lack the means to produce a systematic grasp of the complexities of
+globalization. A new architecture for producing and sharing knowledge
+about globalization could provide the foundations of a pedagogy that
+closes this gap and helps to democratise the flow of knowledge about
+globalization itself. Such a pedagogy would create new forms of dialogue
+between academics, public intellectuals, activists, and policymakers in
+different societies. The principles of this pedagogy will require
+significant innovations. This vision of global collaborative teaching
+and learning about globalization may not resolve the great antinomies of
+power that characterise this world, but it might help to even the
+playing field.</p>
+<p>Arjun Appadurai is Samuel N. Harper Professor of Anthropology at the
+University of Chicago. His recent publications include “Dead Certainty:
+Ethnic Violence in the Era of Globalization” (Public Culture, winter
+1998) and “The Grounds of the Nation-State: Identity, Violence, and
+Territory” (in K. Goldmann, U. Hannerz, and C. Westin, eds., Nationalism
+and Internationalism in the Post–Cold War Era [2000]).</p>
+<h2 id="references">References</h2>
+<p>Appadurai, Arjun. 1996. Modernity at large: Cultural dimensions of
+globalization. Minneapolis: University of Minnesota Press.</p>
+<p>Castells, Manuel. 1996. The rise of network society. Cambridge,
+Mass.: Blackwell Publishers.</p>
+<p>Freire, Paolo. 1987. Pedagogy of the oppressed. New York:
+Continuum.</p>
+<p>Garten, Jeffrey E. 1997. Can the world survive the triumph of
+capitalism? Har-</p>
+<p>vard Business Review 75: 144.</p>
+<p>Giddens, A. 1996. Globalization—A Keynote Address. UNRISD News 15:
+4–5.</p>
+<p>Greider, William. 1997. One world, ready or not: The manic logic of
+global capitalism. New York: Simon &amp; Schuster.</p>
+<p>Held, David. 1995. Democracy and the global order. London: Polity
+Press.</p>
+<p>Keck, Margaret E., and Kathryn Sikkink. 1998. Activists beyond
+borders: Advocacy networks in international politics. Ithaca: Cornell
+University Press.</p>
+<p>Keohane, Robert O. 1995. Hobbes’s dilemma and institutional change in
+world politics: sovereignty in international society. In Whose world
+order? edited by H. Holm and G. Sorensen. Boulder: Westview Press.</p>
+<p>Krugman, Paul R. 1998. The accidental theorist and other dispatches
+from the dismal science. New York: Norton Publishers.</p>
+<p>Matthews, Jessica T. 1997. Power shift. Foreign Affairs,
+January/February, 50–66.</p>
+<p>Rodrik, D. 1997. Has globalization gone too far? Washington, D.C.:
+Institute for International Economics.</p>
+<p>Rosenau, James. 1997. Along the domestic-foreign frontier: Exploring
+governance in a turbulent world. Cambridge: Cambridge University
+Press.</p>
+<p>Ruggie, John Gerard. 1993. Territoriality and beyond: Problematizing
+modernity in international relations. International Organization 47:
+139–74.</p>
+<p>Sassen, Saskia. 1996. Losing control? Sovereignty in an age of
+globalization. New York: Columbia University Press.</p>
+<p>—. 1998. Globalization and its discontents. New York: The New
+Press.</p>
+<p>Soros, George. 1998. Toward a global open society. Atlantic Monthly,
+January, 20–24, 32.</p>
+</body>
+</html>

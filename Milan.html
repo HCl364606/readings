@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+table {
+display: table; overflow: auto;
+max-width: 100%;
+border-collapse: collapse;
+page-break-inside: avoid;
+}
+table th {
+text-align: center;
+font-weight: bold;
+}
+table td,table th {
+border: 1px solid #dfe2e5;
+padding: 6px 13px;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+background-color: #f6f8fa;
+}
+</style>
+</head>
+<body>
+<h1 id="big-data-from-the-souths-beyond-data-universalism">Big Data from
+the South(s): Beyond Data Universalism</h1>
+<p>Stefania Milan1 and Emiliano Treré2</p>
+<p>Television &amp; New Media 2019, Vol. 20(4) 319–335 © The Author(s)
+2019</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<p><sub>/10.1177/1527476419837739</sub>Article reuse guidelines:
+sagepub.com/journals-permissions DOI: 10.1177/1527476419837739
+journals.sagepub.com/home/tvn</p>
+<p><img role="img" aria-label="image" src="data:image/jpeg;base64,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" alt="image" /></p>
+<h2 id="abstract">Abstract</h2>
+<p>This article introduces the tenets of a theory of datafication of and
+in the Souths. It calls for a de-Westernization of critical data
+studies, in view of promoting a reparation to the cognitive injustice
+that fails to recognize non-mainstream ways of knowing the world through
+data. It situates the “Big Data from the South” research agenda as an
+epistemological, ontological, and ethical program and outlines five
+conceptual operations to shape this agenda. First, it suggests moving
+past the “universalism” associated with our interpretations of
+datafication. Second, it advocates understanding the South as a
+composite and plural entity, beyond the geographical connotation (i.e.,
+“global South”). Third, it postulates a critical engagement with the
+decolonial approach. Fourth, it argues for the need to bring agency to
+the core of our analyses. Finally, it suggests embracing the imaginaries
+of datafication emerging from the Souths, foregrounding empowering ways
+of thinking data from the margins.</p>
+<h2 id="keywords">Keywords</h2>
+<p>datafication, global South, data universalism, agency, decolonial
+theory, data imaginaries, epistemic justice</p>
+<p>Datafication has put new weapons in the hands of institutions and
+corporations in the business of managing people. And it seems to hit
+harder where people, laws, and human rights are the most fragile.
+Undocumented migrants crossing European borders become entries in
+biometric databases designed for “processing alterity” rather than
+solving a humanitarian crisis (Pelizza 2019). By 2020, every Indian will
+be enlisted in Aadhaar, the world’s largest identity database and a
+privacy-infringing “behemoth” (Prakash 2017). Drones and georeferential
+radars watch over the Mapuche indigenous communities opposing corporate
+land exploitation in the Chilean region of Araucanía (Parra 2016). The
+list could continue: the algorithmic power enshrined in “gig economy”
+platforms reinforces existing inequalities in the labor market of
+on-demand workforce (Chen 2017). With the advent of big data,
+development interventions in the Global South are becoming the mere
+“byproduct of larger-scale processes of informational capitalism”
+(Taylor and Broeders 2015, 229). But as this composite geography of
+disempowerment in the datafied society shows, the dark side of big data
+produces “algorithmic states of exception” (McQuillan 2015) that do not
+necessarily map into the known North–South dichotomy.</p>
+<p>Western epistemic centers—especially those traditionally considered
+the interpreters and storytellers of technological development—have
+produced hyperbolic narratives of the “big data revolution” (see, for
+one, Cukier and Mayer-Schoenberger 2013). Counterbalancing this powerful
+imaginary, critical literature on the impact of datafication for
+individuals and communities has mushroomed over the past few years.
+Scholars of various disciplines have interrogated the profound
+consequences of this paradigm change on the social, cultural, and
+political domains (among others, Lyon 2018; Srnicek 2016; Zuboff 2019).
+Now we know that no matter how disruptive the paradigm change (Kitchin
+2014) and how flamboyant the chronicles of digital positivism associated
+with it (for a critique, see Mosco 2014), the power dynamics embedded in
+information flows and knowledge structures have survived pretty much
+unaltered— or have been made worse, reiterating or exacerbating existing
+divides (Andrejevic 2014). Yet, these analyses often take as frame of
+reference the liberal democracies of the West, with their sociocultural
+substrate and long tradition of representative institutions, rule of
+law, and citizen involvement in public affairs—and their
+self-representation as wealthy, advanced democracies. The different, the
+underprivileged, the silenced, the subaltern, and the “have nots,” whose
+presence outdoes geographical boundaries, often remain in the blind
+spot.</p>
+<p>Two uncomfortable observations arise. First, while the majority of
+the world’s population today resides outside the West, we continue to
+frame key debates on democracy, surveillance, and the recent automation
+turn by means of “Western” concerns, contexts, user behavior patterns,
+and conceptual frameworks (cf. Arora 2019), with “White masculinity”
+being still “the normative core of scholarly inquiry” (Chakravartty et
+al. 2018, 254). But theory tends to travel badly; more often than not,
+in our thrust to build on the shoulders of giants, we uncritically
+disregard the specificities of distinct geographies, cultures, and
+communities. Hence, the question, how does datafication unfold in
+countries with fragile democracies, flimsy economies, impending poverty?
+In other words, what about the particularities and idiosyncrasies of the
+so-called Global South? To take this challenge seriously, we ought to
+deal with embarrassing questions concerning not only the unequal
+distributions of power and resources across the globe but also the
+political economy of knowledge production. Western modernity has
+supplied the knowledge underlying colonialism, and later global
+capitalism: both historical processes have marginalized and devalued the
+knowledge as well as the specific ways of knowing of the Global South
+(Santos 2014). The relentless push toward datafication, with its
+deleterious consequences for people and communities on the ground, seems
+to exacerbate this process, prompting us to ask whether we are facing
+the next stage of what Santos (2014) denounced as the “epistemicide” of
+the South.</p>
+<p>Second, inequality transcends boundaries and known geographies—and
+big data are no game-changer in this respect. Even within the so-called
+developed countries, we tend to take for granted certain “basic” rights
+that are however modulated on class, race, access to income, education,
+and citizenship and labor rights, underscoring the impact of
+datafication on the disadvantaged, the silenced, and the invisible (with
+some exceptions, see, for example, Gangadharan 2012; Mustafa 2016; Noble
+2018). How, then, does datafication affect individuals and communities
+with sparse access to human rights protection, education, or income,
+and/or with nonmainstream visions of their future? In sum, what happens
+to those individuals and communities “at the bottom of the data pyramid”
+(Arora 2016), be it for class, racial, legal, or sociocultural
+reasons?</p>
+<p>We fear that the conceptual and methodological toolbox available to
+datafication scholars is only partially able to grasp the obscure
+developments, the cultural richness, and the vibrant creativity emerging
+at the margins of the “empire.” We face a major ontological problem:
+does the fabric of datafication shift alongside with inequality,
+geography, class, race, and culture—in a nutshell, alongside with its
+publics and the various denominations within said publics, which are
+hardly ever homogeneous? If we accept this challenge, what is new,
+distinct, and inconsistent with “mainstream” theories? What questions,
+concepts, theories, methods would we embrace or have to devise if we are
+to “decolonize,” metaphorically and not, our thinking?</p>
+<p>This article has the ambition to sketch the central tenets of a
+theory of datafication of and in the Souths, where the South is however
+not merely a geographical or geopolitical marker (as in “Global South”)
+but a plural entity subsuming also the different, the underprivileged,
+the alternative, the resistant, the invisible, and the subversive. The
+“big data from the South” agenda gives voice to distinct data practices
+and epistemologies emerging in the myriad of Souths, their specific
+challenges, and the associated demand for alternative models. But it
+also plays with the many geographical denominations still inhabiting our
+scholarship and our imaginaries, disaggregating familiar geographical
+oppositions and the interpretation of the respective poles as
+homogeneous entities, in view of making away with prevailing dichotomies
+(e.g., Western/non-Western, or developed/underdeveloped,
+cf. Castro-Gómez and Grosfoguel 2007). In so doing, the essay wants to
+probe the dominant geography of data flows and infrastructure and their
+charting on theory development. It calls for a much-needed
+de-Westernization of critical data studies and social science more in
+general. More than providing clear-cut answers, it generates questions
+and instills doubts, under the assumption that what we propose is a
+long-term, open-ended, and collective ride which can only be roughly
+sketched in the limited space of this contribution.</p>
+<p>The essay is organized as follows. First, it situates the “Big Data
+from the South” research agenda as an epistemological, ontological, and
+ethical program. Then, it outlines five conceptual operations that we
+believe are key in shaping the research agenda of Big Data from the
+South, giving voice to fields of inquiry, conceptual lenses, and
+scholars that can assist us in our reconsideration of mainstream
+interpretations of datafication.</p>
+<p>This article introduces the special issue exploring “Big Data from
+the South.” Three articles of this collection scrutinize tensions and
+possibilities in rethinking datafication from a Southern perspective,
+reinterpreting the notion of colonialism as a useful lens to understand
+the pressures of datafication on people and communities. Couldry and
+Mejias (2019) introduce the notion of data colonialism, a process that
+normalizes the exploitation of human beings through data. Writing from
+the “North in the South” vantage point of Australia, Mann and Daly
+(2019) investigate the country’s information imperialism and digital
+colonialism. Ricaurte (2019) develops a framework for analyzing data
+colonization and examines a case of citizen resistance to data
+colonialism and gender violence in Mexico. Arora (2019) criticizes the
+neoliberal ideology and the development paradigm inspiring privacy
+policies in the Global South, calling for decolonizing the approach to
+privacy by practicing epistemic disobedience and reimagining people and
+place. Chenou and Cepeda-Másmela (2019) zoom in on the case of the
+#NiUnaMenos mobilization in Argentina, discussing the alternative
+imaginaries associated with a bottom-up database of gender violence to
+reflect on how data activism translates into specific local contexts.
+The final commentary by Segura and Waisbord (2019) reflects on the key
+issues explored by this set of contributions, cautioning about two
+potential pitfalls: assuming that data citizenship in the South is
+necessarily different than in the North and falling into essentialist
+positions about “the South.”</p>
+<h2 id="datafication-and-its-discontents-situating-the-research-agenda">Datafication
+and Its Discontents: Situating the Research Agenda</h2>
+<p>Important reflections on the pitfalls and the challenges of
+datafication for citizens and democracies have mushroomed in the last
+half decade. The expansion of data mining practices by both corporations
+and states gave rise to critical questions about systematic surveillance
+and privacy invasion (Lyon 2015). Various disciplines, at the
+intersection of social sciences, the humanities, and informatics, have
+called attention to the potential inequality, discrimination, and
+exclusion harbored by the mechanisms of big data (e.g., Eubanks 2018;
+Gangadharan 2012; Noble 2018). Scholars have reminded us that big data
+are not merely a technological issue or the flywheel of knowledge,
+innovation, and change, but a “mythology” and an “ideology” we ought to
+critically interrogate (boyd and Crawford 2012; van Dijck 2014). They
+have shown that big data, although imbued with modernization narratives,
+are not without risks and threats, as opaque regimes of population
+management and control have taken central stage (Aradau and Blanke 2017;
+Cheney-Lippold 2011). Colleagues have encouraged us to pay attention to
+“small” or “good enough” data produced by nonexperts (Gabrys et
+al. 2016; Kitchin and Lauriault 2015), to bottom-up practices (Couldry
+and Powell 2014), everyday forms of critical engagement with data
+(Kennedy and Hill 2017), and feminist approaches to data and their uses
+(D’Ignazio and Klein 2019; Fotopolou forthcoming). However, our
+understanding of datafication remains for the most part still sturdily
+anchored to the dynamics of Western democracy.</p>
+<p>The nature of the problem is threefold. To start with, a “big data
+from the South” agenda presents us with an ontological question, which
+interrogates the fabric of datafication and its consequences not only on
+distinct sociocultural and geopolitical areas but also on differential
+access to rights and privilege. What do we mean by datafication,
+surveillance, and automation in the Souths? As we explain below,
+however, we do not argue for the idealization of the South and what it
+stands for. Although we should resist the tendency to romanticize the
+Souths, we should challenge analyses that implicitly assume Western
+democracies as the privileged setting where and from where to observe
+the dynamics of datafication, overlooking the richness and the diversity
+of meanings, worldviews, and practices emerging in the Souths, as well
+as their specific challenges and inherent problems.</p>
+<p>Second, big data from the South is an epistemological puzzle in that
+it invites us to critically examine how we get to learn about
+datafication and its impact. This includes a methodological component,
+whereby some methods are considered more apt to foster empowerment of
+research subjects (see Freire 1968; Costanza-Chock 2018). But it speaks
+also to the way researchers relate to and interact with social actors
+and communities on the ground. Hence, this epistemological program calls
+for an “engaged” approach to research, whereby scholars, safeguarding
+the gold standards of scientific research, take communities as starting
+(and end) points of their work, whenever possible involving them in a
+process of co-inquiry (S. Milan 2010). Such approach to knowledge
+production considers communities as “skilled learners” and seeks to
+foster community building and knowledge sharing (C. Milan and Milan
+2016).</p>
+<p>Finally, big data from the South is also an ethical query, as it
+forces us to position ourselves as students of social phenomena, our
+motives, goals, and agendas, in relation to the situations of alterity,
+coloniality, inequality, or resistance we encounter in our research—and
+the agendas, desires, and needs of the social actors involved. This
+entails questioning research processes, practices, and relationships, as
+well as infrastructure in the context of ongoing power relations
+(cf. Kazansky et al. 2019). But it also means, as we shall see in the
+“Through the Decolonial Lens” section, practicing “semiotic resistance
+capable of giving new meaning to the hegemonic forms of knowledge from
+the point of view of the post-Eurocentric rationality of subaltern
+subjectivities” (Castro-Gómez and Grosfoguel 2007, 20, own translation;
+see also Mignolo 2007; Ong 2019). In this respect, our reflections on
+big data from the Souths fit within—and hope to feed—the broader process
+of epistemological repositioning of the social sciences (see, e.g.,
+Bringel and Domingues 2017; Castro-Gómez 2007; Comaroff and Comaroff
+2015; Connell 2014; Santos 2014). As Bhambra and Santos (2017, 9)
+observed, “if the injustices of the past continue into the present and
+are in need of repair (and reparation), that reparative work must also
+be extended to the disciplinary structures that obscure as much as
+illuminate the path ahead.” We argue that the sociotechnical dynamics of
+datafication should be understood in relation to, and measured against,
+“the historical processes of dispossession, enslavement, appropriation
+and extraction . . . central to the emergence of the modern world”
+(Bhambra and Santos 2017, 4)—pending the risk of perpetuating
+Western-centric interpretations and power dynamics. The same is to be
+said for the theoretical toolbox used to address datafication. Luckily,
+our effort is not entirely new. This agenda is well in the cords of
+critical data studies and other strands of research interrogating the
+centrality of “Western” interpretations.</p>
+<h2 id="beyond-the-west-five-conceptual-operations">Beyond the West?
+Five Conceptual Operations</h2>
+<p>Approaching the epistemic blind spots in our current analyses of
+datafication and surveillance, we now move to sketch the kernel of a
+conceptual map on big data from the South. We believe that five
+conceptual operations are key to question the domination of Western
+paradigms in our scholarship. These operations are profoundly
+interrelated and are here disentangled only for the sake of clarity.</p>
+<p>First, we have to move past the “universalism” associated with the
+interpretation of datafication and its consequences. Second, we ought to
+understand the South as a composite, plural entity. Third, we have to
+critically engage with the decolonial approach. Fourth, we need to
+decenter data studies away from the focus on data, by bringing agency to
+the core of our analyses. Finally, we have to embrace the novel
+imaginaries of datafication emerging from the Souths, zooming on in the
+specific ways of thinking data from the margins. In what follows, we
+ground these claims.</p>
+<h2 id="beyond-data-universalism">Beyond Data Universalism</h2>
+<p>Investigating the multiple initiatives to “network” contemporary
+Peru, Chan (2013) challenged the myth of “digital universalism,” that
+is, the tendency to assimilate the cultural diversity of technological
+developments in the Global South to Silicon Valley’s principles. She
+showed how digital cultures and network politics emerging in the
+periphery—commonly considered merely subaltern to the “center”—do much
+more than replicate the technological future imagined in the mainstream
+centers of technological entrepreneurship.</p>
+<p>Digital technology is far from being just “imported magic” (Medina et
+al. 2014), “travelling” unchanged from the North to the South. Instead,
+the social and cultural appropriations of technology in the Global South
+often unsettle hegemonic conceptions of innovation. They cast light on
+the context-specific and contentious nature of technological development
+as it is molded by the conflicting interests of an array of social
+forces, for example, governments, activists, and indigenous
+communities.</p>
+<p>Similarly, we observe an impending data universalism infesting many
+of the readings of datafication today. A vestige of the early-day
+technological determinism (Chandler 2000), data universalism is the
+original sin of Western interpretations in particular, as it tends to
+assimilate the heterogeneity of diverse contexts and to gloss over
+differences and cultural specificities. Building on Chan’s (2013)
+analysis of digital universalism, we argue that the main problem with
+data universalism is that it is asocial and ahistorical, presenting
+technology (and datafication-related dynamics, we add) as something
+operating outside of history and of specific sociopolitical, cultural,
+and economic contexts. We thus suggest making away of these
+universalizing readings with their corollary of normalization and
+generalization, to the benefit not only of epistemic diversity but
+especially of epistemic justice. Epistemic justice does not aim simply
+at creating or voicing “otherness.” Rather, it includes a fundamental
+component of affirmative action, which takes inequality seriously and
+seek to work against it. As we shall see in the “Unleashing Novel Data
+Imaginaries” section, it is constitutive of enabling contestation
+(cf. Fricker 2013) but also of promoting the formation of
+alternatives.</p>
+<h2 id="south-as-a-plural-entity">South as a Plural Entity</h2>
+<p>The notion of the Global South has been charged with a multiplicity
+of often conflicting meanings, following geopolitical and also
+sociocultural shifts. Oftentimes it has embedded reductionist or
+folkloric nuances (visible, for example, in the notion of mestizaje or
+the process of mixing ancestries, cf. Cornejo-Polar 1994). Recent
+debates have displayed the political weight of the term, its ambivalent
+but also empowering nature, as well as the need not to take it too
+literally in terms of geographical boundaries (Wolvers et al. 2015).
+Various thinkers have urged us to understand the notion of the Global
+South as a dynamic construct that should be placed within the shifting
+contours and dynamics of globalization and global capitalism. Santos
+(2014) went as far as postulating the urgency of novel “epistemologies
+from the South” against the leveling enacted by neoliberalism (see also
+Huérfano et al. 2016). He sought to encapsulate the richness of the
+knowledge and experiences of/in the South, often silenced and excluded
+by an epistemically powerful North bearer of Eurocentric interpretations
+of grassroots knowledge production (cf. Flórez-Flórez 2007).</p>
+<p>Following on these footsteps, we maintain a flexible, expansive, and
+plural definition of the South(s) that casts it as a place of (and a
+proxy for) alterity, resistance, subversion, and creativity, embracing
+the dynamism and the multiplicity of interpretations while going beyond
+the geopolitical denomination. On the basis of this definition, which
+goes beyond the restrictive notion of the “Global South,” we can find
+countless Souths also in what would normally be inscribed under the
+West, as long as people suffer discrimination, and/or enact resistance
+to injustice and oppression and fight for better life conditions against
+the impending data capitalism. With our definition, we engage in an
+exercise of disaggregation of the geographical dimension: while, on one
+hand, geography per se loses centrality in favor of a “broader” and more
+imaginative definition of the South as also metaphor and proxy, on the
+other hand, we recenter geography, recognizing the differences it
+harbors and especially the shaping roles of power inequalities, old and
+new, still visible today in, for example, digital and data
+infrastructure. Simultaneously, we want to avoid the temptation to
+romanticize the South and reify the North. None of these is
+intrinsically better: rather, they should be analyzed critically, their
+biases and incongruences exposed. This means for instance avoiding
+romanticizing indigenous knowledge but exploring it in all its
+contradictory aspects. Furthermore, the South is not necessarily
+distinct—often, processes and practices observed in the North replicate
+in the South with no particular differences. Said differences should not
+be assumed but thoroughly investigated. The North is not a single,
+unified block either: there are multiple and diverse Norths. We thus
+call for a much-needed dialogue, in search of new ways to unleash the
+richness of the knowledge emerging in the Souths, questioning the fact
+that most theory is a product of the North: while valuable and
+illustrative, it is also incomplete and problematic.</p>
+<h2 id="through-the-decolonial-lens">Through the Decolonial Lens</h2>
+<p>To understand the complexity of data extraction, storage, and
+processing in the Souths, it is essential—as we argued in the
+introduction—to situate them within the historical processes of
+domination, extraction, exploitation, and oppression that are central to
+the modern world—and that continue to be predominant to this day. A
+decolonial lens—rather than a postcolonial one, of Anglo-Saxon origin—is
+particularly apt to critically explore the complexity of these
+processes. Decolonial thinking puts the colonial question at the core of
+the process of knowledge production (Mignolo 2000), urging us to make
+three important operations. First, going beyond a Eurocentric
+perspective, it foregrounds the periphery and the margins, questioning
+border thinking and the geopolitics of knowledge (Mignolo 2000). Second,
+it gives adequate consideration to the material (as opposed to merely
+the cultural) dimension of knowledge generation (see, for example,
+Castro-GómezGrosfoguel 2007). Finally, it centers the demand for
+reparative measures, anchoring the possibilities of the future to the
+injustices of the past and their consequences, such as power
+asymmetries, persisting in the present (Mustafa 2014).</p>
+<p>Thinking of data capitalism as a novel manifestation of colonialism
+is gaining traction, as some of the contributions to this special issue
+make abundantly clear (Couldry and Mejias 2019; Mann and Daly 2019;
+Ricaurte 2019). Just like historic colonialism appropriated territory
+and resources for profit, data colonialism exploits human beings through
+data, across geographies, paving the way for the “capitalization of life
+without limit” (Couldry and Mejias 2019). It is thus imperative to
+unmask and deconstruct this complex process of colonization through data
+by dispossession (Thatcher et al. 2016; see also Halkort In press). We
+ought to understand this new rationality as an expression of the
+coloniality of power (Mignolo 2011; Quijano 2007), manifested as the
+violent imposition of ways of being, thinking, and feeling that
+systematically deny the existence of alternative worlds, and threatens
+life on earth (Barranquero and Baeza 2017; Escobar 2017). These
+reflections resonate with Casilli’s (2017) call for a “digital
+decolonial turn” in digital labor studies, to make visible that
+coloniality is produced on today’s global digital platforms relying on
+the exploitation of unrecognized and marginalized identities. They also
+resonate with the conceptual underpinnings of decolonial computing,
+which, taking the lead from decolonial and critical race theorists like
+Mignolo and Grosfoguel (2011) in centering the
+“margins/borders/periphery of the world system,” foregrounds “systemic
+racial concerns” and “questions . . . technologies in terms of both a
+geo-politics of knowledge and a body-politics of knowledge” (Mustafa
+2014, 1, 4).2</p>
+<p>Yet, just as we should resist the tendency to idealize the Souths, we
+should not uncritically adopt alternative decolonial (and even less so,
+postcolonial) thinking either. As Asher (2013, 838) argued, “unless we
+engage with the modernity/coloniality/decoloniality research program
+critically, we risk resuscitating old binaries (theory vs. practice,
+structure vs. agency, and identity politics vs. anti-capitalist
+struggles) at best and simple reversals (modern bad and tradition good)
+at worst.” Furthermore, we believe that decolonial perspectives have
+their own blind spots and should more explicitly dialogue with other
+powerful conceptual lenses. Feminist interpretations, for example,
+center embodiment and situatedness in relation to disempowerment (see,
+for example, Suchman 2006; Wajcman 2010), although occasionally at the
+expense of other dimensions such as race (Schueller 2005).
+Costanza-Chock (2018) invites us to pay closer attention to
+intersectionality and the matrix of domination—concepts developed by
+Kimberlé Crenshaw and Patricia Hill Collins, respectively—when
+investigating data systems. Intersectionality points to the ways in
+which our life chances are shaped by our specific location within the
+intersecting fields of race, class, and gender; it can help us
+disentangle how capitalism, white supremacy, and heteropatriarchy are
+interlocking systems. This can, in turn, inform our understanding of the
+design, implementation, and development of data systems in the Souths
+(see also Escobar 2017). Finally, as we argue below, we are persuaded
+that a decolonial program should coexist with a constituting movement of
+holistic conceptual and methodological alternatives within a
+prefigurative agenda (Bringel and Domingues 2015). Although the former
+is making its way into critical data studies, the latter is still in its
+infancy. How can research on big data from the South help to generate
+this kind of shift?</p>
+<h2 id="recentering-agency">Recentering Agency</h2>
+<p>Many readings of the role of data within contemporary societies are
+flawed by a techno-centric view of data devoting excessive attention to
+technical aspects to the detriment of appropriations, practices, and the
+human agency around and behind data. Recent literature, however, has
+urged scholars to focus on data practices, relocating agency at the
+center of the debate around the implications of datafication (Dencik In
+press; S. Milan 2018; In press; Rincón and Marroquín Forthcoming; Trere
+2019). The Spanish Colombian philosopher Martín-Barbero’s (1993) epochal
+move from media to mediations is key for this operation (see also
+Radfahrer 2018). More than three decades ago, Martín-Barbero contributed
+to decenter and resituate the investigation of media within the cultural
+negotiations and social interactions of concrete actors in Latin
+America. Departing from the reductionism and media-centrism of North
+American functionalist analyses, he explored everyday practices of media
+appropriation through which social actors enacted resistance and
+resilience to domination and hegemony within their specific cultural
+matrixes. The move was inherently political: looking at how
+communication was being shaped in bars, squares, homes, and the like, it
+refocused the gaze away from media institutions toward people and their
+heterogeneous cultures, restoring the agency of social actors
+participating in the communicative process intended as a process of
+production and exchange of multiple meanings.</p>
+<p>A similar approach should motivate contemporary analyses of Big Data
+from the South. We suggest making the move from datafication to data
+activism/data justice to examine the diverse ways through which citizens
+and the organized civil society in the Souths engage in bottom-up data
+practices and resist a datafication process that magnifies oppression
+and inequality. Hence, the focus should shift from data as technical
+artifacts to the multiplicity of data practices and appropriations that
+human actors develop in a variety of social and historical contexts,
+resurrecting the sociological (rather than the cultural studies) notion
+of political agency in action (cf. Emirbaye and Mische 1988). In other
+words, we should pay attention to the forms of interstitial, hybrid
+knowledge emerging in subversive complicity with the system
+(Castro-Gómez and Grosfoguel 2007, 20, our paraphrasis).</p>
+<p>This move is tightly interwoven with an agenda of socially engaged
+scholarship and a kind of research that is strongly related to its
+environments, rather than enclosed within institutional walls. It is
+important to stress also that the focus on data as practice does not
+entail a disregard for the materiality of data and the importance of
+infrastructures since materiality is a constitutive, essential component
+of practice (and of injustice, too). Rather, it means casting such
+materiality within the fabric of social life and the several spaces
+where humans interact and appropriate data in multiple, often
+unpredictable ways. To be sure, critical data studies have inaugurated
+an operation similar to what Latin American scholarship did with
+Martín-Barbero. However, we need to go one step forward, connecting data
+practices to alternative epistemologies—an operation we attempt in the
+next paragraph.</p>
+<h2 id="unleashing-novel-data-imaginaries">Unleashing Novel Data
+Imaginaries</h2>
+<p>Existing attempts to foreground agency in data studies appear limited
+as they variably fail to connect bottom-up practices to the emergence of
+novel epistemologies and ways of thinking/feeling. In this section, we
+posit the notion of imaginaries as the connective tissue able to couple
+critical analysis with a prefigurative agenda of change inspired to
+decolonial thinking and working toward epistemic justice.</p>
+<p>A sense of ineluctability pervades contemporary reactions to
+datafication. This new “information order” constitutes a “21st century
+imaginary” centered on the discursive and institutional normalization of
+surveillance infrastructure (Turow et al. 2015). Social actors—activists
+included—appear to have resigned to a sort of “surveillance realism,”
+where the normalization of data exploitation and surveillance forecloses
+our possibilities to even imagine possible alternatives (Dencik and
+Cable 2017). In this context, the radical imagination (Khasnabish and
+Haiven 2014) that lies at the core of social movements is voided and
+severely undermined. But a myriad of non-mainstream ways of
+imagining/thinking/feeling data emerges in the fringes, subtending to
+the creation of alternative data practices (while in turn being fed by
+such practices).</p>
+<p>We believe that understanding Big Data from the South entails the
+engagement with a plurality of uncharted ways of actively (re)imagining
+processes of data production, processing, and appropriation. Imaginaries
+(cf. Lehtiniemi and Ruckenstein 2019) can be seen as the trait d’union
+between grassroots data practices and the emergence of alternative data
+epistemologies (C. Milan and van der Velden 2016). Paraphrasing
+Rodriguez (2001, 20), we consider data practices from the Souths as
+forms of intervention and transformation of the established order; these
+interventions contest “social codes, legitimized identities, and
+institutionalized social relations” and empower social actors “to the
+point where these transformation and changes are possible.” In other
+words, imaginaries have the ability to embed and embody prefigurative
+realities capable of producing change.</p>
+<p>But sometimes imagining alone is not enough to act upon values and
+visions for alternative futures. We thus call for a novel alliance
+between the “skilled learners” on the ground and academic observers, who
+can together work toward a thorough “Southern” theory of change for the
+datafied society. Grasping how the socio-critical imaginaries around
+data inhabiting the Souths can break the spiral of data inevitability
+absorbing us, such theory of change could contribute to overcome current
+forms of injustice, forging spaces of autonomy, liberation, and
+resistance. But this exploration of alternative data imaginaries and
+epistemologies needs to be infused with mutual respect, constantly
+keeping watch to prevent the replication of dynamics of domination,
+extraction, exploitation, and oppression.</p>
+<h2 id="conclusions-and-new-beginnings">Conclusions and New
+Beginnings</h2>
+<p>With this contribution, we aim to stimulate a dialogue and move
+forward the critical debate around datafication, to promote a reparation
+to the cognitive injustice (Santos 2014) that fails to recognize
+nonmainstream ways of knowing the world through data. Much work remains
+to be done to integrate and extend the five axes that we have outlined
+into a full-fledged research agenda on Big Data from the Souths. In
+times of pervasive and unequal datafication, this is an urgent
+conversation if we are to remove the mask of data universalism that
+conceals and justifies the mistakes, the biases, and the dangerous
+assumptions of the past, while depriving the Souths of their knowledge,
+richness, and freedom. It is also paramount, however, to put research at
+the service of a broader project of creation of a comprehensive theory
+of change for the age of datafication—one inspired to decolonial
+thinking and that puts epistemic justice at the core. It is only by
+recognizing the “need of a body-politics of knowledge without pretense
+of neutrality or objectivity” that we can make the move toward the
+creation of “alternative forms of ethical rationalities and also new
+forms of utopias” (Castro-Gómez and Grosfoguel 2007, 21, own
+translation).</p>
+<h2 id="authors-note">Authors’ Note</h2>
+<p>Both authors contributed equally to this article; names are listed in
+alphabetical order.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>The authors wholeheartedly thank Jonathan Corpus Ong for the
+intuition and the invitation to work toward this Special Issue, as well
+as for his prompt and careful reading of the various contributions. They
+are grateful to the DATACTIVE team, and Guillén Torres and Kersti R.</p>
+<p>Wissenbach in particular, for the feedback throughout this project.
+They also thank the participants to the International Association of
+Media and Communication Research (IAMCR) preconference “Big Data from
+the South: From media to mediations, from datafication to data activism”
+(Cartagena de Indias, July 15, 2017), the three “Big Data from the
+South” thematic panels co-organized with Anita Say Chan (University of
+Illinois, Urbana-Champaign) at the XXXVI International Congress of the
+Latin American Studies Association (Barcelona, May 25, 2018), and the
+immersive research workshop “Big Data from the South: Toward a Research
+Agenda” (University of Amsterdam, December 4–5, 2018).</p>
+<h2 id="declaration-of-conflicting-interests">Declaration of Conflicting
+Interests</h2>
+<p>The authors declared no potential conflicts of interest with respect
+to the research, authorship, and/or publication of this article.</p>
+<h2 id="funding">Funding</h2>
+<p>The authors disclosed receipt of the following financial support for
+the research, authorship, and/or publication of this article: This
+project has benefited from the funding from the European Research
+Council (ERC) under the European Union’s Horizon 2020 research and
+innovation program (grant agreement No 639379-DATACTIVE;
+https://data-activism.net).</p>
+<h2 id="notes">Notes</h2>
+<ol type="1">
+<li><p>It is worth noting that while a too restricted and static
+definition of the South can limit our understanding to problematic
+geographical coordinates, we are aware of—and would like to caution
+against—the risks inherent to a plural and expansive definition, for
+example, the creation of false equivalences or the further
+homogenization of distinct experiences of oppression and subjugation. In
+the end, the struggle over the contested meanings of the South is part
+of the overall battle for social justice in the many Souths inhabiting
+our world, and no conceptual alternative is exempt from complications
+and misunderstandings.</p></li>
+<li><p>Similarly, postcolonial computing scrutinizes issues of power and
+culture in computing, in search for an “alternative sensibility to the
+process of design and analysis,” in view of “understanding how all
+design research and practice is culturally located and power laden”
+(Irani et al. 2010, 1312). However, such perspective tends to “privilege
+cultural issues over political-economic concerns” (Mustafa 2014,
+2).</p></li>
+</ol>
+<h2 id="orcid-id">ORCID iD</h2>
+<p>Stefania Milan https://orcid.org/0000-0002-9314-2889</p>
+<h2 id="references">References</h2>
+<p>Andrejevic, Mark. 2014. “Big Data, Big Questions: The Big Data
+Divide.” International Journal of Communication 8: 1673–89.</p>
+<p>Aradau, Claudia, and Tobias Blanke. 2017. “Politics of Prediction:
+Security and the Time/Space of Governmentality in the Age of Big Data.”
+European Journal of Social Theory 20 (3): 373–91.</p>
+<p>Arora, Payal. 2016. “Bottom of the Data Pyramid: Big Data and the
+Global South.” International Journal of Communication 10: 1681–99.</p>
+<p>Arora, Payal. 2019. “Decolonizing Privacy Studies.” Television &amp;
+New Media 20 (4): 366–78.</p>
+<p>Asher, Kiran. 2013. “Latin American Decolonial Thought, or Making the
+Subaltern Speak.” Geography Compass 7 (12): 832–42.</p>
+<p>Barranquero, Alejandro Carretero, and Chiara Saez Baeza. 2017. “Latin
+American Critical Epistemologies toward a Biocentric Turn in
+Communication for Social Change: Communication from a Good Living
+Perspective.” Latin American Research Review 52 (3): 431–45.</p>
+<p>Bhambra, Gurminder, and Boaventura De Sousa Santos. 2017.
+“Introduction: Global Challenges for Sociology.” Sociology 51 (1):
+3–10.</p>
+<p>boyd, dana, and Kate Crawford. 2012. “Critical Questions for Big
+Data. Provocations for a Cultural, Technological, and Scholarly
+Phenomenon.” Information, Communication &amp; Society 15 (5):
+662–79.</p>
+<p>Bringel, Brenno M., and J. M. Domingues, eds. 2015. Global Modernity
+and Social Contestation. London: Sage.</p>
+<p>Bringel, Brenno M., and J. M. Domingues. 2017. “Social Theory,
+Extroversion and Autonomy: Dilemmas of Contemporary (Semi) Peripheral
+Sociology.” Méthod(e)s: African Review of Social Sciences Methodology 2
+(1–2): 108–26.</p>
+<p>Casilli, Antonio. 2017. “Digital Labor Studies Go Global: Toward a
+Digital Decolonial Turn.” International Journal of Communication 11:
+3934–54.</p>
+<p>Castro-Gómez, Santiago. 2007. “Decolonizar La Universidad. La Hybris
+Del Punto Cero y El Diálogo de Saberes.” [Decolonizing the University.
+The Hybris of the Zero Point and the Dialogue among knowledges] In El
+Giro Decolonial. Reflexiones Para Una Diversidad Epistémica Más Allá Del
+Capitalismo Global [The Decolonial Turn. Reflections for an Epistemic
+Diversity beyond Global Capitalism], edited by Santiago Castro-Gómez and
+Ramón Grosfoguel, 79–91. Bogotá: Siglo del Hombre Editores.</p>
+<p>Castro-Gómez, Santiago, and Ramón Grosfoguel. 2007. “Prólogo. Giro
+Decolonial, Teoría Crítica y Pensamiento Heterárquico.” [Prologue. The
+Decolonial Turn. Critical Theory and Heterarquical Thought] In El Giro
+Decolonial. Reflexiones Para Una Diversidad Epistémica Más Allá Del
+Capitalismo Global [The Decolonial Turn. Reflections for an Epistemic
+Diversity beyond Global Capitalism], edited by Santiago Castro-Gómez and
+Ramón Grosfoguel, 9–23. Bogotá: Siglo del Hombre Editores.</p>
+<p>Chakravartty, Paula, Rachel Kuo, Victoria Grubbs, and Charlton D.
+McIlwain. 2018. “#CommunicationSoWhite.” Journal of Communication 68
+(2): 254–66.</p>
+<p>Chan, Say Anita. 2013. Networking Peripheries. Technological Futures
+and the Myth of Digital Universalism. Cambridge, MA: MIT Press.</p>
+<p>Chandler, Daniel. 2000. “Technological or Media Determinism.”
+http://visual-memory.co.uk/ daniel/Documents/tecdet/.</p>
+<p>Chen, Julie Yujie. 2017. “Thrown under the Bus and Outrunning It! The
+Logic of Didi and Taxi Drivers’ Labour and Activism in the on-Demand
+Economy.” New Media &amp; Society 20 (8): 2691–2711.</p>
+<p>Cheney-Lippold, John. 2011. “A New Algorithmic Identity Soft
+Biopolitics and the Modulation of Control.” Theory, Culture &amp;
+Society 28 (6): 164–81. doi:10.1177/02632764114 24420.</p>
+<p>Chenou, Jean-Marie, and Carolina Cepeda-Másmela. 2019. “#NiUnaMenos:
+Data Activism from the Global South.” Television &amp; New Media 20 (4):
+396–411.</p>
+<p>Comaroff, Jean, and John Comaroff. 2015. Theory from the South: Or,
+How Euro-America Is Evolving toward Africa. London: Routledge.</p>
+<p>Connell, Raewyn. 2014. “Using Southern Theory: Decolonizing Social
+Thought in Theory, Research and Application.” Planning Theory 13 (2):
+210–23.</p>
+<p>Cornejo-Polar, Antonio. 1994. “Mestizaje, Transculturacion,
+Heterogeneidad.” [Miscegenation, Transculturality, Heterogeneity]
+Revista de Crítica Literaria Latinoamericana 20 (40): 368–71.</p>
+<p>Costanza-Chock, Sasha. 2018. “Design Justice, A.I., and Escape from
+the Matrix of Domination.”
+https://jods.mitpress.mit.edu/pub/costanza-chock?version=c5860136-8a6c-424b-b07c-9c8c071615b0.</p>
+<p>Couldry, Nick, and Ulises A. Mejias. 2019. “Data Colonialism:
+Rethinking Big Data’s Relation to the Contemporary Subject.” Television
+&amp; New Media 20 (4): 336–49.</p>
+<p>Couldry, Nick, and Alison Powell. 2014. “Big Data from the Bottom
+Up.” Big Data &amp; Society 1 (2): 1–5.</p>
+<p>Cukier, Kenneth, and Viktor Mayer-Schoenberger. 2013. “The Rise of
+Big Data: How It’s Changing the Way We Think about the World.” Foreign
+Affairs 92 (3): 28–40.</p>
+<p>Dencik, Lina. In Press. “Situating Practices in Datafication–from
+above and Below.” In Citizen Media and Practice, edited by Hilde
+Stephansen and Emiliano Treré. London: Routledge.</p>
+<p>Dencik, Lina, and Jonathan Cable. 2017. “The Advent of Surveillance
+Realism: Public Opinion and Activist Responses to the Snowden Leaks.”
+International Journal of Communication 11:763–81.</p>
+<p>D’Ignazio, Catherine, and Lauren Klein. 2019. Data Feminism.
+Cambridge, MA: MIT Press.</p>
+<p>Emirbaye, Mustafa, and Ann Mische. 1988. “What Is Agency?” The
+American Journal of Sociology 103 (4): 962–1023.</p>
+<p>Escobar, Arturo. 2017. Designs for the Pluriverse: Radical
+Interdependence, Autonomy, and the Making of Worlds. Durham, NC: Duke
+University Press.</p>
+<p>Eubanks, Virginia. 2018. Automating Inequality: How High-tech Tools
+Profile, Police, and Punish the Poor. New York: St. Martin’s Press.</p>
+<p>Flórez-Flórez, Juliana. 2007. “Lectura No Eurocéntrica de Los
+Movimientos Sociales Latinoamericanos. Las Claves Analíticas Del
+Proyecto Modernidad/Colonialidad.” [A Not Eurocentric View of Latin
+American Social Movements. Analytical Keys of the Modernity/ Coloniality
+Project] In El Giro Decolonial. Reflexiones Para Una Diversidad
+Epistémica Más Allá Del Capitalismo Global [The Decolonial Turn.
+Reflections for an Epistemic Diversity beyond Global Capitalism], edited
+by Santiago Castro-Gómez and Ramón Grosfoguel, 243–66. Bogotá: Siglo del
+Hombre Editores.</p>
+<p>Fotopolou, Aristea. Forthcoming. Feminist Data Studies: Big Data,
+Critique and Social Justice. Thousand Oaks, CA: Sage.</p>
+<p>Freire, Paulo. 1968. Pedagogy of the Oppressed. New York:
+Continuum.</p>
+<p>Fricker, Miranda. 2013. “Epistemic Justice as a Condition of
+Political Freedom?” Synthese 190 (7): 1317–32.</p>
+<p>Gabrys, Jennifer, Helen Pritchard, and Benjamin Barratt. 2016. “Just
+Good Enough Data: Figuring Data Citizenships through Air Pollution
+Sensing and Data Stories.” Big Data &amp; Society 3 (2): 1–14.
+doi:10.1177/2053951716679677.</p>
+<p>Gangadharan, Seeta. 2012. “Digital Inclusion and Data Profiling.”
+First Monday 17 (5). http://
+journals.uic.edu/ojs/index.php/fm/article/view/3821/3199.</p>
+<p>Grosfoguel, Ramón. 2011. “Decolonizing Post-Colonial Studies and
+Paradigms of Political-Economy: Transmodernity, Decolonial Thinking, and
+Global Coloniality.” Transmodernity 1 (1).
+https://escholarship.org/uc/item/21k6t3fq.</p>
+<p>Halkort, Monika. In press. “Decolonising Data: On the Moral Economy
+of Data Activism in a Lebanese Palestinian Refugee Camp.” Canadian
+Journal of Communication.</p>
+<p>Huérfano, Herrera, Francisco Sierra Caballero Eliana, and Carlos Del
+Valle Rojas. 2016. “Hacia Una Epistemología Del Sur. Decolonialidad Del
+Saber-poder Informativo y Nueva Comunicología Latinoamericana. Una
+Lectura Crítica de La Mediación Desde Las Culturas Indígenas.” [Towards
+an Epistemology of the South. Decoloniality of informative
+knowledge-power and the new Latin American Communicology. A critical
+reading on mediation from indigenous cultures] Chasqui. Revista
+Latinoamericana de Comunicación 131 (Abril-Julio): 77–105.</p>
+<p>Irani, Lilly, Janet Vertesi, Paul Dourish, Kavita Philip, and Rebecca
+E. Grinter. 2010. Postcolonial Computing: A Lens on Design and
+Development. Atlanta: ACM. http://www.
+dourish.com/publications/2010/chi2010-postcolonial.pdf.</p>
+<p>Kazansky, Becky, Guillén Torres, Lonneke van der Velden, Kersti R.
+Wissenbach, and Stefania Milan. 2019. “Data for the Social Good: Toward
+a Data-activist Research Agenda.” In Good Data, edited by Angela Daly
+and Monique Mann, 244–59. Amsterdam: Institute of Network Cultures.</p>
+<p>Kennedy, Helen, and Rosemary Lucy Hill. 2017. “The Feeling of
+Numbers: Emotions in Everyday Engagements with Data and Their
+Visualisation.” Sociology 52 (4): 830–48.</p>
+<p>Khasnabish, Alex, and Max Haiven. 2014. The Radical Imagination:
+Social Movement Research in the Age of Austerity. London: Zed Books.</p>
+<p>Kitchin, Rob. 2014. “Big Data, New Epistemologies and Paradigm
+Shifts.” Big Data &amp; Society 6 (1). doi:10.1177/2053951714528481.</p>
+<p>Kitchin, Rob, and Tracey Lauriault. 2015. “Small Data in the Era of
+Big Data.” GeoJournal 80 (4): 463–75.</p>
+<p>Lehtiniemi, Tuukka, and Minna Ruckenstein. 2019. “The Social
+Imaginaries of Data Activism.” Big Data &amp; Society 6 (1).
+doi:10.1177/2053951718821146.</p>
+<p>Lyon, David. 2015. Surveillance after Snowden. Cambridge, UK: Polity
+Press.</p>
+<p>Lyon, David. 2018. The Culture of Surveillance: Watching as a Way of
+Life. Cambridge, UK: Polity Press.</p>
+<p>Mann, Monique, and Angela Daly. 2019. “(Big) Data and the
+North-in-South: Australia’s Informational Imperialism and Digital
+Colonialism.” Television &amp; New Media 20 (4): 379–95.</p>
+<p>Martín-Barbero, Jesus. 1993. Communication, Culture and Hegemony:
+From the Media to Mediations. Thousand Oaks, CA: Sage.</p>
+<p>McQuillan, Daniel. 2015. “Algorithmic States of Exception.” European
+Journal of Cultural Studies 18 (4/5): 564–76.</p>
+<p>Medina, Eden, Ivan da Costa Marques, and Christina Holmes, eds. 2014.
+Beyond Imported Magic. Essays on Science, Technology, and Society in
+Latin America. Cambridge, MA: MIT Press.</p>
+<p>Mignolo, Walter D. 2000. Local Histories/global Designs: Essays on
+the Coloniality of Power, Subaltern Knowledges and Border Thinking.
+Princeton: Princeton University Press.</p>
+<p>Mignolo, Walter D. 2007. “El Pensamento Decolonial: Desprendimiento y
+Apertura. Un Manifiesto.” [The Decolonial Thought: Release and Opening.
+A Manifesto] In El Giro Decolonial. Reflexiones Para Una Diversidad
+Epistémica Más Allá Del Capitalismo Global [The Decolonial Turn.
+Reflections for an Epistemic Diversity beyond Global Capitalism], edited
+by Santiago Castro-Gómez and Ramón Grosfoguel, 25–46. Bogotá: Siglo del
+Hombre Editores.</p>
+<p>Mignolo, Walter D. 2011. The Darker Side of Western Modernity: Global
+Futures, Decolonial Options. Durham, NC: Duke University Press.</p>
+<p>Milan, Chiara, and Stefania Milan. 2016. “Involving Communities as
+Skilled Learners: The STRAP Framework.” In Methodological Reflections on
+Researching Communication and</p>
+<p>Social Change, edited by Norbert Wildermuth and Teke Ngomba, 9–28.
+Basingstoke, UK: Palgrave MacMillan.</p>
+<p>Milan, Stefania. 2010. “Towards an Epistemology of Engaged Research.”
+International Journal of Communication 4 (2010): 856–58.</p>
+<p>Milan, Stefania. 2018. “Political Agency, Digital Traces and
+Bottom-up Data Practices.” International Journal of Communication 12:
+507–27.</p>
+<p>Milan, Stefania. In press. “Acting on Data(Fication).” In Citizen
+Media and Practice, edited by Hilde Stephansen and Emiliano Treré.
+London: Routledge.</p>
+<p>Milan, Stefania, and Lonneke van der Velden. 2016. “The Alternative
+Epistemologies of Data Activism.” Digital Culture &amp; Society 2 (2):
+57–74.</p>
+<p>Mosco, Vincent. 2014. To the Cloud: Big Data in a Turbulent World.
+New York: Paradigm Publishers.</p>
+<p>Mustafa, Ali. 2014. “Towards a Decolonial Computing.” In Ambiguous
+Technologies: Philosophical Issues, Practical Solutions, Human Nature,
+28–35. http://oro.open.
+ac.uk/41372/1/Towards%20a%20Decolonial%20Computing%20-%20Syed%20
+Mustafa%20Ali.pdf.</p>
+<p>Mustafa, Ali. 2016. “Algorithmic Racism: A Decolonial Critique.” In
+Proceedings of the 10Th International Society for the Study of Religion.
+http://www.academia.edu/14124452/
+Algorithmic_Racism_-_A_Decolonial_Critique.</p>
+<p>Noble, Safiya Umoja. 2018. Algorithms of Oppression: How Search
+Engines Reinforce Racism. New York: New York University Press.</p>
+<p>Ong, Jonathan Corpus. 2019. “Toward an Ordinary Ethics of Mediated
+Humanitarianism: An Agenda for Ethnography.” International Journal of
+Cultural Studies. Published electronically February 13.
+doi:10.1177/1367877919830095.</p>
+<p>Parra, Francisco. 2016. “Militarización En La Araucanía: Drones,
+Aviones No Tripulados y Más de Mil Policías Desplegados.”
+[Militarization in La Araucanía: Drones, Unmanned Aircraft and More than
+a Thousand Policemen Deployed] El Desconcierto, March 23.
+http://www.eldesconcierto.cl/2016/03/23/militarizacion-en-la-araucania-drones-avionesno-tripulados-y-mas-de-mil-policias-desplegados/.</p>
+<p>Pelizza, Annalisa. 2019. “Processing Alterity, Enacting Europe:
+Migrant Registration and Identification as Co-Construction of
+Individuals and Polities.” Science, Technology &amp; Human Values.
+Published electronically February 6. doi:10.1177/0162243919827927.</p>
+<p>Prakash, Pranesh. 2017. “Aadhaar Marks a Fundamental Shift in
+Citizen-State Relations: ‘From We the People’ to ‘We the Government.’”
+Hindustan Times, April 3.
+https://www.hindustantimes.com/india-news/what-s-really-happening-when-you-swipe-your-aadhaar-cardto-make-a-payment/story-2fLTO5oNPhq1wyvZrwgNgJ.html.</p>
+<p>Quijano, A. 2007. “Coloniality and Modernity/Rationality.” Cultural
+Studies 21 (2–3): 168–78.</p>
+<p>Radfahrer, Luli. 2018. “The Medium Is the Mediation:
+Postphenomenological Views on Datacratic Contexts.” Matrizes 12 (1):
+131–53.</p>
+<p>Ricaurte, Paula. 2019. “Data Epistemologies, The Coloniality of
+Power, and Resistance.” Television &amp; New Media 20 (4): 350–65.</p>
+<p>Rincón, Omar, and Amparo Marroquín. Forthcoming. “The Latin American
+‘Lo Popular’ as a Theory of Communication: Ways of Seeing Communication
+Practices.” In Citizen Media and Practice, edited by Hilde Stephansen
+and Emiliano Treré. London: Routledge.</p>
+<p>Rodriguez, Clemencia. 2001. Fissures in the Mediascape: An
+International Study of Citizens’ Media. Cresskill, NJ: Hampton
+Press.</p>
+<p>Santos, Boaventura De Sousa. 2014. Epistemologies of the South:
+Justice against Epistemicide. London: Routledge.</p>
+<p>Schueller, Johar. 2005. “Analogy and (White) Feminist Theory:
+Thinking Race and the Color of the Cyborg Body.” Signs 31 (1):
+63–92.</p>
+<p>Segura, Maria Soledad, and Silvio Waisbord. 2019. “Between Data
+Capitalism and Data Citizenship.” Television &amp; New Media 20 (4):
+412–19.</p>
+<p>Srnicek, Nick. 2016. Platform Capitalism. Cambridge, MA: Polity
+Press.</p>
+<p>Suchman, Lucy. 2006. Human-machine Reconfigurations Plans and
+Situated Actions. 2nd ed. Cambridge, MA: Cambridge University Press.</p>
+<p>Taylor, Linnet, and Dennis Broeders. 2015. “In the Name of
+Development: Power, Profit and the Datafication of the Global South.”
+Geoforum 64: 229–37.</p>
+<p>Thatcher, Jim, David O’Sullivan, and Dillon Mahmoudi. 2016. “Data
+Colonialism through Accumulation by Dispossession: New Metaphors for
+Daily Data.” Environment and Planning D: Society and Space 34 (6):
+990–1006.</p>
+<p>Trere, Emiliano. 2019. Hybrid Media Activism. London: Routledge.</p>
+<p>Turow, Joseph, M. Hennesy, and N. Draper. 2015. The Tradeoff Fallacy.
+Philadelphia, PA: Annenberg School for Communication, University of
+Pennsylvania. https://www.asc.
+upenn.edu/sites/default/files/TradeoffFallacy_1.pdf.</p>
+<p>van Dijck, José. 2014. “Datafication, Dataism and Dataveillance: Big
+Data between Scientific Paradigm and Ideology.” Surveillance and Society
+12 (3): 197–208.</p>
+<p>Wajcman, Judy. 2010. “Feminist Theories of Technology.” Cambridge
+Journal of Economics 34 (1): 143–52.</p>
+<p>Wolvers, Andrea, Oliver Tappe, Tijo Salverda, and Tobias Schwarz.
+2015. “Concepts of the Global South.” Voices from Around the World.
+https://kups.ub.uni-koeln.de/6399/1/
+voices012015_concepts_of_the_global_south.pdf.</p>
+<p>Zuboff, Shoshana. 2019. The Age of Surveillance Capitalism: The Fight
+for a Human Future at the New Frontier of Power. New York: Profile
+Books.</p>
+<h2 id="author-biographies">Author Biographies</h2>
+<p>Stefania Milan (stefania.milan.net) is an associate professor of new
+media at the University of Amsterdam. Her work explores the intersection
+of digital technology, governance, and activism. She is the cofounder of
+the Big Data from the South Initiative, and the principal investigator
+of the DATACTIVE (data-activism.net) and ALEX (algorithms.exposed)
+projects, funded by European Research Council. She is the author of
+Social Movements and Their Technologies: Wiring Social Change (Palgrave
+Macmillan, 2013/2016).</p>
+<p>Emiliano Treré is a lecturer at the School of Journalism, Media and
+Culture at Cardiff University, UK. He is a member of the Data Justice
+Lab that examines the relationship between datafication and social
+justice, and the cofounder of the Big Data from the South Initiative
+that interrogates the practices subverting the dominant narratives of
+datafication as narrated by the global North. He is the author of Hybrid
+Media Activism: Ecologies, Imaginaries, Algorithms (Routledge,
+2019).</p>
+</body>
+</html>
